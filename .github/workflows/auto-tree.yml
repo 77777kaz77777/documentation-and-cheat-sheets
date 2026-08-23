@@ -1,13 +1,14 @@
-name: Auto Update README Tree
+# The Categorized Table
+name: Auto Update README Tables
 
 on:
   push:
     branches:
-      - main  # Change to 'master' if your main branch is called master
+      - main
   workflow_dispatch:
 
 jobs:
-  update-readme-tree:
+  update-readme-tables:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -21,7 +22,7 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Generate Formatted Tree & Update README
+      - name: Generate Formatted Tables & Update README
         run: |
           python3 -c '
           import os, re
@@ -31,7 +32,17 @@ jobs:
               "configs": "Terminal & CLI tool dotfiles",
               "desktop-tweaks": "UI customization & desktop scripts",
               "security": "Antivirus & system defense utilities",
-              "utils": "General standalone helper scripts"
+              "utils": "General standalone helper scripts",
+              "ansible": "Ansible Automation Guides",
+              "containers": "Docker, Podman, and LXC Guides",
+              "fedora": "Fedora Linux Specific Documentation",
+              "linux-general": "General Linux Reference",
+              "networking-and-security": "Networking & Security Configurations",
+              "virtualization": "Hypervisor & VM Runbooks",
+              "windows-and-macos": "Windows & macOS References",
+              "networking": "Networking Automation",
+              "provisioning": "User Provisioning & Bootstrapping",
+              "proxmox": "Proxmox Virtual Environment Scripts"
           }
 
           IGNORE_PATHS = {".git", ".github", "README.md", "tree_output.txt"}
@@ -51,55 +62,37 @@ jobs:
                   pass
               return ""
 
-          repo_name = os.path.basename(os.getcwd()) + "/"
-          lines = [repo_name]
+          entries = sorted([e for e in os.listdir(".") if e not in IGNORE_PATHS and os.path.isdir(e)])
+          table_output = []
 
-          entries = [e for e in sorted(os.listdir(".")) if e not in IGNORE_PATHS]
-          dirs = [e for e in entries if os.path.isdir(e)]
-
-          for d_idx, d in enumerate(dirs):
-              is_last_dir = (d_idx == len(dirs) - 1)
-              dir_prefix = "└── " if is_last_dir else "├── "
-
+          for d in entries:
               folder_desc = FOLDER_DESCS.get(d, "")
-              dir_line = f"{dir_prefix}📁 {d}/"
-              lines.append((dir_line, f"# {folder_desc}" if folder_desc else ""))
-
+              header_desc = f" ({folder_desc})" if folder_desc else ""
+              
+              table_output.append(f"### 📁 {d}/{header_desc}\n")
+              table_output.append("| File | Description |")
+              table_output.append("|---|---|")
+              
               sub_path = os.path.join(".", d)
-              files = sorted([f for f in os.listdir(sub_path) if f not in IGNORE_PATHS])
-
-              for f_idx, f in enumerate(files):
-                  is_last_file = (f_idx == len(files) - 1)
-                  indent = "    " if is_last_dir else "│   "
-                  file_prefix = "└── " if is_last_file else "├── "
-
+              files = sorted([f for f in os.listdir(sub_path) if f not in IGNORE_PATHS and os.path.isfile(os.path.join(sub_path, f))])
+              
+              if not files:
+                  table_output.append("| *(Empty)* | |")
+              
+              for f in files:
                   file_path = os.path.join(sub_path, f)
                   desc = get_file_description(file_path)
+                  table_output.append(f"| `{f}` | {desc} |")
+              
+              table_output.append("\n")
 
-                  item_line = f"{indent}{file_prefix}{f}"
-                  lines.append((item_line, f"# {desc}" if desc else ""))
-
-          max_len = max(len(item[0]) if isinstance(item, tuple) else len(item) for item in lines)
-          padding = max(max_len + 4, 40)
-
-          formatted_tree = []
-          for item in lines:
-              if isinstance(item, str):
-                  formatted_tree.append(item)
-              else:
-                  left, comment = item
-                  if comment:
-                      formatted_tree.append(f"{left:<{padding}}{comment}")
-                  else:
-                      formatted_tree.append(left)
-
-          tree_str = "```text\n" + "\n".join(formatted_tree) + "\n```"
+          final_str = "\n".join(table_output).strip()
 
           with open("README.md", "r") as f:
               readme = f.read()
 
           pattern = r"(<!-- START_SECTION:tree -->)(.*?)(<!-- END_SECTION:tree -->)"
-          replacement = r"\1\n" + tree_str + r"\n\3"
+          replacement = r"\1\n" + final_str + r"\n\3"
           updated = re.sub(pattern, replacement, readme, flags=re.DOTALL)
 
           with open("README.md", "w") as f:
@@ -109,4 +102,4 @@ jobs:
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5.1.0
         with:
-          commit_message: "docs: auto-update directory structure in README"
+          commit_message: "docs: auto-update directory tables in README"
