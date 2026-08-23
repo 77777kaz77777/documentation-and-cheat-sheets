@@ -1,4 +1,4 @@
-# The Categorized Table
+```yaml
 name: Auto Update README Tables
 
 on:
