@@ -1,4 +1,4 @@
-Here is a quick reference cheat sheet for **UFW (Uncomplicated Firewall)** on Ubuntu/Debian systems.
+## Here is a quick reference cheat sheet for **UFW (Uncomplicated Firewall)** on Ubuntu/Debian systems.
 Service Control & Status
 |  |  |
 | :- | :- |
