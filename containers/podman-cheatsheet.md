@@ -24,7 +24,7 @@ Podman is a daemonless, rootless container engine designed to manage containers,
 | **Inspect Container Details** | `podman inspect [name]` |
 | **View Resource Usage (Stats)** | `podman stats` |
 
-### **🖼️ Image Management**
+### **Image Management**
 | Action | Command |
 | :--- | :--- |
 | **List Local Images** | `podman images` |
