@@ -1,6 +1,4 @@
-## Description
-
-The recommended, most stable way to install NVIDIA drivers on Fedora Workstation is through the **RPM Fusion** repositories. Using the official `.run` installer directly from NVIDIA is strongly discouraged on Fedora because kernel updates will frequently break the display driver.
+##The recommended, most stable way to install NVIDIA drivers on Fedora Workstation is through the **RPM Fusion** repositories. Using the official `.run` installer directly from NVIDIA is strongly discouraged on Fedora because kernel updates will frequently break the display driver.
 
 Below is the complete installation process.
 ---
