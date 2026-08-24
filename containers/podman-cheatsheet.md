@@ -14,7 +14,7 @@ Podman is a daemonless, rootless container engine designed to manage containers,
 | **Remove a Container** | `podman rm [name]` |
 | **Force Remove a Running Container** | `podman rm -f [name]` |
 
-### **🛠️ Execution & Inspection**
+### ** Execution & Inspection**
 | Action | Command |
 | :--- | :--- |
 | **Open Shell Inside Container** | `podman exec -it [name] /bin/bash` |
