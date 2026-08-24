@@ -27,7 +27,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 
 | File | Description |
 |---|---|
-| ` Fedora_NVIDIA_Installation_Guide.md` | Description |
+| ` Fedora_NVIDIA_Installation_Guide.md` | The recommended, most stable way to install NVIDIA drivers on Fedora Workstation is through the **RPM Fusion** repositories. Using the official `.run` installer directly from NVIDIA is strongly discouraged on Fedora because kernel updates will frequently break the display driver. |
 | `Btrbk_Snapshot_Automation_Cheat_Sheet.md` | Btrbk Snapshot & Backup Automation Cheat Sheet |
 | `ClamAV_SELinux_Implementation_Guide.md` | Comprehensive ClamAV & SELinux Implementation Guide (Fedora 44) |
 | `DNF_Configuration_Guide.md` | DNF Configuration Guide |
