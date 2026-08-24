@@ -37,6 +37,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `Fedora_KDE_SSD_Formatting_Btrbk.md` | Fedora KDE - Secondary SSD Formatting & Automated Btrbk Runbook |
 | `Fedora_Linux_Btrfs_Recovery.md` | Fedora Linux - Command-Line Btrfs Recovery Methods |
 | `Fedora_SELinux_Cheat_Sheet.md` | Fedora Linux SELinux Cheat Sheet |
+| `Fedora_TPM2_LUKS_AutoUnlock_Guide.md` | 1. Install Dependencies |
 | `KDE_Plasma_6_Multi_Monitor_Troubleshooting.md` | KDE Plasma 6 Multi-Monitor Troubleshooting Guide |
 | `Snapper_Snapshot_Management_Cheat_Sheet.md` | Snapper Snapshot Management Cheat Sheet |
 | `asusctl_cheat_sheet_guide.md` | asusctl v6.3.8 Cheat Sheet (GA503RW) |
