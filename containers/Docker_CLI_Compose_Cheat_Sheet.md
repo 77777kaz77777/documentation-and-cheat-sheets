@@ -1,6 +1,6 @@
 # Docker CLI & Compose Cheat Sheet
 
-## 🐋 Docker CLI Essentials
+##  Docker CLI Essentials
 | Action | Command |
 | :--- | :--- |
 | **Run a Container** | `docker run -d --name [name] [image]` |
@@ -15,7 +15,7 @@
 | **Enter Container Shell** | `docker exec -it [container_name] /bin/bash` |
 | **Prune (Clean) System** | `docker system prune -a` |
 
-## 🏗️ Docker Compose Commands
+##  Docker Compose Commands
 | Action | Command |
 | :--- | :--- |
 | **Start Services (Background)** | `docker-compose up -d` |
@@ -27,7 +27,7 @@
 | **Restart Services** | `docker-compose restart` |
 | **Pull New Images** | `docker-compose pull` |
 
-## 🛠️ Helpful Shortcuts & Tips
+##  Helpful Shortcuts & Tips
 
 ### Container Cleanup
 ```bash
