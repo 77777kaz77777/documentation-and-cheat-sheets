@@ -27,6 +27,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 
 | File | Description |
 |---|---|
+| ` Fedora_NVIDIA_Installation_Guide.md` |  |
 | `Btrbk_Snapshot_Automation_Cheat_Sheet.md` | Btrbk Snapshot & Backup Automation Cheat Sheet |
 | `ClamAV_SELinux_Implementation_Guide.md` | Comprehensive ClamAV & SELinux Implementation Guide (Fedora 44) |
 | `DNF_Configuration_Guide.md` | DNF Configuration Guide |
@@ -44,7 +45,6 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `dnf-speed-optimization-guide.md` | Document Name: dnf-speed-optimization-guide.md |
 | `dnf_command_reference.md` | DNF Command Reference Guide |
 | `fedora-clamav-setup-guide.md` | ClamAV Setup and Automation Guide for Fedora Linux |
-| `fedora-nvidia-install-guide.md` |  |
 | `fix-mux-plymouth-deadlock.md` | Fixing MUX / Plymouth Boot Deadlock |
 
 
