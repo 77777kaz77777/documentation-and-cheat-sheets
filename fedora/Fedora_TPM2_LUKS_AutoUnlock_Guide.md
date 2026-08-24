@@ -1,3 +1,5 @@
+#This document provides a step-by-step procedure for configuring a Fedora Linux system to automatically decrypt a LUKS2-encrypted root volume during the boot process #utilizing the hardware TPM (Trusted Platform Module) 2.0 chip. By implementing `systemd-cryptenroll`, this configuration binds the decryption key to PCR 7 (Secure Boot #state). This ensures seamless, passwordless boots under normal conditions, while automatically reverting to a manual passphrase prompt if the hardware configuration or #Secure Boot environment is modified or tampered with.
+
 ## 1. Install Dependencies
 
 Install the required packages to interact with the TPM 2.0 chip using `systemd-cryptenroll`.
