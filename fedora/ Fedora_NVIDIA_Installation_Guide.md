@@ -1,4 +1,4 @@
-The recommended, most stable way to install NVIDIA drivers on Fedora Workstation is through the **RPM Fusion** repositories. Using the official `.run` installer directly #from NVIDIA is strongly discouraged on Fedora because kernel updates will frequently break the display driver.
+The recommended, most stable way to install NVIDIA drivers on Fedora Workstation is through the **RPM Fusion** repositories. Using the official `.run` installer directly from NVIDIA is strongly discouraged on Fedora because kernel updates will frequently break the display driver.
 
 Below is the complete installation process.
 
@@ -10,17 +10,25 @@ First, ensure your system is completely up-to-date and enable the **RPM Fusion N
 
 ```bash
 # Update existing system packages
-sudo dnf update \
+sudo dnf \
+  update \
   -y
+```
 
+```bash
 # Enable RPM Fusion Free and Non-Free repositories
-sudo dnf install \
+sudo dnf \
+  install \
   -y \
   [https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm](https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm) -E %fedora).noarch.rpm \
   [https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm](https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm) -E %fedora).noarch.rpm
+```
 
+```bash
 # Enable RPM Fusion AppStream metadata
-sudo dnf group update \
+sudo dnf \
+  group \
+  update \
   core \
   -y
 ```
@@ -33,20 +41,25 @@ sudo dnf group update \
 
 If **Secure Boot** is enabled in your system's UEFI/BIOS settings, Linux will block unsigned driver modules from loading. You must generate and enroll a Machine Owner Key (MOK) **before** installing the drivers.
 
-1. **Generate the signing key:**
+### 1. Generate the signing key:
+
 ```bash
-sudo dnf install \
+sudo dnf \
+  install \
   -y \
   kmodtool \
   akmods \
   mokutil \
   openssl
+```
 
+```bash
 sudo kmodgenca \
   -a
 ```
 
-2. **Import the key into MOK:**
+### 2. Import the key into MOK:
+
 ```bash
 sudo mokutil \
   --import \
@@ -55,7 +68,8 @@ sudo mokutil \
 
 *You will be prompted to create a password. Remember this password.*
 
-3. **Reboot to complete MOK enrollment:**
+### 3. Reboot to complete MOK enrollment:
+
 ```bash
 sudo reboot
 ```
@@ -70,12 +84,16 @@ Once back in Fedora, install the main driver package along with CUDA and video a
 
 ```bash
 # Install the core driver package
-sudo dnf install \
+sudo dnf \
+  install \
   -y \
   akmod-nvidia
+```
 
+```bash
 # Install CUDA / NVENC / NVDEC libraries (Recommended for gaming & compute)
-sudo dnf install \
+sudo dnf \
+  install \
   -y \
   xorg-x11-drv-nvidia-cuda
 ```
@@ -88,6 +106,7 @@ Fedora uses `akmods` to automatically build the NVIDIA kernel module in the back
 
 1. **Do not reboot immediately.** Wait a few minutes for the module compilation to complete.
 2. Check if the module build has finished by running:
+
 ```bash
 modinfo \
   -F \
@@ -98,6 +117,7 @@ modinfo \
 If it returns a version number (e.g., `555.58.02` or similar), the compilation is complete. If it says `module nvidia not found`, wait another 1–2 minutes and run the command again.
 
 3. Once verified, reboot your machine:
+
 ```bash
 sudo reboot
 ```
