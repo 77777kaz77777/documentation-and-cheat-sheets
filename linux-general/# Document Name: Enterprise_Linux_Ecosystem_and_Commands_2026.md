@@ -1,4 +1,4 @@
-## An overview of the 2026 Enterprise Linux ecosystem—detailing the relationship between Fedora, CentOS Stream, RHEL, and Rocky Linux—paired with an essential command reference guide for package (DNF5), service (systemd), network (NetworkManager), firewall (firewalld), and SELinux administration.
+##An overview of the 2026 Enterprise Linux ecosystem—detailing the relationship between Fedora, CentOS Stream, RHEL, and Rocky Linux—paired with an essential command reference guide for package (DNF5), service (systemd), network (NetworkManager), firewall (firewalld), and SELinux administration.
 
 ## 1. Enterprise Linux Ecosystem Overview (Current as of August 2026)
 
