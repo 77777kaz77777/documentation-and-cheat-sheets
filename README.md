@@ -46,6 +46,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `dnf_command_reference.md` | DNF Command Reference Guide |
 | `fedora-clamav-setup-guide.md` | ClamAV Setup and Automation Guide for Fedora Linux |
 | `fix-mux-plymouth-deadlock.md` | Fixing MUX / Plymouth Boot Deadlock |
+| `selinux-context-resolution.md` | SELinux Context Resolution |
 
 
 ### 📁 linux-general/ (General Linux Reference)
