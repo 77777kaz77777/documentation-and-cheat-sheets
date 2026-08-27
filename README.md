@@ -53,7 +53,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 
 | File | Description |
 |---|---|
-| `# Document Name: Enterprise_Linux_Ecosystem_and_Commands_2026.md` | An overview of the 2026 Enterprise Linux ecosystem—detailing the relationship between Fedora, CentOS Stream, RHEL, and Rocky Linux—paired with an essential command reference guide for package (DNF5), service (systemd), network (NetworkManager), firewall (firewalld), and SELinux administration. |
+| `Enterprise_Linux_Ecosystem_and_Commands_2026.md` | An overview of the 2026 Enterprise Linux ecosystem—detailing the relationship between Fedora, CentOS Stream, RHEL, and Rocky Linux—paired with an essential command reference guide for package (DNF5), service (systemd), network (NetworkManager), firewall (firewalld), and SELinux administration. |
 | `Fastfetch_Configuration_Guide.md` | Fastfetch Configuration & Customization Guide |
 | `Git_Dotfiles_Maintenance_Cheat_Sheet.md` | Git Dotfiles & Maintenance Scripts Cheat Sheet |
 | `KDE_Plasma_Wayland_Shortcuts_Cheat_Sheet.md` | KDE Plasma (Wayland) Shortcuts & Control Cheat Sheet |
