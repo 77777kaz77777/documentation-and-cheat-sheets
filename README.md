@@ -77,6 +77,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `nmcli-cheat-sheet.md` | nmcli Cheat Sheet |
 | `pacman_command_reference.md` | Pacman Command Reference Guide |
 | `storage_management_reference.md` | Storage Management Command Reference Guide |
+| `workstation_bootstrap_documentation.md` | Workstation Bootstrap & Toolstack Installer Documentation |
 | `zypper_command_reference.md` | Zypper Command Reference Guide (openSUSE / SUSE Linux Enterprise) |
 
 
