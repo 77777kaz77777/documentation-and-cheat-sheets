@@ -2,7 +2,7 @@
 
 *Note: Ensure you run these in a PowerShell window with **Administrator** privileges.*
 
-## 🖥️ Hyper-V VM Management
+##  Hyper-V VM Management
 | Action | PowerShell Command |
 | :--- | :--- |
 | **List All VMs** | `Get-VM` |
@@ -33,7 +33,7 @@
 | **Apply Checkpoint** | `Restore-VMSnapshot -Name "[Label]" -VMName "[VMName]"` |
 | **Delete Checkpoint** | `Remove-VMSnapshot -Name "[Label]" -VMName "[VMName]"` |
 
-## 🌐 Virtual Networking (V-Switches)
+##  Virtual Networking (V-Switches)
 | Action | PowerShell Command |
 | :--- | :--- |
 | **List All Switches** | `Get-VMSwitch` |
@@ -41,7 +41,7 @@
 | **Create Private Switch** | `New-VMSwitch -Name "PrivateNet" -SwitchType Private` |
 | **Connect VM to Switch** | `Connect-VMNetworkAdapter -VMName "[VMName]" -SwitchName "[SwitchName]"` |
 
-## 📂 Virtual Disks (VHD/VHDX)
+## Virtual Disks (VHD/VHDX)
 | Action | PowerShell Command |
 | :--- | :--- |
 | **Create New Disk** | `New-VHD -Path "C:\VMs\disk.vhdx" -SizeBytes 50GB -Dynamic` |
