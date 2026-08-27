@@ -1,0 +1,21 @@
+name: Mark Stale Issues and Pull Requests
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-stale: 60
+          days-before-close: 7
+          stale-issue-label: "stale"
+          stale-pr-label: "stale"
+          stale-issue-message: "This issue has been automatically marked as stale because of inactivity."
+          stale-pr-message: "This pull request has been automatically marked as stale because of inactivity."
