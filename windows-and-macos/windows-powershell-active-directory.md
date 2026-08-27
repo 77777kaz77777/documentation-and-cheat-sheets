@@ -1,5 +1,5 @@
 ## **Windows PowerShell & Active Directory Essentials**
-### **🗝️ Windows Registry Management**
+### ** Windows Registry Management**
 In PowerShell, the Registry is treated like a file drive (HKLM: for HKEY_LOCAL_MACHINE and HKCU: for HKEY_CURRENT_USER).
 |  |  |
 | :- | :- |
@@ -11,7 +11,7 @@ In PowerShell, the Registry is treated like a file drive (HKLM: for HKEY_LOCAL_M
 | **Get Specific Value** | Get-ItemProperty -Path . -Name "Version" |
 | **Remove Key/Value** | Remove-ItemProperty or Remove-Item |
 
-### **👥 Active Directory (AD) Management**
+### ** Active Directory (AD) Management**
 *Note: These require the RSAT (Remote Server Administration Tools) to be installed on your machine.*
 |  |  |
 | :- | :- |
@@ -24,12 +24,12 @@ In PowerShell, the Registry is treated like a file drive (HKLM: for HKEY_LOCAL_M
 | **List Group Members** | Get-ADGroupMember -Identity [GroupName] |
 | **Find Computers** | Get-ADComputer -Filter 'Name -like "*Desktop*"' |
 
-### **🛰️ Windows Networking & Remote Management**
+### ** Windows Networking & Remote Management**
 PowerShell excels at managing remote Windows machines using **WinRM**.
   - **Enter a Remote Session:** Enter-PSSession -ComputerName [RemotePC] (Like SSH for Windows).
   - **Run Command Remotely:** Invoke-Command -ComputerName [RemotePC] -ScriptBlock { Get-Service }
   - **Test Network Port:** Test-NetConnection -ComputerName [IP] -Port 80 (A modern telnet replacement).
-### **📊 Comparing CMD vs. PowerShell Objects**
+### ** Comparing CMD vs. PowerShell Objects**
 The biggest hurdle is realizing that PowerShell doesn't just return text; it returns **Data Objects**.
   - **Linux/CMD style (Text):** You grep or find a string of text.
   - **PowerShell style (Objects):** You filter by properties.
