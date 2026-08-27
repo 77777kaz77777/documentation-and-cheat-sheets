@@ -109,6 +109,6 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 |---|---|
 | `Winget_Cheat_Sheet.md` | Winget Command Cheat Sheet |
 | `macOS_Terminal_Package_Management_Cheat_Sheet.md` | macOS Terminal and Package Management Cheat Sheet |
-| `windows-cmd-cheatsheet.md` | **💻 Windows Command Line Comparison** |
+| `windows-cmd-cheatsheet.md` | ** Windows Command Line Comparison** |
 | `windows-powershell-active-directory.md` | **Windows PowerShell & Active Directory Essentials** |
 <!-- END_SECTION:tree -->
