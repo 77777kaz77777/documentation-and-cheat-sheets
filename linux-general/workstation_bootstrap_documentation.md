@@ -4,6 +4,8 @@
 
 The **Automated Python Workstation Bootstrap & Toolstack Installer** is a cross-distribution Linux deployment utility featuring a graphical user interface (GUI). It automates the setup of core development toolstacks, third-party repositories, system debloat routines, repository-managed maintenance scripts, and terminal/shell customizations.
 
+The source code for this installer is found here: [https://github.com/77777kaz77777/linux-maintenance-and-dotfiles/blob/main/utils/setup.py](https://github.com/77777kaz77777/linux-maintenance-and-dotfiles/blob/main/utils/setup.py)
+
 ## System Requirements & Prerequisites
 
 * **Operating System:** Linux (Tested/Optimized for Fedora, RHEL, Rocky Linux, Ubuntu, Debian, and Arch-based distributions).
