@@ -15,7 +15,7 @@
 | **Rename a VM** | `Rename-VM -Name "[Old]" -NewName "[New]"` |
 | **Remove/Delete VM** | `Remove-VM -Name "[VMName]"` |
 
-## 🛠️ Configuration & Hardware
+##  Configuration & Hardware
 | Action | PowerShell Command |
 | :--- | :--- |
 | **Show VM Settings** | `Get-VM -Name "[VMName]"` |
@@ -25,7 +25,7 @@
 | **List Network Adapters** | `Get-VMNetworkAdapter -VMName "[VMName]"` |
 | **Connect ISO/DVD** | `Set-VMDvdDrive -VMName "[VMName]" -Path "C:\image.iso"` |
 
-## 📸 Snapshots (Checkpoints)
+## Snapshots (Checkpoints)
 | Action | PowerShell Command |
 | :--- | :--- |
 | **Create Checkpoint** | `Checkpoint-VM -Name "[VMName]" -SnapshotName "[Label]"` |
@@ -49,7 +49,7 @@
 | **Expand Disk Size** | `Resize-VHD -Path "C:\VMs\disk.vhdx" -SizeBytes 100GB` |
 | **Get Disk Info** | `Get-VHD -Path "C:\VMs\disk.vhdx"` |
 
-## 🔍 Quick Diagnostics
+##  Quick Diagnostics
 * **Is Hyper-V enabled?** `Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V`
 * **Check VM Uptime:** `Get-VM | Select Name, State, Uptime`
 * **Expose Virtualization (Nested VT):** If you want to run Proxmox or Docker *inside* a Hyper-V VM, run: `Set-VMProcessor -VMName "[VMName]" -ExposeVirtualizationExtensions $true`
