@@ -44,6 +44,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `asusctl_cheat_sheet_guide.md` | asusctl v6.3.8 Cheat Sheet (GA503RW) |
 | `dnf-speed-optimization-guide.md` | Document Name: dnf-speed-optimization-guide.md |
 | `dnf_command_reference.md` | DNF Command Reference Guide |
+| `fedora-alacritty-setup-and-verification.md` | Complete guide for installing and configuring the Alacritty terminal emulator on Fedora 44 KDE, featuring a matte black color scheme, JetBrains Mono Nerd Font integration, and custom workflow keybindings. |
 | `fedora-clamav-setup-guide.md` | ClamAV Setup and Automation Guide for Fedora Linux |
 | `fix-mux-plymouth-deadlock.md` | Fixing MUX / Plymouth Boot Deadlock |
 | `selinux-context-resolution.md` | SELinux Context Resolution |
