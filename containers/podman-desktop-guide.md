@@ -1,4 +1,4 @@
-# Podman Desktop: Installation and Usage Guide
+## How to install and set up the Podman Desktop GUI
 
 Podman Desktop is a graphical user interface (GUI) that allows developers to easily manage containers, images, and pods without needing to memorize command-line operations.
 
