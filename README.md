@@ -75,7 +75,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `fwupdmgr_Firmware_Update_Cheat_Sheet.md` | How to check for and apply hardware firmware updates with fwupdmgr. |
 | `linux_permissions_reference_expanded.md` | A deep dive into managing Linux file permissions, ownership, and ACLs. |
 | `linux_source_installation_guide.md` | Steps to compile and install Linux software directly from source code. |
-| `make_bash_script_executable.md` | How to Make a Bash Script Executable and Callable Globally |
+| `make_bash_script_executable.md` | How to make a Bash script executable and run it from anywhere on your system. |
 | `ncdu_command_reference.md` | NCDU (NCurses Disk Usage) Command Reference Guide |
 | `nmcli-cheat-sheet.md` | nmcli Cheat Sheet |
 | `pacman_command_reference.md` | Pacman Command Reference Guide |
