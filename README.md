@@ -71,7 +71,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `apt_command_reference.md` | Everyday package management commands for Debian and Ubuntu using APT. |
 | `brew_command_reference.md` | Essential Homebrew commands for installing software on macOS and Linux. |
 | `cheatsheet-for-linux.md` | A quick comparison of commands across the most common Linux package managers. |
-| `flatpak_command_reference.md` | Flatpak Command Reference Guide (Linux Desktop) |
+| `flatpak_command_reference.md` | Commands to install, update, and manage sandboxed Flatpak apps. |
 | `fwupdmgr_Firmware_Update_Cheat_Sheet.md` | fwupdmgr Firmware Update Cheat Sheet |
 | `linux_permissions_reference_expanded.md` | Advanced Linux Permissions, Ownership, and Access Control Reference Guide |
 | `linux_source_installation_guide.md` | Comprehensive guide for building and installing software from source code on Linux. |
