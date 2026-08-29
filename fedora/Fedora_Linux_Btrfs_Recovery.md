@@ -1,4 +1,5 @@
-# Fedora Linux - Command-Line Btrfs Recovery Methods
+# CLI methods for rescuing a corrupted Btrfs filesystem on Fedora.
+
 
 ## Scenario 1: You can reach a TTY / Command Line Terminal
 If your system boots to a black screen, terminal prompt, or you can press **Ctrl + Alt + F3** to reach a login prompt:
