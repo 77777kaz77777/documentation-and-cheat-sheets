@@ -114,5 +114,5 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `Winget_Cheat_Sheet.md` | A quick-reference guide for managing Windows software packages using the Winget command-line tool, covering package discovery, silent installations, bulk upgrades, and system provisioning. |
 | `macOS_Terminal_Package_Management_Cheat_Sheet.md` | A quick-reference guide for macOS command-line operations, covering Homebrew package management, system software updates, networking tools, process management, and essential Finder modifications. |
 | `windows-cmd-cheatsheet.md` | A quick-reference cheat sheet for Windows Command Prompt (CMD) and PowerShell, covering file navigation, system management, and package provisioning. |
-| `windows-powershell-active-directory.md` | **Windows PowerShell & Active Directory Essentials** |
+| `windows-powershell-active-directory.md` | A quick-reference guide for Windows PowerShell administration, covering Registry manipulation, Active Directory user and group management, remote networking, and object-oriented data filtering. |
 <!-- END_SECTION:tree -->
