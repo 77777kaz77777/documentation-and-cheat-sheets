@@ -1,6 +1,6 @@
-# Document Name: ZFS_Administration_Cheat_Sheet.md
-
+## A technical reference detailing essential commands for managing ZFS physical storage pools and logical datasets, including pool creation, dataset properties, snapshot replication, and disk replacement workflows
 ## 1. Zpool Management (Physical Disks)
+
 
 **Check Pool Status and Health:**
 
