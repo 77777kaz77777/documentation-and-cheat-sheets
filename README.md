@@ -66,6 +66,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `SS_Command_Options_Cheat_Sheet.md` | ss Command Options Cheat Sheet |
 | `Sublime_Text_Linux_Shortcuts.md` | Sublime Text Shortcuts (Linux) |
 | `Vim_Vi_Editor_Cheat_Sheet.md` | Vi / Vim Text Editor Cheat Sheet |
+| `ZFS_Administration_Cheat_Sheet.md` | Document Name: ZFS_Administration_Cheat_Sheet.md |
 | `apk_command_reference.md` | APK Command Reference Guide (Alpine Linux / Containers) |
 | `apt_command_reference.md` | APT Command Reference Guide |
 | `brew_command_reference.md` | Homebrew Command Reference Guide (macOS / Linux Desktop) |
