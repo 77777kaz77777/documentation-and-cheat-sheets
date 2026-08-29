@@ -1,4 +1,4 @@
-## Comprehensive guide for building and installing software from source code on Linux.
+## Steps to compile and install Linux software directly from source code.
 
  Installing software from source on Linux involves downloading the raw source code, satisfying its dependencies, compiling it into executable binary files, and placing those binaries into your system path.
 
