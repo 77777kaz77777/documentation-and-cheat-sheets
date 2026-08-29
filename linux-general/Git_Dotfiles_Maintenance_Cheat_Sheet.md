@@ -1,4 +1,4 @@
-# Git Dotfiles & Maintenance Scripts Cheat Sheet
+# Commands and scripts for backing up system configurations and dotfiles with Git
 
 ## Repository Syncing
 
