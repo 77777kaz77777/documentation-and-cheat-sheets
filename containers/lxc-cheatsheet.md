@@ -1,4 +1,5 @@
-## ** LXC/LXD Essentials**
+## LXC/LXD Essentials Cheat Sheet 
+
 Most modern implementations use the lxc command-line tool (part of the LXD project).
 |  |  |
 | :- | :- |
