@@ -1,3 +1,5 @@
+## A quick-reference guide for Windows PowerShell administration, covering Registry manipulation, Active Directory user and group management, remote networking, and object-oriented data filtering.
+
 ## **Windows PowerShell & Active Directory Essentials**
 ### ** Windows Registry Management**
 In PowerShell, the Registry is treated like a file drive (HKLM: for HKEY_LOCAL_MACHINE and HKCU: for HKEY_CURRENT_USER).
