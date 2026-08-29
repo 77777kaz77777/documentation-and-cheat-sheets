@@ -90,7 +90,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 |---|---|
 | `AdGuard_Home_Management_Cheat_Sheet.md` | Commands and config paths for managing AdGuard Home DNS rules and filters. |
 | `OpenWrt_UCI_Command_Cheat_Sheet.md` | How to configure OpenWrt router settings straight from the terminal using UCI. |
-| `Pentesting_Toolkit_Cheat_Sheet.md` | Penetration Testing Toolkit Cheat Sheet |
+| `Pentesting_Toolkit_Cheat_Sheet.md` | A quick reference for everyday penetration testing tools and frameworks. |
 | `Tailscale_Mesh_CLI_Cheat_Sheet.md` | Tailscale Mesh Networking Cheat Sheet |
 | `ufw-cheatsheet.md` | UFW (Uncomplicated Firewall) Command Reference for Ubuntu/Debian. |
 
