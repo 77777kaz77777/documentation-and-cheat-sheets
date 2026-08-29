@@ -103,7 +103,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `proxmox-cheatsheet.md` | Proxmox Virtual Machine Commands (qm) Cheat Sheet |
 | `virt-manager-cheatsheet.md` | Virt-Manager & Virsh Command Line Cheat Sheet |
 | `virt-manager-docker-conflict.md` | How to fix network bridge conflicts when running Virt-Manager and Docker on the same machine |
-| `virtualization_virt-manager-troubleshooting-fedora.md` | Virt-Manager troubleshooting guide tailored for Fedora with notes for other distributions. |
+| `virtualization_virt-manager-troubleshooting-fedora.md` | Fixes and tweaks for running Virt-Manager smoothly on Fedora. |
 
 
 ### 📁 windows-and-macos/ (Windows & macOS References)
