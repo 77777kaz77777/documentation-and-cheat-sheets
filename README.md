@@ -92,7 +92,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `OpenWrt_UCI_Command_Cheat_Sheet.md` | OpenWrt UCI (Unified Configuration Interface) Cheat Sheet |
 | `Pentesting_Toolkit_Cheat_Sheet.md` | Penetration Testing Toolkit Cheat Sheet |
 | `Tailscale_Mesh_CLI_Cheat_Sheet.md` | Tailscale Mesh Networking Cheat Sheet |
-| `ufw-cheatsheet.md` | Here is a quick reference cheat sheet for **UFW (Uncomplicated Firewall)** on Ubuntu/Debian systems. |
+| `ufw-cheatsheet.md` | UFW (Uncomplicated Firewall) Command Reference for Ubuntu/Debian. |
 
 
 ### 📁 virtualization/ (Hypervisor & VM Runbooks)
