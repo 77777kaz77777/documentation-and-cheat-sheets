@@ -41,7 +41,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `Fedora_TPM2_LUKS_AutoUnlock_Guide.md` | Step-by-step guide for configuring automatic LUKS2 root volume decryption using hardware TPM 2.0 and systemd-cryptenroll. |
 | `KDE_Plasma_6_Multi_Monitor_Troubleshooting.md` | Fixes for multi-monitor display glitches in KDE Plasma 6. |
 | `Snapper_Snapshot_Management_Cheat_Sheet.md` | Commands to create filesystem snapshots and roll back changes using Snapper |
-| `asusctl_cheat_sheet_guide.md` | asusctl v6.3.8 Cheat Sheet (GA503RW) |
+| `asusctl_cheat_sheet_guide.md` | Commands to control fans, lighting, and performance profiles on ASUS ROG laptops (GA503RW) with asusctl. |
 | `dnf-speed-optimization-guide.md` | DNF Package Manager Speed Optimization & Configuration Guide |
 | `dnf_command_reference.md` | DNF Command Reference Guide |
 | `fedora-alacritty-setup-and-verification.md` | Complete guide for installing and configuring the Alacritty terminal emulator on Fedora 44 KDE, featuring a matte black color scheme, JetBrains Mono Nerd Font integration, and custom workflow keybindings. |
