@@ -76,7 +76,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `linux_permissions_reference_expanded.md` | A deep dive into managing Linux file permissions, ownership, and ACLs. |
 | `linux_source_installation_guide.md` | Steps to compile and install Linux software directly from source code. |
 | `make_bash_script_executable.md` | How to make a Bash script executable and run it from anywhere on the system. |
-| `ncdu_command_reference.md` | NCDU (NCurses Disk Usage) Command Reference Guide |
+| `ncdu_command_reference.md` | How to hunt down large files and analyze disk usage using NCDU. |
 | `nmcli-cheat-sheet.md` | nmcli Cheat Sheet |
 | `pacman_command_reference.md` | Pacman Command Reference Guide |
 | `storage_management_reference.md` | Storage Management Command Reference Guide |
