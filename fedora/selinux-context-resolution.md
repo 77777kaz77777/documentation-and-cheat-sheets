@@ -1,4 +1,4 @@
-## SELinux Context Resolution
+## How to track down and fix SELinux context denials and permission errors. 
 
 The SELinux denial occurs because `fedora.img` currently has an `unlabeled_t` context. The virtualization daemon (`rpc-virtqemud`) requires virtual machine disk images to have the `virt_image_t` context to access and manage them securely.
 
