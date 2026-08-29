@@ -1,4 +1,4 @@
-# Fedora KDE - Secondary SSD Formatting & Automated Btrbk Runbook
+# Steps to format a secondary SSD and set up automated Btrbk snapshots on Fedora KDE.
 
 ## Prerequisites
 * Fedora KDE running on Btrfs (primary drive).
