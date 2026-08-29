@@ -34,7 +34,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `Fedora_DNF5_Tailscale_Repository_Fix.md` | Fixes and syntax for setting up Tailscale repositories with DNF5 on Fedora. |
 | `Fedora_Firewall_Cheat_Sheet.md` | Quick commands for managing network rules using Firewalld on Fedora. |
 | `Fedora_KDE_GRUB_Btrfs_Advanced.md` | Advanced fixes and config steps for GRUB and Btrfs integration on Fedora KDE. |
-| `Fedora_KDE_GRUB_Btrfs_Integration.md` | Fedora KDE - GRUB Btrfs Snapshot Integration Guide |
+| `Fedora_KDE_GRUB_Btrfs_Integration.md` | How to get Btrfs snapshots showing up directly in the GRUB boot menu on Fedora KDE. |
 | `Fedora_KDE_SSD_Formatting_Btrbk.md` | Fedora KDE - Secondary SSD Formatting & Automated Btrbk Runbook |
 | `Fedora_Linux_Btrfs_Recovery.md` | Fedora Linux - Command-Line Btrfs Recovery Methods |
 | `Fedora_SELinux_Cheat_Sheet.md` | Fedora Linux SELinux Cheat Sheet |
