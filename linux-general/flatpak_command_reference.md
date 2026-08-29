@@ -1,3 +1,5 @@
+## Commands to install, update, and manage sandboxed Flatpak apps.
+
 # Flatpak Command Reference Guide (Linux Desktop)
 
 ## Core Package Management
