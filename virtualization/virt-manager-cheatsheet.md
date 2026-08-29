@@ -1,4 +1,4 @@
-## ** Virt-Manager & Virsh Command Line Cheat Sheet**
+## Virt-Manager & Virsh Command Line Cheat Sheet
 Virt-Manager is a graphical desktop user interface for managing virtual machines through libvirt. Below are the common GUI actions and their underlying `virsh` and `virt-*` command-line equivalents for headless management and automation.
 
 ### ** Virtual Machine Management (`virsh`)**
