@@ -1,4 +1,4 @@
-# ClamAV Setup and Automation Guide for Fedora Linux
+# How to deploy and automate ClamAV scans on Fedora.
 
 This document outlines the complete process for installing, configuring, and automating ClamAV Antivirus on Fedora Linux. It includes steps for removing incomplete upstream installations, configuring the ClamAV daemon (`clamd`), managing SELinux policies, and deploying custom automation scripts using systemd timers.
 
