@@ -88,7 +88,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 
 | File | Description |
 |---|---|
-| `AdGuard_Home_Management_Cheat_Sheet.md` | AdGuard Home Management & DNS Filtering Cheat Sheet |
+| `AdGuard_Home_Management_Cheat_Sheet.md` | Commands and config paths for managing AdGuard Home DNS rules and filters. |
 | `OpenWrt_UCI_Command_Cheat_Sheet.md` | OpenWrt UCI (Unified Configuration Interface) Cheat Sheet |
 | `Pentesting_Toolkit_Cheat_Sheet.md` | Penetration Testing Toolkit Cheat Sheet |
 | `Tailscale_Mesh_CLI_Cheat_Sheet.md` | Tailscale Mesh Networking Cheat Sheet |
