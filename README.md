@@ -67,7 +67,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `Sublime_Text_Linux_Shortcuts.md` | Must-know keyboard shortcuts for Sublime Text on Linux. |
 | `Vim_Vi_Editor_Cheat_Sheet.md` | Core commands for opening, editing, saving, and exiting Vi/Vim. |
 | `ZFS_Administration_Cheat_Sheet.md` | A technical reference detailing essential commands for managing ZFS physical storage pools and logical datasets, including pool creation, dataset properties, snapshot replication, and disk replacement workflows |
-| `apk_command_reference.md` | APK Command Reference Guide (Alpine Linux / Containers) |
+| `apk_command_reference.md` | Commands for installing and updating packages in Alpine Linux and containers using APK. |
 | `apt_command_reference.md` | APT Command Reference Guide |
 | `brew_command_reference.md` | Homebrew Command Reference Guide (macOS / Linux Desktop) |
 | `cheatsheet-for-linux.md` | **Package Management Cheat Sheet** |
