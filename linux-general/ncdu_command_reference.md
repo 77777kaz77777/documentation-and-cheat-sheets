@@ -1,4 +1,4 @@
-# NCDU (NCurses Disk Usage) Command Reference Guide
+# How to hunt down large files and analyze disk usage using NCDU.
 
 ## Basic Usage
 
