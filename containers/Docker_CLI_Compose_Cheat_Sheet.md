@@ -1,4 +1,4 @@
-# Docker CLI & Compose Cheat Sheet
+## Core commands for spinning up Docker containers, managing images, and using Compose.
 
 ##  Docker CLI Essentials
 | Action | Command |
