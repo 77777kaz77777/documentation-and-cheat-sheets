@@ -1,4 +1,4 @@
-# How to Make a Bash Script Executable and Callable Globally
+# How to make a Bash script executable and run it from anywhere on your system.
 
 Follow these steps to make a Bash script executable and runnable from anywhere using a simple custom command like `update`.
 
