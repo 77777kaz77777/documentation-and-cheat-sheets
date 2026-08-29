@@ -1,4 +1,5 @@
-# Fedora Linux SELinux Cheat Sheet
+# Everyday commands for fixing and managing SELinux policies on Fedora.
+
 
 Fedora runs Security-Enhanced Linux (SELinux) in **Enforcing** mode by default for mandatory access control.
 
