@@ -1,4 +1,4 @@
-# How to Create a Ventoy USB on Fedora Linux
+# How to format and create a multi-boot Ventoy USB drive on Linux.
 
 This guide provides step-by-step instructions to create a Ventoy USB drive on Fedora Linux using either the graphical WebGUI or the command-line interface.
 
