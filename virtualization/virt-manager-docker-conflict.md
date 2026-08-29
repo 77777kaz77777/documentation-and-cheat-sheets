@@ -1,3 +1,5 @@
+## How to fix network bridge conflicts when running Virt-Manager and Docker on the same machine
+
 # Virt-Manager and Docker: Networking Conflicts Explained
 
 Running Virt-Manager (which utilizes libvirt and KVM) and Docker on the same Linux host frequently results in severe networking conflicts. While it is technically possible to force them to coexist, the default behavior of both services makes them fundamentally incompatible on a shared host network.
