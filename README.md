@@ -47,7 +47,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `fedora-alacritty-setup-and-verification.md` | Setting up the Alacritty terminal on Fedora, complete with custom fonts and themes. |
 | `fedora-clamav-setup-guide.md` | How to deploy and automate ClamAV scans on Fedora. |
 | `fix-mux-plymouth-deadlock.md` | How to fix boot deadlocks caused by MUX switches and Plymouth. |
-| `selinux-context-resolution.md` | SELinux Context Resolution |
+| `selinux-context-resolution.md` | How to track down and fix SELinux context denials and permission errors. |
 
 
 ### 📁 linux-general/ (General Linux Reference)
