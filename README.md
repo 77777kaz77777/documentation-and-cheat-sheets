@@ -45,7 +45,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `dnf-speed-optimization-guide.md` | DNF Package Manager Speed Optimization & Configuration Guide |
 | `dnf_command_reference.md` | useful commands for Fedora’s DNF package manager. |
 | `fedora-alacritty-setup-and-verification.md` | Setting up the Alacritty terminal on Fedora, complete with custom fonts and themes. |
-| `fedora-clamav-setup-guide.md` | ClamAV Setup and Automation Guide for Fedora Linux |
+| `fedora-clamav-setup-guide.md` | How to deploy and automate ClamAV scans on Fedora. |
 | `fix-mux-plymouth-deadlock.md` | Fixing MUX / Plymouth Boot Deadlock |
 | `selinux-context-resolution.md` | SELinux Context Resolution |
 
