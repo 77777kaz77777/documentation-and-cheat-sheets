@@ -1,3 +1,5 @@
+## Commands to manage block devices, format partitions, and handle filesystems.
+
 # Storage Management Command Reference Guide
 
 ## Block Devices and Partitions
