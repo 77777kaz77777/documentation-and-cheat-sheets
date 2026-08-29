@@ -110,6 +110,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 
 | File | Description |
 |---|---|
+| `Windows_Sysinternals_Cheat_Sheet.md` | Document Name: Windows_Sysinternals_Cheat_Sheet.md |
 | `Winget_Cheat_Sheet.md` | Winget Command Cheat Sheet |
 | `macOS_Terminal_Package_Management_Cheat_Sheet.md` | macOS Terminal and Package Management Cheat Sheet |
 | `windows-cmd-cheatsheet.md` | ** Windows Command Line Comparison** |
