@@ -1,4 +1,4 @@
-# macOS Terminal and Package Management Cheat Sheet
+## A quick-reference guide for macOS command-line operations, covering Homebrew package management, system software updates, networking tools, process management, and essential Finder modifications.
 
 ##  macOS Package Management (Homebrew)
 | Action | Command |
