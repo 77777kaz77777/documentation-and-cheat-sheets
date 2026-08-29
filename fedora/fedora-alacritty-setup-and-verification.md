@@ -1,5 +1,6 @@
 
-## Complete guide for installing and configuring the Alacritty terminal emulator on Fedora 44 KDE, featuring a matte black color scheme, JetBrains Mono Nerd Font integration, and custom workflow keybindings.
+## Setting up the Alacritty terminal on Fedora, complete with custom fonts and themes.
+
 
 ## Step 1: Install Alacritty
 Install the terminal emulator directly from the standard Fedora repositories.
