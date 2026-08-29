@@ -64,7 +64,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `Linux_Ventoy_USB_Creation_Guide.md` | How to format and create a multi-boot Ventoy USB drive on Linux. |
 | `NVIDIA_CUDA_Monitoring_Cheat_Sheet.md` | Commands to monitor NVIDIA GPU performance and CUDA workloads. |
 | `SS_Command_Options_Cheat_Sheet.md` | How to inspect network sockets and connections using the ss command. |
-| `Sublime_Text_Linux_Shortcuts.md` | Sublime Text Shortcuts (Linux) |
+| `Sublime_Text_Linux_Shortcuts.md` | Must-know keyboard shortcuts for Sublime Text on Linux. |
 | `Vim_Vi_Editor_Cheat_Sheet.md` | Vi / Vim Text Editor Cheat Sheet |
 | `ZFS_Administration_Cheat_Sheet.md` | A technical reference detailing essential commands for managing ZFS physical storage pools and logical datasets, including pool creation, dataset properties, snapshot replication, and disk replacement workflows |
 | `apk_command_reference.md` | APK Command Reference Guide (Alpine Linux / Containers) |
