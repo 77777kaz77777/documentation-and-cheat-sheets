@@ -1,4 +1,4 @@
-# Sublime Text Shortcuts (Linux)
+# Must-know keyboard shortcuts for Sublime Text on Linux.
 
 ## Navigation and File Management
 
