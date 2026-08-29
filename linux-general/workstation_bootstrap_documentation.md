@@ -1,3 +1,5 @@
+## Scripts and steps for setting up a new workstation and automating tool installations.
+
 # Workstation Bootstrap & Toolstack Installer Documentation
 
 ## Overview
