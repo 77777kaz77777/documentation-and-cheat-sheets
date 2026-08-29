@@ -41,7 +41,6 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `KDE_Plasma_6_Multi_Monitor_Troubleshooting.md` | Fixes for multi-monitor display glitches in KDE Plasma 6. |
 | `Snapper_Snapshot_Management_Cheat_Sheet.md` | Commands to create filesystem snapshots and roll back changes using Snapper |
 | `asusctl_cheat_sheet_guide.md` | Commands to control fans, lighting, and performance profiles on ASUS ROG laptops (GA503RW) with asusctl. |
-| `dnf-speed-optimization-guide.md` | DNF Package Manager Speed Optimization & Configuration Guide |
 | `dnf_command_reference.md` | useful commands for Fedora’s DNF package manager. |
 | `fedora-alacritty-setup-and-verification.md` | Setting up the Alacritty terminal on Fedora, complete with custom fonts and themes. |
 | `fedora-clamav-setup-guide.md` | How to deploy and automate ClamAV scans on Fedora. |
