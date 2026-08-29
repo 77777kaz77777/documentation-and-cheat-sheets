@@ -1,4 +1,4 @@
-# Homebrew Command Reference Guide (macOS / Linux Desktop)
+# Essential Homebrew commands for installing software on macOS and Linux.
 
 ## Core Package Management
 
