@@ -70,7 +70,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `apk_command_reference.md` | Commands for installing and updating packages in Alpine Linux and containers using APK. |
 | `apt_command_reference.md` | Everyday package management commands for Debian and Ubuntu using APT. |
 | `brew_command_reference.md` | Essential Homebrew commands for installing software on macOS and Linux. |
-| `cheatsheet-for-linux.md` | **Package Management Cheat Sheet** |
+| `cheatsheet-for-linux.md` | A quick comparison of commands across the most common Linux package managers. |
 | `flatpak_command_reference.md` | Flatpak Command Reference Guide (Linux Desktop) |
 | `fwupdmgr_Firmware_Update_Cheat_Sheet.md` | fwupdmgr Firmware Update Cheat Sheet |
 | `linux_permissions_reference_expanded.md` | Advanced Linux Permissions, Ownership, and Access Control Reference Guide |
