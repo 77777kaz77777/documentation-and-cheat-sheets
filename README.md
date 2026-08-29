@@ -78,7 +78,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `make_bash_script_executable.md` | How to make a Bash script executable and run it from anywhere on the system. |
 | `ncdu_command_reference.md` | How to hunt down large files and analyze disk usage using NCDU. |
 | `nmcli-cheat-sheet.md` | Commands for managing network interfaces and Wi-Fi connections via nmcli |
-| `pacman_command_reference.md` | Pacman Command Reference Guide |
+| `pacman_command_reference.md` | Essential commands for managing Arch Linux packages with Pacman. |
 | `storage_management_reference.md` | Storage Management Command Reference Guide |
 | `workstation_bootstrap_documentation.md` | Workstation Bootstrap & Toolstack Installer Documentation |
 | `zypper_command_reference.md` | Zypper Command Reference Guide (openSUSE / SUSE Linux Enterprise) |
