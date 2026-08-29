@@ -32,7 +32,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `ClamAV_SELinux_Implementation_Guide.md` | Getting ClamAV antivirus working smoothly with SELinux on Fedora 44. |
 | `DNF_Configuration_Guide.md` | Tweaks and settings to speed up the DNF package manager. |
 | `Fedora_DNF5_Tailscale_Repository_Fix.md` | Fixes and syntax for setting up Tailscale repositories with DNF5 on Fedora. |
-| `Fedora_Firewall_Cheat_Sheet.md` | Fedora Linux Firewall (Firewalld) Cheat Sheet |
+| `Fedora_Firewall_Cheat_Sheet.md` | Quick commands for managing network rules using Firewalld on Fedora. |
 | `Fedora_KDE_GRUB_Btrfs_Advanced.md` | Fedora KDE - Advanced GRUB Btrfs Configuration & Troubleshooting |
 | `Fedora_KDE_GRUB_Btrfs_Integration.md` | Fedora KDE - GRUB Btrfs Snapshot Integration Guide |
 | `Fedora_KDE_SSD_Formatting_Btrbk.md` | Fedora KDE - Secondary SSD Formatting & Automated Btrbk Runbook |
