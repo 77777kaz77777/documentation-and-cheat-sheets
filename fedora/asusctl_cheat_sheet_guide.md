@@ -1,4 +1,4 @@
-# asusctl v6.3.8 Cheat Sheet (GA503RW)
+# Commands to control fans, lighting, and performance profiles on ASUS ROG laptops (GA503RW) with asusctl.
 
 ## 💡 Keyboard Lighting (Aura RGB)
 
