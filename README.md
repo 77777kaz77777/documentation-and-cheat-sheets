@@ -36,7 +36,6 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `Fedora_KDE_GRUB_Btrfs_Integration.md` | How to get Btrfs snapshots showing up directly in the GRUB boot menu on Fedora KDE. |
 | `Fedora_KDE_SSD_Formatting_Btrbk.md` | Steps to format a secondary SSD and set up automated Btrbk snapshots on Fedora KDE. |
 | `Fedora_Linux_Btrfs_Recovery.md` | CLI methods for rescuing a corrupted Btrfs filesystem on Fedora. |
-| `Fedora_SELinux_Cheat_Sheet.md` | Everyday commands for fixing and managing SELinux policies on Fedora. |
 | `Fedora_TPM2_LUKS_AutoUnlock_Guide.md` | Step-by-step guide for configuring automatic LUKS2 root volume decryption using hardware TPM 2.0 and systemd-cryptenroll. |
 | `KDE_Plasma_6_Multi_Monitor_Troubleshooting.md` | Fixes for multi-monitor display glitches in KDE Plasma 6. |
 | `Snapper_Snapshot_Management_Cheat_Sheet.md` | Commands to create filesystem snapshots and roll back changes using Snapper |
