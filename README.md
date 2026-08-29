@@ -61,7 +61,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `Linux_Export_Command_Guide.md` | How to properly set and manage environment variables using the export command. |
 | `Linux_Systemd_Cheat_Sheet.md` | Everyday commands for handling services and logs with Systemd and journalctl. |
 | `Linux_Upstream_Midstream_Downstream_Explained.md` | A plain-English explanation of how upstream, midstream, and downstream open-source flows work. |
-| `Linux_Ventoy_USB_Creation_Guide.md` | How to Create a Ventoy USB on Fedora Linux |
+| `Linux_Ventoy_USB_Creation_Guide.md` | How to format and create a multi-boot Ventoy USB drive on Linux. |
 | `NVIDIA_CUDA_Monitoring_Cheat_Sheet.md` | NVIDIA & CUDA Monitoring Cheat Sheet |
 | `SS_Command_Options_Cheat_Sheet.md` | ss Command Options Cheat Sheet |
 | `Sublime_Text_Linux_Shortcuts.md` | Sublime Text Shortcuts (Linux) |
