@@ -1,4 +1,4 @@
-# Fedora KDE - Advanced GRUB Btrfs Configuration & Troubleshooting
+# Advanced fixes and config steps for GRUB and Btrfs integration on Fedora KDE.
 
 ## 📋 Prerequisites
 Ensure your system meets the following requirements before proceeding:
