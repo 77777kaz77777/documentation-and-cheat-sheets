@@ -74,7 +74,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `flatpak_command_reference.md` | Commands to install, update, and manage sandboxed Flatpak apps. |
 | `fwupdmgr_Firmware_Update_Cheat_Sheet.md` | How to check for and apply hardware firmware updates with fwupdmgr. |
 | `linux_permissions_reference_expanded.md` | A deep dive into managing Linux file permissions, ownership, and ACLs. |
-| `linux_source_installation_guide.md` | Comprehensive guide for building and installing software from source code on Linux. |
+| `linux_source_installation_guide.md` | Steps to compile and install Linux software directly from source code. |
 | `make_bash_script_executable.md` | How to Make a Bash Script Executable and Callable Globally |
 | `ncdu_command_reference.md` | NCDU (NCurses Disk Usage) Command Reference Guide |
 | `nmcli-cheat-sheet.md` | nmcli Cheat Sheet |
