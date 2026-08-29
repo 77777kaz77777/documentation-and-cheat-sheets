@@ -1,4 +1,4 @@
-# Comprehensive ClamAV & SELinux Implementation Guide (Fedora 44)
+## Getting ClamAV antivirus working smoothly with SELinux on Fedora 44.
 
 This technical reference provides an in-depth breakdown of the interactions between the ClamAV daemon, systemd, and SELinux on Fedora. It explains the underlying mechanics of file descriptor passing, socket communication, and mandatory access control constraints.
 
