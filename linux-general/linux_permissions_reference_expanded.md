@@ -1,4 +1,4 @@
-# Advanced Linux Permissions, Ownership, and Access Control Reference Guide
+# A deep dive into managing Linux file permissions, ownership, and ACLs.
 
 ## 1. Numeric (Octal) Permission Breakdown
 
