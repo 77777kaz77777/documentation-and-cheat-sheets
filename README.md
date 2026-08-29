@@ -55,7 +55,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | File | Description |
 |---|---|
 | `Enterprise_Linux_Ecosystem_and_Commands_2026.md` | A breakdown of the 2026 Enterprise Linux landscape plus core admin commands. |
-| `Fastfetch_Configuration_Guide.md` | Fastfetch Configuration & Customization Guide |
+| `Fastfetch_Configuration_Guide.md` | How to tweak and customize system info outputs using Fastfetch. |
 | `Git_Dotfiles_Maintenance_Cheat_Sheet.md` | Git Dotfiles & Maintenance Scripts Cheat Sheet |
 | `KDE_Plasma_Wayland_Shortcuts_Cheat_Sheet.md` | KDE Plasma (Wayland) Shortcuts & Control Cheat Sheet |
 | `Linux_Export_Command_Guide.md` | Deep Dive: Linux `export` Command & Environment Variables |
