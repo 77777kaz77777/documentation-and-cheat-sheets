@@ -110,7 +110,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 
 | File | Description |
 |---|---|
-| `Windows_Sysinternals_Cheat_Sheet.md` | Document Name: Windows_Sysinternals_Cheat_Sheet.md |
+| `Windows_Sysinternals_Cheat_Sheet.md` | A practical guide to core Microsoft Sysinternals tools (Process Explorer, Process Monitor, Autoruns, PsExec, and TCPView), highlighting specific filters, shortcuts, and commands for advanced troubleshooting, malware isolation, and remote system administration. |
 | `Winget_Cheat_Sheet.md` | Winget Command Cheat Sheet |
 | `macOS_Terminal_Package_Management_Cheat_Sheet.md` | macOS Terminal and Package Management Cheat Sheet |
 | `windows-cmd-cheatsheet.md` | ** Windows Command Line Comparison** |
