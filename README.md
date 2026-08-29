@@ -43,7 +43,6 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `asusctl_cheat_sheet_guide.md` | Commands to control fans, lighting, and performance profiles on ASUS ROG laptops (GA503RW) with asusctl. |
 | `dnf_command_reference.md` | useful commands for Fedora’s DNF package manager. |
 | `fedora-alacritty-setup-and-verification.md` | Setting up the Alacritty terminal on Fedora, complete with custom fonts and themes. |
-| `fedora-clamav-setup-guide.md` | How to deploy and automate ClamAV scans on Fedora. |
 | `fix-mux-plymouth-deadlock.md` | How to fix boot deadlocks caused by MUX switches and Plymouth. |
 | `selinux-context-resolution.md` | How to track down and fix SELinux context denials and permission errors. |
 
