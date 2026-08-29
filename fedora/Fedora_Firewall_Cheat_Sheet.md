@@ -1,4 +1,4 @@
-# Fedora Linux Firewall (Firewalld) Cheat Sheet
+# Quick commands for managing network rules using Firewalld on Fedora.
 
 Fedora uses **firewalld** by default for packet filtering, managed via the `firewall-cmd` utility.
 
