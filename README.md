@@ -29,6 +29,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 |---|---|
 | ` Fedora_NVIDIA_Installation_Guide.md` | A guide to safely installing NVIDIA drivers on Fedora Workstation utilizing RPM Fusion repositories. |
 | `Btrbk_Snapshot_Automation_Cheat_Sheet.md` | Steps to automate Btrfs snapshots and backups using Btrbk. |
+| `ClamAV_SELinux_Implementation_Guide.md` | Fedora ClamAV & SELinux Implementation Guide |
 | `DNF_Optimization_and_Configuration_Guide.md` | DNF Package Manager Speed Optimization & Configuration Guide |
 | `Fedora_DNF5_Tailscale_Repository_Fix.md` | Fixes and syntax for setting up Tailscale repositories with DNF5 on Fedora. |
 | `Fedora_Firewall_Cheat_Sheet.md` | Quick commands for managing network rules using Firewalld on Fedora. |
