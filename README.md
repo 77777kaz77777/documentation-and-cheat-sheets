@@ -43,7 +43,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `Snapper_Snapshot_Management_Cheat_Sheet.md` | Commands to create filesystem snapshots and roll back changes using Snapper |
 | `asusctl_cheat_sheet_guide.md` | Commands to control fans, lighting, and performance profiles on ASUS ROG laptops (GA503RW) with asusctl. |
 | `dnf-speed-optimization-guide.md` | DNF Package Manager Speed Optimization & Configuration Guide |
-| `dnf_command_reference.md` | DNF Command Reference Guide |
+| `dnf_command_reference.md` | useful commands for Fedora’s DNF package manager. |
 | `fedora-alacritty-setup-and-verification.md` | Complete guide for installing and configuring the Alacritty terminal emulator on Fedora 44 KDE, featuring a matte black color scheme, JetBrains Mono Nerd Font integration, and custom workflow keybindings. |
 | `fedora-clamav-setup-guide.md` | ClamAV Setup and Automation Guide for Fedora Linux |
 | `fix-mux-plymouth-deadlock.md` | Fixing MUX / Plymouth Boot Deadlock |
