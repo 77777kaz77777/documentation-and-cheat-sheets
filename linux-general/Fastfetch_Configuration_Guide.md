@@ -1,4 +1,4 @@
-# Fastfetch Configuration & Customization Guide
+# How to tweak and customize system info outputs using Fastfetch.
 
 Customizing **Fastfetch** (the speedy, highly configurable successor to Neofetch) is done using a structured JSONC (JSON with Comments) configuration system. This allows you to easily format modules, change colors, insert custom text, and swap out logos.
 
