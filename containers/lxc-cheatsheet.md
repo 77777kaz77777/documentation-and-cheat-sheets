@@ -13,7 +13,7 @@ Most modern implementations use the lxc command-line tool (part of the LXD proje
 | **Delete Container** | lxc delete [name] --force |
 | **Show Container Info** | lxc info [name] |
 
-## **🛠️ Access & Configuration**
+## ** Access & Configuration**
 Interacting with the "inside" of an LXC container is very similar to interacting with a virtual machine.
 |  |  |
 | :- | :- |
@@ -25,14 +25,14 @@ Interacting with the "inside" of an LXC container is very similar to interacting
 | **Edit Config** | lxc config edit [name] |
 | **Set Resource Limit** | lxc config set [name] limits.cpu 2 |
 
-## **📸 Snapshots & Images**
+## **Snapshots & Images**
 One of the best features of LXC is the ability to "freeze" a state before making risky changes.
   - **Create Snapshot:** lxc snapshot [name] [snap_name]
   - **Restore Snapshot:** lxc restore [name] [snap_name]
   - **List Snapshots:** lxc info [name] (Look under the Snapshots section)
   - **Delete Snapshot:** lxc delete [name]/[snap_name]
   - **Publish as Image:** lxc publish [name]/[snap_name] --alias [my-custom-image]
-## **🌐 Network & Storage**
+## ** Network & Storage**
 |  |  |
 | :- | :- |
 | Action | Command |
