@@ -1,4 +1,5 @@
-## **Package Management Cheat Sheet**
+## A quick comparison of commands across the most common Linux package managers.
+
 This table covers the essential commands for managing software. Whether you're using **Debian/Ubuntu** (APT), **RHEL/Fedora/Rocky** (DNF), or **Arch** (Pacman), these are your bread-and-butter commands.
 |  |  |  |  |
 | :- | :- | :- | :- |
