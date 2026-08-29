@@ -81,7 +81,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `pacman_command_reference.md` | Essential commands for managing Arch Linux packages with Pacman. |
 | `storage_management_reference.md` | Commands to manage block devices, format partitions, and handle filesystems. |
 | `workstation_bootstrap_documentation.md` | Scripts and steps for setting up a new workstation and automating tool installations. |
-| `zypper_command_reference.md` | Zypper Command Reference Guide (openSUSE / SUSE Linux Enterprise) |
+| `zypper_command_reference.md` | Everyday commands for managing packages on openSUSE and SLES using Zypper. |
 
 
 ### 📁 networking-and-security/ (Networking & Security Configurations)
