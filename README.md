@@ -76,7 +76,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `ncdu_command_reference.md` | How to hunt down large files and analyze disk usage using NCDU. |
 | `nmcli-cheat-sheet.md` | Commands for managing network interfaces and Wi-Fi connections via nmcli |
 | `pacman_command_reference.md` | Essential commands for managing Arch Linux packages with Pacman. |
-| `samba-mount-guide.md` | Connecting via Dolphin (GUI) |
+| `samba-mount-guide.md` | Commands and configurations for connecting, temporarily mounting, and permanently automounting local SMB/CIFS network shares. |
 | `storage_management_reference.md` | Commands to manage block devices, format partitions, and handle filesystems. |
 | `workstation_bootstrap_documentation.md` | Scripts and steps for setting up a new workstation and automating tool installations. |
 | `zypper_command_reference.md` | Everyday commands for managing packages on openSUSE and SLES using Zypper. |
