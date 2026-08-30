@@ -1,3 +1,5 @@
+## Commands and configurations for connecting, temporarily mounting, and permanently automounting local SMB/CIFS network shares.
+
 ## Connecting via Dolphin (GUI)
 
 * Open the **Dolphin** file manager.
