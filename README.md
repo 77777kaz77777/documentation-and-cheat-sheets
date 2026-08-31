@@ -65,6 +65,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `Vim_Vi_Editor_Cheat_Sheet.md` | Core commands for opening, editing, saving, and exiting Vi/Vim. |
 | `ZFS_Administration_Cheat_Sheet.md` | A technical reference detailing essential commands for managing ZFS physical storage pools and logical datasets, including pool creation, dataset properties, snapshot replication, and disk replacement workflows |
 | `apk_command_reference.md` | Commands for installing and updating packages in Alpine Linux and containers using APK. |
+| `appimage_installation_guide.md` | How to Install and Run AppImages on Linux |
 | `apt_command_reference.md` | Everyday package management commands for Debian and Ubuntu using APT. |
 | `brew_command_reference.md` | Essential Homebrew commands for installing software on macOS and Linux. |
 | `cheatsheet-for-linux.md` | A quick comparison of commands across the most common Linux package managers. |
