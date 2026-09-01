@@ -11,7 +11,7 @@ sudo dnf install alacritty
 
 ## Step 2: Install JetBrains Mono Nerd Font
 
-Your configuration requires the Nerd Font variant for correct glyph and icon rendering, which must be installed locally. Execute the following sequential commands to download, extract, and apply the font cache:
+This configuration requires the Nerd Font variant for correct glyph and icon rendering, which must be installed locally. Execute the following sequential commands to download, extract, and apply the font cache:
 
 ```bash
 mkdir -p ~/.local/share/fonts/JetBrainsMonoNerd
