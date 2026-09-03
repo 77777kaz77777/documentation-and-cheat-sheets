@@ -1,5 +1,4 @@
-# .markdownlint.yaml
-default: true
-
-# Disable line length constraints that break documentation rendering and cannot be auto-fixed safely
-MD013: false
+{
+  "default": true,
+  "MD013": false
+}
