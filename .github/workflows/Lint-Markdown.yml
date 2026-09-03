@@ -1,24 +1,21 @@
-name: Lint Markdown Files
+name: Markdown Linter
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
+    branches: [ main ]
 
 jobs:
-  markdownlint:
+  lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        # Updated to v5 to resolve the Node.js 20 deprecation warning
-        uses: actions/checkout@v5
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        # Updated to v5 to resolve the Node.js 20 deprecation warning
-        uses: actions/setup-node@v5
-        with:
-          node-version: '22'
+      - name: Install dependencies
+        run: npm install -g markdownlint-cli2@0.23.2
 
-      - name: Run markdownlint-cli2
-        run: npx markdownlint-cli2 "**/*.md"
+      - name: Run markdownlint-cli2 with auto-fix
+        # The --fix flag automatically repairs spacing, list indentation, and trailing spaces
+        run: npx markdownlint-cli2-fix "**/*.md"
