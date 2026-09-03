@@ -1,14 +1,15 @@
-# A deep dive into managing Linux file permissions, ownership, and ACLs.
+# A deep dive into managing Linux file permissions, ownership, and ACLs
 
 ## 1. Numeric (Octal) Permission Breakdown
 
 Permissions are represented by a 3-digit (or 4-digit) octal number. Each digit is the sum of the permissions for **Owner (u)**, **Group (g)**, and **Others (o)**.
 
 ### Permission Values
-*   **4:** Read (`r`) - Ability to view file contents or list directory contents.
-*   **2:** Write (`w`) - Ability to modify file contents or add/remove files in a directory.
-*   **1:** Execute (`x`) - Ability to run a file as a program or enter a directory (`cd`).
-*   **0:** No permission (`-`)
+
+* **4:** Read (`r`) - Ability to view file contents or list directory contents.
+* **2:** Write (`w`) - Ability to modify file contents or add/remove files in a directory.
+* **1:** Execute (`x`) - Ability to run a file as a program or enter a directory (`cd`).
+* **0:** No permission (`-`)
 
 ---
 
@@ -17,14 +18,16 @@ Permissions are represented by a 3-digit (or 4-digit) octal number. Each digit i
 Instead of numbers, permissions can be modified using letters to add (`+`), remove (`-`), or exactly set (`=`) access.
 
 ### Targets
-*   **u:** User (Owner)
-*   **g:** Group
-*   **o:** Others
-*   **a:** All (User, Group, and Others)
+
+* **u:** User (Owner)
+* **g:** Group
+* **o:** Others
+* **a:** All (User, Group, and Others)
 
 ### Examples of Symbolic Modifications
 
 **Add execute permission for the owner:**
+
 ~~~bash
 chmod \
   u+x \
@@ -32,6 +35,7 @@ chmod \
 ~~~
 
 **Remove write permission for group and others:**
+
 ~~~bash
 chmod \
   go-w \
@@ -39,6 +43,7 @@ chmod \
 ~~~
 
 **Set exact permissions (read/write for owner, read-only for group/others):**
+
 ~~~bash
 chmod \
   u=rw,go=r \
@@ -52,9 +57,10 @@ chmod \
 Special bits alter the default execution or ownership behavior.
 
 ### SUID (Set Owner User ID)
-*   **Numeric:** `4000` (e.g., `4755`)
-*   **Symbolic:** `u+s`
-*   **Function:** Executes the file with the privileges of the file's owner (commonly root), not the user running it (e.g., `/usr/bin/passwd`).
+
+* **Numeric:** `4000` (e.g., `4755`)
+* **Symbolic:** `u+s`
+* **Function:** Executes the file with the privileges of the file's owner (commonly root), not the user running it (e.g., `/usr/bin/passwd`).
 
 ~~~bash
 chmod \
@@ -63,9 +69,10 @@ chmod \
 ~~~
 
 ### SGID (Set Group ID)
-*   **Numeric:** `2000` (e.g., `2755`)
-*   **Symbolic:** `g+s`
-*   **Function:** On a file, runs it with group privileges. On a directory, forces all newly created files within it to inherit the directory's group ownership rather than the creator's primary group.
+
+* **Numeric:** `2000` (e.g., `2755`)
+* **Symbolic:** `g+s`
+* **Function:** On a file, runs it with group privileges. On a directory, forces all newly created files within it to inherit the directory's group ownership rather than the creator's primary group.
 
 ~~~bash
 chmod \
@@ -74,9 +81,10 @@ chmod \
 ~~~
 
 ### Sticky Bit
-*   **Numeric:** `1000` (e.g., `1777`)
-*   **Symbolic:** `+t`
-*   **Function:** Used on shared directories (`/tmp`). Prevents users from deleting or renaming files they do not own, even if they have write access to the directory.
+
+* **Numeric:** `1000` (e.g., `1777`)
+* **Symbolic:** `+t`
+* **Function:** Used on shared directories (`/tmp`). Prevents users from deleting or renaming files they do not own, even if they have write access to the directory.
 
 ~~~bash
 chmod \
@@ -91,7 +99,8 @@ chmod \
 ### Common Production & Desktop Permissions
 
 **777 (rwxrwxrwx)**
-*   Read, write, and execute for everyone. (Dangerous for sensitive files).
+
+* Read, write, and execute for everyone. (Dangerous for sensitive files).
 
 ~~~bash
 chmod \
@@ -100,7 +109,8 @@ chmod \
 ~~~
 
 **755 (rwxr-xr-x)**
-*   Owner has full access; group and others have read and execute access. (Standard for directories and executable scripts).
+
+* Owner has full access; group and others have read and execute access. (Standard for directories and executable scripts).
 
 ~~~bash
 chmod \
@@ -109,7 +119,8 @@ chmod \
 ~~~
 
 **700 (rwx------)**
-*   Owner has full access; group and others have no access. (Standard for private directories like `~/.ssh`).
+
+* Owner has full access; group and others have no access. (Standard for private directories like `~/.ssh`).
 
 ~~~bash
 chmod \
@@ -118,7 +129,8 @@ chmod \
 ~~~
 
 **644 (rw-r--r--)**
-*   Owner can read and write; group and others can only read. (Standard for configuration files and documents).
+
+* Owner can read and write; group and others can only read. (Standard for configuration files and documents).
 
 ~~~bash
 chmod \
@@ -127,7 +139,8 @@ chmod \
 ~~~
 
 **600 (rw-------)**
-*   Owner can read and write; group and others have no access. (Standard for private files like SSH private keys).
+
+* Owner can read and write; group and others have no access. (Standard for private files like SSH private keys).
 
 ~~~bash
 chmod \
@@ -140,6 +153,7 @@ chmod \
 ## 5. Changing Permissions and Ownership Commands
 
 **Modify file or directory permissions recursively.**
+
 ~~~bash
 chmod \
   -R \
@@ -148,6 +162,7 @@ chmod \
 ~~~
 
 **Change file owner and group.**
+
 ~~~bash
 chown \
   <user>:<group> \
@@ -155,6 +170,7 @@ chown \
 ~~~
 
 **Change file owner recursively.**
+
 ~~~bash
 chown \
   -R \
@@ -163,6 +179,7 @@ chown \
 ~~~
 
 **View current permissions, ownership, and hidden files.**
+
 ~~~bash
 ls \
   -la \
@@ -176,12 +193,14 @@ ls \
 Standard permissions only allow one owner and one group. ACLs permit assigning permissions to specific additional users or groups.
 
 **View current ACLs on a file or directory.**
+
 ~~~bash
 getfacl \
   <file_or_directory>
 ~~~
 
 **Modify (add/change) an ACL to give a specific user read and write access.**
+
 ~~~bash
 setfacl \
   -m \
@@ -190,6 +209,7 @@ setfacl \
 ~~~
 
 **Remove a specific user's ACL entry.**
+
 ~~~bash
 setfacl \
   -x \
@@ -198,6 +218,7 @@ setfacl \
 ~~~
 
 **Remove all ACLs from a file.**
+
 ~~~bash
 setfacl \
   -b \
@@ -211,6 +232,7 @@ setfacl \
 Attributes sit below standard permissions and can restrict root users. Highly relevant for protecting critical system files or BTRFS subvolume roots.
 
 **Make a file immutable (cannot be deleted, renamed, or modified by anyone, including root).**
+
 ~~~bash
 sudo \
   chattr \
@@ -219,6 +241,7 @@ sudo \
 ~~~
 
 **Remove the immutable attribute.**
+
 ~~~bash
 sudo \
   chattr \
@@ -227,6 +250,7 @@ sudo \
 ~~~
 
 **List extended attributes on a file.**
+
 ~~~bash
 lsattr \
   <file>
@@ -234,11 +258,12 @@ lsattr \
 
 ---
 
-## 8. SELinux Security Contexts 
+## 8. SELinux Security Contexts
 
 For systems enforcing SELinux, standard permissions are evaluated first, followed by SELinux policies.
 
 **List files with their SELinux security contexts.**
+
 ~~~bash
 ls \
   -Z \
@@ -246,6 +271,7 @@ ls \
 ~~~
 
 **Restore the default SELinux context for a file based on system policy (useful after moving files).**
+
 ~~~bash
 restorecon \
   -v \
@@ -253,6 +279,7 @@ restorecon \
 ~~~
 
 **Change a file's SELinux context type manually.**
+
 ~~~bash
 chcon \
   -t \

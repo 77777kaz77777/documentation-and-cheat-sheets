@@ -1,4 +1,4 @@
-## Steps to compile and install Linux software directly from source code.
+## Steps to compile and install Linux software directly from source code
 
  Installing software from source on Linux involves downloading the raw source code, satisfying its dependencies, compiling it into executable binary files, and placing those binaries into your system path.
 
@@ -69,6 +69,7 @@ sudo \
 Different projects use different build systems. Identify the primary build file in the repository (e.g., `Makefile`, `CMakeLists.txt`, `meson.build`, or `configure`) to determine which build method to use.
 
 ### 1. Clone or Download the Source Code
+
 Obtain the source files directly from GitHub or a tarball archive.
 
 **From GitHub:**
@@ -97,13 +98,16 @@ cd \
 ```
 
 ### 2. Check for Dependencies and Build Instructions
+
 Always inspect project documentation before running build scripts. Read the project's documentation files to identify required library dependencies and specific build flags:
 
 ```bash
 cat \
   README.md
 ```
+
 *or*
+
 ```bash
 cat \
   INSTALL
@@ -112,9 +116,11 @@ cat \
 Install any missing development packages (usually named with a `-dev` suffix on Debian/Ubuntu or `-devel` on Fedora) via your package manager.
 
 ### 3. Compile and Install Using the Project's Build System
+
 Follow the method matching the repository's configuration files. Choose **one** of the following sub-methods based on what files exist in the repository root:
 
 #### Option A: GNU Autotools (`./configure`)
+
 *Used if the project contains a `configure` or `autogen.sh` file.*
 
 ```bash
@@ -136,6 +142,7 @@ sudo \
 ```
 
 #### Option B: CMake
+
 *Used if the project contains a `CMakeLists.txt` file.*
 
 ```bash
@@ -165,6 +172,7 @@ sudo \
 ```
 
 #### Option C: Meson & Ninja
+
 *Used if the project contains a `meson.build` file.*
 
 ```bash
@@ -188,6 +196,7 @@ sudo \
 ```
 
 #### Option D: Standard `Makefile` Only
+
 *Used if the project only contains a plain `Makefile` without a configure step.*
 
 ```bash
@@ -202,6 +211,7 @@ sudo \
 ```
 
 ### 4. Update Shared Library Cache and Verify
+
 Ensure your system links new libraries and binary paths correctly. If the installation added shared libraries (`.so` files), refresh the system dynamic linker cache:
 
 ```bash

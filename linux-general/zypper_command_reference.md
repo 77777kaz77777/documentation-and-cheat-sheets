@@ -1,10 +1,11 @@
-## Everyday commands for managing packages on openSUSE and SLES using Zypper.
+## Everyday commands for managing packages on openSUSE and SLES using Zypper
 
 # Zypper Command Reference Guide (openSUSE / SUSE Linux Enterprise)
 
 ## Core Package Management
 
 **Install software.**
+
 ```bash
 zypper \
   install \
@@ -12,6 +13,7 @@ zypper \
 ```
 
 **Remove (uninstall) software.**
+
 ```bash
 zypper \
   remove \
@@ -19,18 +21,21 @@ zypper \
 ```
 
 **Upgrade software (standard update).**
+
 ```bash
 zypper \
   update
 ```
 
 **Upgrade software (distribution upgrade / rolling release).**
+
 ```bash
 zypper \
   dup
 ```
 
 **Remove unneeded dependencies.**
+
 ```bash
 zypper \
   remove \
@@ -39,6 +44,7 @@ zypper \
 ```
 
 **Install build dependencies for a package.**
+
 ```bash
 zypper \
   source-install \
@@ -49,6 +55,7 @@ zypper \
 ## Search and Information
 
 **Search for software matching specified strings.**
+
 ```bash
 zypper \
   search \
@@ -56,6 +63,7 @@ zypper \
 ```
 
 **List packages depending on their relation to the system with additional details.**
+
 ```bash
 zypper \
   info \
@@ -63,6 +71,7 @@ zypper \
 ```
 
 **Find what package provides the given value.**
+
 ```bash
 zypper \
   search \
@@ -73,18 +82,21 @@ zypper \
 ## Repository and Configuration Management
 
 **Generate the metadata cache (refresh).**
+
 ```bash
 zypper \
   refresh
 ```
 
 **List configured repositories.**
+
 ```bash
 zypper \
   repos
 ```
 
 **Add a new repository.**
+
 ```bash
 zypper \
   addrepo \
@@ -93,6 +105,7 @@ zypper \
 ```
 
 **Remove or expire cached data.**
+
 ```bash
 zypper \
   clean

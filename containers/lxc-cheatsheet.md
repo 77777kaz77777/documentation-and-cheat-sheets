@@ -1,7 +1,8 @@
-## LXC/LXD Essentials Cheat Sheet 
+## LXC/LXD Essentials Cheat Sheet
 
 Most modern implementations use the lxc command-line tool (part of the LXD project).
-|  |  |
+
+| | |
 | :- | :- |
 | Action | Command |
 | **List Containers** | lxc list |
@@ -13,9 +14,11 @@ Most modern implementations use the lxc command-line tool (part of the LXD proje
 | **Delete Container** | lxc delete [name] --force |
 | **Show Container Info** | lxc info [name] |
 
-## ** Access & Configuration**
+## **Access & Configuration**
+
 Interacting with the "inside" of an LXC container is very similar to interacting with a virtual machine.
-|  |  |
+
+| | |
 | :- | :- |
 | Action | Command |
 | **Open Shell (Root)** | lxc exec [name] -- /bin/bash |
@@ -26,14 +29,18 @@ Interacting with the "inside" of an LXC container is very similar to interacting
 | **Set Resource Limit** | lxc config set [name] limits.cpu 2 |
 
 ## **Snapshots & Images**
+
 One of the best features of LXC is the ability to "freeze" a state before making risky changes.
-  - **Create Snapshot:** lxc snapshot [name] [snap_name]
-  - **Restore Snapshot:** lxc restore [name] [snap_name]
-  - **List Snapshots:** lxc info [name] (Look under the Snapshots section)
-  - **Delete Snapshot:** lxc delete [name]/[snap_name]
-  - **Publish as Image:** lxc publish [name]/[snap_name] --alias [my-custom-image]
-## ** Network & Storage**
-|  |  |
+
+- **Create Snapshot:** lxc snapshot [name] [snap_name]
+- **Restore Snapshot:** lxc restore [name] [snap_name]
+- **List Snapshots:** lxc info [name] (Look under the Snapshots section)
+- **Delete Snapshot:** lxc delete [name]/[snap_name]
+- **Publish as Image:** lxc publish [name]/[snap_name] --alias [my-custom-image]
+
+## **Network & Storage**
+
+| | |
 | :- | :- |
 | Action | Command |
 | **List Networks** | lxc network list |
@@ -42,6 +49,7 @@ One of the best features of LXC is the ability to "freeze" a state before making
 | **Create Managed Volume** | lxc storage volume create [pool] [volume_name] |
 
 ### **Comparison Note**
-  - **Docker:** Temporary, ephemeral, application-centric.
-  - **LXC/LXD:** Persistent, stateful, machine-centric (it has its own init, ssh, cron, etc.).
+
+- **Docker:** Temporary, ephemeral, application-centric.
+- **LXC/LXD:** Persistent, stateful, machine-centric (it has its own init, ssh, cron, etc.).
 Should we add a section for **Proxmox-specific LXC** commands (since many people use LXC through the Proxmox pct tool)?

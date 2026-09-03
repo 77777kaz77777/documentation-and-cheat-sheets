@@ -1,6 +1,7 @@
-## Core commands for spinning up Docker containers, managing images, and using Compose.
+## Core commands for spinning up Docker containers, managing images, and using Compose
 
-##  Docker CLI Essentials
+## Docker CLI Essentials
+
 | Action | Command |
 | :--- | :--- |
 | **Run a Container** | `docker run -d --name [name] [image]` |
@@ -15,7 +16,8 @@
 | **Enter Container Shell** | `docker exec -it [container_name] /bin/bash` |
 | **Prune (Clean) System** | `docker system prune -a` |
 
-##  Docker Compose Commands
+## Docker Compose Commands
+
 | Action | Command |
 | :--- | :--- |
 | **Start Services (Background)** | `docker-compose up -d` |
@@ -27,13 +29,15 @@
 | **Restart Services** | `docker-compose restart` |
 | **Pull New Images** | `docker-compose pull` |
 
-##  Helpful Shortcuts & Tips
+## Helpful Shortcuts & Tips
 
 ### Container Cleanup
+
 ```bash
 docker system prune --volumes
 ```
 
 ### Port Mapping & Volumes
+
 * **Ports:** `-p 8080:80` (Access the app via port 8080 on your machine).
 * **Volumes:** `-v /my/data:/data` (Syncs a local folder to the container).

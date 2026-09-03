@@ -1,13 +1,16 @@
 ## Fedora ClamAV & SELinux Implementation Guide
 
 ### 1. Installation
+
 Remove any incomplete upstream standalone RPMs to prevent conflicts, then install the official Fedora packages.
+
 ```bash
 sudo dnf remove clamav
 sudo dnf install clamav clamav-update clamd
 ```
 
 ### 2. Daemon Provisioning & Configuration
+
 Fedora's default `clamd` configuration includes a deliberate safety lock (`Example`). Overwrite `/etc/clamd.d/scan.conf` to configure local socket connections and force the daemon to retain `root` execution privileges at the POSIX level so it can read files across the entire filesystem.
 
 ```bash
@@ -29,6 +32,7 @@ EOF
 ```
 
 ### 3. Runtime Environment & SELinux Setup
+
 Fedora mounts `/run` as `tmpfs` (RAM). You must create the socket directory and set SELinux booleans to permit scanning and JIT memory allocation. Manual directory creation requires restoring context labels.
 
 ```bash
@@ -42,6 +46,7 @@ sudo restorecon -Rv /run/clamd.scan /etc/clamd.d/
 ```
 
 ### 4. Signature Updates & Service Activation
+
 ```bash
 sudo freshclam
 sudo systemctl enable --now clamd@scan.service
@@ -49,11 +54,13 @@ sudo systemctl enable --now clamav-freshclam.service
 ```
 
 ### 5. Production Scanning Script (`/usr/local/bin/sys-scan`)
+
 Using `--stream` forces the `clamdscan` client to read the file into memory itself and stream the raw bytes over the socket to the daemon, bypassing the SELinux descriptor restriction.
 
 ```bash
 sudo nano /usr/local/bin/sys-scan
 ```
+
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
@@ -72,11 +79,13 @@ else
     clamscan -r --infected /home /usr/bin /usr/local/bin
 fi
 ```
+
 ```bash
 sudo chmod +x /usr/local/bin/sys-scan
 ```
 
 ### Operational Troubleshooting
+
 * **`Can't send to clamd: Broken pipe`**: Daemon not listening. Restart via `sudo systemctl restart clamd@scan`.
 * **`Control message truncated`**: SELinux intercepted file descriptor transfer. Ensure script uses `--stream`.
 * **SELinux Audit Logging**: Query raw AVC denials with `sudo ausearch -m avc -ts recent -c clamd`.

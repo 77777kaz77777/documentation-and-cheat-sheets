@@ -1,8 +1,9 @@
-## Essential commands for running daemonless containers with Podman.
+## Essential commands for running daemonless containers with Podman
 
 Podman is a daemonless, rootless container engine designed to manage containers, pods, and images, with a command-line interface nearly identical to Docker.
 
-### ** Container Management**
+### **Container Management**
+
 | Action | Command |
 | :--- | :--- |
 | **List Running Containers** | `podman ps` |
@@ -15,7 +16,8 @@ Podman is a daemonless, rootless container engine designed to manage containers,
 | **Remove a Container** | `podman rm [name]` |
 | **Force Remove a Running Container** | `podman rm -f [name]` |
 
-### ** Execution & Inspection**
+### **Execution & Inspection**
+
 | Action | Command |
 | :--- | :--- |
 | **Open Shell Inside Container** | `podman exec -it [name] /bin/bash` |
@@ -26,6 +28,7 @@ Podman is a daemonless, rootless container engine designed to manage containers,
 | **View Resource Usage (Stats)** | `podman stats` |
 
 ### **Image Management**
+
 | Action | Command |
 | :--- | :--- |
 | **List Local Images** | `podman images` |
@@ -35,7 +38,9 @@ Podman is a daemonless, rootless container engine designed to manage containers,
 | **Tag an Image** | `podman tag [image] [new_image:tag]` |
 
 ### **Pods & Networking**
+
 *Unlike Docker, Podman allows you to group containers into "Pods" (similar to Kubernetes pods).*
+
 | Action | Command |
 | :--- | :--- |
 | **List Pods** | `podman pod ls` |
@@ -45,7 +50,8 @@ Podman is a daemonless, rootless container engine designed to manage containers,
 | **Remove a Pod** | `podman pod rm [pod_name]` |
 | **List Networks** | `podman network ls` |
 
-### ** Volumes & Storage**
+### **Volumes & Storage**
+
 | Action | Command |
 | :--- | :--- |
 | **List Volumes** | `podman volume ls` |

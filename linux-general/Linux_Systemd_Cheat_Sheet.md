@@ -1,4 +1,4 @@
-# Everyday commands for handling services and logs with Systemd and journalctl.
+# Everyday commands for handling services and logs with Systemd and journalctl
 
 Systemd is the system and service manager responsible for controlling system units, background services, boots, and logs.
 

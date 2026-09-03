@@ -1,4 +1,4 @@
-# Commands to monitor NVIDIA GPU performance and CUDA workloads.
+# Commands to monitor NVIDIA GPU performance and CUDA workloads
 
 ## Hardware Monitoring Tools
 

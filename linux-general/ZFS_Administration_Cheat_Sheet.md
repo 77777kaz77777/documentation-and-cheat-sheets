@@ -1,6 +1,6 @@
 ## A technical reference detailing essential commands for managing ZFS physical storage pools and logical datasets, including pool creation, dataset properties, snapshot replication, and disk replacement workflows
-## 1. Zpool Management (Physical Disks)
 
+## 1. Zpool Management (Physical Disks)
 
 **Check Pool Status and Health:**
 
@@ -157,5 +157,7 @@ zpool online \
 ```
 
 ---
+
 ## Sources & Verification
-* **ZFS Commands:** Verified against the official OpenZFS Documentation (https://openzfs.github.io/openzfs-docs/). Syntax, dataset properties, and pool management parameters have been validated for correct structure and safe execution.
+
+* **ZFS Commands:** Verified against the official OpenZFS Documentation (<https://openzfs.github.io/openzfs-docs/>). Syntax, dataset properties, and pool management parameters have been validated for correct structure and safe execution.

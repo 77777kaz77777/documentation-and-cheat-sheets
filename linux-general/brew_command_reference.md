@@ -1,8 +1,9 @@
-# Essential Homebrew commands for installing software on macOS and Linux.
+# Essential Homebrew commands for installing software on macOS and Linux
 
 ## Core Package Management
 
 **Install software.**
+
 ```bash
 brew \
   install \
@@ -10,6 +11,7 @@ brew \
 ```
 
 **Install GUI software (Cask).**
+
 ```bash
 brew \
   install \
@@ -18,6 +20,7 @@ brew \
 ```
 
 **Remove (uninstall) software.**
+
 ```bash
 brew \
   uninstall \
@@ -25,12 +28,14 @@ brew \
 ```
 
 **Upgrade software.**
+
 ```bash
 brew \
   upgrade
 ```
 
 **Remove unneeded dependencies and clear old cache.**
+
 ```bash
 brew \
   cleanup
@@ -39,6 +44,7 @@ brew \
 ## Search and Information
 
 **Search for software matching specified strings.**
+
 ```bash
 brew \
   search \
@@ -46,6 +52,7 @@ brew \
 ```
 
 **List packages depending on their relation to the system with additional details.**
+
 ```bash
 brew \
   info \
@@ -53,12 +60,14 @@ brew \
 ```
 
 **List installed packages.**
+
 ```bash
 brew \
   list
 ```
 
 **Show package dependencies.**
+
 ```bash
 brew \
   deps \
@@ -68,12 +77,14 @@ brew \
 ## Repository and Configuration Management
 
 **Generate the metadata cache (update Homebrew and formulae).**
+
 ```bash
 brew \
   update
 ```
 
 **Add a new repository (tap).**
+
 ```bash
 brew \
   tap \
@@ -81,6 +92,7 @@ brew \
 ```
 
 **Check system for potential problems.**
+
 ```bash
 brew \
   doctor

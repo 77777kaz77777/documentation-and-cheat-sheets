@@ -1,4 +1,4 @@
-# How to format and create a multi-boot Ventoy USB drive on Linux.
+# How to format and create a multi-boot Ventoy USB drive on Linux
 
 This guide provides step-by-step instructions to create a Ventoy USB drive on Fedora Linux using either the graphical WebGUI or the command-line interface.
 
@@ -9,6 +9,7 @@ This guide provides step-by-step instructions to create a Ventoy USB drive on Fe
 ## Step-by-Step Instructions
 
 ### Step 1: Identify your USB drive path
+
 Plug in your USB flash drive and open a terminal. Run `lsblk` to identify its device name:
 
 ```bash
@@ -20,6 +21,7 @@ Look for your USB drive in the list (e.g., `sdb` or `sdc`). Note the device path
 ---
 
 ### Step 2: Download and extract Ventoy
+
 Download the latest Linux `.tar.gz` package from Ventoy's GitHub release page or run the following commands in your terminal:
 
 ```bash
@@ -33,6 +35,7 @@ cd ventoy-1.0.99/
 ### Step 3: Choose an installation method
 
 #### Option A: Install via WebGUI (Recommended)
+
 Launch the WebGUI installer with administrator privileges:
 
 ```bash
@@ -45,6 +48,7 @@ sudo ./VentoyWeb.sh
 4. Once finished, return to the terminal and press `Ctrl+C` to stop the web server.
 
 #### Option B: Install via CLI
+
 Run `Ventoy2Disk.sh` with the `-i` flag targeting your USB drive:
 
 ```bash
@@ -56,6 +60,7 @@ sudo ./Ventoy2Disk.sh -i /dev/sdX
 ---
 
 ### Step 4: Copy ISO files to the USB
+
 1. Unplug and re-plug your USB drive (or remount it).
 2. Open the volume labeled **Ventoy**.
 3. Drag and drop any ISO image files (Fedora, Ubuntu, Windows, etc.) directly onto the drive.

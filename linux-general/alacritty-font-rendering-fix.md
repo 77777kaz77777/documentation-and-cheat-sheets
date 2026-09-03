@@ -1,15 +1,18 @@
 # Alacritty Rendering Troubleshooting Guide (Fedora KDE)
 
 ## Problem
+
 Visual artifacting, text clipping, and residual text remaining on the window margins in the Alacritty terminal.
 
 ## Root Cause
+
 1. **Missing Font:** The configured `JetBrains Mono Nerd Font` is missing from the host system, causing character metric mismatches during font fallback.
 2. **Wayland Compositor Redraw:** The Wayland compositor under KDE Plasma fails to refresh padded terminal margins correctly upon window resize.
 
 ## Solution
 
 ### Step 1: Install Required Nerd Fonts
+
 Download and install the JetBrains Mono Nerd Font to the local user directory. Execute the following commands sequentially:
 
 ```bash

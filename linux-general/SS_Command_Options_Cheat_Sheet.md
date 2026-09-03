@@ -1,4 +1,4 @@
-# How to inspect network sockets and connections using the ss command.
+# How to inspect network sockets and connections using the ss command
 
 The `ss` command is a utility used to investigate socket connections on Linux systems.
 
@@ -77,6 +77,7 @@ The `ss` command is a utility used to investigate socket connections on Linux sy
 ## 🏷️ State Filters & TCP States
 
 ### State Filters
+
 - **`all`**
 - **`connected`** (`established`, `syn-sent`, `syn-recv`, `fin-wait-1`, `fin-wait-2`, `time-wait`, `close-wait`, `last-ack`, `closing`)
 - **`synchronized`** (`established`, `syn-recv`, `fin-wait-1`, `fin-wait-2`, `time-wait`, `close-wait`, `last-ack`, `closing`)
@@ -84,4 +85,5 @@ The `ss` command is a utility used to investigate socket connections on Linux sy
 - **`big`** (`established`, `syn-sent`, `fin-wait-1`, `fin-wait-2`, `closed`, `close-wait`, `last-ack`, `listening`, `closing`)
 
 ### Individual TCP States
+
 `established`, `syn-sent`, `syn-recv`, `fin-wait-1`, `fin-wait-2`, `time-wait`, `closed`, `close-wait`, `last-ack`, `listening`, `closing`

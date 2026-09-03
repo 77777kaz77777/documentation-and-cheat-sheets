@@ -1,12 +1,12 @@
-## A breakdown of the 2026 Enterprise Linux landscape plus core admin commands.
+## A breakdown of the 2026 Enterprise Linux landscape plus core admin commands
 
 ## 1. Enterprise Linux Ecosystem Overview (Current as of August 2026)
 
 The current Enterprise Linux ecosystem relies on a specific upstream and downstream relationship structure:
 
 * **CentOS Stream:** Serves as the continuously delivered upstream public development branch for RHEL. The current active major branches are CentOS Stream 10 (tracking ahead of RHEL 10) and CentOS Stream 9.
-* **Red Hat Enterprise Linux (RHEL):** The primary commercial enterprise release. The current latest flagship version is RHEL 10.2, released in May 2026, with full support extending to May 2030 and maintenance to May 2035. 
-* **Rocky Linux:** A downstream, 100% bug-for-bug compatible community rebuild of RHEL. The current latest version is Rocky Linux 10.2, released in May 2026. 
+* **Red Hat Enterprise Linux (RHEL):** The primary commercial enterprise release. The current latest flagship version is RHEL 10.2, released in May 2026, with full support extending to May 2030 and maintenance to May 2035.
+* **Rocky Linux:** A downstream, 100% bug-for-bug compatible community rebuild of RHEL. The current latest version is Rocky Linux 10.2, released in May 2026.
 
 ## 2. The Difference Between Fedora and Enterprise Linux
 

@@ -1,4 +1,4 @@
-## Fixes and syntax for setting up Tailscale repositories with DNF5 on Fedora.
+## Fixes and syntax for setting up Tailscale repositories with DNF5 on Fedora
 
 If you are running Fedora 41 or newer, repository management syntax has changed due to the migration to **DNF5**. Specifically, `--add-repo` was replaced with the `addrepo` positional verb.
 

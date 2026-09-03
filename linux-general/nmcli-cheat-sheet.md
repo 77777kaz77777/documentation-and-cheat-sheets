@@ -47,6 +47,7 @@
 ### Ethernet/IP Configuration
 
 - **Set static IP address:**
+
   ```text
   nmcli connection modify "Wired connection 1" ipv4.addresses 192.168.1.100/24
   nmcli connection modify "Wired connection 1" ipv4.gateway 192.168.1.1

@@ -6,7 +6,7 @@
 | :--- | :--- |
 | `sudo snapper ls` | List all snapshots for the default configuration (root). |
 | `sudo snapper -c <config> ls` | List snapshots for a specific configuration (e.g., `home`). |
-| `sudo snapper create -c <config> -d "<description>"`| Create a manual snapshot with a description. |
+| `sudo snapper create -c <config> -d "<description>"` | Create a manual snapshot with a description. |
 | `sudo snapper delete <number>` | Delete a specific snapshot by its number. |
 | `sudo snapper delete <start_num>-<end_num>` | Delete a range of snapshots. |
 

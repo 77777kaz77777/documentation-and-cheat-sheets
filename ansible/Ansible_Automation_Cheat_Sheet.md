@@ -1,6 +1,7 @@
 # Ansible Automation Cheat Sheet
 
 ## 🚀 Ansible Ad-Hoc Commands
+
 | Action | Command |
 | :--- | :--- |
 | **Ping all hosts** | `ansible all -m ping` |
@@ -11,6 +12,7 @@
 | **Gather facts** | `ansible hostname -m setup` |
 
 ## 📝 Playbook Management
+
 | Action | Command |
 | :--- | :--- |
 | **Run a playbook** | `ansible-playbook site.yml` |
@@ -21,6 +23,7 @@
 | **Limit to one host** | `ansible-playbook site.yml --limit "webserver01"` |
 
 ## 🔐 Ansible Vault (Secrets)
+
 | Action | Command |
 | :--- | :--- |
 | **Create encrypted file** | `ansible-vault create secret.yml` |
@@ -30,23 +33,28 @@
 | **Run with vault pass** | `ansible-playbook site.yml --ask-vault-pass` |
 
 ## 🏗️ Inventory & Roles
+
 * **List hosts in a group:** `ansible [group_name] --list-hosts`
 * **Create a new role:** `ansible-galaxy init my_new_role`
 * **Install role from Galaxy:** `ansible-galaxy install geerlingguy.apache`
 * **List installed roles:** `ansible-galaxy list`
 
 ## 🔍 Useful Variables & Debugging
+
 * **Debug a variable:**
+
 ```yaml
 - name: Print a variable
   debug:
     msg: "The value of foo is {{ foo }}"
 ```
+
 * **Common Magic Variables:**
   * `{{ inventory_hostname }}`: The name of the current host being configured.
   * `{{ groups['webservers'] }}`: List of all hosts in the 'webservers' group.
   * `{{ ansible_default_ipv4.address }}`: The primary IP of the managed node.
 
 ## 🛠️ Configuration Tips
+
 * **The `ansible.cfg` file:** Ansible looks for configuration in the current directory first, then `~/.ansible.cfg`, then `/etc/ansible/ansible.cfg`.
 * **Become (Sudo):** Use `--become` or `-K` in the CLI to prompt for the sudo password.

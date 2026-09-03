@@ -1,4 +1,4 @@
-# Fixes for multi-monitor display glitches in KDE Plasma 6.
+# Fixes for multi-monitor display glitches in KDE Plasma 6
 
 **Issue:** An external monitor connected via USB-C/Dock or DisplayPort is not detected in KDE System Settings (`kscreen`), even though the monitor is powered on and connected.
 
@@ -15,6 +15,7 @@ for d in /sys/class/drm/card*-*; do echo "$d: $(cat $d/status)"; done
 ```
 
 ### Interpreting the Results
+
 - **Scenario A: Kernel sees fewer connected displays than physically plugged in**
   - *Example:* Only 2 displays show connected.
   - *Cause:* Physical cable, missing dock power, or hardware bandwidth limitations. Try swapping cables or testing monitors individually.
@@ -40,13 +41,17 @@ Running an external monitor at high refresh rates (e.g., 100Hz or 144Hz) over a 
 KDE Plasma caches display configurations. If a previous layout failed or corrupted, KScreen may refuse to initialize newly connected ports.
 
 1. Wipe the cached display configuration files:
+
    ```bash
    rm -rf ~/.local/share/kscreen/
    ```
+
 2. Restart the KDE display daemon:
+
    ```bash
    systemctl --user restart plasma-kscreen.service
    ```
+
 3. Unplug the USB-C dock or monitor cable from your laptop, wait 5 seconds, and plug it back in.
 
 ---

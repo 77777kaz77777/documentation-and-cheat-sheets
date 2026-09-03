@@ -1,5 +1,5 @@
 
-# Essential keyboard shortcuts for getting around KDE Plasma on Wayland.
+# Essential keyboard shortcuts for getting around KDE Plasma on Wayland
 
 ## KWin Window Management
 

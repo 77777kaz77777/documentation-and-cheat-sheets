@@ -1,6 +1,7 @@
-## A quick-reference guide for managing Windows software packages using the Winget command-line tool, covering package discovery, silent installations, bulk upgrades, and system provisioning.
+## A quick-reference guide for managing Windows software packages using the Winget command-line tool, covering package discovery, silent installations, bulk upgrades, and system provisioning
 
 ## Search & Discovery
+
 | Command | Action |
 | :--- | :--- |
 | `winget search <name>` | Searches repositories for a package matching the name. |
@@ -10,6 +11,7 @@
 | `winget show <package>` | Displays detailed metadata (version, publisher, URLs) for a package. |
 
 ## Installation & Removal
+
 | Command | Action |
 | :--- | :--- |
 | `winget install <name>` | Installs the best match for the given name. |
@@ -18,6 +20,7 @@
 | `winget uninstall --id <id>` | Uninstalls a package using its exact ID. |
 
 ## Updates & Upgrades
+
 | Command | Action |
 | :--- | :--- |
 | `winget upgrade` | Lists all installed packages that have an available update. |
@@ -25,12 +28,14 @@
 | `winget upgrade --all` | Upgrades all eligible packages to their latest versions. |
 
 ## Automation & Provisioning
+
 | Command | Action |
 | :--- | :--- |
 | `winget export -o <file.json>` | Exports a list of all currently installed winget packages to a JSON file. |
 | `winget import -i <file.json>` | Installs all packages listed in a previously exported JSON file. |
 
 ## Essential Modifiers & Flags
+
 | Flag | Effect |
 | :--- | :--- |
 | `-h` or `--silent` | Runs the installer in the background without launching a visible UI. |
@@ -40,6 +45,7 @@
 | `-v <version>` | Installs a specific version of a package rather than the latest. |
 
 **Example of a fully automated, silent install:**
+
 ```powershell
 winget install --id Mozilla.Firefox -e --silent --accept-package-agreements --accept-source-agreements
 ```

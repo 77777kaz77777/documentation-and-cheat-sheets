@@ -1,4 +1,4 @@
-# How to tweak and customize system info outputs using Fastfetch.
+# How to tweak and customize system info outputs using Fastfetch
 
 Customizing **Fastfetch** (the speedy, highly configurable successor to Neofetch) is done using a structured JSONC (JSON with Comments) configuration system. This allows you to easily format modules, change colors, insert custom text, and swap out logos.
 
@@ -48,6 +48,7 @@ The JSONC file is broken down into three major pillars:
 The `"logo"` block handles the visual art displayed on the left side of your terminal fetch.
 
 ### Switch to a Built-in OS Logo
+
 ```jsonc
 "logo": {
     "source": "arch", // Try "ubuntu", "fedora", "apple", "windows", etc.
@@ -58,6 +59,7 @@ The `"logo"` block handles the visual art displayed on the left side of your ter
 ```
 
 ### Use a Custom Image (Kitty/Sixel Protocol)
+
 If your terminal emulator supports images (Kitty, WezTerm, Alacritty with graphics support, iTerm2):
 
 ```jsonc
@@ -70,6 +72,7 @@ If your terminal emulator supports images (Kitty, WezTerm, Alacritty with graphi
 ```
 
 ### Use Custom ASCII Art
+
 Save text art in a plain file (e.g., `~/.config/fastfetch/my_ascii.txt`) and reference it:
 
 ```jsonc
@@ -106,6 +109,7 @@ The `"display"` block alters how text elements behave next to the logo:
 The `"modules"` array controls what information prints.
 
 ### Basic Module Array (Simple Strings)
+
 ```jsonc
 "modules": [
     "title",
@@ -123,6 +127,7 @@ The `"modules"` array controls what information prints.
 ```
 
 ### Advanced Modules (Objects with Parameters)
+
 Replace simple strings with objects to customize layout, labels, colors, and format strings:
 
 ```jsonc
@@ -180,5 +185,6 @@ If a Nerd Font is installed in your terminal, copy-paste icons directly into `"k
 Run `fastfetch` in your terminal to view changes instantly. Fastfetch will print detailed error lines if your JSON syntax is invalid.
 
 ### Launch on Terminal Startup
+
 - **Bash / Zsh:** Add `fastfetch` to the bottom of `~/.bashrc` or `~/.zshrc`.
 - **Fish:** Add `fastfetch` inside the interactive block in `~/.config/fish/config.fish`.

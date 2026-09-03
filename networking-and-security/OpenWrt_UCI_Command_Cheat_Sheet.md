@@ -1,4 +1,4 @@
-## How to configure OpenWrt router settings straight from the terminal using UCI.
+## How to configure OpenWrt router settings straight from the terminal using UCI
 
 # OpenWrt UCI (Unified Configuration Interface) Cheat Sheet
 

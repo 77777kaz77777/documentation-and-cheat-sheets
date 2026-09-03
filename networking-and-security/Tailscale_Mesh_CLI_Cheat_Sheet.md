@@ -1,4 +1,4 @@
-## Terminal commands for setting up and managing Tailscale mesh networks. 
+## Terminal commands for setting up and managing Tailscale mesh networks
 
 # Tailscale Mesh Networking Cheat Sheet
 

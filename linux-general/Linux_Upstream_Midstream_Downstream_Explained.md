@@ -1,4 +1,4 @@
-# A plain-English explanation of how upstream, midstream, and downstream open-source flows work.
+# A plain-English explanation of how upstream, midstream, and downstream open-source flows work
 
 To understand upstream, midstream, and downstream, picture software development as a physical river. Water (code, features, bug fixes) originates at the source high up in the mountains. As it flows down the river, it is collected, tested, refined, and filtered until it reaches end consumers.
 

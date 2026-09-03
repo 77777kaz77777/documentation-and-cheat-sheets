@@ -13,6 +13,7 @@
 | **Generate Policy Fix from Logs** | `sudo sealert -a /var/log/audit/audit.log` |
 
 ### Tracking Down and Fixing Context Denials
+
 If a daemon (like `rpc-virtqemud`) denies access to a file because it requires a specific SELinux context (e.g., `virt_image_t`), you must permanently define the default context for the directory and restore the labels.
 
 ```bash
@@ -21,5 +22,6 @@ sudo restorecon -R -v /mnt/storage/vms
 ```
 
 **Command Breakdown:**
+
 * `semanage fcontext`: Permanently adds a rule to the SELinux policy, ensuring any file created in the target directory automatically receives the defined label.
 * `restorecon`: Traverses the directory recursively (`-R`) and applies the newly defined policy to any existing files, outputting the changes (`-v`).

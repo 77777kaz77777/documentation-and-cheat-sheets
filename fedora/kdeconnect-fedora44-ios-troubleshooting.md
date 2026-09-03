@@ -1,10 +1,11 @@
-##  KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora 44 KDE Plasma, even after adding firewall rules to the `home` zone.
+## KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora 44 KDE Plasma, even after adding firewall rules to the `home` zone
 
 # Troubleshooting KDE Connect: Fedora 44 KDE to iOS
 
 **Issue:** KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora 44 KDE Plasma, even after adding firewall rules to the `home` zone.
 
-**Root Causes:** 
+**Root Causes:**
+
 1. Fedora's active network interface defaults to `FedoraWorkstation` or `public` zones, causing `home` zone rules to be ignored.
 2. Fedora 44 (Plasma 6) utilizes D-Bus activation for KDE Connect; standard `systemctl` restart commands will fail if the daemon is killed.
 3. iOS aggressively filters UDP broadcast packets, often requiring manual IP configuration.
@@ -63,16 +64,17 @@ kdeconnect-cli --refresh
 If the firewall is open and the daemon is running but the iPhone still cannot see the Fedora machine, bypass UDP broadcast restrictions by directly inputting the local IP.
 
 1. Retrieve the Fedora machine's local IP address:
+
 ```bash
 ip -br a
 ```
 
 *(Note the IPv4 address assigned to your active connection, e.g., `192.168.8.x` on a GL.iNet router).*
 
-2. Open the KDE Connect app on the iPhone.
-3. Tap the **three-dot menu** (top right corner).
-4. Select **Add device by IP**.
-5. Input the Fedora machine's IPv4 address and initiate pairing.
+1. Open the KDE Connect app on the iPhone.
+2. Tap the **three-dot menu** (top right corner).
+3. Select **Add device by IP**.
+4. Input the Fedora machine's IPv4 address and initiate pairing.
 
 ---
 

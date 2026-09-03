@@ -1,4 +1,4 @@
-## Scripts and steps for setting up a new workstation and automating tool installations.
+## Scripts and steps for setting up a new workstation and automating tool installations
 
 # Workstation Bootstrap & Toolstack Installer Documentation
 
@@ -19,20 +19,25 @@ The source code for this installer is found here: [https://github.com/77777kaz77
 Before executing the script, ensure your system has the standard GUI library and package management prerequisites installed:
 
 * **Fedora / RHEL / Rocky Linux:**
+
   ~~~bash
   sudo \
   dnf \
   install \
   python3-tkinter
   ~~~
+
 * **Ubuntu / Debian:**
+
   ~~~bash
   sudo \
   apt-get \
   install \
   python3-tk
   ~~~
+
 * **Arch Linux:**
+
   ~~~bash
   sudo \
   pacman \
@@ -46,6 +51,7 @@ Before executing the script, ensure your system has the standard GUI library and
 
 1. Save the installer script to your local machine (e.g., `setup.py`).
 2. Grant execution permissions or run directly with administrative privileges using Python:
+
    ~~~bash
    sudo \
    python3 \

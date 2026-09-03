@@ -1,4 +1,4 @@
-# How to fix boot deadlocks caused by MUX switches and Plymouth.
+# How to fix boot deadlocks caused by MUX switches and Plymouth
 
 To force text mode and bypass the MUX/Plymouth deadlock, edit the GRUB parameters directly from the boot selection screen:
 
@@ -18,5 +18,6 @@ To force text mode and bypass the MUX/Plymouth deadlock, edit the GRUB parameter
 Run **one** of the following commands based on your installed utilities:
 
 * **Using `supergfxctl`:**
+
   ```bash
   supergfxctl -m Hybrid

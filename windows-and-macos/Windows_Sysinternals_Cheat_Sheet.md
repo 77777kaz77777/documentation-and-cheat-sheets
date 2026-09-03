@@ -1,4 +1,4 @@
-## A practical guide to core Microsoft Sysinternals tools (Process Explorer, Process Monitor, Autoruns, PsExec, and TCPView), highlighting specific filters, shortcuts, and commands for advanced troubleshooting, malware isolation, and remote system administration.
+## A practical guide to core Microsoft Sysinternals tools (Process Explorer, Process Monitor, Autoruns, PsExec, and TCPView), highlighting specific filters, shortcuts, and commands for advanced troubleshooting, malware isolation, and remote system administration
 
 ## 1. Process Explorer (procexp.exe)
 
@@ -60,5 +60,7 @@ psexec `
 * **Whois integration:** Right-click a remote address and select **Whois** to immediately query the IP ownership.
 
 ---
+
 ## Sources & Verification
-* **Windows Sysinternals:** Tool features and parameters verified against Microsoft Learn official Sysinternals documentation (https://learn.microsoft.com/en-us/sysinternals/). PsExec remote execution syntax confirmed valid.
+
+* **Windows Sysinternals:** Tool features and parameters verified against Microsoft Learn official Sysinternals documentation (<https://learn.microsoft.com/en-us/sysinternals/>). PsExec remote execution syntax confirmed valid.

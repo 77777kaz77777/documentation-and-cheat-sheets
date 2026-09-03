@@ -1,5 +1,4 @@
-## Steps to automate Btrfs snapshots and backups using Btrbk.
-
+## Steps to automate Btrfs snapshots and backups using Btrbk
 
 ## Execution & Dry Runs
 

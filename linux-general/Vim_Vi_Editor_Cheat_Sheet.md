@@ -1,13 +1,15 @@
-# Core commands for opening, editing, saving, and exiting Vi/Vim. 
+# Core commands for opening, editing, saving, and exiting Vi/Vim
 
 Essential navigation, editing, and saving commands for Vi and Vim.
 
 ## **Modes**
+
 * **Normal Mode:** Default entry mode for navigation and commands. Press `Esc` to return here.
 * **Insert Mode:** Used for typing text. Enter by pressing `i`, `a`, or `o`.
 * **Command-Line Mode:** Used for saving, quitting, and searching. Enter by typing `:` while in Normal mode.
 
 ## **Navigation (Normal Mode)**
+
 | Action | Key / Command |
 | :--- | :--- |
 | **Move Left / Down / Up / Right** | `h` / `j` / `k` / `l` |
@@ -18,6 +20,7 @@ Essential navigation, editing, and saving commands for Vi and Vim.
 | **Jump to Top / Bottom of File** | `gg` / `G` |
 
 ## **Editing & Manipulation (Normal Mode)**
+
 | Action | Key / Command |
 | :--- | :--- |
 | **Insert Text (Before Cursor)** | `i` |
@@ -30,6 +33,7 @@ Essential navigation, editing, and saving commands for Vi and Vim.
 | **Redo Change** | `Ctrl + r` |
 
 ## **Search, Save, and Quit (Command-Line Mode)**
+
 | Action | Command |
 | :--- | :--- |
 | **Search Forward for Text** | `/[search_term]` (Press `n` for next match, `N` for previous) |

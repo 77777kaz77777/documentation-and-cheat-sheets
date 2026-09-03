@@ -1,8 +1,9 @@
-# Commands for installing and updating packages in Alpine Linux and containers using APK.
+# Commands for installing and updating packages in Alpine Linux and containers using APK
 
 ## Core Package Management
 
 **Install software.**
+
 ```bash
 apk \
   add \
@@ -10,6 +11,7 @@ apk \
 ```
 
 **Remove (uninstall) software.**
+
 ```bash
 apk \
   del \
@@ -17,12 +19,14 @@ apk \
 ```
 
 **Upgrade software.**
+
 ```bash
 apk \
   upgrade
 ```
 
 **Install software temporarily (removed on next reboot or cache clean).**
+
 ```bash
 apk \
   add \
@@ -34,6 +38,7 @@ apk \
 ## Search and Information
 
 **Search for software matching specified strings.**
+
 ```bash
 apk \
   search \
@@ -41,6 +46,7 @@ apk \
 ```
 
 **List packages depending on their relation to the system with additional details.**
+
 ```bash
 apk \
   info \
@@ -48,6 +54,7 @@ apk \
 ```
 
 **Find what package provides the given value.**
+
 ```bash
 apk \
   info \
@@ -58,12 +65,14 @@ apk \
 ## Repository and Configuration Management
 
 **Generate the metadata cache (update package lists).**
+
 ```bash
 apk \
   update
 ```
 
 **Clean cache.**
+
 ```bash
 apk \
   cache \

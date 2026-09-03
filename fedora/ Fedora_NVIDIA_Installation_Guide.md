@@ -1,6 +1,6 @@
-## A guide to safely installing NVIDIA drivers on Fedora Workstation utilizing RPM Fusion repositories. 
+## A guide to safely installing NVIDIA drivers on Fedora Workstation utilizing RPM Fusion repositories
 
-Below is the complete installation process.
+Below is the complete installation process
 ---
 
 ## Step 1: Update System & Enable Repositories
@@ -40,7 +40,7 @@ sudo dnf \
 
 If **Secure Boot** is enabled in your system's UEFI/BIOS settings, Linux will block unsigned driver modules from loading. You must generate and enroll a Machine Owner Key (MOK) **before** installing the drivers.
 
-### 1. Generate the signing key:
+### 1. Generate the signing key
 
 ```bash
 sudo dnf \
@@ -57,7 +57,7 @@ sudo kmodgenca \
   -a
 ```
 
-### 2. Import the key into MOK:
+### 2. Import the key into MOK
 
 ```bash
 sudo mokutil \
@@ -67,7 +67,7 @@ sudo mokutil \
 
 *You will be prompted to create a password. Remember this password.*
 
-### 3. Reboot to complete MOK enrollment:
+### 3. Reboot to complete MOK enrollment
 
 ```bash
 sudo reboot
@@ -115,7 +115,7 @@ modinfo \
 
 If it returns a version number (e.g., `555.58.02` or similar), the compilation is complete. If it says `module nvidia not found`, wait another 1–2 minutes and run the command again.
 
-3. Once verified, reboot your machine:
+1. Once verified, reboot your machine:
 
 ```bash
 sudo reboot

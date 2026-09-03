@@ -1,8 +1,8 @@
 
-## Setting up the Alacritty terminal on Fedora, complete with custom fonts and themes.
-
+## Setting up the Alacritty terminal on Fedora, complete with custom fonts and themes
 
 ## Step 1: Install Alacritty
+
 Install the terminal emulator directly from the standard Fedora repositories.
 
 ```bash
@@ -165,9 +165,11 @@ action = "SpawnNewInstance"  # Opens a fresh terminal window in your current pat
 
 * **Launch Alacritty**: Open the application from your KDE Plasma launcher or run `alacritty` in your existing terminal.
 * **Test the Font & Glyphs**: The text should render in JetBrains Mono. To confirm the Nerd Font icons are working, run:
+
   ```bash
   echo -e "\ue712"
   ```
+
   If successful, it will output a Linux penguin icon (``).
 * **Confirm Window Styling**: Ensure the window has a uniform 12px padding around the edges, standard minimize/maximize window decorations, and a matte black (`#121212`) background.
 * **Test Custom Keybindings**:

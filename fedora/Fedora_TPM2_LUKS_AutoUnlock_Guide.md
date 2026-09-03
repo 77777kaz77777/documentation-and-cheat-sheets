@@ -1,4 +1,4 @@
-## Step-by-step guide for configuring automatic LUKS2 root volume decryption using hardware TPM 2.0 and systemd-cryptenroll.
+## Step-by-step guide for configuring automatic LUKS2 root volume decryption using hardware TPM 2.0 and systemd-cryptenroll
 
 ## 1. Install Dependencies
 

@@ -1,10 +1,11 @@
-## Commands to install, update, and manage sandboxed Flatpak apps.
+## Commands to install, update, and manage sandboxed Flatpak apps
 
 # Flatpak Command Reference Guide (Linux Desktop)
 
 ## Core Package Management
 
 **Install software.**
+
 ```bash
 flatpak \
   install \
@@ -13,6 +14,7 @@ flatpak \
 ```
 
 **Remove (uninstall) software.**
+
 ```bash
 flatpak \
   uninstall \
@@ -20,12 +22,14 @@ flatpak \
 ```
 
 **Upgrade software.**
+
 ```bash
 flatpak \
   update
 ```
 
 **Remove unused runtimes and extensions.**
+
 ```bash
 flatpak \
   uninstall \
@@ -35,6 +39,7 @@ flatpak \
 ## Search and Information
 
 **Search for software matching specified strings.**
+
 ```bash
 flatpak \
   search \
@@ -42,6 +47,7 @@ flatpak \
 ```
 
 **List packages depending on their relation to the system with additional details.**
+
 ```bash
 flatpak \
   info \
@@ -49,6 +55,7 @@ flatpak \
 ```
 
 **List installed packages (applications only).**
+
 ```bash
 flatpak \
   list \
@@ -56,6 +63,7 @@ flatpak \
 ```
 
 **List installed packages (runtimes only).**
+
 ```bash
 flatpak \
   list \
@@ -65,6 +73,7 @@ flatpak \
 ## Repository and Configuration Management
 
 **Add a new repository (remote).**
+
 ```bash
 flatpak \
   remote-add \
@@ -74,12 +83,14 @@ flatpak \
 ```
 
 **List configured repositories.**
+
 ```bash
 flatpak \
   remotes
 ```
 
 **Manage application permissions.**
+
 ```bash
 flatpak \
   override \
