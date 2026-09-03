@@ -11,11 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Install dependencies
-        run: npm install -g markdownlint-cli2@0.23.2
+        uses: actions/checkout@v4
 
       - name: Run markdownlint-cli2 with auto-fix
-        # Use the primary executable and pass the --fix flag to repair structural formatting
-        run: npx markdownlint-cli2 --fix "**/*.md"
+        uses: DavidAnson/markdownlint-cli2-action@v24
+        with:
+          fix: true
+          globs: '**/*.md'
