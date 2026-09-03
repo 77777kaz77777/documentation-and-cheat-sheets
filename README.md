@@ -73,6 +73,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `cheatsheet-for-linux.md` | A quick comparison of commands across the most common Linux package managers. |
 | `flatpak_command_reference.md` | Commands to install, update, and manage sandboxed Flatpak apps. |
 | `fwupdmgr_Firmware_Update_Cheat_Sheet.md` | How to check for and apply hardware firmware updates with fwupdmgr. |
+| `linux-comprehensive-networking-guide.md` | Linux Comprehensive Networking Tools Guide |
 | `linux-static-ip-configuration.md` | Linux Static IP Configuration Guide |
 | `linux_permissions_reference_expanded.md` | A deep dive into managing Linux file permissions, ownership, and ACLs. |
 | `linux_source_installation_guide.md` | Steps to compile and install Linux software directly from source code. |
