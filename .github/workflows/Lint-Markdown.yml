@@ -17,5 +17,5 @@ jobs:
         run: npm install -g markdownlint-cli2@0.23.2
 
       - name: Run markdownlint-cli2 with auto-fix
-        # The --package flag is required because the executable name differs from the package name
-        run: npx --package=markdownlint-cli2 markdownlint-cli2-fix "**/*.md"
+        # Use the primary executable and pass the --fix flag to repair structural formatting
+        run: npx markdownlint-cli2 --fix "**/*.md"
