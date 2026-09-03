@@ -12,11 +12,13 @@ If your system boots to a black screen, terminal prompt, or you can press **Ctrl
 ```bash
 sudo snapper -c root list
 ```
+
 1. Roll back to a snapshot number created *before* the issue occurred (e.g., #2):
 
 ```bash
 sudo snapper -c root rollback 2
 ```
+
 1. Reboot your system:
 
 ```bash
@@ -68,6 +70,7 @@ Stream the backup from the 1TB drive back to the 500GB primary drive.
 ```bash
 ls -la /mnt/backup/btrfs-backups/
 ```
+
 1. Send and receive the snapshot (replace `ROOT.20260813T1431` with your actual backup folder name):
 
 ```bash
@@ -83,6 +86,7 @@ Make the restored snapshot active and writable.
 ```bash
 sudo mv /mnt/primary/ROOT.20260813T1431 /mnt/primary/root
 ```
+
 1. Backups transferred via `btrfs send/receive` are marked **read-only**. Remove the read-only flag so Fedora can boot and write to it normally:
 
 ```bash
@@ -108,4 +112,5 @@ Once you successfully log back into Fedora:
 ```bash
 sudo btrfs subvolume delete /root_broken
 ```
+
 1. Run `sudo btrbk run` to create a fresh baseline snapshot on your 1TB drive.

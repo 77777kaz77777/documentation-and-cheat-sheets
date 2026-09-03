@@ -22,6 +22,7 @@ sudo ln -s /boot/grub2 /boot/grub
 git clone https://github.com/Antynea/grub-btrfs.git
 cd grub-btrfs
 ```
+
 1. Execute the installer:
 
 ```bash
@@ -35,11 +36,13 @@ sudo make install
 ```bash
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 ```
+
 1. Enable and start the background monitoring service (`grub-btrfsd`). This daemon automatically updates the GRUB boot menu whenever btrbk or snapper creates or deletes a snapshot:
 
 ```bash
 sudo systemctl enable --now grub-btrfsd
 ```
+
 1. Verify service status:
 
 ```bash
