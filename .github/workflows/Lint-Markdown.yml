@@ -1,4 +1,4 @@
-name: Markdown Linter
+name: CI Super-Linter
 
 on:
   push:
@@ -7,14 +7,19 @@ on:
     branches: [ main ]
 
 jobs:
-  lint:
+  build:
+    name: Lint Code Base
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout Code
         uses: actions/checkout@v4
-
-      - name: Run markdownlint-cli2 with auto-fix
-        uses: DavidAnson/markdownlint-cli2-action@v24
         with:
-          fix: true
-          globs: '**/*.md'
+          fetch-depth: 0
+
+      - name: Run Super-Linter
+        uses: super-linter/super-linter@v7
+        env:
+          VALIDATE_ALL_CODEBASE: true
+          DEFAULT_BRANCH: main
+          VALIDATE_MARKDOWN: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
