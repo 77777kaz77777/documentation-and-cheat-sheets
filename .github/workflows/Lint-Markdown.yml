@@ -10,7 +10,12 @@ jobs:
   markdownlint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.2.2
-      - uses: DavidAnson/markdownlint-cli2-action@v19.0.0
+      - name: Checkout Repository
+        uses: actions/checkout@v4.2.2
+
+      - name: Run Markdown Lint
+        uses: DavidAnson/markdownlint-cli2-action@v19.0.0
         with:
           globs: '**/*.md'
+        env:
+          ACTIONS_RUNNER_USE_NODE20: "true"
