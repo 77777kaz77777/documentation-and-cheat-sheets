@@ -6,18 +6,17 @@ on:
       - main
   pull_request:
 
-permissions:
-  contents: read
-
 jobs:
   markdownlint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        # Updated to v5 to resolve the Node.js 20 deprecation warning
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        # Updated to v5 to resolve the Node.js 20 deprecation warning
+        uses: actions/setup-node@v5
         with:
           node-version: '22'
 
