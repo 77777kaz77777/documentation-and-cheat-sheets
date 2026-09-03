@@ -58,15 +58,15 @@ TERM = "xterm-256color"
 # --- WINDOW CONFIGURATION ---
 [window]
 padding = { x = 12, y = 12 }
-decorations = "Full"
-opacity = 1.0
-blur = true
-startup_mode = "Windowed"
-dynamic_title = true
+decorations = "Full"        # Enables Minimize, Maximize, and Close buttons
+opacity = 1.0               # Matte black look (change to 0.9 if you want slight transparency)
+blur = true                 # Enables background blur if your desktop compositor supports it
+startup_mode = "Windowed"   # Can be "Windowed", "Maximized", or "Fullscreen"
+dynamic_title = true        # Allows running apps (like bash/nvim) to update the window title
 
 # --- FONT CONFIGURATION ---
 [font]
-size = 12.0
+size = 17.0
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
@@ -86,18 +86,18 @@ style = "Bold Italic"
 
 # --- SCROLLBACK BUFFER ---
 [scrolling]
-history = 10000
-multiplier = 3
+history = 10000             # Remember 10,000 lines of terminal text scrollback
+multiplier = 3              # Number of lines scrolled per mouse wheel tick
 
 # --- CURSOR ---
 [cursor]
 style = { shape = "Block", blinking = "On" }
-blink_interval = 750
-unfocused_hollow = true
+blink_interval = 750        # Blink speed in milliseconds
+unfocused_hollow = true     # Turns cursor into an empty box when the window loses focus
 
 # --- SELECTION & CLIPBOARD ---
 [selection]
-save_to_clipboard = true
+save_to_clipboard = true    # Automatically copy highlighted text to your clipboard
 
 # --- MATTE BLACK COLOR SCHEME ---
 [colors.primary]
@@ -141,24 +141,24 @@ mods = "Control"
 action = "Copy"
 
 [[keyboard.bindings]]
-key = "Key0"
+key = "0"
 mods = "Control"
 action = "ResetFontSize"
 
 [[keyboard.bindings]]
-key = "Equals"
+key = "="
 mods = "Control"
 action = "IncreaseFontSize"
 
 [[keyboard.bindings]]
-key = "Minus"
+key = "-"
 mods = "Control"
 action = "DecreaseFontSize"
 
 [[keyboard.bindings]]
-key = "Return"
+key = "Enter"
 mods = "Control|Shift"
-action = "SpawnNewInstance"
+action = "SpawnNewInstance"  # Opens a fresh terminal window in your current path
 ```
 
 ## Step 4: Verification Steps
