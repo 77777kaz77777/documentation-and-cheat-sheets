@@ -6,6 +6,10 @@ on:
       - main
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   update-readme-tables:
     runs-on: ubuntu-latest
@@ -91,8 +95,7 @@ jobs:
               readme = f.read()
 
           pattern = r"(<!-- START_SECTION:tree -->)(.*?)(<!-- END_SECTION:tree -->)"
-          replacement = r"\1\n" + final_str + r"\n\3"
-          updated = re.sub(pattern, replacement, readme, flags=re.DOTALL)
+          updated = re.sub(pattern, lambda m: m.group(1) + "\n" + final_str + "\n" + m.group(3), readme, flags=re.DOTALL)
 
           with open("README.md", "w") as f:
               f.write(updated)
