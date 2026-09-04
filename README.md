@@ -67,7 +67,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `Vim_Vi_Editor_Cheat_Sheet.md` | Core commands for opening, editing, saving, and exiting Vi/Vim |
 | `ZFS_Administration_Cheat_Sheet.md` | A technical reference detailing essential commands for managing ZFS physical storage pools and logical datasets, including pool creation, dataset properties, snapshot replication, and disk replacement workflows |
 | `alacritty-font-rendering-fix.md` | Alacritty Rendering Troubleshooting Guide (Fedora KDE) |
-| `alacritty_keybindings_cheatsheet.md` | This document is a comprehensive Alacritty keybinding cheatsheet that outlines standard terminal shortcuts, my custom overrides—specifically the switch from the default Ctrl + Shift + C and V to Ctrl + C and V for copying and pasting—and a detailed breakdown of my terminal's configuration settings |
+| `alacritty_keybindings_cheatsheet.md` | This document is a comprehensive Alacritty keybinding cheatsheet that outlines standard terminal shortcuts. |
 | `apk_command_reference.md` | Commands for installing and updating packages in Alpine Linux and containers using APK |
 | `appimage_installation_guide.md` | How to Install and Run AppImages on Linux |
 | `apt_command_reference.md` | Everyday package management commands for Debian and Ubuntu using APT |
