@@ -51,4 +51,3 @@
 | **Copy Selection (Yank)** | `y` |
 | **Search Forward/Backward** | `/` / `?` |
 | **Next / Previous Search Match** | `n` / `N` |
-
