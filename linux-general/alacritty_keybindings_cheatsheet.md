@@ -52,12 +52,3 @@
 | **Search Forward/Backward** | `/` / `?` |
 | **Next / Previous Search Match** | `n` / `N` |
 
-## Detailed Breakdown
-
-* **General Settings:** The `live_config_reload` instructs Alacritty to attach a filesystem watcher to the TOML file. When it detects a write event, it instantly applies the changes to the running instance. Setting `TERM = "xterm-256color"` ensures rich colors in terminal output.
-* **Window Management:** The padding values push text 12 pixels away from the window borders. `dynamic_title = true` allows running processes to update the OS-level window title.
-* **Typography:** The config binds specifically to "JetBrainsMono Nerd Font" at exactly 17.0pt with explicit style declarations to prevent artifacting from OS-level font rendering.
-* **Scrolling & Buffer:** Holding 10,000 lines of standard output in memory (`history = 10000`) and mapping mouse scroll multiplier to 3 lines per physical click provides robust navigation.
-* **Cursor Behavior:** `unfocused_hollow = true` acts as a clear visual indicator that input is no longer routed to that specific window.
-* **Clipboard:** Highlighting text instantly copies it to the system clipboard via `save_to_clipboard = true`.
-* **Keybindings:** Binding standard desktop shortcuts `Ctrl + C` and `Ctrl + V` standardizes interactions. **By doing this, you are explicitly switching the default `Ctrl + Shift + C` (Copy) and `Ctrl + Shift + V` (Paste) to `Ctrl + C` and `Ctrl + V`.** This intercepts the traditional UNIX interrupt signal (SIGINT) normally bound to `Ctrl + C`.
