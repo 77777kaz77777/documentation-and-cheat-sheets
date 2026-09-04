@@ -1,4 +1,5 @@
-## This guide provides step-by-step instructions for manually configuring, compiling, and installing a custom or vanilla Linux kernel on Fedora systems.
+## This guide provides step-by-step instructions for manually configuring, compiling, and installing a custom or vanilla Linux kernel on Fedora systems
+
 ## Overview
 
 This document provides instructions on how to manually compile the Linux kernel on Fedora (including Fedora 44 KDE). It begins with the simplest method (building a vanilla upstream kernel) and moves to more advanced configuration methods.

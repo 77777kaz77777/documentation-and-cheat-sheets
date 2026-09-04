@@ -12,22 +12,20 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 |---|---|
 | `Ansible_Automation_Cheat_Sheet.md` | Ansible Automation Cheat Sheet |
 
-
 ### 📁 containers/ (Docker, Podman, and LXC Guides)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | `Docker_CLI_Compose_Cheat_Sheet.md` | Core commands for spinning up Docker containers, managing images, and using Compose |
 | `lxc-cheatsheet.md` | LXC/LXD Essentials Cheat Sheet |
 | `podman-cheatsheet.md` | Essential commands for running daemonless containers with Podman |
 | `podman-desktop-guide.md` | How to install and set up the Podman Desktop GUI |
 
-
 ### 📁 fedora/ (Fedora Linux Specific Documentation)
 
 | File | Description |
-|---|---|
-| ` Fedora_NVIDIA_Installation_Guide.md` | A guide to safely installing NVIDIA drivers on Fedora Workstation utilizing RPM Fusion repositories |
+| --- | --- |
+| `Fedora_NVIDIA_Installation_Guide.md` | A guide to safely installing NVIDIA drivers on Fedora Workstation utilizing RPM Fusion repositories |
 | `Btrbk_Snapshot_Automation_Cheat_Sheet.md` | Steps to automate Btrfs snapshots and backups using Btrbk |
 | `ClamAV_SELinux_Implementation_Guide.md` | Fedora ClamAV & SELinux Implementation Guide |
 | `DNF_Optimization_and_Configuration_Guide.md` | DNF Package Manager Speed Optimization & Configuration Guide |
@@ -48,11 +46,10 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `fix-mux-plymouth-deadlock.md` | How to fix boot deadlocks caused by MUX switches and Plymouth |
 | `kdeconnect-fedora44-ios-troubleshooting.md` | KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora 44 KDE Plasma, even after adding firewall rules to the `home` zone |
 
-
 ### 📁 linux-general/ (General Linux Reference)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | `Enterprise_Linux_Ecosystem_and_Commands_2026.md` | A breakdown of the 2026 Enterprise Linux landscape plus core admin commands |
 | `Fastfetch_Configuration_Guide.md` | How to tweak and customize system info outputs using Fastfetch |
 | `Git_Dotfiles_Maintenance_Cheat_Sheet.md` | Commands and scripts for backing up system configurations and dotfiles with Git |
@@ -86,33 +83,30 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `workstation_bootstrap_documentation.md` | Scripts and steps for setting up a new workstation and automating tool installations |
 | `zypper_command_reference.md` | Everyday commands for managing packages on openSUSE and SLES using Zypper |
 
-
 ### 📁 networking-and-security/ (Networking & Security Configurations)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | `AdGuard_Home_Management_Cheat_Sheet.md` | Commands and config paths for managing AdGuard Home DNS rules and filters |
 | `OpenWrt_UCI_Command_Cheat_Sheet.md` | How to configure OpenWrt router settings straight from the terminal using UCI |
 | `Pentesting_Toolkit_Cheat_Sheet.md` | A quick reference for everyday penetration testing tools and frameworks |
 | `Tailscale_Mesh_CLI_Cheat_Sheet.md` | Terminal commands for setting up and managing Tailscale mesh networks |
 | `ufw-cheatsheet.md` | UFW (Uncomplicated Firewall) Command Reference for Ubuntu/Debian |
 
-
 ### 📁 virtualization/ (Hypervisor & VM Runbooks)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | `Hyper-V_PowerShell_Cheat_Sheet.md` | PowerShell commands to spin up and manage Hyper-V virtual machines |
 | `proxmox-cheatsheet.md` | Proxmox Virtual Machine Commands (qm) Cheat Sheet |
 | `virt-manager-cheatsheet.md` | Virt-Manager & Virsh Command Line Cheat Sheet |
 | `virt-manager-docker-conflict.md` | How to fix network bridge conflicts when running Virt-Manager and Docker on the same machine |
 | `virtualization_virt-manager-troubleshooting-fedora.md` | Fixes and tweaks for running Virt-Manager smoothly on Fedora |
 
-
 ### 📁 windows-and-macos/ (Windows & macOS References)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | `Windows_Sysinternals_Cheat_Sheet.md` | A practical guide to core Microsoft Sysinternals tools (Process Explorer, Process Monitor, Autoruns, PsExec, and TCPView), highlighting specific filters, shortcuts, and commands for advanced troubleshooting, malware isolation, and remote system administration |
 | `Winget_Cheat_Sheet.md` | A quick-reference guide for managing Windows software packages using the Winget command-line tool, covering package discovery, silent installations, bulk upgrades, and system provisioning |
 | `macOS_Terminal_Package_Management_Cheat_Sheet.md` | A quick-reference guide for macOS command-line operations, covering Homebrew package management, system software updates, networking tools, process management, and essential Finder modifications |
