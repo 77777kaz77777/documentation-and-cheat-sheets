@@ -1,4 +1,5 @@
-## This document is a comprehensive Alacritty keybinding cheatsheet that outlines standard terminal shortcuts.
+## This document is a comprehensive Alacritty keybinding cheatsheet that outlines standard terminal shortcuts
+
 ## Custom Keybindings (Your Override Configuration)
 
 | Action | Custom Keybinding | Note |
