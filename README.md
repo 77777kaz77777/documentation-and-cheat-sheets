@@ -36,7 +36,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `Fedora_KDE_GRUB_Btrfs_Advanced.md` | Advanced fixes and config steps for GRUB and Btrfs integration on Fedora KDE |
 | `Fedora_KDE_GRUB_Btrfs_Integration.md` | How to get Btrfs snapshots showing up directly in the GRUB boot menu on Fedora KDE |
 | `Fedora_KDE_SSD_Formatting_Btrbk.md` | Steps to format a secondary SSD and set up automated Btrbk snapshots on Fedora KDE |
-| `Fedora_Kernel_Compilation_Guide.md` | Document Name: Fedora_Kernel_Compilation_Guide.md |
+| `Fedora_Kernel_Compilation_Guide.md` | This guide provides step-by-step instructions for manually configuring, compiling, and installing a custom or vanilla Linux kernel on Fedora systems. |
 | `Fedora_Linux_Btrfs_Recovery.md` | CLI methods for rescuing a corrupted Btrfs filesystem on Fedora |
 | `Fedora_SELinux_Management_Cheat_Sheet.md` | Fedora SELinux Management & Context Resolution Cheat Sheet |
 | `Fedora_TPM2_LUKS_AutoUnlock_Guide.md` | Step-by-step guide for configuring automatic LUKS2 root volume decryption using hardware TPM 2.0 and systemd-cryptenroll |
