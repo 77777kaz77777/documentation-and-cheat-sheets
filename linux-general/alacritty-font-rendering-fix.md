@@ -16,8 +16,8 @@ Visual artifacting, text clipping, and residual text remaining on the window mar
 Download and install the JetBrains Mono Nerd Font to the local user directory. Execute the following commands sequentially:
 
 ```bash
-curl -LO [https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip)
-mkdir -p ~/.local/share/fonts
+curl -LO https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
+mkdir -p ~/.local/share/fonts/JetBrainsMono
 unzip JetBrainsMono.zip -d ~/.local/share/fonts/JetBrainsMono
 fc-cache -fv
 rm JetBrainsMono.zip
