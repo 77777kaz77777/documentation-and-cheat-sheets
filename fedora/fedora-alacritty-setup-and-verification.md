@@ -14,11 +14,11 @@ sudo dnf install alacritty
 This configuration requires the Nerd Font variant for correct glyph and icon rendering, which must be installed locally. Execute the following sequential commands to download, extract, and apply the font cache:
 
 ```bash
-mkdir -p ~/.local/share/fonts/JetBrainsMonoNerd
-cd ~/.local/share/fonts/JetBrainsMonoNerd
-wget [https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip)
-unzip JetBrainsMono.zip
-fc-cache -f -v
+curl -LO https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
+mkdir -p ~/.local/share/fonts/JetBrainsMono
+unzip JetBrainsMono.zip -d ~/.local/share/fonts/JetBrainsMono
+fc-cache -fv
+rm JetBrainsMono.zip
 ```
 
 ## Step 3: Apply the Alacritty Configuration
