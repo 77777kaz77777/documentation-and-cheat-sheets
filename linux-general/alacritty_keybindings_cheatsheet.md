@@ -1,5 +1,4 @@
-## This document is a comprehensive Alacritty keybinding cheatsheet that outlines standard terminal shortcuts, my custom overrides—specifically the switch from the default Ctrl + Shift + C and V to Ctrl + C and V for copying and pasting—and a detailed breakdown of my terminal's configuration settings
-
+## This document is a comprehensive Alacritty keybinding cheatsheet that outlines standard terminal shortcuts.
 ## Custom Keybindings (Your Override Configuration)
 
 | Action | Custom Keybinding | Note |
