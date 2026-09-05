@@ -1,6 +1,7 @@
 # Linux Commands Cheat Sheet (With Examples)
 
 ## 1. File Operations Commands
+
 - `access`: `access -r file.txt` (Check read permission)
 - `basename`: `basename /var/log/syslog` -> `syslog`
 - `cat`: `cat file.txt` (View file content)
@@ -44,6 +45,7 @@
 - `wc`: `wc -l file.txt` (Print newline, word, and byte counts)
 
 ## 2. Directory Operations Commands
+
 - `cd`: `cd /var/log` (Change directory)
 - `dir`: `dir -l` (List directory contents)
 - `dirname`: `dirname /var/log/syslog` -> `/var/log`
@@ -58,12 +60,14 @@
 - `tree`: `tree /etc` (List contents of directories in a tree-like format)
 
 ## 3. File Permission and Ownership Commands
+
 - `chmod`: `chmod 755 script.sh` (Change file mode bits)
 - `chattr`: `chattr +i file.txt` (Change file attributes on a Linux file system)
 - `chown`: `chown user:group file.txt` (Change file owner and group)
 - `chgrp`: `chgrp wheel file.txt` (Change group ownership)
 
 ## 4. User Management Commands
+
 - `chage`: `chage -l username` (Change user password expiry information)
 - `chfn`: `chfn username` (Change real user name and information)
 - `chsh`: `chsh -s /bin/zsh username` (Change login shell)
@@ -81,6 +85,7 @@
 - `whoami`: `whoami` (Print effective userid)
 
 ## 5. Group Management Commands
+
 - `groupadd`: `groupadd developers` (Create a new group)
 - `groupdel`: `groupdel developers` (Delete a group)
 - `groupmod`: `groupmod -n devs developers` (Modify a group definition)
@@ -90,6 +95,7 @@
 - `grpconv`: `grpconv` (Create shadow group file from group file)
 
 ## 6. Process Management Commands
+
 - `accton`: `accton /var/account/pacct` (Turn process accounting on or off)
 - `bg`: `bg %1` (Put a job in the background)
 - `chrt`: `chrt -p 1234` (Manipulate the real-time attributes of a process)
@@ -109,6 +115,7 @@
 - `w`: `w` (Show who is logged on and what they are doing)
 
 ## 7. Networking Commands
+
 - `arp`: `arp -a` (Manipulate the system ARP cache)
 - `curl`: `curl -O http://example.com/file.zip` (Transfer a URL)
 - `host`: `host example.com` (DNS lookup utility)
@@ -140,6 +147,7 @@
 - `wget`: `wget http://example.com/file.iso` (The non-interactive network downloader)
 
 ## 8. Job Scheduling Commands
+
 - `atd`: `systemctl status atd` (Job spooling daemon)
 - `atrm`: `atrm 1` (Remove jobs spooled by at)
 - `atq`: `atq` (Lists the user's pending jobs)
@@ -148,6 +156,7 @@
 - `crontab`: `crontab -e` (Maintain crontab files for individual users)
 
 ## 9. Disk and File System Commands
+
 - `cfdisk`: `cfdisk /dev/sda` (Display or manipulate disk partition table)
 - `df`: `df -h` (Report file system disk space usage)
 - `dosfsck`: `dosfsck /dev/sdb1` (Check and repair MS-DOS file systems)
@@ -159,6 +168,7 @@
 - `sync`: `sync` (Synchronize cached writes to persistent storage)
 
 ## 10. Hardware and System Information Commands
+
 - `acpi`: `acpi -V` (Show battery status and other ACPI information)
 - `acpi_available`: `acpi_available` (Test whether ACPI subsystem is available)
 - `acpid`: `systemctl restart acpid` (Advanced Configuration and Power Interface event daemon)
@@ -176,6 +186,7 @@
 - `uname`: `uname -a` (Print system information)
 
 ## 11. Compression and Archiving Commands
+
 - `ar`: `ar rcs lib.a obj1.o obj2.o` (Create, modify, and extract from archives)
 - `bzcmp`: `bzcmp file1.bz2 file2.bz2` (Compare bzip2 compressed files)
 - `bzdiff`: `bzdiff file1.bz2 file2.bz2` (Compare bzip2 compressed files)
@@ -191,6 +202,7 @@
 - `zgrep`: `zgrep "search" file.gz` (Search possibly compressed files for a regular expression)
 
 ## 12. Text Processing and Formatting Commands
+
 - `awk`: `awk '{print $1}' file.txt` (Pattern scanning and processing language)
 - `aspell`: `aspell check file.txt` (Interactive spell checker)
 - `banner`: `banner Hello` (Print large banner on printer/stdout)
@@ -210,6 +222,7 @@
 - `unix2dos`: `unix2dos file.txt` (UNIX to DOS text file format converter)
 
 ## 13. Kernel and Module Management Commands
+
 - `depmod`: `depmod -a` (Generate modules.dep and map files)
 - `insmod`: `insmod module.ko` (Simple program to insert a module into the Linux Kernel)
 - `lsmod`: `lsmod` (Show the status of modules in the Linux Kernel)
@@ -218,12 +231,14 @@
 - `systemctl`: `systemctl status network` (Control the systemd system and service manager)
 
 ## 14. System Control and Power Commands
+
 - `halt`: `halt` (Instruct the hardware to stop all CPU functions)
 - `poweroff`: `poweroff` (Power off the system)
 - `reboot`: `reboot` (Reboot the system)
 - `shutdown`: `shutdown -h now` (Halt, power-off or reboot the machine)
 
 ## 15. Logging and Monitoring Commands
+
 - `journalctl`: `journalctl -u sshd -f` (Query the systemd journal)
 - `last`: `last username` (Show listing of last logged in users)
 - `history`: `history | grep command` (GNU History Library)
@@ -232,22 +247,26 @@
 - `scriptreplay`: `scriptreplay timing.log session.log` (Play back typescripts, using timing information)
 
 ## 16. Checksum and File Integrity Commands
+
 - `md5sum`: `md5sum file.iso` (Compute and check MD5 message digest)
 - `cksum`: `cksum file.txt` (Print CRC checksum and byte counts)
 - `sum`: `sum file.txt` (Checksum and count the blocks in a file)
 
 ## 17. Date and Time Commands
+
 - `cal`: `cal 2026` (Displays a calendar)
 - `date`: `date "+%Y-%m-%d %H:%M:%S"` (Print or set the system date and time)
 - `uptime`: `uptime` (Tell how long the system has been running)
 
 ## 18. Mail and User Communication Commands
+
 - `biff`: `biff y` (Be notified if mail arrives and who it is from)
 - `mailq`: `mailq` (Print the mail queue)
 - `write`: `write username` (Send a message to another user)
 - `wall`: `wall "System will go down in 10 minutes"` (Send a message to everybody's terminal)
 
 ## 19. Printing and Media Commands
+
 - `amixer`: `amixer set Master 50%` (Command-line mixer for ALSA soundcard driver)
 - `aplay`: `aplay sound.wav` (Command-line sound player for ALSA soundcard driver)
 - `aplaymidi`: `aplaymidi -p 14:0 file.mid` (Standard MIDI File player for ALSA sequencer)
@@ -256,6 +275,7 @@
 - `import`: `import screenshot.png` (Saves any visible window on an X server and outputs it as an image file)
 
 ## 20. Shell Built-in and Scripting Commands
+
 - `alias`: `alias ll='ls -l'` (Define or display aliases)
 - `bind`: `bind -P` (Set Readline key bindings and variables)
 - `break`: `break` (Exit from a for, while, or until loop)
@@ -296,7 +316,9 @@
 ---
 
 ## 21. Bash Shortcuts Commands
+
 ### Navigation Shortcuts
+
 - `Ctrl + A` : Move to the beginning of the line
 - `Ctrl + E` : Move to the end of the line
 - `Ctrl + B` : Move back one character
@@ -305,6 +327,7 @@
 - `Alt + F` : Move forward one word
 
 ### Editing Shortcuts
+
 - `Ctrl + U` : Cut/delete text from the cursor to the beginning of the line
 - `Ctrl + K` : Cut/delete text from the cursor to the end of the line
 - `Ctrl + W` : Cut/delete the word before the cursor
@@ -313,6 +336,7 @@
 - `Ctrl + C` : Terminate the currently running command
 
 ### History Shortcuts
+
 - `Ctrl + R` : Search command history (reverse search)
 - `Ctrl + G` : Exit history search mode
 - `Ctrl + P` : Go to the previous command in history
@@ -321,6 +345,7 @@
 ---
 
 ## 22. Development and Build Automation Commands
+
 - `aclocal`: `aclocal` (Create aclocal.m4 by scanning configure.ac)
 - `addr2line`: `addr2line -e myprog 0x400500` (Convert addresses into file names and line numbers)
 - `autoconf`: `autoconf` (Generate configuration scripts)
@@ -339,6 +364,7 @@
 - `readelf`: `readelf -a myprog` (Displays information about ELF files)
 
 ## 23. Terminal and Session Management Commands
+
 - `agetty`: `agetty tty1 9600` (Alternative Linux getty)
 - `chvt`: `chvt 3` (Change foreground virtual terminal)
 - `reset`: `reset` (Terminal initialization)
@@ -349,6 +375,7 @@
 - `xdg-open`: `xdg-open index.html` (Opens a file or URL in the user's preferred application)
 
 ## 24. Help and Documentation Commands
+
 - `apropos`: `apropos network` (Search the manual page names and descriptions)
 - `help`: `help cd` (Display information about builtin commands)
 - `info`: `info bash` (Read Info documents)
@@ -357,19 +384,23 @@
 - `which`: `which python` (Locate a command)
 
 ## 25. Text Editors in Linux
+
 - `nano`: `nano file.txt` (Nano's ANOther editor)
 - `vi`: `vi file.txt` (Programmer's text editor)
 - `vim`: `vim file.txt` (Vi IMproved)
 - `ed`: `ed file.txt` (Line-oriented text editor)
 - `emacs`: `emacs file.txt` (GNU project Emacs editor)
 
-### Nano Shortcuts Commands:
+### Nano Shortcuts Commands
+
 **File Operations**
+
 - `Ctrl + O` : Save (write) the current file
 - `Ctrl + X` : Exit Nano
 - `Ctrl + R` : Read and insert another file
 
 **Navigation**
+
 - `Ctrl + Y` : Scroll up one page
 - `Ctrl + V` : Scroll down one page
 - `Alt + \` : Go to a specific line number
@@ -377,6 +408,7 @@
 - `Alt + .` : Move to the end of the current line
 
 **Editing**
+
 - `Ctrl + K` : Cut/delete text from the cursor to the end of the line (or marked block)
 - `Ctrl + U` : Uncut (paste) the last cut text
 - `Ctrl + 6` : Mark a block of text
@@ -384,12 +416,15 @@
 - `Ctrl + J` : Justify (format) the current paragraph
 
 **Search and Replace**
+
 - `Ctrl + W` : Search for a string
 - `Alt + W` : Search and replace a string
 - `Alt + R` : Repeat the last search
 
-### VI/VIM Shortcuts Commands:
+### VI/VIM Shortcuts Commands
+
 **Insert & Replace Mode**
+
 - `i` : Insert before cursor
 - `a` : Insert after cursor
 - `A` : Insert at the end of the line
@@ -401,6 +436,7 @@
 - `C` : Change to end of line
 
 **Delete & Change**
+
 - `x` : Delete character
 - `dd` : Delete line
 - `3dd` : Delete 3 lines
@@ -410,17 +446,20 @@
 - `cw` : Change word
 
 **Undo & Restore**
+
 - `u` : Undo
 - `U` : Restore current line
 - `~` : Toggle case
 - `Esc` : Exit mode
 
 **Vim Normal Mode**
+
 - `yy` : Copy (yank) current line
 - `p` : Paste
 - `Ctrl + R` : Redo
 
 **Vim Command Mode**
+
 - `:w` : Save
 - `:q` : Quit
 - `:q!` : Quit without saving
@@ -429,6 +468,7 @@
 - `:s/old/new/g` : Replace in file
 
 **Vim Visual Mode**
+
 - `v` : Select text
 - `y` : Copy selected
 - `d` : Delete selected
@@ -437,6 +477,7 @@
 ---
 
 ## 26. IO Redirection Commands
+
 - `cmd < file` : `sort < names.txt` (Redirect input)
 - `cmd > file` : `echo "Hello" > out.txt` (Redirect output (overwrite))
 - `cmd >> file` : `echo "World" >> out.txt` (Redirect output (append))
@@ -448,6 +489,7 @@
 - `cmd1 <(cmd2)` : `diff <(ls dir1) <(ls dir2)` (Process substitution)
 
 ## 27. Environment Variable Commands
+
 - `export VARIABLE_NAME=value` : `export PATH=$PATH:/opt/bin` (Set and export an environment variable)
 - `echo $VARIABLE_NAME` : `echo $USER` (Display value of a variable)
 - `env` : `env` (List all environment variables)
