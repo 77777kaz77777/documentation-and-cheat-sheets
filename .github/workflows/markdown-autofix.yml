@@ -4,11 +4,9 @@ on:
     branches:
       - main
   workflow_dispatch:
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
-
 jobs:
   markdownlint-fix:
     runs-on: ubuntu-latest
@@ -16,23 +14,23 @@ jobs:
       contents: write
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.ref }}
           fetch-depth: 0
-
+      
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '22'
-
+      
       - name: Run markdownlint auto-fix
         run: npx markdownlint-cli2 --fix "**/*.md" || true
-
+      
       - name: Sync with remote branch
         run: git pull --rebase --autostash origin main
-
+      
       - name: Commit and Push changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: "style: auto-fix markdown formatting spacing"
