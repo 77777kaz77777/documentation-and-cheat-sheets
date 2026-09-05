@@ -3,6 +3,7 @@
 ## Core Commands
 
 * **Switch to Integrated Mode (Max Battery):**
+
 ~~~bash
 cardwire \
   set \
@@ -10,6 +11,7 @@ cardwire \
 ~~~
 
 * **Switch to Hybrid Mode (Default):**
+
 ~~~bash
 cardwire \
   set \
@@ -17,6 +19,7 @@ cardwire \
 ~~~
 
 * **Switch to Dedicated Mode (Max Performance):**
+
 ~~~bash
 cardwire \
   set \
@@ -24,6 +27,7 @@ cardwire \
 ~~~
 
 * **Check Current Status:**
+
 ~~~bash
 cardwire \
   status
@@ -32,6 +36,7 @@ cardwire \
 ## Hardware Verification
 
 * **Check NVIDIA Power State:**
+
 ~~~bash
 cat \
   /sys/bus/pci/devices/0000:01:00.0/power_state
