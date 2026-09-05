@@ -97,7 +97,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `OpenWrt_UCI_Command_Cheat_Sheet.md` | How to configure OpenWrt router settings straight from the terminal using UCI |
 | `Pentesting_Toolkit_Cheat_Sheet.md` | A quick reference for everyday penetration testing tools and frameworks |
 | `Tailscale_Mesh_CLI_Cheat_Sheet.md` | Terminal commands for setting up and managing Tailscale mesh networks |
-| `nftables_Cheat_Sheet.md` | nftables Cheat Sheet |
+| `nftables_Cheat_Sheet.md` | How to properly configure network filtering, manage firewall rulesets, and set up NAT using the nftables command-line utility. |
 | `ufw-cheatsheet.md` | UFW (Uncomplicated Firewall) Command Reference for Ubuntu/Debian |
 
 
