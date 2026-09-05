@@ -13,15 +13,15 @@
 | **Protocols** | **UDP (User Datagram Protocol)** | Connectionless protocol that sends packets without guaranteeing delivery, order, or error checking. Faster but less reliable than TCP (used in streaming, gaming). |
 | **Protocols** | **IP (Internet Protocol)** | The principal communications protocol for relaying datagrams across network boundaries. Responsible for routing packets based on IP addresses. |
 | **Protocols** | **HTTP / HTTPS** | Hypertext Transfer Protocol (Secure). Foundation of data communication for the World Wide Web. HTTPS encrypts the data using TLS/SSL. |
-| **Protocols** | **DNS (Domain Name System)** | Translates human-readable domain names (e.g., www.example.com) into machine-readable IP addresses (e.g., 192.0.2.1). |
+| **Protocols** | **DNS (Domain Name System)** | Translates human-readable domain names (e.g., <www.example.com>) into machine-readable IP addresses (e.g., 192.0.2.1). |
 | **Protocols** | **DHCP (Dynamic Host Configuration Protocol)** | Automatically assigns IP addresses and other network configuration parameters to devices on a network so they can communicate. |
 | **Protocols** | **FTP / SFTP** | File Transfer Protocol (Secure). Used for the transfer of computer files between a client and server. SFTP adds a secure shell (SSH) encryption layer. |
 | **Protocols** | **SSH (Secure Shell)** | Cryptographic network protocol for operating network services securely over an unsecured network. Typically used for remote command-line login. |
-| **Addressing**| **IPv4** | 32-bit numeric address (e.g., 192.168.1.1) used to identify devices on a network. Limited to approximately 4.3 billion addresses. |
-| **Addressing**| **IPv6** | 128-bit alphanumeric address (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334) designed to replace IPv4 due to address exhaustion. |
-| **Addressing**| **MAC Address** | Media Access Control address. A unique identifier assigned to a network interface controller (NIC) for communications at the data link layer (Layer 2). |
-| **Addressing**| **Subnetting** | The practice of dividing a network into two or more smaller networks (subnets) to improve routing efficiency and security. |
-| **Addressing**| **NAT (Network Address Translation)** | Modifies network address information in packet headers while in transit across a traffic routing device, allowing multiple devices on a local network to share a single public IP. |
+| **Addressing** | **IPv4** | 32-bit numeric address (e.g., 192.168.1.1) used to identify devices on a network. Limited to approximately 4.3 billion addresses. |
+| **Addressing** | **IPv6** | 128-bit alphanumeric address (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334) designed to replace IPv4 due to address exhaustion. |
+| **Addressing** | **MAC Address** | Media Access Control address. A unique identifier assigned to a network interface controller (NIC) for communications at the data link layer (Layer 2). |
+| **Addressing** | **Subnetting** | The practice of dividing a network into two or more smaller networks (subnets) to improve routing efficiency and security. |
+| **Addressing** | **NAT (Network Address Translation)** | Modifies network address information in packet headers while in transit across a traffic routing device, allowing multiple devices on a local network to share a single public IP. |
 | **Hardware** | **Router** | Forwards data packets between different computer networks. Operates at Layer 3 of the OSI model. |
 | **Hardware** | **Switch** | Connects devices within a single local area network (LAN) and uses MAC addresses to forward data to the correct destination. Operates at Layer 2. |
 | **Hardware** | **Hub** | A basic network device that connects multiple computers but broadcasts data to all connected devices rather than routing it to a specific destination. Mostly obsolete. |
