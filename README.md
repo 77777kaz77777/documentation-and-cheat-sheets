@@ -81,7 +81,6 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `linux_source_installation_guide.md` | Steps to compile and install Linux software directly from source code |
 | `make_bash_script_executable.md` | How to make a Bash script executable and run it from anywhere on the system |
 | `ncdu_command_reference.md` | How to hunt down large files and analyze disk usage using NCDU |
-| `nftables_Cheat_Sheet.md` | nftables Cheat Sheet |
 | `nmcli-cheat-sheet.md` | Commands for managing network interfaces and Wi-Fi connections via nmcli |
 | `pacman_command_reference.md` | Essential commands for managing Arch Linux packages with Pacman |
 | `samba-mount-guide.md` | Commands and configurations for connecting, temporarily mounting, and permanently automounting local SMB/CIFS network shares |
