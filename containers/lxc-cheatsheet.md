@@ -47,4 +47,3 @@ One of the best features of LXC is the ability to "freeze" a state before making
 | **Show Network Details** | lxc network show [bridge_name] |
 | **List Storage Pools** | lxc storage list |
 | **Create Managed Volume** | lxc storage volume create [pool] [volume_name] |
-
