@@ -91,12 +91,7 @@ sudo systemctl enable \
       dedicated
     ~~~
 
-* **Check Status:**
 
-    ~~~bash
-    cardwire \
-      status
-    ~~~
 
 ## Verification
 
