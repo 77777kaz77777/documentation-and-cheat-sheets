@@ -91,8 +91,6 @@ sudo systemctl enable \
       dedicated
     ~~~
 
-
-
 ## Verification
 
 To verify that the NVIDIA GPU has successfully powered down to save battery in integrated mode, inspect the power state on the PCI bus:
