@@ -1,4 +1,4 @@
-## How to properly configure network filtering, manage firewall rulesets, and set up NAT using the nftables command-line utility.
+## How to properly configure network filtering, manage firewall rulesets, and set up NAT using the nftables command-line utility
 
 ## 1. General Ruleset Management
 
