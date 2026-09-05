@@ -1,4 +1,4 @@
-## reference guide categorizes critical Linux commands, administration tools, and text editor shortcuts into structured tables designed for rapid visual parsing. It clearly isolates each command alongside a precise functional description and a practical execution example to streamline daily system administration workflows.
+## reference guide categorizes critical Linux commands, administration tools, and text editor shortcuts into structured tables designed for rapid visual parsing. It clearly isolates each command alongside a precise functional description and a practical execution example to streamline daily system administration workflows
 
 ## 1. File Operations Commands
 
