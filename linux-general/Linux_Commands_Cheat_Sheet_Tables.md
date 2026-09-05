@@ -1,6 +1,7 @@
 # Linux Commands Cheat Sheet (Tabular Format)
 
 ## 1. File Operations Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `access` | Check read, write, and execute permissions | `access -r file.txt` |
@@ -46,6 +47,7 @@
 | `wc` | Print newline, word, and byte counts for each file | `wc -l file.txt` |
 
 ## 2. Directory Operations Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `cd` | Change the shell working directory | `cd /var/log` |
@@ -62,6 +64,7 @@
 | `tree` | List contents of directories in a tree-like format | `tree /etc` |
 
 ## 3. File Permission and Ownership Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `chmod` | Change file mode bits (permissions) | `chmod 755 script.sh` |
@@ -70,6 +73,7 @@
 | `chgrp` | Change group ownership | `chgrp wheel file.txt` |
 
 ## 4. User Management Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `chage` | Change user password expiry information | `chage -l username` |
@@ -88,6 +92,7 @@
 | `whoami` | Print effective userid | `whoami` |
 
 ## 5. Group Management Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `groupadd` | Create a new group | `groupadd developers` |
@@ -99,6 +104,7 @@
 | `grpconv` | Create shadow group file from group file | `grpconv` |
 
 ## 6. Process Management Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `accton` | Turn process accounting on or off | `accton /var/account/pacct` |
@@ -120,6 +126,7 @@
 | `w` | Show who is logged on and what they are doing | `w` |
 
 ## 7. Networking Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `arp` | Manipulate the system ARP cache | `arp -a` |
@@ -153,6 +160,7 @@
 | `wget` | The non-interactive network downloader | `wget http://example.com/file.iso` |
 
 ## 8. Job Scheduling Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `atd` | Job spooling daemon | `systemctl status atd` |
@@ -163,6 +171,7 @@
 | `crontab` | Maintain crontab files for individual users | `crontab -e` |
 
 ## 9. Disk and File System Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `cfdisk` | Display or manipulate disk partition table | `cfdisk /dev/sda` |
@@ -176,6 +185,7 @@
 | `sync` | Synchronize cached writes to persistent storage | `sync` |
 
 ## 10. Hardware and System Information Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `acpi` | Show battery status and other ACPI information | `acpi -V` |
@@ -195,6 +205,7 @@
 | `uname` | Print system information | `uname -a` |
 
 ## 11. Compression and Archiving Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `ar` | Create, modify, and extract from archives | `ar rcs lib.a obj1.o obj2.o` |
@@ -212,6 +223,7 @@
 | `zgrep` | Search possibly compressed files for a regular expression | `zgrep "search" file.gz` |
 
 ## 12. Text Processing and Formatting Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `awk` | Pattern scanning and processing language | `awk '{print $1}' file.txt` |
@@ -233,6 +245,7 @@
 | `unix2dos` | UNIX to DOS text file format converter | `unix2dos file.txt` |
 
 ## 13. Kernel and Module Management Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `depmod` | Generate modules.dep and map files | `depmod -a` |
@@ -243,6 +256,7 @@
 | `systemctl` | Control the systemd system and service manager | `systemctl status network` |
 
 ## 14. System Control and Power Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `halt` | Instruct the hardware to stop all CPU functions | `halt` |
@@ -251,6 +265,7 @@
 | `shutdown` | Halt, power-off or reboot the machine | `shutdown -h now` |
 
 ## 15. Logging and Monitoring Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `journalctl` | Query the systemd journal | `journalctl -u sshd -f` |
@@ -261,6 +276,7 @@
 | `scriptreplay` | Play back typescripts, using timing information | `scriptreplay timing.log session.log` |
 
 ## 16. Checksum and File Integrity Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `md5sum` | Compute and check MD5 message digest | `md5sum file.iso` |
@@ -268,6 +284,7 @@
 | `sum` | Checksum and count the blocks in a file | `sum file.txt` |
 
 ## 17. Date and Time Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `cal` | Displays a calendar | `cal 2026` |
@@ -275,6 +292,7 @@
 | `uptime` | Tell how long the system has been running | `uptime` |
 
 ## 18. Mail and User Communication Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `biff` | Be notified if mail arrives and who it is from | `biff y` |
@@ -283,6 +301,7 @@
 | `wall` | Send a message to everybody's terminal | `wall "System will go down in 10 minutes"` |
 
 ## 19. Printing and Media Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `amixer` | Command-line mixer for ALSA soundcard driver | `amixer set Master 50%` |
@@ -293,6 +312,7 @@
 | `import` | Saves any visible window on an X server and outputs it as an image file | `import screenshot.png` |
 
 ## 20. Shell Built-in and Scripting Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `alias` | Define or display aliases | `alias ll='ls -l'` |
@@ -335,6 +355,7 @@
 ## 21. Bash Shortcuts Commands
 
 ### Navigation Shortcuts
+
 | Shortcut | Description |
 | :--- | :--- |
 | `Ctrl + A` | Move to the beginning of the line |
@@ -345,6 +366,7 @@
 | `Alt + F` | Move forward one word |
 
 ### Editing Shortcuts
+
 | Shortcut | Description |
 | :--- | :--- |
 | `Ctrl + U` | Cut/delete text from the cursor to the beginning of the line |
@@ -355,6 +377,7 @@
 | `Ctrl + C` | Terminate the currently running command |
 
 ### History Shortcuts
+
 | Shortcut | Description |
 | :--- | :--- |
 | `Ctrl + R` | Search command history (reverse search) |
@@ -363,6 +386,7 @@
 | `Ctrl + N` | Go to the next command in history |
 
 ## 22. Development and Build Automation Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `aclocal` | Create aclocal.m4 by scanning configure.ac | `aclocal` |
@@ -383,6 +407,7 @@
 | `readelf` | Displays information about ELF files | `readelf -a myprog` |
 
 ## 23. Terminal and Session Management Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `agetty` | Alternative Linux getty | `agetty tty1 9600` |
@@ -395,6 +420,7 @@
 | `xdg-open` | Opens a file or URL in the user's preferred application | `xdg-open index.html` |
 
 ## 24. Help and Documentation Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `apropos` | Search the manual page names and descriptions | `apropos network` |
@@ -405,6 +431,7 @@
 | `which` | Locate a command | `which python` |
 
 ## 25. Text Editors in Linux
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `nano` | Nano's ANOther editor | `nano file.txt` |
@@ -414,6 +441,7 @@
 | `emacs` | GNU project Emacs editor | `emacs file.txt` |
 
 ### Nano Shortcuts Commands
+
 | Category | Shortcut | Description |
 | :--- | :--- | :--- |
 | **File Operations** | `Ctrl + O` | Save (write) the current file |
@@ -434,6 +462,7 @@
 | | `Alt + R` | Repeat the last search |
 
 ### VI/VIM Shortcuts Commands
+
 | Mode/Category | Shortcut | Description |
 | :--- | :--- | :--- |
 | **Insert & Replace** | `i` | Insert before cursor |
@@ -471,6 +500,7 @@
 | | `p` | Paste |
 
 ## 26. IO Redirection Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `cmd < file` | Redirect input | `sort < names.txt` |
@@ -484,6 +514,7 @@
 | `cmd1 <(cmd2)` | Process substitution | `diff <(ls dir1) <(ls dir2)` |
 
 ## 27. Environment Variable Commands
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `export VARIABLE_NAME=value` | Set and export an environment variable | `export PATH=$PATH:/opt/bin` |
