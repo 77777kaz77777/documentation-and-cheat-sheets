@@ -57,7 +57,6 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `Fastfetch_Configuration_Guide.md` | How to tweak and customize system info outputs using Fastfetch |
 | `Git_Dotfiles_Maintenance_Cheat_Sheet.md` | Commands and scripts for backing up system configurations and dotfiles with Git |
 | `KDE_Plasma_Wayland_Shortcuts_Cheat_Sheet.md` | Essential keyboard shortcuts for getting around KDE Plasma on Wayland |
-| `Linux_Commands_Cheat_Sheet_Updated.md` | Linux Commands Cheat Sheet (With Examples) |
 | `Linux_Export_Command_Guide.md` | How to properly set and manage environment variables using the export command |
 | `Linux_Systemd_Cheat_Sheet.md` | Everyday commands for handling services and logs with Systemd and journalctl |
 | `Linux_Upstream_Midstream_Downstream_Explained.md` | A plain-English explanation of how upstream, midstream, and downstream open-source flows work |
