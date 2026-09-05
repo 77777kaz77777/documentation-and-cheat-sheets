@@ -67,28 +67,32 @@ sudo systemctl enable \
 
 ## Managing GPU Modes
 
-*   **Integrated Mode (Max Battery):**
+* **Integrated Mode (Max Battery):**
+
     ~~~bash
     cardwire \
       set \
       integrated
     ~~~
 
-*   **Hybrid Mode (Default):**
+* **Hybrid Mode (Default):**
+
     ~~~bash
     cardwire \
       set \
       hybrid
     ~~~
 
-*   **Dedicated Mode (Max Performance):**
+* **Dedicated Mode (Max Performance):**
+
     ~~~bash
     cardwire \
       set \
       dedicated
     ~~~
 
-*   **Check Status:**
+* **Check Status:**
+
     ~~~bash
     cardwire \
       status
