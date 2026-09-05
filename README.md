@@ -74,6 +74,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `appimage_installation_guide.md` | How to Install and Run AppImages on Linux |
 | `apt_command_reference.md` | Everyday package management commands for Debian and Ubuntu using APT |
 | `brew_command_reference.md` | Essential Homebrew commands for installing software on macOS and Linux |
+| `cardwire-cheat-sheet.md` | Cardwire Cheat Sheet |
 | `flatpak_command_reference.md` | Commands to install, update, and manage sandboxed Flatpak apps |
 | `fwupdmgr_Firmware_Update_Cheat_Sheet.md` | How to check for and apply hardware firmware updates with fwupdmgr |
 | `linux-comprehensive-networking-guide.md` | Linux Comprehensive Networking Tools Guide |
