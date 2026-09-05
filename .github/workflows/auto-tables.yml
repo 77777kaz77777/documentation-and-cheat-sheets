@@ -1,35 +1,30 @@
 name: Auto Update README Tables
-
 on:
   push:
     branches:
       - main
   workflow_dispatch:
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
-
 jobs:
   update-readme-tables:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4.2.2
-
+        uses: actions/checkout@v5
+        
       - name: Setup Python
-        uses: actions/setup-python@v5.4.0
+        uses: actions/setup-python@v6
         with:
           python-version: '3.x'
-
+          
       - name: Generate Formatted Tables & Update README
         run: |
           python3 -c '
           import os, re
-
           FOLDER_DESCS = {
               "updates": "Distro maintenance & update scripts",
               "configs": "Terminal & CLI tool dotfiles",
@@ -47,9 +42,7 @@ jobs:
               "provisioning": "User Provisioning & Bootstrapping",
               "proxmox": "Proxmox Virtual Environment Scripts"
           }
-
           IGNORE_PATHS = {".git", ".github", "README.md", "tree_output.txt"}
-
           def get_file_description(filepath):
               if not os.path.isfile(filepath):
                   return ""
@@ -64,10 +57,8 @@ jobs:
               except Exception:
                   pass
               return ""
-
           entries = sorted([e for e in os.listdir(".") if e not in IGNORE_PATHS and os.path.isdir(e)])
           table_output = []
-
           for d in entries:
               folder_desc = FOLDER_DESCS.get(d, "")
               header_desc = f" ({folder_desc})" if folder_desc else ""
@@ -88,20 +79,16 @@ jobs:
                   table_output.append(f"| `{f}` | {desc} |")
               
               table_output.append("\n")
-
           final_str = "\n".join(table_output).strip()
-
           with open("README.md", "r") as f:
               readme = f.read()
-
           pattern = r"(<!-- START_SECTION:tree -->)(.*?)(<!-- END_SECTION:tree -->)"
           updated = re.sub(pattern, lambda m: m.group(1) + "\n" + final_str + "\n" + m.group(3), readme, flags=re.DOTALL)
-
           with open("README.md", "w") as f:
               f.write(updated)
           '
-
+          
       - name: Commit and Push changes
-        uses: stefanzweifel/git-auto-commit-action@v5.1.0
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: "docs: auto-update directory tables in README"
