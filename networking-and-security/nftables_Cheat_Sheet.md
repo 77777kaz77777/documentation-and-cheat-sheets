@@ -1,6 +1,7 @@
 # nftables Cheat Sheet
 
 ## 1. General Ruleset Management
+
 | Command | Description | Example |
 | :--- | :--- | :--- |
 | `nft list ruleset` | Display the entire active ruleset | `nft list ruleset` |
@@ -10,6 +11,7 @@
 | `nft monitor` | Monitor netlink events (rule additions/deletions) in real-time | `nft monitor` |
 
 ## 2. Table Management
+
 *Tables act as containers for chains, sets, and stateful objects.*
 
 | Command | Description | Example |
@@ -20,6 +22,7 @@
 | `nft flush table <family> <table>` | Remove all rules from all chains within a table (keeps the table and chains) | `nft flush table inet my_table` |
 
 ## 3. Chain Management
+
 *Chains are containers for rules and can be base (hooked into kernel) or regular.*
 
 | Command | Description | Example |
@@ -31,6 +34,7 @@
 | `nft flush chain <family> <table> <chain>` | Delete all rules within a specific chain | `nft flush chain inet my_table my_filter` |
 
 ## 4. Rule Management
+
 *Rules define the match criteria and the action to take.*
 
 | Command | Description | Example |
@@ -42,6 +46,7 @@
 | `nft replace rule <family> <table> <chain> handle <handle> <new_rule>` | Replace an existing rule in-place by its handle | `nft replace rule inet my_table my_filter handle 5 tcp dport 80 accept` |
 
 ## 5. Sets and Maps
+
 *Sets allow matching multiple values efficiently; Maps map a matched value to a specific verdict or data.*
 
 | Command | Description | Example |
@@ -55,6 +60,7 @@
 ## 6. Common Rule Examples
 
 ### Port Filtering
+
 | Purpose | Command Example |
 | :--- | :--- |
 | Allow incoming SSH (port 22) | `nft add rule inet filter input tcp dport 22 accept` |
@@ -62,6 +68,7 @@
 | Drop incoming Telnet (port 23) | `nft add rule inet filter input tcp dport 23 drop` |
 
 ### IP/Network Filtering
+
 | Purpose | Command Example |
 | :--- | :--- |
 | Drop specific source IP | `nft add rule inet filter input ip saddr 192.168.1.100 drop` |
@@ -69,12 +76,14 @@
 | Match multiple IPs using anonymous set | `nft add rule inet filter input ip saddr { 1.2.3.4, 5.6.7.8 } drop` |
 
 ### Stateful Tracking
+
 | Purpose | Command Example |
 | :--- | :--- |
 | Allow established/related traffic | `nft add rule inet filter input ct state established,related accept` |
 | Drop invalid packets | `nft add rule inet filter input ct state invalid drop` |
 
 ### Network Address Translation (NAT)
+
 | Purpose | Command Example |
 | :--- | :--- |
 | Setup SNAT (Masquerade for outbound) | `nft add rule ip nat postrouting oifname "eth0" masquerade` |
