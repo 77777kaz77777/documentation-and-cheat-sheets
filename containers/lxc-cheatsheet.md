@@ -48,8 +48,3 @@ One of the best features of LXC is the ability to "freeze" a state before making
 | **List Storage Pools** | lxc storage list |
 | **Create Managed Volume** | lxc storage volume create [pool] [volume_name] |
 
-### **Comparison Note**
-
-- **Docker:** Temporary, ephemeral, application-centric.
-- **LXC/LXD:** Persistent, stateful, machine-centric (it has its own init, ssh, cron, etc.).
-Should we add a section for **Proxmox-specific LXC** commands (since many people use LXC through the Proxmox pct tool)?
