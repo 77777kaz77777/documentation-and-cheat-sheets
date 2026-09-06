@@ -1,0 +1,27 @@
+name: Spell Check Documentation
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  cspell:
+    name: Check Spelling
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Latest Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'current'
+
+      - name: Run Cspell Spellchecker
+        uses:streetsidesoftware/cspell-action@v6
+        with:
+          check_dotfiles: true
+          inline: error
