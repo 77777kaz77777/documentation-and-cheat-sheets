@@ -1,0 +1,24 @@
+name: Vale Prose Linter
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  vale:
+    name: Lint Prose
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/errata-ai/vale:latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run Vale Linter
+        run: |
+          vale --version
+          vale sync
+          vale --minAlertLevel=error .
