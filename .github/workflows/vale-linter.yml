@@ -15,10 +15,20 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Create Default Vale Config
+        run: |
+          cat << 'EOF' > .vale.ini
+          StylesPath = styles
+          MinAlertLevel = error
+          
+          [*.md]
+          BasedOnStyles = 
+          EOF
+
       - name: Run Vale Linter
         uses: errata-ai/vale-action@v2
         with:
           files: '.'
-          min_alert_level: error
+          level: 'error'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
