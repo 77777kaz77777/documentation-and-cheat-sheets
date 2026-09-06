@@ -1,5 +1,8 @@
 name: Spell Check Documentation
 
+permissions:
+  contents: read
+
 on:
   push:
     branches: [ "main" ]
