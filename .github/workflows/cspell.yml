@@ -21,7 +21,7 @@ jobs:
           node-version: 'current'
 
       - name: Run Cspell Spellchecker
-        uses:streetsidesoftware/cspell-action@v6
+        uses: streetsidesoftware/cspell-action@v6
         with:
           check_dotfiles: true
           inline: error
