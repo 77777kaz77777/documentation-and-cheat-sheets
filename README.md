@@ -77,6 +77,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `cardwire-cheat-sheet.md` | Cardwire Cheat Sheet |
 | `flatpak_command_reference.md` | Commands to install, update, and manage sandboxed Flatpak apps |
 | `fwupdmgr_Firmware_Update_Cheat_Sheet.md` | How to check for and apply hardware firmware updates with fwupdmgr |
+| `iproute2_reference_guide.md` | This document provides a concise quick-reference guide for essential `iproute2` commands used in Linux network administration. It covers practical syntax for managing interfaces, IP addresses, routing tables, and socket statistics, serving as a modern replacement for legacy `net-tools`. |
 | `linux-comprehensive-networking-guide.md` | Linux Comprehensive Networking Tools Guide |
 | `linux-static-ip-configuration.md` | Linux Static IP Configuration Guide |
 | `linux_permissions_reference_expanded.md` | A deep dive into managing Linux file permissions, ownership, and ACLs |
@@ -101,7 +102,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `Tailscale_Mesh_CLI_Cheat_Sheet.md` | Terminal commands for setting up and managing Tailscale mesh networks |
 | `networking_cheatsheet.md` | Networking Concepts and Explanations Cheatsheet |
 | `nftables_Cheat_Sheet.md` | How to properly configure network filtering, manage firewall rulesets, and set up NAT using the nftables command-line utility |
-| `opkg_cheatsheet.md` | quick reference for the ⁠opkg⁠ package manager, commonly used on OpenWrt and embedded Linux systems. It covers the essential commands needed to install, upgrade, query, and manage software packages and their dependencies. |
+| `opkg_cheatsheet.md` | quick reference for the ⁠opkg⁠ package manager, commonly used on OpenWrt and embedded Linux systems. It covers the essential commands needed to install, upgrade, query, and manage software packages and their dependencies |
 | `ufw-cheatsheet.md` | UFW (Uncomplicated Firewall) Command Reference for Ubuntu/Debian |
 
 
