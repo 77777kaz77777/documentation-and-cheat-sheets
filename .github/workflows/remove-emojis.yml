@@ -1,88 +1,59 @@
-
-name: Remove Emojis
+name: Strip Emojis from All Markdown Files
 
 on:
-  issues:
-    types: [opened, edited]
-  issue_comment:
-    types: [created, edited]
-  pull_request:
-    types: [opened, edited]
+  workflow_dispatch: # Allows manual trigger from the Actions tab
 
 jobs:
   strip-emojis:
     runs-on: ubuntu-latest
     permissions:
-      issues: write
-      pull-requests: write
+      contents: write
     steps:
-      - name: Strip Emojis from Title and Body
-        uses: actions/github-script@v7
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          script: |
-            // Regex matching modern Unicode emojis and extended pictographic characters
+          node-version: '20'
+
+      - name: Recursively Remove Emojis from .md Files
+        run: |
+          node -e '
+            const fs = require("fs");
+            const path = require("path");
             const emojiRegex = /(\p{Extended_Pictographic}|\p{Emoji_Component})/gu;
 
-            const payload = context.payload;
-            let targetType = null;
-            let targetId = null;
-            let originalTitle = '';
-            let originalBody = '';
-
-            // Determine if the event comes from an issue, PR, or comment
-            if (payload.comment) {
-              targetType = 'comment';
-              targetId = payload.comment.id;
-              originalBody = payload.comment.body || '';
-            } else if (payload.issue) {
-              targetType = 'issue';
-              targetId = payload.issue.number;
-              originalTitle = payload.issue.title || '';
-              originalBody = payload.issue.body || '';
-            } else if (payload.pull_request) {
-              targetType = 'pull_request';
-              targetId = payload.pull_request.number;
-              originalTitle = payload.pull_request.title || '';
-              originalBody = payload.pull_request.body || '';
+            function processDirectory(dirPath) {
+              const entries = fs.readdirSync(dirPath, { withFileTypes: true });
+              for (const entry of entries) {
+                const fullPath = path.join(dirPath, entry.name);
+                if (entry.isDirectory()) {
+                  if (entry.name !== "node_modules" && entry.name !== ".git") {
+                    processDirectory(fullPath);
+                  }
+                } else if (entry.isFile() && entry.name.endsWith(".md")) {
+                  const content = fs.readFileSync(fullPath, "utf8");
+                  const cleaned = content.replace(emojiRegex, "");
+                  if (content !== cleaned) {
+                    fs.writeFileSync(fullPath, cleaned, "utf8");
+                    console.log(`Cleaned: ${fullPath}`);
+                  }
+                }
+              }
             }
 
-            if (!targetType) return;
+            processDirectory(".");
+          '
 
-            // Remove emojis and clean up double spaces left behind in titles
-            const cleanedTitle = originalTitle.replace(emojiRegex, '').replace(/\s+/g, ' ').trim();
-            const cleanedBody = originalBody.replace(emojiRegex, '');
-
-            const titleChanged = originalTitle !== cleanedTitle;
-            const bodyChanged = originalBody !== cleanedBody;
-
-            // Stop execution if no emojis were detected to avoid infinite loop triggers
-            if (!titleChanged && !bodyChanged) {
-              console.log('No emojis detected.');
-              return;
-            }
-
-            // Update the item via GitHub API
-            if (targetType === 'issue') {
-              await github.rest.issues.update({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: targetId,
-                title: cleanedTitle,
-                body: cleanedBody
-              });
-            } else if (targetType === 'pull_request') {
-              await github.rest.pulls.update({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: targetId,
-                title: cleanedTitle,
-                body: cleanedBody
-              });
-            } else if (targetType === 'comment') {
-              await github.rest.issues.updateComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                comment_id: targetId,
-                body: cleanedBody
-              });
-            }
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A "*.md"
+          if git diff --cached --quiet; then
+            echo "No emojis found in any markdown files."
+          else
+            git commit -m "style: remove emojis from all markdown files"
+            git push
+          fi
