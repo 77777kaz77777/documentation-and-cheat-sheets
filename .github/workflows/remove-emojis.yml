@@ -1,0 +1,87 @@
+name: Remove Emojis
+
+on:
+  issues:
+    types: [opened, edited]
+  issue_comment:
+    types: [created, edited]
+  pull_request:
+    types: [opened, edited]
+
+jobs:
+  strip-emojis:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Strip Emojis from Title and Body
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // Regex matching modern Unicode emojis and extended pictographic characters
+            const emojiRegex = /(\p{Extended_Pictographic}|\p{Emoji_Component})/gu;
+
+            const payload = context.payload;
+            let targetType = null;
+            let targetId = null;
+            let originalTitle = '';
+            let originalBody = '';
+
+            // Determine if the event comes from an issue, PR, or comment
+            if (payload.comment) {
+              targetType = 'comment';
+              targetId = payload.comment.id;
+              originalBody = payload.comment.body || '';
+            } else if (payload.issue) {
+              targetType = 'issue';
+              targetId = payload.issue.number;
+              originalTitle = payload.issue.title || '';
+              originalBody = payload.issue.body || '';
+            } else if (payload.pull_request) {
+              targetType = 'pull_request';
+              targetId = payload.pull_request.number;
+              originalTitle = payload.pull_request.title || '';
+              originalBody = payload.pull_request.body || '';
+            }
+
+            if (!targetType) return;
+
+            // Remove emojis and clean up double spaces left behind in titles
+            const cleanedTitle = originalTitle.replace(emojiRegex, '').replace(/\s+/g, ' ').trim();
+            const cleanedBody = originalBody.replace(emojiRegex, '');
+
+            const titleChanged = originalTitle !== cleanedTitle;
+            const bodyChanged = originalBody !== cleanedBody;
+
+            // Stop execution if no emojis were detected to avoid infinite loop triggers
+            if (!titleChanged && !bodyChanged) {
+              console.log('No emojis detected.');
+              return;
+            }
+
+            // Update the item via GitHub API
+            if (targetType === 'issue') {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: targetId,
+                title: cleanedTitle,
+                body: cleanedBody
+              });
+            } else if (targetType === 'pull_request') {
+              await github.rest.pulls.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: targetId,
+                title: cleanedTitle,
+                body: cleanedBody
+              });
+            } else if (targetType === 'comment') {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: targetId,
+                body: cleanedBody
+              });
+            }
