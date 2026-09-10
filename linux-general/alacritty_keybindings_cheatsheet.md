@@ -4,8 +4,8 @@
 
 | Action | Custom Keybinding | Note |
 | :--- | :--- | :--- |
-| **Copy Selection** | `Ctrl + C` | *Switches Copy from the default `Ctrl + Shift + C`. Warning: This overrides the default UNIX SIGINT (cancel program) command.* |
-| **Paste** | `Ctrl + V` | *Switches Paste from the default `Ctrl + Shift + V` to match typical desktop applications.* |
+| **Copy Selection** | `Ctrl + Shift + C` |  |
+| **Paste** | `Ctrl + Shift + V` |  |
 | **Increase Font Size** | `Ctrl + =` | |
 | **Decrease Font Size** | `Ctrl + -` | |
 | **Reset Font Size** | `Ctrl + 0` | |
