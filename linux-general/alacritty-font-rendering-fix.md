@@ -110,7 +110,7 @@ white   = "#ffffff"
 
 [[keyboard.bindings]]
 key = "V"
-mods = "Control"
+mods = "Control|Shift"
 action = "Paste"
 
 [[keyboard.bindings]]
@@ -120,7 +120,7 @@ action = "Copy"
 
 [[keyboard.bindings]]
 key = "0"
-mods = "Control"
+mods = "Control|Shift"
 action = "ResetFontSize"
 
 [[keyboard.bindings]]
