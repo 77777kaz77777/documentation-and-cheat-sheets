@@ -4,8 +4,8 @@
 
 | Action | Custom Keybinding | Note |
 | :--- | :--- | :--- |
-| **Copy Selection** | `Ctrl + Shift + C` |  |
-| **Paste** | `Ctrl + Shift + V` |  |
+| **Copy Selection** | `Ctrl + Shift + C` | |
+| **Paste** | `Ctrl + Shift + V` | |
 | **Increase Font Size** | `Ctrl + =` | |
 | **Decrease Font Size** | `Ctrl + -` | |
 | **Reset Font Size** | `Ctrl + 0` | |
