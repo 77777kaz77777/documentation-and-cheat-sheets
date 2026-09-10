@@ -132,12 +132,12 @@ white   = "#ffffff"
 # Handy layout mapping for basic quality of life terminal actions
 [[keyboard.bindings]]
 key = "V"
-mods = "Control"
+mods = "Control|Shift"
 action = "Paste"
 
 [[keyboard.bindings]]
 key = "C"
-mods = "Control"
+mods = "Control|Shift"
 action = "Copy"
 
 [[keyboard.bindings]]
@@ -173,7 +173,7 @@ action = "SpawnNewInstance"  # Opens a fresh terminal window in your current pat
   If successful, it will output a Linux penguin icon (``).
 * **Confirm Window Styling**: Ensure the window has a uniform 12px padding around the edges, standard minimize/maximize window decorations, and a matte black (`#121212`) background.
 * **Test Custom Keybindings**:
-  * Highlight any text, press **Ctrl + C** to copy, and **Ctrl + V** to paste.
+  * Highlight any text, press **Ctrl + Shift + C** to copy, and **Ctrl + Shift + V** to paste.
   * Press **Ctrl + =** to increase font size, **Ctrl + -** to decrease it, and **Ctrl + 0** to reset it to 12.0.
   * Press **Ctrl + Shift + Enter** to spawn a fresh Alacritty window pointing to your current working directory.
 * **Test Live Reload**: Open `~/.config/alacritty/alacritty.toml` in your text editor. Temporarily change `opacity = 1.0` to `0.5`, and save the file. The terminal window should immediately become transparent without requiring a restart. Revert back to `1.0` and save again.
