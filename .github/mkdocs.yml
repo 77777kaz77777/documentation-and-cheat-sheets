@@ -1,0 +1,54 @@
+site_name: Documentation & Cheat Sheets
+site_description: Personal repository for administrative cheat sheets and runbooks.
+site_author: 77777kaz77777
+
+site_url: https://77777kaz77777.github.io/documentation-and-cheat-sheets/
+
+# Specifies the directory containing your markdown files
+docs_dir: .
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+# Essential markdown extensions for technical documentation
+markdown_extensions:
+  - admonition
+  - tables
+  - pymdownx.details
+  - pymdownx.magiclink
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+# Explicitly ignore GitHub workflow files and the site build directory
+nav:
+  - Home: README.md
+  - Ansible: ansible/
+  - Containers: containers/
+  - Fedora Linux: fedora/
+  - General Linux: linux-general/
+  - Networking & Security: networking-and-security/
+  - Virtualization: virtualization/
+  - Windows & macOS: windows-and-macos/
