@@ -21,19 +21,22 @@ Once installed, open Gearlever and drag the LibrePods AppImage into the window t
 If tap gestures (Play/Pause/Skip) are not functioning, AVRCP support must be enabled. For systems utilizing PipeWire/WirePlumber:
 
 1. Create a WirePlumber configuration directory and file:
+
 ```bash
 mkdir -p ~/.config/wireplumber/wireplumber.conf.d/
 nano ~/.config/wireplumber/wireplumber.conf.d/51-bluez-avrcp.conf
 ```
 
-2. Add the following block to enable the dummy AVRCP player:
+1. Add the following block to enable the dummy AVRCP player:
+
 ```ini
 monitor.bluez.properties = {
   bluez5.dummy-avrcp-player = true
 }
 ```
 
-3. Restart WirePlumber:
+1. Restart WirePlumber:
+
 ```bash
 systemctl --user restart wireplumber
 ```
@@ -57,16 +60,19 @@ Because AirPods check for the DeviceID characteristic to verify an Apple device 
 
 1. Open `/etc/bluetooth/main.conf` as root.
 2. Add this line under the `[General]` section:
+
 ```ini
 DeviceID = bluetooth:004C:0000:0000
 ```
 
-3. Restart Bluetooth and re-pair the AirPods:
+1. Restart Bluetooth and re-pair the AirPods:
+
 ```bash
 sudo systemctl restart bluetooth
 ```
 
-4. Run the Python script to apply audiogram settings:
+1. Run the Python script to apply audiogram settings:
+
 ```bash
 python3 hearing_aid.py
 ```
