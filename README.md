@@ -46,6 +46,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `asusctl_cheat_sheet_guide.md` | Commands to control fans, lighting, and performance profiles on ASUS ROG laptops (GA503RW) with asusctl |
 | `dnf_command_reference.md` | useful commands for Fedora’s DNF package manager |
 | `fedora-alacritty-setup-and-verification.md` | Setting up the Alacritty terminal on Fedora, complete with custom fonts and themes |
+| `fedora_rog_setup.md` | This document outlines the configurations applied by `fedora_rog_setup.sh` for optimizing the ASUS ROG Zephyrus G15 on Fedora 44 KDE. It manages graphics switching, daemon integration, and power profile adjustments required for stable desktop performance and battery management. |
 | `fix-mux-plymouth-deadlock.md` | How to fix boot deadlocks caused by MUX switches and Plymouth |
 | `kdeconnect-fedora44-ios-troubleshooting.md` | KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora 44 KDE Plasma, even after adding firewall rules to the `home` zone |
 
