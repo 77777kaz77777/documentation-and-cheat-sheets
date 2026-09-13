@@ -78,7 +78,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `flatpak_command_reference.md` | Commands to install, update, and manage sandboxed Flatpak apps |
 | `fwupdmgr_Firmware_Update_Cheat_Sheet.md` | How to check for and apply hardware firmware updates with fwupdmgr |
 | `iproute2_reference_guide.md` | This document provides a concise quick-reference guide for essential `iproute2` commands used in Linux network administration. It covers practical syntax for managing interfaces, IP addresses, routing tables, and socket statistics, serving as a modern replacement for legacy `net-tools` |
-| `librepods_setup_guide.md` | 1. System-Level Bluetooth Configuration |
+| `librepods_setup_guide.md` | a comprehensive setup for deploying LibrePods on Linux to enable native Apple AirPods capabilities, including advanced configuration for Bluetooth and media controls. It also includes an automated Bash script and instructions for managing the application via Gearlever. |
 | `linux-comprehensive-networking-guide.md` | Linux Comprehensive Networking Tools Guide |
 | `linux-static-ip-configuration.md` | Linux Static IP Configuration Guide |
 | `linux_permissions_reference_expanded.md` | A deep dive into managing Linux file permissions, ownership, and ACLs |
