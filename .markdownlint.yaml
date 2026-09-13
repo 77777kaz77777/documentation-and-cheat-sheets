@@ -1,0 +1,7 @@
+# Save this file in the root directory to suppress non-autofixable structural errors
+MD013: false # Line length: Disabled to allow long technical commands and tables
+MD041: false # First line heading: Disabled to permit ## subheadings at the top
+MD024: false # Multiple headings: Disabled to allow recurring sections like "Applying Changes"
+MD036: false # No emphasis as heading: Disabled to permit bolded standalone text
+MD003:
+  style: atx # Enforce standard # over setext (underline) headings
