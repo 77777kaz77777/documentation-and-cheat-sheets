@@ -38,7 +38,7 @@ cardwire \
 
 ~~~bash
 cardwire \
-  status
+  get
 ~~~
 
 ## Hardware Verification
