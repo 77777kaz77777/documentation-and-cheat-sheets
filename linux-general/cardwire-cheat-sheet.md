@@ -10,7 +10,15 @@ cardwire \
   integrated
 ~~~
 
-* **Switch to Hybrid Mode (Default):**
+* **Switch to Smart Mode (Dynamic/Optimal Performance):**
+
+~~~bash
+cardwire \
+  set \
+  smart
+~~~
+
+* **Switch to Hybrid Mode (Standard Offloading):**
 
 ~~~bash
 cardwire \
@@ -18,12 +26,12 @@ cardwire \
   hybrid
 ~~~
 
-* **Switch to Dedicated Mode (Max Performance):**
+* **Switch to Manual Mode (Manual Control):**
 
 ~~~bash
 cardwire \
   set \
-  dedicated
+  manual
 ~~~
 
 * **Check Current Status:**
