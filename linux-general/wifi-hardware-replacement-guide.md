@@ -1,5 +1,3 @@
-# Document Name: wifi-hardware-replacement-guide.md
-
 # Comprehensive Post-Wi-Fi Hardware Replacement Diagnostic Guide
 
 ## 1. Hardware Detection & Bus Audit
