@@ -1,16 +1,15 @@
-## Objective
+## instructions for disabling the integrated AMD GPU on Fedora 44 by blacklisting the amdgpu module in the GRUB bootloader, ensuring the system relies exclusively on the dedicated NVIDIA GPU. It also includes troubleshooting steps using grubby and dracut to resolve issues where Boot Loader Specification (BLS) files retain outdated kernel parameters.
+
 
 Disable the integrated AMD GPU at the OS level by adding the `amdgpu` module to the GRUB bootloader blacklist. This ensures the system relies exclusively on the dedicated NVIDIA GPU.
 
 ## Prerequisites
-
 * Root/sudo privileges.
 * Terminal access.
 
 ## Procedure
 
 ### 1. Edit the GRUB Configuration
-
 Open the GRUB default configuration file in a text editor:
 
 ```bash
@@ -61,7 +60,7 @@ If the command returns no output (a blank line), the AMD GPU driver has been suc
 
 ---
 
-## Troubleshooting: Kernel Still Booting with AMDGPU Blacklisted Post Fix Release
+## Troubleshooting: Kernel Still Booting with AMDGPU Blacklisted Post Fix Release 
 
 If your `/etc/default/grub` file is clean and does not contain `amdgpu` in the blacklist string, the reason kernel 7.2.5 still boots with `amdgpu` blacklisted is that Fedora uses BLS (Boot Loader Specification). Individual boot entries in `/boot/loader/entries/` store their own kernel command line arguments. If `amdgpu` was blacklisted when kernel 7.2.5 was installed, editing `/etc/default/grub` afterwards does not automatically update that specific kernel's BLS file.
 
