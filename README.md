@@ -76,7 +76,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `apt_command_reference.md` | Everyday package management commands for Debian and Ubuntu using APT |
 | `brew_command_reference.md` | Essential Homebrew commands for installing software on macOS and Linux |
 | `cardwire-cheat-sheet.md` | Cardwire Cheat Sheet |
-| `fedora44-disable-amdgpu-grub.md` | Objective |
+| `fedora44-disable-amdgpu-grub.md` | instructions for disabling the integrated AMD GPU on Fedora 44 by blacklisting the amdgpu module in the GRUB bootloader, ensuring the system relies exclusively on the dedicated NVIDIA GPU. It also includes troubleshooting steps using grubby and dracut to resolve issues where Boot Loader Specification (BLS) files retain outdated kernel parameters. |
 | `flatpak_command_reference.md` | Commands to install, update, and manage sandboxed Flatpak apps |
 | `fwupdmgr_Firmware_Update_Cheat_Sheet.md` | How to check for and apply hardware firmware updates with fwupdmgr |
 | `grubby-command-reference.md` | provides a quick-reference guide for using the grubby utility to view, switch, and modify Linux kernel boot parameters and default entries directly from the command line |
