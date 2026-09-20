@@ -1,4 +1,5 @@
-## A that guide organizes essential Linux commands, administration tools, and text editor shortcuts into easy-to-read tables
+## Essential Linux commands, administration tools, and text editor shortcuts organized into tables 
+
 
 ## 1. File Operations Commands
 
