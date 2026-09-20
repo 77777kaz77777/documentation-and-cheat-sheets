@@ -1,6 +1,6 @@
 # LibrePods Setup Guide
 
-## A comprehensive setup for deploying LibrePods on Linux to enable native Apple AirPods capabilities, including advanced configuration for Bluetooth and media controls. It also includes an automated Bash script and instructions for managing the application via Gearlever.
+## A comprehensive setup for deploying LibrePods on Linux to enable native Apple AirPods capabilities, including advanced configuration for Bluetooth and media controls. It also includes an automated Bash script and instructions for managing the application via Gearlever
 
 LibrePods unlocks native AirPods capabilities on Linux, including noise control modes, adaptive transparency, ear detection, and battery status reporting.
 
@@ -31,7 +31,7 @@ mkdir -p ~/.config/wireplumber/wireplumber.conf.d/
 nano ~/.config/wireplumber/wireplumber.conf.d/51-bluez-avrcp.conf
 ```
 
-2. Add the following block to enable the dummy AVRCP player:
+1. Add the following block to enable the dummy AVRCP player:
 
 ```ini
 monitor.bluez.properties = {
@@ -39,7 +39,7 @@ monitor.bluez.properties = {
 }
 ```
 
-3. Restart WirePlumber:
+1. Restart WirePlumber:
 
 ```bash
 systemctl --user restart wireplumber
