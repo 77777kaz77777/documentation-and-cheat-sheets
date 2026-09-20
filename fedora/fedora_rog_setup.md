@@ -35,3 +35,7 @@ Specific fixes are applied based on the hardware generation of the Zephyrus G15.
 * **2022 Models:** Ensure the system BIOS is updated past version `313` . ASUS fixed ACPI support for Linux in this release, resolving power distribution issues that caused stuttering in performance mode .
 * **2021 Models (Suspend Issues):** Using a secondary NVMe drive on 2021 models can break `s0ix` (s2idle) suspend . This requires a DSDT table patch on older kernels, but is fixed natively in kernel versions `6.1.x` and up .
 * **S3 Sleep Fallback:** If `s0ix` fails completely, you must patch your DSDT tables to force the legacy S3 suspend method . This is a manual process and cannot be integrated directly into the kernel . If you update your BIOS after applying an S3 patch, you must disable the old DSDT table and create a new one .
+
+## Repository Reference
+
+* Script Source: [`fedora_rog_setup.sh`](https://github.com/77777kaz77777/linux-environment-automation/blob/main/utils/fedora_rog_setup.sh)
