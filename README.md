@@ -81,6 +81,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `fwupdmgr_Firmware_Update_Cheat_Sheet.md` | How to check for and apply hardware firmware updates with fwupdmgr |
 | `grubby-command-reference.md` | provides a quick-reference guide for using the grubby utility to view, switch, and modify Linux kernel boot parameters and default entries directly from the command line |
 | `iproute2_reference_guide.md` | This document provides a concise quick-reference guide for essential `iproute2` commands used in Linux network administration. It covers practical syntax for managing interfaces, IP addresses, routing tables, and socket statistics, serving as a modern replacement for legacy `net-tools` |
+| `librepods_setup_guide.md` | LibrePods Setup Guide |
 | `linux-comprehensive-networking-guide.md` | Linux Comprehensive Networking Tools Guide |
 | `linux-static-ip-configuration.md` | Linux Static IP Configuration Guide |
 | `linux_permissions_reference_expanded.md` | A deep dive into managing Linux file permissions, ownership, and ACLs |
