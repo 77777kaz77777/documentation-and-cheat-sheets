@@ -91,6 +91,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `nmcli-cheat-sheet.md` | Commands for managing network interfaces and Wi-Fi connections via nmcli |
 | `pacman_command_reference.md` | Essential commands for managing Arch Linux packages with Pacman |
 | `samba-mount-guide.md` | Commands and configurations for connecting, temporarily mounting, and permanently automounting local SMB/CIFS network shares |
+| `smartctl_cheat_sheet.md` | `smartctl` Comprehensive Cheat Sheet |
 | `storage_management_reference.md` | Commands to manage block devices, format partitions, and handle filesystems |
 | `wifi-hardware-replacement-guide.md` | Comprehensive Post-Wi-Fi Hardware Replacement Diagnostic Guide |
 | `workstation_bootstrap_documentation.md` | Scripts and steps for setting up a new workstation and automating tool installations |
