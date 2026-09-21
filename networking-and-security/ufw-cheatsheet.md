@@ -1,111 +1,176 @@
 ## UFW (Uncomplicated Firewall) Command Reference for Ubuntu/Debian
 
-Service Control & Status
 
-| | |
-| :- | :- |
-| **Command** | **Action** |
-| sudo ufw status | View firewall status (enabled/disabled) |
-| sudo ufw status verbose | View detailed status, default policies, and active rules |
-| sudo ufw status numbered | Display active rules with line numbers (useful for deletion) |
-| sudo ufw enable | Enable UFW (starts automatically on boot) |
-| sudo ufw disable | Disable UFW |
-| sudo ufw reload | Reload UFW rules without resetting connections |
-| sudo ufw reset | Reset UFW to default factory state (deletes all custom rules) |
+UFW is a user-friendly frontend for managing iptables (or nftables) firewall rules on Linux. It aims to make basic firewall management simple while still allowing for advanced configurations.
 
-Default Policies
-Set default traffic handling before adding specific rules:
+## 1. Service Control & Status
 
-# Deny all incoming traffic and allow all outgoing traffic (standard baseline)  
+| Command | Description |
+| :--- | :--- |
+| `sudo ufw status` | Display active firewall status and configured rules. |
+| `sudo ufw status verbose` | Show detailed status including default policies, logging level, and active profiles. |
+| `sudo ufw status numbered` | Display active rules with index numbers (required for precise deletion or insertion). |
+| `sudo ufw enable` | Enable UFW and configure systemd to start the firewall service on boot. **Warning:** Ensure SSH is allowed before enabling! |
+| `sudo ufw disable` | Stop UFW and disable automatic launch at system boot. |
+| `sudo ufw reload` | Reload configuration files and re-apply rules without dropping active connections. |
+| `sudo ufw reset` | Disable UFW and delete all custom rules, returning it to factory defaults. |
 
-sudo ufw default deny incoming  
-sudo ufw default allow outgoing  
-Allowing Traffic
-By Port or Service
+## 2. Default Policies
 
-# Allow SSH by service name or port number  
+It is best practice to define default behaviors for traffic that does not match any specific rule.
 
-sudo ufw allow ssh  
-sudo ufw allow 22  
-  
-# Allow HTTP and HTTPS  
+```bash
+# Deny all incoming connections (Standard secure baseline)
+sudo ufw default deny incoming
 
-sudo ufw allow http  
-sudo ufw allow https  
-sudo ufw allow 80/tcp  
-sudo ufw allow 443/tcp  
-By Port Range & Protocol
+# Allow all outgoing connections (Allows your server to reach the internet)
+sudo ufw default allow outgoing
 
-# Allow TCP port range 6000 to 6007  
+# Reject incoming traffic (Sends an ICMP "unreachable" response instead of silently dropping)
+sudo ufw default reject incoming
 
-sudo ufw allow 6000:6007/tcp  
-  
-# Allow UDP port range 6000 to 6007  
+# Allow/Deny routed traffic (Forwarding between interfaces, useful for VPNs/routers)
+sudo ufw default allow routed
+```
 
-sudo ufw allow 6000:6007/udp  
-By IP Address or Subnet
+## 3. Application Profiles
 
-# Allow all incoming connections from a specific IP address  
+UFW can read application profiles (usually located in `/etc/ufw/applications.d`) which bundle port configurations for specific software.
 
-sudo ufw allow from 192.168.1.50  
-  
-# Allow a specific IP address on a specific port (e.g., SSH)  
+```bash
+# List all available application profiles installed on the system
+sudo ufw app list
 
-sudo ufw allow from 192.168.1.50 to any port 22  
-  
-# Allow an entire subnet (e.g., 192.168.1.0/24)  
+# View details and ports associated with a specific profile
+sudo ufw app info "Nginx Full"
 
-sudo ufw allow from 192.168.1.0/24  
-  
-# Allow an entire subnet to access a specific port (e.g., MySQL 3306)  
+# Allow traffic using an application profile
+sudo ufw allow "Nginx Full"
+sudo ufw allow OpenSSH
+```
 
-sudo ufw allow from 192.168.1.0/24 to any port 3306  
-Denying & Rate Limiting
+## 4. Allowing & Denying Traffic
 
-# Deny incoming traffic on port 80  
+### By Port or Service
+```bash
+# Allow/Deny by service name (reads from /etc/services)
+sudo ufw allow ssh
+sudo ufw deny telnet
 
-sudo ufw deny 80/tcp  
-  
-# Deny connections from a specific IP  
+# Allow/Deny by specific port number
+sudo ufw allow 22
+sudo ufw deny 23
 
-sudo ufw deny from 203.0.113.100  
-  
-# Rate limit SSH (denies connections from IPs with 6+ attempts in 30 seconds)  
+# Specify TCP or UDP protocol
+sudo ufw allow 80/tcp
+sudo ufw allow 1194/udp
+```
 
-sudo ufw limit ssh  
-Deleting Rules
-Method 1: By Rule Line Number
+### By Port Ranges
+```bash
+# Allow TCP port range 6000 to 6007
+sudo ufw allow 6000:6007/tcp
 
-# 1. List rules with numbers  
+# Allow UDP port range 6000 to 6007
+sudo ufw allow 6000:6007/udp
+```
 
-sudo ufw status numbered  
-  
-# 2. Delete rule by number (e.g., rule #3)  
+### Advanced IP and Subnet Rules
+```bash
+# Allow all incoming connections from a specific IP address
+sudo ufw allow from 192.168.1.50
 
-sudo ufw delete 3  
-Method 2: By Original Syntax
-sudo ufw delete allow 80/tcp  
-sudo ufw delete allow ssh  
-Network Interface Rules
-Apply rules to specific network interfaces (e.g., eth0 or wg0):
+# Deny all incoming connections from a specific IP
+sudo ufw deny from 203.0.113.100
 
-# Allow incoming traffic on port 80 on eth0 only  
+# Allow an entire CIDR subnet (e.g., 192.168.1.0 to 192.168.1.255)
+sudo ufw allow from 192.168.1.0/24
 
-sudo ufw allow in on eth0 to any port 80  
-  
-# Allow traffic on a specific VPN interface  
+# Allow a specific IP address to access a specific port (e.g., SSH)
+sudo ufw allow from 192.168.1.50 to any port 22
 
-sudo ufw allow in on wg0  
-Logging
+# Allow a specific subnet to access a specific port and protocol (MySQL)
+sudo ufw allow from 192.168.1.0/24 to any port 3306 proto tcp
 
-# Enable logging (logs stored in /var/log/ufw.log)  
+# Specify the destination IP (useful if your server has multiple IP addresses)
+sudo ufw allow from 192.168.1.50 to 10.0.0.5 port 22
+```
 
-sudo ufw logging on  
-  
-# Set logging level (low, medium, high, full)  
+### Outgoing Traffic Rules
+If you change the default outgoing policy to `deny`, you must explicitly allow outbound traffic:
+```bash
+# Allow outbound traffic to a specific port (e.g., HTTP/HTTPS)
+sudo ufw allow out 80/tcp
+sudo ufw allow out 443/tcp
 
-sudo ufw logging medium  
-  
-# Disable logging  
+# Allow outbound traffic to a specific IP address
+sudo ufw allow out to 8.8.8.8 port 53 proto udp
+```
 
+## 5. Rate Limiting (Brute-Force Protection)
+
+UFW can rate-limit connections to prevent brute-force attacks. By default, it denies connections from an IP address that has attempted to initiate 6 or more connections in the last 30 seconds.
+
+```bash
+# Rate limit SSH (Highly recommended if exposed to the internet)
+sudo ufw limit ssh
+
+# Rate limit a specific custom port
+sudo ufw limit 2222/tcp
+```
+
+## 6. Network Interface Specific Rules
+
+You can restrict rules to specific network interfaces (e.g., `eth0`, `wlan0`, `wg0`, `tun0`).
+
+```bash
+# Allow incoming traffic on port 80 only on the 'eth0' interface
+sudo ufw allow in on eth0 to any port 80
+
+# Deny incoming traffic from a specific IP on a specific interface
+sudo ufw deny in on eth0 from 192.168.1.100
+
+# Allow all traffic on a trusted VPN interface (e.g., WireGuard)
+sudo ufw allow in on wg0
+sudo ufw allow out on wg0
+```
+
+## 7. Managing & Editing Rules
+
+### Inserting Rules at a Specific Position
+Rules are evaluated top-down. The first matching rule applies.
+```bash
+# Insert a rule at line number 1 (highest priority)
+sudo ufw insert 1 allow from 192.168.1.100 to any port 22
+
+# Insert a rule at line number 3
+sudo ufw insert 3 deny from 203.0.113.50
+```
+
+### Deleting Rules
+```bash
+# Method 1: By Line Number (Safest)
+sudo ufw status numbered
+sudo ufw delete 3   # Deletes the rule at index 3
+
+# Method 2: By Original Syntax
+sudo ufw delete allow 80/tcp
+sudo ufw delete allow ssh
+```
+
+## 8. Logging
+
+Logs are typically stored in `/var/log/ufw.log`, `/var/log/syslog`, or `/var/log/kern.log` depending on your Linux distribution.
+
+```bash
+# Enable firewall logging
+sudo ufw logging on
+
+# Set logging level (options: low, medium, high, full)
+# 'low' logs blocked packets not matching defined policy (default)
+# 'medium' adds logs for allowed packets not matching defined policy
+sudo ufw logging medium
+
+# Disable logging
 sudo ufw logging off
+```
