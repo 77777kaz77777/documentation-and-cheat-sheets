@@ -93,7 +93,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `samba-mount-guide.md` | Commands and configurations for connecting, temporarily mounting, and permanently automounting local SMB/CIFS network shares |
 | `smartctl_cheat_sheet.md` | `smartctl` Comprehensive Cheat Sheet |
 | `storage_management_reference.md` | Commands to manage block devices, format partitions, and handle filesystems |
-| `systemd_journalctl_cheat_sheet.md` | Everyday commands for handling services and logs with Systemd and journalctl |
+| `systemd_journalctl_cheat_sheet.md` | reference sheet for managing systemd services and inspecting system logs with journalctl |
 | `wifi-hardware-replacement-guide.md` | Comprehensive Post-Wi-Fi Hardware Replacement Diagnostic Guide |
 | `workstation_bootstrap_documentation.md` | Scripts and steps for setting up a new workstation and automating tool installations |
 | `zypper_command_reference.md` | Everyday commands for managing packages on openSUSE and SLES using Zypper |
