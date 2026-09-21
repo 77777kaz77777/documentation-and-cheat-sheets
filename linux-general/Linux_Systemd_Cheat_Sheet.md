@@ -50,6 +50,7 @@ Systemd is the system and service manager responsible for controlling system uni
 ## 4. Log Filtering & Diagnostics (`journalctl`)
 
 ### Basic & Real-Time Logs
+
 | Action | Command |
 | :--- | :--- |
 | **Follow Unit Logs Real-Time** | `sudo journalctl -u <unit> -f` |
@@ -60,6 +61,7 @@ Systemd is the system and service manager responsible for controlling system uni
 | **View Kernel Logs (`dmesg` equivalent)** | `sudo journalctl -k` |
 
 ### Time & Priority Filtering
+
 | Action | Command |
 | :--- | :--- |
 | **Filter by Relative Time** | `sudo journalctl --since "1 hour ago"` |
@@ -69,6 +71,7 @@ Systemd is the system and service manager responsible for controlling system uni
 | **Filter by Executable Path** | `sudo journalctl /usr/bin/<binary>` |
 
 ### Formatting & Disk Space Maintenance
+
 | Action | Command |
 | :--- | :--- |
 | **Raw Message Output (No metadata)** | `sudo journalctl -u <unit> -o cat` |
