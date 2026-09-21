@@ -28,6 +28,7 @@ SELinux contexts are typically displayed in the format: `user:role:type:level`. 
 ## 3. Modifying File Contexts
 
 ### Temporary Changes (`chcon`)
+
 Changes made with `chcon` will be lost the next time the filesystem is relabeled or `restorecon` is run.
 
 ```bash
@@ -36,6 +37,7 @@ sudo chcon -t httpd_sys_content_t /var/www/html/index.html
 ```
 
 ### Permanent Changes (`semanage fcontext` & `restorecon`)
+
 To permanently define the default context for a directory and ensure the labels survive reboots and relabeling operations.
 
 ```bash
@@ -59,7 +61,7 @@ Booleans are on/off switches that allow you to modify SELinux policy behavior on
 
 ## 5. Troubleshooting & Audit Logs
 
-When a daemon or process is denied access, SELinux logs an AVC (Access Vector Cache) denial. 
+When a daemon or process is denied access, SELinux logs an AVC (Access Vector Cache) denial.
 
 ### Finding the Denials
 
@@ -72,6 +74,7 @@ sudo journalctl -t setroubleshoot
 ```
 
 ### Analyzing Denials with `sealert`
+
 `sealert` translates cryptic audit logs into human-readable explanations and suggests fixes.
 
 ```bash
@@ -80,6 +83,7 @@ sudo sealert -a /var/log/audit/audit.log
 ```
 
 ### Generating Custom Policy Modules (`audit2allow`)
+
 If you are running a custom application and need to allow it to bypass a restriction, you can compile a custom policy module based on the denial logs.
 
 ```bash
@@ -92,9 +96,9 @@ sudo semodule -i mypol.pp
 
 ## 6. Common Context Types Reference
 
-*   `httpd_sys_content_t`: Standard read-only web server content.
-*   `httpd_sys_rw_content_t`: Web server content that the web daemon needs to write to (e.g., upload directories).
-*   `public_content_t`: Read-only files shared via FTP, Samba, or Apache.
-*   `public_content_rw_t`: Read/write files shared via FTP, Samba, or Apache.
-*   `virt_image_t`: Disk image files used by KVM/libvirt.
-*   `container_file_t`: Files and directories mapped into Podman/Docker containers.
+* `httpd_sys_content_t`: Standard read-only web server content.
+* `httpd_sys_rw_content_t`: Web server content that the web daemon needs to write to (e.g., upload directories).
+* `public_content_t`: Read-only files shared via FTP, Samba, or Apache.
+* `public_content_rw_t`: Read/write files shared via FTP, Samba, or Apache.
+* `virt_image_t`: Disk image files used by KVM/libvirt.
+* `container_file_t`: Files and directories mapped into Podman/Docker containers.
