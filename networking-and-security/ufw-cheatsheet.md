@@ -1,6 +1,5 @@
 ## UFW (Uncomplicated Firewall) Command Reference for Ubuntu/Debian
 
-
 UFW is a user-friendly frontend for managing iptables (or nftables) firewall rules on Linux. It aims to make basic firewall management simple while still allowing for advanced configurations.
 
 ## 1. Service Control & Status
@@ -52,6 +51,7 @@ sudo ufw allow OpenSSH
 ## 4. Allowing & Denying Traffic
 
 ### By Port or Service
+
 ```bash
 # Allow/Deny by service name (reads from /etc/services)
 sudo ufw allow ssh
@@ -67,6 +67,7 @@ sudo ufw allow 1194/udp
 ```
 
 ### By Port Ranges
+
 ```bash
 # Allow TCP port range 6000 to 6007
 sudo ufw allow 6000:6007/tcp
@@ -76,6 +77,7 @@ sudo ufw allow 6000:6007/udp
 ```
 
 ### Advanced IP and Subnet Rules
+
 ```bash
 # Allow all incoming connections from a specific IP address
 sudo ufw allow from 192.168.1.50
@@ -97,7 +99,9 @@ sudo ufw allow from 192.168.1.50 to 10.0.0.5 port 22
 ```
 
 ### Outgoing Traffic Rules
+
 If you change the default outgoing policy to `deny`, you must explicitly allow outbound traffic:
+
 ```bash
 # Allow outbound traffic to a specific port (e.g., HTTP/HTTPS)
 sudo ufw allow out 80/tcp
@@ -138,7 +142,9 @@ sudo ufw allow out on wg0
 ## 7. Managing & Editing Rules
 
 ### Inserting Rules at a Specific Position
+
 Rules are evaluated top-down. The first matching rule applies.
+
 ```bash
 # Insert a rule at line number 1 (highest priority)
 sudo ufw insert 1 allow from 192.168.1.100 to any port 22
@@ -148,6 +154,7 @@ sudo ufw insert 3 deny from 203.0.113.50
 ```
 
 ### Deleting Rules
+
 ```bash
 # Method 1: By Line Number (Safest)
 sudo ufw status numbered
