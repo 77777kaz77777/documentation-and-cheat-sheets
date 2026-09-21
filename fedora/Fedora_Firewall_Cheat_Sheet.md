@@ -3,8 +3,9 @@
 Fedora and other RHEL-based distributions use **firewalld** as the default dynamic firewall manager. It uses the concept of "Zones" to define trust levels for network connections and interfaces.
 
 > **Crucial Concept: Runtime vs. Permanent**
-> *   Commands run *without* `--permanent` apply immediately but are lost on reboot or reload.
-> *   Commands run *with* `--permanent` are saved to disk but do not apply immediately. You must run `sudo firewall-cmd --reload` to activate them.
+>
+> * Commands run *without* `--permanent` apply immediately but are lost on reboot or reload.
+> * Commands run *with* `--permanent` are saved to disk but do not apply immediately. You must run `sudo firewall-cmd --reload` to activate them.
 
 ## 1. Service Control & Status
 
@@ -13,14 +14,14 @@ Manage the underlying `firewalld` system service and check overall status.
 | Command | Description |
 | :--- | :--- |
 | `sudo systemctl status firewalld` | Check if the firewalld systemd service is running. |
-| `sudo systemctl enable --now firewalld`| Start firewalld and enable it to launch on boot. |
+| `sudo systemctl enable --now firewalld` | Start firewalld and enable it to launch on boot. |
 | `sudo firewall-cmd --state` | Quick check to see if the firewall is actively running. |
 | `sudo firewall-cmd --reload` | Reload permanent rules into runtime (does not drop connections). |
 | `sudo firewall-cmd --complete-reload` | Reload rules and *drop* all active connections (use if state matching breaks). |
 
 ## 2. Managing Zones
 
-Zones dictate the default behavior for incoming traffic on the interfaces or sources assigned to them. 
+Zones dictate the default behavior for incoming traffic on the interfaces or sources assigned to them.
 
 | Command | Description |
 | :--- | :--- |
@@ -32,6 +33,7 @@ Zones dictate the default behavior for incoming traffic on the interfaces or sou
 | `sudo firewall-cmd --zone=home --list-all` | List all settings for a specific zone (e.g., `home`). |
 
 ### Interface Management
+
 ```bash
 # Temporarily assign an interface to a specific zone
 sudo firewall-cmd --zone=internal --change-interface=eth0
@@ -45,6 +47,7 @@ sudo firewall-cmd --permanent --zone=internal --change-interface=eth0
 Instead of remembering ports, Firewalld allows you to allow/block predefined services (like HTTP, SSH, FTP).
 
 ### Managing Services
+
 ```bash
 # List all predefined services firewalld knows about
 sudo firewall-cmd --get-services
@@ -60,6 +63,7 @@ sudo firewall-cmd --permanent --remove-service=ftp
 ```
 
 ### Managing Ports directly
+
 ```bash
 # Open a specific port permanently (TCP or UDP)
 sudo firewall-cmd --permanent --add-port=8080/tcp
