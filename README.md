@@ -12,20 +12,22 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 |---|---|
 | `Ansible_Automation_Cheat_Sheet.md` | Ansible Automation Cheat Sheet |
 
+
 ### 📁 containers/ (Docker, Podman, and LXC Guides)
 
 | File | Description |
-| --- | --- |
+|---|---|
 | `Docker_CLI_Compose_Cheat_Sheet.md` | Core commands for spinning up Docker containers, managing images, and using Compose |
 | `lxc-cheatsheet.md` | LXC/LXD Essentials Cheat Sheet |
 | `podman-cheatsheet.md` | Essential commands for running daemonless containers with Podman |
 | `podman-desktop-guide.md` | How to install and set up the Podman Desktop GUI |
 
+
 ### 📁 fedora/ (Fedora Linux Specific Documentation)
 
 | File | Description |
-| --- | --- |
-| `Fedora_NVIDIA_Installation_Guide.md` | A guide to safely installing NVIDIA drivers on Fedora Workstation utilizing RPM Fusion repositories |
+|---|---|
+| ` Fedora_NVIDIA_Installation_Guide.md` | A guide to safely installing NVIDIA drivers on Fedora Workstation utilizing RPM Fusion repositories |
 | `Btrbk_Snapshot_Automation_Cheat_Sheet.md` | Steps to automate Btrfs snapshots and backups using Btrbk |
 | `ClamAV_SELinux_Implementation_Guide.md` | Fedora ClamAV & SELinux Implementation Guide |
 | `DNF_Optimization_and_Configuration_Guide.md` | DNF Package Manager Speed Optimization & Configuration Guide |
@@ -48,17 +50,17 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `fix-mux-plymouth-deadlock.md` | How to fix boot deadlocks caused by MUX switches and Plymouth |
 | `kdeconnect-fedora44-ios-troubleshooting.md` | KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora 44 KDE Plasma, even after adding firewall rules to the `home` zone |
 
+
 ### 📁 linux-general/ (General Linux Reference)
 
 | File | Description |
-| --- | --- |
+|---|---|
 | `Enterprise_Linux_Ecosystem_and_Commands_2026.md` | A breakdown of the 2026 Enterprise Linux landscape plus core admin commands |
 | `Fastfetch_Configuration_Guide.md` | How to tweak and customize system info outputs using Fastfetch |
 | `Git_Dotfiles_Maintenance_Cheat_Sheet.md` | Commands and scripts for backing up system configurations and dotfiles with Git |
 | `KDE_Plasma_Wayland_Shortcuts_Cheat_Sheet.md` | Essential keyboard shortcuts for getting around KDE Plasma on Wayland |
 | `Linux_Commands_Cheat_Sheet_Tables.md` | Essential Linux commands, administration tools, and text editor shortcuts organized into tables |
 | `Linux_Export_Command_Guide.md` | How to properly set and manage environment variables using the export command |
-| `Linux_Systemd_Cheat_Sheet.md` | Everyday commands for handling services and logs with Systemd and journalctl |
 | `Linux_Upstream_Midstream_Downstream_Explained.md` | A plain-English explanation of how upstream, midstream, and downstream open-source flows work |
 | `Linux_Ventoy_USB_Creation_Guide.md` | How to format and create a multi-boot Ventoy USB drive on Linux |
 | `NVIDIA_CUDA_Monitoring_Cheat_Sheet.md` | Commands to monitor NVIDIA GPU performance and CUDA workloads |
@@ -91,14 +93,16 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `samba-mount-guide.md` | Commands and configurations for connecting, temporarily mounting, and permanently automounting local SMB/CIFS network shares |
 | `smartctl_cheat_sheet.md` | `smartctl` Comprehensive Cheat Sheet |
 | `storage_management_reference.md` | Commands to manage block devices, format partitions, and handle filesystems |
+| `systemd_journalctl_cheat_sheet.md` | Everyday commands for handling services and logs with Systemd and journalctl |
 | `wifi-hardware-replacement-guide.md` | Comprehensive Post-Wi-Fi Hardware Replacement Diagnostic Guide |
 | `workstation_bootstrap_documentation.md` | Scripts and steps for setting up a new workstation and automating tool installations |
 | `zypper_command_reference.md` | Everyday commands for managing packages on openSUSE and SLES using Zypper |
 
+
 ### 📁 networking-and-security/ (Networking & Security Configurations)
 
 | File | Description |
-| --- | --- |
+|---|---|
 | `AdGuard_Home_Management_Cheat_Sheet.md` | Commands and config paths for managing AdGuard Home DNS rules and filters |
 | `OpenWrt_UCI_Command_Cheat_Sheet.md` | How to configure OpenWrt router settings straight from the terminal using UCI |
 | `Pentesting_Toolkit_Cheat_Sheet.md` | A quick reference for everyday penetration testing tools and frameworks |
@@ -108,20 +112,22 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `opkg_cheatsheet.md` | quick reference for the ⁠opkg⁠ package manager, commonly used on OpenWrt and embedded Linux systems. It covers the essential commands needed to install, upgrade, query, and manage software packages and their dependencies |
 | `ufw-cheatsheet.md` | UFW (Uncomplicated Firewall) Command Reference for Ubuntu/Debian |
 
+
 ### 📁 virtualization/ (Hypervisor & VM Runbooks)
 
 | File | Description |
-| --- | --- |
+|---|---|
 | `Hyper-V_PowerShell_Cheat_Sheet.md` | PowerShell commands to spin up and manage Hyper-V virtual machines |
 | `proxmox-cheatsheet.md` | Proxmox Virtual Machine Commands (qm) Cheat Sheet |
 | `virt-manager-cheatsheet.md` | Virt-Manager & Virsh Command Line Cheat Sheet |
 | `virt-manager-docker-conflict.md` | How to fix network bridge conflicts when running Virt-Manager and Docker on the same machine |
 | `virtualization_virt-manager-troubleshooting-fedora.md` | Fixes and tweaks for running Virt-Manager smoothly on Fedora |
 
+
 ### 📁 windows-and-macos/ (Windows & macOS References)
 
 | File | Description |
-| --- | --- |
+|---|---|
 | `Windows_Sysinternals_Cheat_Sheet.md` | A practical guide to core Microsoft Sysinternals tools (Process Explorer, Process Monitor, Autoruns, PsExec, and TCPView), highlighting specific filters, shortcuts, and commands for advanced troubleshooting, malware isolation, and remote system administration |
 | `Winget_Cheat_Sheet.md` | A quick-reference guide for managing Windows software packages using the Winget command-line tool, covering package discovery, silent installations, bulk upgrades, and system provisioning |
 | `macOS_Terminal_Package_Management_Cheat_Sheet.md` | A quick-reference guide for macOS command-line operations, covering Homebrew package management, system software updates, networking tools, process management, and essential Finder modifications |
