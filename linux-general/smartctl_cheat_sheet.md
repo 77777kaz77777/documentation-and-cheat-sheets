@@ -19,6 +19,7 @@
 ## 2. Basic Syntax & Drive Scanning
 
 ### Scan for Available Devices
+
 ```bash
 # Scan for all smartctl-compatible devices
 sudo smartctl --scan
@@ -28,6 +29,7 @@ sudo smartctl --scan-open
 ```
 
 ### General Syntax
+
 ```bash
 sudo smartctl [options] /dev/<device_name>
 ```
@@ -39,6 +41,7 @@ sudo smartctl [options] /dev/<device_name>
 ## 3. Quick Checks & Information
 
 ### Basic Info & S.M.A.R.T. Status
+
 ```bash
 # Display drive hardware info (Model, Serial, Firmware, Family)
 sudo smartctl -i /dev/sda
@@ -50,7 +53,8 @@ sudo smartctl -H /dev/sda
 sudo smartctl -i /dev/sda | grep -i "smart"
 ```
 
-### Enabling & Disabling S.M.A.R.T.
+### Enabling & Disabling S.M.A.R.T
+
 ```bash
 # Enable S.M.A.R.T. on a drive
 sudo smartctl -s on /dev/sda
@@ -145,6 +149,7 @@ sudo smartctl -a /dev/nvme0n1
 ```
 
 ### Important NVMe Health Indicators
+
 - **Critical Warning:** Should be `0x00`. Non-zero indicates overheating, wear, or memory errors.
 - **Percentage Used:** Estimated wear level percentage (100% = end of rated lifetime).
 - **Data Units Read / Written:** Total volume of data moved (helps calculate total bytes written / TBW).
@@ -157,6 +162,7 @@ sudo smartctl -a /dev/nvme0n1
 To query drives attached behind a hardware RAID controller, specify the controller/device type using the `-d` flag.
 
 ### MegaRAID / LSI
+
 ```bash
 # Query physical drive 0 behind MegaRAID controller
 sudo smartctl -a -d megaraid,0 /dev/sda
@@ -166,18 +172,21 @@ sudo smartctl -a -d megaraid,1 /dev/sda
 ```
 
 ### HP Smart Array (cciss)
+
 ```bash
 # Query physical drive 0
 sudo smartctl -a -d cciss,0 /dev/sg0
 ```
 
 ### ARECA RAID
+
 ```bash
 # Query enclosure 1, disk 2
 sudo smartctl -a -d areca,2/1 /dev/sg1
 ```
 
 ### SAT / USB Enclosures
+
 ```bash
 # Force ATA/SATA mode on USB enclosures or bridges that obscure drive pass-through
 sudo smartctl -a -d sat /dev/sdb
@@ -190,6 +199,7 @@ sudo smartctl -a -d sat /dev/sdb
 `smartd` is the daemon included with `smartmontools` to continuously monitor drives and send alerts on failures.
 
 ### Configuration File
+
 `/etc/smartd.conf`
 
 ### Common Configuration Examples
@@ -207,6 +217,7 @@ DEVICESCAN -m admin@example.com -M exec /usr/share/smartmontools/smartd-runner
 ```
 
 ### Managing the Daemon
+
 ```bash
 # Enable and start smartd daemon
 sudo systemctl enable --now smartd
