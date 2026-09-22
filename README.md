@@ -18,7 +18,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | File | Description |
 |---|---|
 | `Docker_CLI_Compose_Cheat_Sheet.md` | reference guide for essential Docker and Docker Compose commands |
-| `lxc-cheatsheet.md` | LXC/LXD Essentials Cheat Sheet |
+| `lxc-cheatsheet.md` | quick-reference CLI guide for managing LXC/LXD system containers |
 | `podman-cheatsheet.md` | Essential commands for running daemonless containers with Podman |
 | `podman-desktop-guide.md` | How to install and set up the Podman Desktop GUI |
 
