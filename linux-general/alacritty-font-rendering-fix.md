@@ -115,7 +115,7 @@ action = "Paste"
 
 [[keyboard.bindings]]
 key = "C"
-mods = "Control"
+mods = "Control|Shift"
 action = "Copy"
 
 [[keyboard.bindings]]
