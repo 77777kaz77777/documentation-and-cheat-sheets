@@ -1,4 +1,4 @@
-## Core commands for spinning up Docker containers, managing images, and using Compose
+## reference guide for essential Docker and Docker Compose commands
 
 ## Docker CLI Essentials
 
