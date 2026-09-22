@@ -1,4 +1,4 @@
-## LXC/LXD Essentials Cheat Sheet
+## quick-reference CLI guide for managing LXC/LXD system containers
 
 Most modern implementations use the lxc command-line tool (part of the LXD project).
 
