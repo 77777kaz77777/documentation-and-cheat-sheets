@@ -25,9 +25,10 @@ Look for your USB drive in the list (e.g., `sdb` or `sdc`). Note the device path
 Download the latest Linux `.tar.gz` package from Ventoy's GitHub release page or run the following commands in your terminal:
 
 ```bash
-wget [https://github.com/ventoy/Ventoy/releases/download/v1.0.99/ventoy-1.0.99-linux.tar.gz](https://github.com/ventoy/Ventoy/releases/download/v1.0.99/ventoy-1.0.99-linux.tar.gz)
-tar -xvf ventoy-1.0.99-linux.tar.gz
-cd ventoy-1.0.99/
+VENTOY_VER=$(curl -sI https://github.com/ventoy/Ventoy/releases/latest | grep -i '^location:' | sed -E 's/.*\/tag\/v//' | tr -d '\r\n') && \
+wget "https://github.com/ventoy/Ventoy/releases/download/v${VENTOY_VER}/ventoy-${VENTOY_VER}-linux.tar.gz" && \
+tar -xvf "ventoy-${VENTOY_VER}-linux.tar.gz" && \
+cd "ventoy-${VENTOY_VER}"
 ```
 
 ---
