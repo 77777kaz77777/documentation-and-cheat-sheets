@@ -75,7 +75,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `appimage_installation_guide.md` | How to Install and Run AppImages on Linux |
 | `apt_command_reference.md` | Everyday package management commands for Debian and Ubuntu using APT |
 | `brew_command_reference.md` | Essential Homebrew commands for installing software on macOS and Linux |
-| `btrfs_cheat_sheet.md` | Btrfs Comprehensive Cheat Sheet |
+| `btrfs_cheat_sheet.md` | quick-reference guide for managing Btrfs filesystems |
 | `cardwire-cheat-sheet.md` | Cardwire Cheat Sheet |
 | `disable-amdgpu-grub.md` | instructions for disabling the integrated AMD GPU on Fedora 44 by blacklisting the amdgpu module in the GRUB bootloader, ensuring the system relies exclusively on the dedicated NVIDIA GPU. It also includes troubleshooting steps using grubby and dracut to resolve issues where Boot Loader Specification (BLS) files retain outdated kernel parameters |
 | `flatpak_command_reference.md` | Commands to install, update, and manage sandboxed Flatpak apps |
