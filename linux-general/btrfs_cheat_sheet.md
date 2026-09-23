@@ -7,6 +7,7 @@
 ## 1. Installation & Utility Setup
 
 ### Install Userspace Tools
+
 ```bash
 # RHEL / Fedora
 sudo dnf install btrfs-progs
@@ -22,6 +23,7 @@ sudo apk add btrfs-progs
 ```
 
 ### Verify Kernel Module & Drivers
+
 ```bash
 # Check if btrfs kernel module is loaded
 lsmod | grep btrfs
@@ -35,6 +37,7 @@ sudo modprobe btrfs
 ## 2. Filesystem Creation & Mount Options
 
 ### Create a Btrfs Volume
+
 ```bash
 # Single drive with filesystem label
 sudo mkfs.btrfs -L "DataDrive" /dev/sdb
@@ -63,6 +66,7 @@ sudo mkfs.btrfs -d raid1 -m raid1 -L "MyRaid" /dev/sdb /dev/sdc
 | `nodatacow` | Disables Copy-on-Write for all new files on the mounted subvolume/filesystem. |
 
 ### Mount Commands
+
 ```bash
 # Mount with ZSTD compression and asynchronous TRIM for SSDs
 sudo mount -o compress=zstd:3,noatime,discard=async,space_cache=v2 /dev/sdb /mnt/btrfs
@@ -81,6 +85,7 @@ sudo mount -o subvolid=256,noatime /dev/sdb /mnt/subvol
 Subvolumes are independently mountable POSIX file trees within a single Btrfs storage pool.
 
 ### Subvolume Management
+
 ```bash
 # Create subvolumes (Standard flat layout pattern)
 sudo btrfs subvolume create /mnt/btrfs/@
@@ -101,7 +106,9 @@ sudo btrfs subvolume delete /mnt/btrfs/@snapshots/snap_old
 ```
 
 ### Snapshots & Atomic Rollbacks
+
 Snapshots are zero-copy, point-in-time references to subvolumes.
+
 ```bash
 # Create a writable snapshot
 sudo btrfs subvolume snapshot /mnt/btrfs/@home /mnt/btrfs/@home_rw_snap
@@ -154,6 +161,7 @@ sudo btrfs send -p /mnt/btrfs/@snapshots/snap_v1 -c /mnt/btrfs/@snapshots/snap_r
 ## 5. File Properties & NoCoW Attributes
 
 ### Btrfs Native Properties
+
 ```bash
 # View properties on a file, directory, or subvolume
 btrfs property get /mnt/btrfs/@data
@@ -169,6 +177,7 @@ btrfs property set /mnt/btrfs/@snapshot ro true
 ```
 
 ### Disabling Copy-on-Write (`nodatacow`)
+
 CoW causes heavy fragmentation on active databases, virtual machine disks (QEMU/KVM, VirtualBox), and large log files.
 
 ```bash
@@ -180,6 +189,7 @@ sudo chattr +C /var/lib/libvirt/images
 lsattr -d /var/lib/libvirt/images
 # Output includes 'C': ---------------C------ /var/lib/libvirt/images
 ```
+
 *Note: Setting `chattr +C` on an existing file with data will not disable CoW retroactively. You must set it on an empty file or directory first.*
 
 ---
@@ -189,6 +199,7 @@ lsattr -d /var/lib/libvirt/images
 Creating swapfiles on Btrfs requires specific allocation flags to avoid CoW corruption.
 
 ### Automated Method (`btrfs-progs` >= 6.1)
+
 ```bash
 # Automatically creates a non-fragmented, NoCoW swap file
 sudo btrfs filesystem mkswapfile --size 4G /swap/swapfile
@@ -196,6 +207,7 @@ sudo swapon /swap/swapfile
 ```
 
 ### Manual Method (Legacy / Broad Compatibility)
+
 ```bash
 # 1. Create a 0-byte file
 sudo truncate -s 0 /swap/swapfile
@@ -233,6 +245,7 @@ sudo btrfs filesystem du -s /mnt/btrfs/@data/*
 ```
 
 ### Subvolume Quotas (qgroups)
+
 ```bash
 # Enable quota engine
 sudo btrfs quota enable /mnt/btrfs
@@ -267,6 +280,7 @@ Btrfs handles multi-device pools natively without requiring hardware RAID or LVM
 | **RAID5/6** | 3 (R5) / 4 (R6) | Parity | 66–75% | **Unstable**: Parity write-hole bug present. Avoid for critical data. |
 
 ### Adding, Removing & Live Drive Replacement
+
 ```bash
 # Online expansion: Add a new physical drive to mounted filesystem
 sudo btrfs device add /dev/sdd /mnt/btrfs
@@ -282,6 +296,7 @@ sudo btrfs replace status /mnt/btrfs
 ```
 
 ### Live Resizing
+
 ```bash
 # Expand mounted filesystem on devid 1 to occupy maximum available partition size
 sudo btrfs filesystem resize 1:max /mnt/btrfs
@@ -291,6 +306,7 @@ sudo btrfs filesystem resize -20G /mnt/btrfs
 ```
 
 ### Balancing Operations
+
 Re-balances allocated chunks to reclaim unused block groups or convert online RAID profiles.
 
 ```bash
@@ -313,6 +329,7 @@ sudo btrfs balance cancel /mnt/btrfs
 ## 9. Maintenance, Integrity & Defragmentation
 
 ### Scrubbing (Checksum Integrity Check)
+
 Background process reading all block extents, verifying against stored cryptographic checksums (CRC32c / XXHASH / SHA256), and repairing damaged sectors using redundant RAID/DUP mirrors.
 
 ```bash
@@ -327,6 +344,7 @@ sudo btrfs scrub start -B /mnt/btrfs
 ```
 
 ### Defragmentation
+
 ```bash
 # Recursively defragment a directory or subvolume
 sudo btrfs filesystem defragment -r /mnt/btrfs/@data
@@ -334,9 +352,11 @@ sudo btrfs filesystem defragment -r /mnt/btrfs/@data
 # Defragment and re-compress extents with ZSTD
 sudo btrfs filesystem defragment -r -czstd /mnt/btrfs/@data
 ```
+
 *Warning: Defragmenting files involved in active snapshot chains will clone shared extents, increasing overall disk space usage.*
 
 ### Device Hardware Statistics
+
 ```bash
 # Display physical disk I/O, checksum, and uncorrectable read/write errors
 sudo btrfs device stats /mnt/btrfs
@@ -350,6 +370,7 @@ sudo btrfs device stats -z /mnt/btrfs
 ## 10. Emergency Recovery, Repair & Forensics
 
 ### Emergency Read-Only Recovery Mounts
+
 When a Btrfs filesystem fails standard mounting due to tree corruption, force read-only recovery mode:
 
 ```bash
@@ -364,6 +385,7 @@ sudo mount -o ro,rescue=clear_cache /dev/sdb1 /mnt/recovery
 ```
 
 ### Offline File Extraction (`btrfs restore`)
+
 Extract files from an unmountable corrupted filesystem without writing to the damaged device.
 
 ```bash
@@ -372,6 +394,7 @@ sudo btrfs restore -v /dev/sdb1 /mnt/external_backup/
 ```
 
 ### Structural Repair Utilities
+
 ```bash
 # Clear corrupted transaction log tree (Fixes panic on boot following sudden power loss)
 sudo btrfs rescue zero-log /dev/sdb1
@@ -385,6 +408,7 @@ sudo btrfs check --readonly /dev/sdb1
 # Inspect internal superblock metadata
 sudo btrfs inspect-internal dump-super /dev/sdb1
 ```
+
 *CRITICAL WARNING: Never run `btrfs check --repair` unless explicitly instructed as an absolute last resort by developers or after creating a complete block-level disk image (`dd`). Running `--repair` on a partially damaged filesystem can cause irreversible data loss.*
 
 ---
@@ -392,6 +416,7 @@ sudo btrfs inspect-internal dump-super /dev/sdb1
 ## 11. Production `/etc/fstab` Example & System Architecture
 
 ### Standard Recommended Layout (`/etc/fstab`)
+
 ```fstab
 # <file system>                           <mount point>  <type>  <options>                                             <dump> <pass>
 UUID=a1b2c3d4-e5f6-7890-abcd-1234567890ab /              btrfs   subvol=@,compress=zstd:3,noatime,discard=async        0      0
@@ -400,6 +425,7 @@ UUID=a1b2c3d4-e5f6-7890-abcd-1234567890ab /.snapshots    btrfs   subvol=@snapsho
 ```
 
 ### Best Practices Checklist
+
 1. **Avoid LVM/MDADM Layers**: Place Btrfs directly on raw block partitions (`/dev/nvme0n1p2` or `/dev/sda1`) to allow native checksum verification and device repair functions to operate directly on disk hardware.
 2. **Automate Scrubbing**: Schedule monthly scrub jobs using systemd timers (`btrfs-scrub.timer`) or cron to identify bit rot early on cold data storage.
 3. **Set Up Automated Snapper / Btrbk**: Use snapshot management automation (like `snapper` or `btrbk`) for automated boot snapshots and incremental off-site replication.
