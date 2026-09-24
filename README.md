@@ -91,6 +91,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | `ncdu_command_reference.md` | How to hunt down large files and analyze disk usage using NCDU |
 | `nmcli-cheat-sheet.md` | Commands for managing network interfaces and Wi-Fi connections via nmcli |
 | `nvme_cli_cheat_sheet.md` | nvme-cli Cheat Sheet |
+| `nvme_troubleshooting_guide.md` | NVMe Unsafe Shutdown Troubleshooting Guide |
 | `pacman_command_reference.md` | Essential commands for managing Arch Linux packages with Pacman |
 | `raid_cheatsheet.md` | RAID Cheatsheet for Beginners |
 | `samba-mount-guide.md` | Commands and configurations for connecting, temporarily mounting, and permanently automounting local SMB/CIFS network shares |
