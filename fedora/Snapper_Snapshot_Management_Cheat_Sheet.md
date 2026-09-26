@@ -1,4 +1,5 @@
 # Commands to create filesystem snapshots and roll back changes using Snapper
+
 ## Configuration Setup & Management
 
 Before taking snapshots, a configuration must exist for the target Btrfs subvolume.
@@ -67,6 +68,7 @@ sudo cp /.snapshots/<number>/snapshot/etc/fstab /etc/fstab
 
 ---
 **Sources & Verification:**
-* *Snapper Official Documentation:* http://snapper.io/documentation.html
+
+* *Snapper Official Documentation:* <http://snapper.io/documentation.html>
 * *Snapper Man Pages:* `man snapper`
-* *Arch Wiki - Snapper (Highly applicable to Fedora Btrfs configs):* https://wiki.archlinux.org/title/Snapper
+* *Arch Wiki - Snapper (Highly applicable to Fedora Btrfs configs):* <https://wiki.archlinux.org/title/Snapper>
