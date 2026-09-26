@@ -1,4 +1,5 @@
 # Quick-reference CLI and syntax cheat sheet for Ansible
+
 ## 🚀 Ansible Ad-Hoc Commands
 
 | Action | Command |
@@ -22,7 +23,7 @@
 | **Run specific tags** | `ansible-playbook site.yml --tags "packages,config"` |
 | **Skip specific tags** | `ansible-playbook site.yml --skip-tags "debug"` |
 | **Limit to one host/group** | `ansible-playbook site.yml --limit "webserver01"` |
-| **Step-by-step execution**| `ansible-playbook site.yml --step` |
+| **Step-by-step execution** | `ansible-playbook site.yml --step` |
 
 ## 🔐 Ansible Vault (Secrets)
 
@@ -41,8 +42,8 @@
 | :--- | :--- |
 | **List hosts in a group** | `ansible webservers --list-hosts` |
 | **Create a new role** | `ansible-galaxy init my_new_role` |
-| **Install role from Galaxy**| `ansible-galaxy install geerlingguy.apache` |
-| **Install roles from requirements**| `ansible-galaxy install -r requirements.yml` |
+| **Install role from Galaxy** | `ansible-galaxy install geerlingguy.apache` |
+| **Install roles from requirements** | `ansible-galaxy install -r requirements.yml` |
 | **List installed roles** | `ansible-galaxy list` |
 
 ## 🔍 Useful Variables & Debugging
@@ -68,7 +69,7 @@
   2. `./ansible.cfg` (current directory)
   3. `~/.ansible.cfg` (user home directory)
   4. `/etc/ansible/ansible.cfg` (default)
-* **Privilege Escalation (Become):** 
-  * Use `--become` (or `-b`) to run operations with privileges (default sudo). 
+* **Privilege Escalation (Become):**
+  * Use `--become` (or `-b`) to run operations with privileges (default sudo).
   * Use `-K` (or `--ask-become-pass`) in the CLI to prompt for the sudo password.
   * Use `--become-user [user]` to escalate to a user other than root.
