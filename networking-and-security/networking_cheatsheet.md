@@ -1,4 +1,5 @@
 # Networking Concepts and Explanations Cheatsheet
+
 # Comprehensive Networking Concepts & Explanations
 
 ## 1. The OSI Model & Protocol Data Units (PDUs)
@@ -52,11 +53,10 @@ The Open Systems Interconnection (OSI) model conceptualizes how networks operate
 | **VLAN (Virtual LAN)** | A logical grouping of network devices on the same physical switch into separate broadcast domains for security and traffic reduction (IEEE 802.1Q). |
 | **DMZ** | Demilitarized Zone. An isolated subnet exposing externally facing services (web servers, mail servers) to the internet, separated from the internal secure LAN. |
 
-
-
 ---
 **Sources & Verification:**
-* *RFC 1918 Address Allocation for Private Internets:* https://datatracker.ietf.org/doc/html/rfc1918
-* *RFC 793 Transmission Control Protocol:* https://datatracker.ietf.org/doc/html/rfc793
+
+* *RFC 1918 Address Allocation for Private Internets:* <https://datatracker.ietf.org/doc/html/rfc1918>
+* *RFC 793 Transmission Control Protocol:* <https://datatracker.ietf.org/doc/html/rfc793>
 * *CompTIA Network+ / Cisco CCNA Official Study Guides*
-* *Red Hat Enterprise Linux (RHEL) Networking Guide:* https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/
+* *Red Hat Enterprise Linux (RHEL) Networking Guide:* <https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/>
