@@ -79,6 +79,5 @@
 ---
 **Sources & Verification:**
 
-* *Apple Developer Documentation (softwareupdate, pmset, launchctl):* <https://developer.apple.com/library/archive/documentation/Darwin/Reference/ManPages/>
 * *Homebrew Official Documentation:* <https://docs.brew.sh/>
 * *macOS Defaults Reference:* <https://macos-defaults.com/>
