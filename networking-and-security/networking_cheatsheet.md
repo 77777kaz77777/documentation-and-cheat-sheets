@@ -59,4 +59,3 @@ The Open Systems Interconnection (OSI) model conceptualizes how networks operate
 * *RFC 1918 Address Allocation for Private Internets:* <https://datatracker.ietf.org/doc/html/rfc1918>
 * *RFC 793 Transmission Control Protocol:* <https://datatracker.ietf.org/doc/html/rfc793>
 * *CompTIA Network+ / Cisco CCNA Official Study Guides*
-* *Red Hat Enterprise Linux (RHEL) Networking Guide:* <https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/>
