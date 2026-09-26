@@ -1,31 +1,62 @@
 # Networking Concepts and Explanations Cheatsheet
+# Comprehensive Networking Concepts & Explanations
 
-| Category | Concept | Explanation / Details |
-| :--- | :--- | :--- |
-| **OSI Model** | **Layer 1: Physical** | Handles the physical transmission of raw bit streams over a physical medium (e.g., Ethernet cables, fiber optics, radio waves). Hardware includes hubs, repeaters, and cables. |
-| **OSI Model** | **Layer 2: Data Link** | Node-to-node data transfer. Detects and possibly corrects errors that may occur in the Physical layer. Defines MAC addresses. Hardware includes switches and bridges. |
-| **OSI Model** | **Layer 3: Network** | Handles routing of data paths between different networks. Uses logical addressing (IP addresses) to route packets. Hardware includes routers. |
-| **OSI Model** | **Layer 4: Transport** | Provides reliable or unreliable delivery of data between hosts (e.g., TCP for reliable, UDP for unreliable). Manages ports, segmentation, and error checking. |
-| **OSI Model** | **Layer 5: Session** | Establishes, manages, and terminates connections (sessions) between local and remote applications. |
-| **OSI Model** | **Layer 6: Presentation** | Translates, encrypts, and compresses data. Ensures that data transferred from the application layer of one system can be read by the application layer of another. |
-| **OSI Model** | **Layer 7: Application** | Network applications and their protocols. Provides network services directly to the user's application (e.g., HTTP, FTP, SMTP). |
-| **Protocols** | **TCP (Transmission Control Protocol)** | Connection-oriented protocol that ensures guaranteed, ordered, and error-checked delivery of a stream of packets. |
-| **Protocols** | **UDP (User Datagram Protocol)** | Connectionless protocol that sends packets without guaranteeing delivery, order, or error checking. Faster but less reliable than TCP (used in streaming, gaming). |
-| **Protocols** | **IP (Internet Protocol)** | The principal communications protocol for relaying datagrams across network boundaries. Responsible for routing packets based on IP addresses. |
-| **Protocols** | **HTTP / HTTPS** | Hypertext Transfer Protocol (Secure). Foundation of data communication for the World Wide Web. HTTPS encrypts the data using TLS/SSL. |
-| **Protocols** | **DNS (Domain Name System)** | Translates human-readable domain names (e.g., <www.example.com>) into machine-readable IP addresses (e.g., 192.0.2.1). |
-| **Protocols** | **DHCP (Dynamic Host Configuration Protocol)** | Automatically assigns IP addresses and other network configuration parameters to devices on a network so they can communicate. |
-| **Protocols** | **FTP / SFTP** | File Transfer Protocol (Secure). Used for the transfer of computer files between a client and server. SFTP adds a secure shell (SSH) encryption layer. |
-| **Protocols** | **SSH (Secure Shell)** | Cryptographic network protocol for operating network services securely over an unsecured network. Typically used for remote command-line login. |
-| **Addressing** | **IPv4** | 32-bit numeric address (e.g., 192.168.1.1) used to identify devices on a network. Limited to approximately 4.3 billion addresses. |
-| **Addressing** | **IPv6** | 128-bit alphanumeric address (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334) designed to replace IPv4 due to address exhaustion. |
-| **Addressing** | **MAC Address** | Media Access Control address. A unique identifier assigned to a network interface controller (NIC) for communications at the data link layer (Layer 2). |
-| **Addressing** | **Subnetting** | The practice of dividing a network into two or more smaller networks (subnets) to improve routing efficiency and security. |
-| **Addressing** | **NAT (Network Address Translation)** | Modifies network address information in packet headers while in transit across a traffic routing device, allowing multiple devices on a local network to share a single public IP. |
-| **Hardware** | **Router** | Forwards data packets between different computer networks. Operates at Layer 3 of the OSI model. |
-| **Hardware** | **Switch** | Connects devices within a single local area network (LAN) and uses MAC addresses to forward data to the correct destination. Operates at Layer 2. |
-| **Hardware** | **Hub** | A basic network device that connects multiple computers but broadcasts data to all connected devices rather than routing it to a specific destination. Mostly obsolete. |
-| **Hardware** | **Firewall** | A network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules. |
-| **Security** | **VPN (Virtual Private Network)** | Extends a private network across a public network, enabling users to send and receive data across shared networks as if their computing devices were directly connected to the private network. |
-| **Security** | **DMZ (Demilitarized Zone)** | A physical or logical subnetwork that contains and exposes an organization's external-facing services to an untrusted, usually larger, network such as the Internet. |
-| **Security** | **TLS / SSL** | Transport Layer Security / Secure Sockets Layer. Cryptographic protocols designed to provide communications security over a computer network (e.g., securing HTTPS). |
+## 1. The OSI Model & Protocol Data Units (PDUs)
+
+The Open Systems Interconnection (OSI) model conceptualizes how networks operate. The PDU is the form data takes at that specific layer.
+
+| Layer | Name | PDU | Hardware / Protocols | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| **7** | **Application** | Data | HTTP/S, DNS, SSH, FTP, DHCP, SMTP | Network services directly interfacing with user applications. |
+| **6** | **Presentation** | Data | TLS, SSL, JPEG, ASCII, MPEG | Translates, encrypts, and compresses data into a readable format for the application layer. |
+| **5** | **Session** | Data | NetBIOS, RPC, SOCKS | Establishes, maintains, and terminates connections (sessions) between local and remote applications. |
+| **4** | **Transport** | Segment (TCP) / Datagram (UDP) | TCP, UDP, Ports (1-65535) | Ensures reliable (TCP) or unreliable (UDP) delivery of data. Handles segmentation and port assignments. |
+| **3** | **Network** | Packet | IP (IPv4/IPv6), ICMP, IPsec, Routers, L3 Switches | Handles logical addressing (IPs) and routing data paths between different networks. |
+| **2** | **Data Link** | Frame | MAC Addresses, ARP, Switches, VLANs (802.1Q) | Node-to-node transfer within the same network. Uses physical MAC addresses. Detects L1 errors. |
+| **1** | **Physical** | Bit | Ethernet (802.3), Wi-Fi (802.11), Cables, Hubs | Physical transmission of raw binary streams over a medium (copper, fiber, radio). |
+
+## 2. Core Network Protocols
+
+| Protocol | Layer | Port(s) | Description |
+| :--- | :--- | :--- | :--- |
+| **TCP** | 4 | N/A | Transmission Control Protocol. Connection-oriented. Uses a 3-way handshake (`SYN` -> `SYN-ACK` -> `ACK`) to guarantee ordered, error-checked delivery. |
+| **UDP** | 4 | N/A | User Datagram Protocol. Connectionless. "Fire and forget." Faster but no delivery guarantee (used for DNS, VoIP, streaming). |
+| **IP** | 3 | N/A | Internet Protocol. The core routing protocol of the internet. |
+| **ICMP** | 3 | N/A | Internet Control Message Protocol. Used for diagnostics and error reporting (e.g., `ping`, `traceroute`). Does not use ports. |
+| **ARP** | 2/3 | N/A | Address Resolution Protocol. Broadcasts on a local network to map a known logical Layer 3 IP address to an unknown physical Layer 2 MAC address. |
+| **DNS** | 7 | 53 (UDP/TCP) | Domain Name System. Resolves human-readable hostnames to IP addresses. UDP for standard queries, TCP for zone transfers. |
+| **DHCP** | 7 | 67, 68 (UDP) | Dynamic Host Configuration Protocol. Leases IP addresses, subnet masks, gateways, and DNS servers to clients dynamically. |
+| **HTTP(S)** | 7 | 80, 443 (TCP) | Hypertext Transfer Protocol (Secure). HTTPS uses TLS encryption for secure web communication. |
+| **SSH** | 7 | 22 (TCP) | Secure Shell. Encrypted remote command-line login and secure data tunneling. |
+| **BGP/OSPF** | 7/3 | 179 / N/A | Routing protocols used by core internet routers to determine the shortest and most efficient paths for packets. |
+
+## 3. Addressing & Subnetting
+
+| Concept | Explanation |
+| :--- | :--- |
+| **MAC Address** | 48-bit hardware address burned into the Network Interface Card (NIC) by the manufacturer (e.g., `00:1A:2B:3C:4D:5E`). First 24 bits are the vendor OUI. |
+| **IPv4** | 32-bit logical address. Exhausted globally. Consists of 4 octets (e.g., `192.168.1.100`). |
+| **IPv6** | 128-bit logical address (e.g., `2001:db8::ff00:42:8329`). Features built-in IPsec, no need for NAT, and massive address space. |
+| **RFC 1918 (Private IPs)** | Non-routable internet IPs reserved for local networks: <br>• `10.0.0.0/8` (Large enterprises)<br>• `172.16.0.0/12` (Medium networks)<br>• `192.168.0.0/16` (Home networks) |
+| **Subnet Mask / CIDR** | Defines which part of the IP is the network vs. the host. <br>• `/24` = `255.255.255.0` (254 usable hosts)<br>• `/16` = `255.255.0.0` (65,534 usable hosts) |
+| **NAT / PAT** | Network / Port Address Translation. Translates multiple private IP addresses on a LAN to a single public IP address at the router to access the internet. |
+
+## 4. Hardware & Infrastructure
+
+| Device/Concept | Description |
+| :--- | :--- |
+| **Switch (L2)** | Connects devices within a single LAN. Forwards traffic intelligently based on MAC address tables. |
+| **Router (L3)** | Connects multiple disparate networks (e.g., your LAN to your ISP's network). Forwards traffic based on IP routing tables. |
+| **Load Balancer (L4/L7)** | Distributes incoming network traffic across multiple backend servers to ensure reliability and performance (e.g., HAProxy, Nginx). |
+| **Stateful Firewall** | Tracks the state of active connections. If traffic is allowed out, the return traffic is automatically allowed back in. |
+| **VLAN (Virtual LAN)** | A logical grouping of network devices on the same physical switch into separate broadcast domains for security and traffic reduction (IEEE 802.1Q). |
+| **DMZ** | Demilitarized Zone. An isolated subnet exposing externally facing services (web servers, mail servers) to the internet, separated from the internal secure LAN. |
+
+
+
+---
+**Sources & Verification:**
+* *RFC 1918 Address Allocation for Private Internets:* https://datatracker.ietf.org/doc/html/rfc1918
+* *RFC 793 Transmission Control Protocol:* https://datatracker.ietf.org/doc/html/rfc793
+* *CompTIA Network+ / Cisco CCNA Official Study Guides*
+* *Red Hat Enterprise Linux (RHEL) Networking Guide:* https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/
