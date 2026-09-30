@@ -337,7 +337,6 @@
 | `if` | Conditional construct | `if [ -f file ]; then echo "Exists"; fi` |
 | `let` | Evaluate arithmetic expressions | `let "a = 5 + 3"` |
 | `printf` | Format and print data | `printf "Result: %04d
-
 | `read` | Read a line from standard input | `read -p "Enter name: " name` |
 | `return` | Return from a shell function | `return 1` |
 | `select` | Generate menus from list of words | `select opt in "A" "B"; do echo $opt; break; done` |
