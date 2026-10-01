@@ -17,7 +17,7 @@
 | **Show NVMe controller info** | `sudo nvme id-ctrl /dev/nvme0` |
 | **Show NVMe namespace info** | `sudo nvme id-ns /dev/nvme0n1` |
 | **List NVMe topologies** | `sudo nvme list-subsys` |
-| **Show supported LBA formats** | `sudo nvme id-ns /dev/nvme0n1 `|` grep -i lbaf` |
+| **Show supported LBA formats** | `sudo nvme id-ns /dev/nvme0n1` | `grep -i lbaf` |
 
 ## Health & SMART Monitoring
 
