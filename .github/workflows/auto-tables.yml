@@ -9,7 +9,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   update-readme-tables:
-    runs-on: fedora:latest
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
