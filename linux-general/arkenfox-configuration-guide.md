@@ -3,17 +3,20 @@
 ## 1. Script Download and Initialization
 
 Navigate to your Firefox profile directory (standard location on Linux/Fedora):
+
 ```bash
 cd ~/.mozilla/firefox/*.default-release
 ```
 
 Download the official Arkenfox maintenance scripts securely via HTTPS:
+
 ```bash
 curl -O [https://raw.githubusercontent.com/arkenfox/user.js/master/updater.sh](https://raw.githubusercontent.com/arkenfox/user.js/master/updater.sh)
 curl -O [https://raw.githubusercontent.com/arkenfox/user.js/master/prefsCleaner.sh](https://raw.githubusercontent.com/arkenfox/user.js/master/prefsCleaner.sh)
 ```
 
 Make the scripts executable:
+
 ```bash
 chmod +x updater.sh prefsCleaner.sh
 ```
@@ -48,15 +51,19 @@ user_pref("browser.startup.page", 3);
 Execute the following commands whenever applying new overrides or updating Arkenfox to match a new Firefox release.
 
 1. **Run the Updater:**
+
    ```bash
    ./updater.sh
    ```
+
    *Downloads the latest upstream `user.js` and appends `user-overrides.js` to the bottom.*
 
 2. **Run the Preferences Cleaner:**
+
    ```bash
    ./prefsCleaner.sh
    ```
+
    *Forces Firefox to forget any old, orphaned configurations no longer present in the updated `user.js`.*
 
 3. **Restart Firefox** to apply the merged configuration.
