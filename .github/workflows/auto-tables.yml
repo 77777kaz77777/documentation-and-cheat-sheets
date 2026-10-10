@@ -15,7 +15,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
-        
+        with:
+          fetch-depth: 0
+          
       - name: Setup Python
         uses: actions/setup-python@v7
         with:
@@ -76,7 +78,7 @@ jobs:
               for f in files:
                   file_path = os.path.join(sub_path, f)
                   desc = get_file_description(file_path)
-                  table_output.append(f"| [`{f}`]({d}/{f}) | {desc} |")
+                  table_output.append(f"| <a href=\"{d}/{f}\"><code>{f}</code></a> | {desc} |")
               
               table_output.append("\n")
           final_str = "\n".join(table_output).strip()
@@ -87,6 +89,9 @@ jobs:
           with open("README.md", "w") as f:
               f.write(updated)
           '
+          
+      - name: Sync with remote branch
+        run: git pull --rebase --autostash origin main
           
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v7
