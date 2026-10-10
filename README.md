@@ -10,134 +10,134 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 
 | File | Description |
 |---|---|
-| `Ansible_Automation_Cheat_Sheet.md` | Quick-reference CLI and syntax cheat sheet for Ansible |
+| [`Ansible_Automation_Cheat_Sheet.md`](ansible/Ansible_Automation_Cheat_Sheet.md) | Quick-reference CLI and syntax cheat sheet for Ansible |
 
 
 ### 📁 containers/ (Docker, Podman, and LXC Guides)
 
 | File | Description |
 |---|---|
-| `Docker_CLI_Compose_Cheat_Sheet.md` | reference guide for essential Docker and Docker Compose commands |
-| `lxc-cheatsheet.md` | quick-reference CLI guide for managing LXC/LXD system containers |
-| `podman-cheatsheet.md` | Essential commands for running daemonless containers with Podman |
-| `podman-desktop-guide.md` | How to install and set up the Podman Desktop GUI |
+| [`Docker_CLI_Compose_Cheat_Sheet.md`](containers/Docker_CLI_Compose_Cheat_Sheet.md) | reference guide for essential Docker and Docker Compose commands |
+| [`lxc-cheatsheet.md`](containers/lxc-cheatsheet.md) | quick-reference CLI guide for managing LXC/LXD system containers |
+| [`podman-cheatsheet.md`](containers/podman-cheatsheet.md) | Essential commands for running daemonless containers with Podman |
+| [`podman-desktop-guide.md`](containers/podman-desktop-guide.md) | How to install and set up the Podman Desktop GUI |
 
 
 ### 📁 fedora/ (Fedora Linux Specific Documentation)
 
 | File | Description |
 |---|---|
-| ` Fedora_NVIDIA_Installation_Guide.md` | A guide to safely installing NVIDIA drivers on Fedora Workstation utilizing RPM Fusion repositories |
-| `Btrbk_Snapshot_Automation_Cheat_Sheet.md` | Steps to automate Btrfs snapshots and backups using Btrbk |
-| `ClamAV_SELinux_Implementation_Guide.md` | Fedora ClamAV & SELinux Implementation Guide |
-| `DNF_Optimization_and_Configuration_Guide.md` | DNF Package Manager Speed Optimization & Configuration Guide |
-| `Fedora_DNF5_Tailscale_Repository_Fix.md` | Fixes and syntax for setting up Tailscale repositories with DNF5 on Fedora |
-| `Fedora_Firewall_Cheat_Sheet.md` | Firewalld Cheat Sheet (Fedora / RHEL / CentOS) |
-| `Fedora_KDE_GRUB_Btrfs_Advanced.md` | Advanced fixes and config steps for GRUB and Btrfs integration on Fedora KDE |
-| `Fedora_KDE_GRUB_Btrfs_Integration.md` | How to get Btrfs snapshots showing up directly in the GRUB boot menu on Fedora KDE |
-| `Fedora_KDE_SSD_Formatting_Btrbk.md` | Steps to format a secondary SSD and set up automated Btrbk snapshots on Fedora KDE |
-| `Fedora_Kernel_Compilation_Guide.md` | This guide provides step-by-step instructions for manually configuring, compiling, and installing a custom or vanilla Linux kernel on Fedora systems |
-| `Fedora_Linux_Btrfs_Recovery.md` | CLI methods for rescuing a corrupted Btrfs filesystem on Fedora |
-| `Fedora_SELinux_Management_Cheat_Sheet.md` | Fedora SELinux Management & Context Resolution Cheat Sheet |
-| `Fedora_TPM2_LUKS_AutoUnlock_Guide.md` | Step-by-step guide for configuring automatic LUKS2 root volume decryption using hardware TPM 2.0 and systemd-cryptenroll |
-| `KDE_Plasma_6_Multi_Monitor_Troubleshooting.md` | Fixes for multi-monitor display glitches in KDE Plasma 6 |
-| `Snapper_Snapshot_Management_Cheat_Sheet.md` | Commands to create filesystem snapshots and roll back changes using Snapper |
-| `asus-rog-fedora-setup.md` | ASUS ROG Zephyrus G15 Setup Guide for Fedora 44 KDE |
-| `asusctl_cheat_sheet_guide.md` | Commands to control fans, lighting, and performance profiles on ASUS ROG laptops (GA503RW) with asusctl |
-| `dnf_command_reference.md` | useful commands for Fedora’s DNF package manager |
-| `fedora-alacritty-setup-and-verification.md` | Setting up the Alacritty terminal on Fedora, complete with custom fonts and themes |
-| `fedora-quick-reference.md` | CLI reference for Fedora Linux system administration. Provides direct syntax for DNF package management, systemd service control, journalctl diagnostics, firewalld rules, SELinux enforcement, and network operations |
-| `fedora_rog_setup.md` | This document outlines the configurations applied by `fedora_rog_setup.sh` for optimizing the ASUS ROG Zephyrus G15 on Fedora 44 KDE. It manages graphics switching, daemon integration, and power profile adjustments required for stable desktop performance and battery management |
-| `fix-mux-plymouth-deadlock.md` | How to fix boot deadlocks caused by MUX switches and Plymouth |
-| `kdeconnect-fedora44-ios-troubleshooting.md` | KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora 44 KDE Plasma, even after adding firewall rules to the `home` zone |
+| [` Fedora_NVIDIA_Installation_Guide.md`](fedora/ Fedora_NVIDIA_Installation_Guide.md) | A guide to safely installing NVIDIA drivers on Fedora Workstation utilizing RPM Fusion repositories |
+| [`Btrbk_Snapshot_Automation_Cheat_Sheet.md`](fedora/Btrbk_Snapshot_Automation_Cheat_Sheet.md) | Steps to automate Btrfs snapshots and backups using Btrbk |
+| [`ClamAV_SELinux_Implementation_Guide.md`](fedora/ClamAV_SELinux_Implementation_Guide.md) | Fedora ClamAV & SELinux Implementation Guide |
+| [`DNF_Optimization_and_Configuration_Guide.md`](fedora/DNF_Optimization_and_Configuration_Guide.md) | DNF Package Manager Speed Optimization & Configuration Guide |
+| [`Fedora_DNF5_Tailscale_Repository_Fix.md`](fedora/Fedora_DNF5_Tailscale_Repository_Fix.md) | Fixes and syntax for setting up Tailscale repositories with DNF5 on Fedora |
+| [`Fedora_Firewall_Cheat_Sheet.md`](fedora/Fedora_Firewall_Cheat_Sheet.md) | Firewalld Cheat Sheet (Fedora / RHEL / CentOS) |
+| [`Fedora_KDE_GRUB_Btrfs_Advanced.md`](fedora/Fedora_KDE_GRUB_Btrfs_Advanced.md) | Advanced fixes and config steps for GRUB and Btrfs integration on Fedora KDE |
+| [`Fedora_KDE_GRUB_Btrfs_Integration.md`](fedora/Fedora_KDE_GRUB_Btrfs_Integration.md) | How to get Btrfs snapshots showing up directly in the GRUB boot menu on Fedora KDE |
+| [`Fedora_KDE_SSD_Formatting_Btrbk.md`](fedora/Fedora_KDE_SSD_Formatting_Btrbk.md) | Steps to format a secondary SSD and set up automated Btrbk snapshots on Fedora KDE |
+| [`Fedora_Kernel_Compilation_Guide.md`](fedora/Fedora_Kernel_Compilation_Guide.md) | This guide provides step-by-step instructions for manually configuring, compiling, and installing a custom or vanilla Linux kernel on Fedora systems |
+| [`Fedora_Linux_Btrfs_Recovery.md`](fedora/Fedora_Linux_Btrfs_Recovery.md) | CLI methods for rescuing a corrupted Btrfs filesystem on Fedora |
+| [`Fedora_SELinux_Management_Cheat_Sheet.md`](fedora/Fedora_SELinux_Management_Cheat_Sheet.md) | Fedora SELinux Management & Context Resolution Cheat Sheet |
+| [`Fedora_TPM2_LUKS_AutoUnlock_Guide.md`](fedora/Fedora_TPM2_LUKS_AutoUnlock_Guide.md) | Step-by-step guide for configuring automatic LUKS2 root volume decryption using hardware TPM 2.0 and systemd-cryptenroll |
+| [`KDE_Plasma_6_Multi_Monitor_Troubleshooting.md`](fedora/KDE_Plasma_6_Multi_Monitor_Troubleshooting.md) | Fixes for multi-monitor display glitches in KDE Plasma 6 |
+| [`Snapper_Snapshot_Management_Cheat_Sheet.md`](fedora/Snapper_Snapshot_Management_Cheat_Sheet.md) | Commands to create filesystem snapshots and roll back changes using Snapper |
+| [`asus-rog-fedora-setup.md`](fedora/asus-rog-fedora-setup.md) | ASUS ROG Zephyrus G15 Setup Guide for Fedora 44 KDE |
+| [`asusctl_cheat_sheet_guide.md`](fedora/asusctl_cheat_sheet_guide.md) | Commands to control fans, lighting, and performance profiles on ASUS ROG laptops (GA503RW) with asusctl |
+| [`dnf_command_reference.md`](fedora/dnf_command_reference.md) | useful commands for Fedora’s DNF package manager |
+| [`fedora-alacritty-setup-and-verification.md`](fedora/fedora-alacritty-setup-and-verification.md) | Setting up the Alacritty terminal on Fedora, complete with custom fonts and themes |
+| [`fedora-quick-reference.md`](fedora/fedora-quick-reference.md) | CLI reference for Fedora Linux system administration. Provides direct syntax for DNF package management, systemd service control, journalctl diagnostics, firewalld rules, SELinux enforcement, and network operations |
+| [`fedora_rog_setup.md`](fedora/fedora_rog_setup.md) | This document outlines the configurations applied by `fedora_rog_setup.sh` for optimizing the ASUS ROG Zephyrus G15 on Fedora 44 KDE. It manages graphics switching, daemon integration, and power profile adjustments required for stable desktop performance and battery management |
+| [`fix-mux-plymouth-deadlock.md`](fedora/fix-mux-plymouth-deadlock.md) | How to fix boot deadlocks caused by MUX switches and Plymouth |
+| [`kdeconnect-fedora44-ios-troubleshooting.md`](fedora/kdeconnect-fedora44-ios-troubleshooting.md) | KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora 44 KDE Plasma, even after adding firewall rules to the `home` zone |
 
 
 ### 📁 linux-general/ (General Linux Reference)
 
 | File | Description |
 |---|---|
-| `Enterprise_Linux_Ecosystem_and_Commands_2026.md` | A breakdown of the 2026 Enterprise Linux landscape plus core admin commands |
-| `Fastfetch_Configuration_Guide.md` | How to tweak and customize system info outputs using Fastfetch |
-| `Git_Dotfiles_Maintenance_Cheat_Sheet.md` | Commands and scripts for backing up system configurations and dotfiles with Git |
-| `KDE_Plasma_Wayland_Shortcuts_Cheat_Sheet.md` | Essential keyboard shortcuts for getting around KDE Plasma on Wayland |
-| `Linux_Commands_Cheat_Sheet_Tables.md` | Essential Linux commands, administration tools, and text editor shortcuts organized into tables |
-| `Linux_Export_Command_Guide.md` | How to properly set and manage environment variables using the export command |
-| `Linux_Upstream_Midstream_Downstream_Explained.md` | A plain-English explanation of how upstream, midstream, and downstream open-source flows work |
-| `Linux_Ventoy_USB_Creation_Guide.md` | How to format and create a multi-boot Ventoy USB drive on Linux |
-| `NVIDIA_CUDA_Monitoring_Cheat_Sheet.md` | Commands to monitor NVIDIA GPU performance and CUDA workloads |
-| `SS_Command_Options_Cheat_Sheet.md` | How to inspect network sockets and connections using the ss command |
-| `Sublime_Text_Linux_Shortcuts.md` | Must-know keyboard shortcuts for Sublime Text on Linux |
-| `Vim_Vi_Editor_Cheat_Sheet.md` | Core commands for opening, editing, saving, and exiting Vi/Vim |
-| `ZFS_Administration_Cheat_Sheet.md` | A technical reference detailing essential commands for managing ZFS physical storage pools and logical datasets, including pool creation, dataset properties, snapshot replication, and disk replacement workflows |
-| `alacritty-font-rendering-fix.md` | Alacritty Rendering Troubleshooting Guide (Fedora KDE) |
-| `alacritty_keybindings_cheatsheet.md` | This document is a comprehensive Alacritty keybinding cheatsheet that outlines standard terminal shortcuts |
-| `apk_command_reference.md` | Commands for installing and updating packages in Alpine Linux and containers using APK |
-| `appimage_installation_guide.md` | How to Install and Run AppImages on Linux |
-| `apt_command_reference.md` | Everyday package management commands for Debian and Ubuntu using APT |
-| `arkenfox-configuration-guide.md` | Arkenfox Configuration and Updater Guide |
-| `bash_configuration_guide.md` | Bash Configuration and Environment Automation Guide |
-| `brew_command_reference.md` | Essential Homebrew commands for installing software on macOS and Linux |
-| `btrfs_cheat_sheet.md` | quick-reference guide for managing Btrfs filesystems |
-| `cardwire-cheat-sheet.md` | Cardwire Cheat Sheet |
-| `disable-amdgpu-grub.md` | instructions for disabling the integrated AMD GPU on Fedora 44 by blacklisting the amdgpu module in the GRUB bootloader, ensuring the system relies exclusively on the dedicated NVIDIA GPU. It also includes troubleshooting steps using grubby and dracut to resolve issues where Boot Loader Specification (BLS) files retain outdated kernel parameters |
-| `flatpak_command_reference.md` | Commands to install, update, and manage sandboxed Flatpak apps |
-| `fwupdmgr_Firmware_Update_Cheat_Sheet.md` | How to check for and apply hardware firmware updates with fwupdmgr |
-| `grubby-command-reference.md` | provides a quick-reference guide for using the grubby utility to view, switch, and modify Linux kernel boot parameters and default entries directly from the command line |
-| `guide_to_using_alien.md` | The Comprehensive Guide to Using `alien` |
-| `iproute2_reference_guide.md` | This document provides a concise quick-reference guide for essential `iproute2` commands used in Linux network administration. It covers practical syntax for managing interfaces, IP addresses, routing tables, and socket statistics, serving as a modern replacement for legacy `net-tools` |
-| `librepods_setup_guide.md` | LibrePods Setup Guide |
-| `linux-comprehensive-networking-guide.md` | Linux Comprehensive Networking Tools Guide |
-| `linux-static-ip-configuration.md` | Linux Static IP Configuration Guide |
-| `linux_permissions_reference_expanded.md` | A deep dive into managing Linux file permissions, ownership, and ACLs |
-| `linux_source_installation_guide.md` | Steps to compile and install Linux software directly from source code |
-| `make_bash_script_executable.md` | How to make a Bash script executable and run it from anywhere on the system |
-| `ncdu_command_reference.md` | How to hunt down large files and analyze disk usage using NCDU |
-| `nmcli-cheat-sheet.md` | Commands for managing network interfaces and Wi-Fi connections via nmcli |
-| `nvme_cli_cheat_sheet.md` | nvme-cli Cheat Sheet |
-| `nvme_troubleshooting_guide.md` | NVMe Unsafe Shutdown Troubleshooting Guide |
-| `pacman_command_reference.md` | Essential commands for managing Arch Linux packages with Pacman |
-| `raid_cheatsheet.md` | RAID Cheatsheet for Beginners |
-| `samba-mount-guide.md` | Commands and configurations for connecting, temporarily mounting, and permanently automounting local SMB/CIFS network shares |
-| `setup_script_documentation.md` | `setup.sh` - Workstation Setup Script Documentation |
-| `smartctl_cheat_sheet.md` | `smartctl` Comprehensive Cheat Sheet |
-| `storage_management_reference.md` | Commands to manage block devices, format partitions, and handle filesystems |
-| `systemd_journalctl_cheat_sheet.md` | reference sheet for managing systemd services and inspecting system logs with journalctl |
-| `wifi-hardware-replacement-guide.md` | Comprehensive Post-Wi-Fi Hardware Replacement Diagnostic Guide |
-| `zypper_command_reference.md` | Everyday commands for managing packages on openSUSE and SLES using Zypper |
+| [`Enterprise_Linux_Ecosystem_and_Commands_2026.md`](linux-general/Enterprise_Linux_Ecosystem_and_Commands_2026.md) | A breakdown of the 2026 Enterprise Linux landscape plus core admin commands |
+| [`Fastfetch_Configuration_Guide.md`](linux-general/Fastfetch_Configuration_Guide.md) | How to tweak and customize system info outputs using Fastfetch |
+| [`Git_Dotfiles_Maintenance_Cheat_Sheet.md`](linux-general/Git_Dotfiles_Maintenance_Cheat_Sheet.md) | Commands and scripts for backing up system configurations and dotfiles with Git |
+| [`KDE_Plasma_Wayland_Shortcuts_Cheat_Sheet.md`](linux-general/KDE_Plasma_Wayland_Shortcuts_Cheat_Sheet.md) | Essential keyboard shortcuts for getting around KDE Plasma on Wayland |
+| [`Linux_Commands_Cheat_Sheet_Tables.md`](linux-general/Linux_Commands_Cheat_Sheet_Tables.md) | Essential Linux commands, administration tools, and text editor shortcuts organized into tables |
+| [`Linux_Export_Command_Guide.md`](linux-general/Linux_Export_Command_Guide.md) | How to properly set and manage environment variables using the export command |
+| [`Linux_Upstream_Midstream_Downstream_Explained.md`](linux-general/Linux_Upstream_Midstream_Downstream_Explained.md) | A plain-English explanation of how upstream, midstream, and downstream open-source flows work |
+| [`Linux_Ventoy_USB_Creation_Guide.md`](linux-general/Linux_Ventoy_USB_Creation_Guide.md) | How to format and create a multi-boot Ventoy USB drive on Linux |
+| [`NVIDIA_CUDA_Monitoring_Cheat_Sheet.md`](linux-general/NVIDIA_CUDA_Monitoring_Cheat_Sheet.md) | Commands to monitor NVIDIA GPU performance and CUDA workloads |
+| [`SS_Command_Options_Cheat_Sheet.md`](linux-general/SS_Command_Options_Cheat_Sheet.md) | How to inspect network sockets and connections using the ss command |
+| [`Sublime_Text_Linux_Shortcuts.md`](linux-general/Sublime_Text_Linux_Shortcuts.md) | Must-know keyboard shortcuts for Sublime Text on Linux |
+| [`Vim_Vi_Editor_Cheat_Sheet.md`](linux-general/Vim_Vi_Editor_Cheat_Sheet.md) | Core commands for opening, editing, saving, and exiting Vi/Vim |
+| [`ZFS_Administration_Cheat_Sheet.md`](linux-general/ZFS_Administration_Cheat_Sheet.md) | A technical reference detailing essential commands for managing ZFS physical storage pools and logical datasets, including pool creation, dataset properties, snapshot replication, and disk replacement workflows |
+| [`alacritty-font-rendering-fix.md`](linux-general/alacritty-font-rendering-fix.md) | Alacritty Rendering Troubleshooting Guide (Fedora KDE) |
+| [`alacritty_keybindings_cheatsheet.md`](linux-general/alacritty_keybindings_cheatsheet.md) | This document is a comprehensive Alacritty keybinding cheatsheet that outlines standard terminal shortcuts |
+| [`apk_command_reference.md`](linux-general/apk_command_reference.md) | Commands for installing and updating packages in Alpine Linux and containers using APK |
+| [`appimage_installation_guide.md`](linux-general/appimage_installation_guide.md) | How to Install and Run AppImages on Linux |
+| [`apt_command_reference.md`](linux-general/apt_command_reference.md) | Everyday package management commands for Debian and Ubuntu using APT |
+| [`arkenfox-configuration-guide.md`](linux-general/arkenfox-configuration-guide.md) | Arkenfox Configuration and Updater Guide |
+| [`bash_configuration_guide.md`](linux-general/bash_configuration_guide.md) | Bash Configuration and Environment Automation Guide |
+| [`brew_command_reference.md`](linux-general/brew_command_reference.md) | Essential Homebrew commands for installing software on macOS and Linux |
+| [`btrfs_cheat_sheet.md`](linux-general/btrfs_cheat_sheet.md) | quick-reference guide for managing Btrfs filesystems |
+| [`cardwire-cheat-sheet.md`](linux-general/cardwire-cheat-sheet.md) | Cardwire Cheat Sheet |
+| [`disable-amdgpu-grub.md`](linux-general/disable-amdgpu-grub.md) | instructions for disabling the integrated AMD GPU on Fedora 44 by blacklisting the amdgpu module in the GRUB bootloader, ensuring the system relies exclusively on the dedicated NVIDIA GPU. It also includes troubleshooting steps using grubby and dracut to resolve issues where Boot Loader Specification (BLS) files retain outdated kernel parameters |
+| [`flatpak_command_reference.md`](linux-general/flatpak_command_reference.md) | Commands to install, update, and manage sandboxed Flatpak apps |
+| [`fwupdmgr_Firmware_Update_Cheat_Sheet.md`](linux-general/fwupdmgr_Firmware_Update_Cheat_Sheet.md) | How to check for and apply hardware firmware updates with fwupdmgr |
+| [`grubby-command-reference.md`](linux-general/grubby-command-reference.md) | provides a quick-reference guide for using the grubby utility to view, switch, and modify Linux kernel boot parameters and default entries directly from the command line |
+| [`guide_to_using_alien.md`](linux-general/guide_to_using_alien.md) | The Comprehensive Guide to Using `alien` |
+| [`iproute2_reference_guide.md`](linux-general/iproute2_reference_guide.md) | This document provides a concise quick-reference guide for essential `iproute2` commands used in Linux network administration. It covers practical syntax for managing interfaces, IP addresses, routing tables, and socket statistics, serving as a modern replacement for legacy `net-tools` |
+| [`librepods_setup_guide.md`](linux-general/librepods_setup_guide.md) | LibrePods Setup Guide |
+| [`linux-comprehensive-networking-guide.md`](linux-general/linux-comprehensive-networking-guide.md) | Linux Comprehensive Networking Tools Guide |
+| [`linux-static-ip-configuration.md`](linux-general/linux-static-ip-configuration.md) | Linux Static IP Configuration Guide |
+| [`linux_permissions_reference_expanded.md`](linux-general/linux_permissions_reference_expanded.md) | A deep dive into managing Linux file permissions, ownership, and ACLs |
+| [`linux_source_installation_guide.md`](linux-general/linux_source_installation_guide.md) | Steps to compile and install Linux software directly from source code |
+| [`make_bash_script_executable.md`](linux-general/make_bash_script_executable.md) | How to make a Bash script executable and run it from anywhere on the system |
+| [`ncdu_command_reference.md`](linux-general/ncdu_command_reference.md) | How to hunt down large files and analyze disk usage using NCDU |
+| [`nmcli-cheat-sheet.md`](linux-general/nmcli-cheat-sheet.md) | Commands for managing network interfaces and Wi-Fi connections via nmcli |
+| [`nvme_cli_cheat_sheet.md`](linux-general/nvme_cli_cheat_sheet.md) | nvme-cli Cheat Sheet |
+| [`nvme_troubleshooting_guide.md`](linux-general/nvme_troubleshooting_guide.md) | NVMe Unsafe Shutdown Troubleshooting Guide |
+| [`pacman_command_reference.md`](linux-general/pacman_command_reference.md) | Essential commands for managing Arch Linux packages with Pacman |
+| [`raid_cheatsheet.md`](linux-general/raid_cheatsheet.md) | RAID Cheatsheet for Beginners |
+| [`samba-mount-guide.md`](linux-general/samba-mount-guide.md) | Commands and configurations for connecting, temporarily mounting, and permanently automounting local SMB/CIFS network shares |
+| [`setup_script_documentation.md`](linux-general/setup_script_documentation.md) | `setup.sh` - Workstation Setup Script Documentation |
+| [`smartctl_cheat_sheet.md`](linux-general/smartctl_cheat_sheet.md) | `smartctl` Comprehensive Cheat Sheet |
+| [`storage_management_reference.md`](linux-general/storage_management_reference.md) | Commands to manage block devices, format partitions, and handle filesystems |
+| [`systemd_journalctl_cheat_sheet.md`](linux-general/systemd_journalctl_cheat_sheet.md) | reference sheet for managing systemd services and inspecting system logs with journalctl |
+| [`wifi-hardware-replacement-guide.md`](linux-general/wifi-hardware-replacement-guide.md) | Comprehensive Post-Wi-Fi Hardware Replacement Diagnostic Guide |
+| [`zypper_command_reference.md`](linux-general/zypper_command_reference.md) | Everyday commands for managing packages on openSUSE and SLES using Zypper |
 
 
 ### 📁 networking-and-security/ (Networking & Security Configurations)
 
 | File | Description |
 |---|---|
-| `AdGuard_Home_Management_Cheat_Sheet.md` | Commands and config paths for managing AdGuard Home DNS rules and filters |
-| `OpenWrt_UCI_Command_Cheat_Sheet.md` | How to configure OpenWrt router settings straight from the terminal using UCI |
-| `Pentesting_Toolkit_Cheat_Sheet.md` | A quick reference for everyday penetration testing tools and frameworks |
-| `Tailscale_Mesh_CLI_Cheat_Sheet.md` | Terminal commands for setting up and managing Tailscale mesh networks |
-| `networking_cheatsheet.md` | Networking Concepts and Explanations Cheatsheet |
-| `nftables_Cheat_Sheet.md` | How to properly configure network filtering, manage firewall rulesets, and set up NAT using the nftables command-line utility |
-| `opkg_cheatsheet.md` | quick reference for the ⁠opkg⁠ package manager, commonly used on OpenWrt and embedded Linux systems. It covers the essential commands needed to install, upgrade, query, and manage software packages and their dependencies |
-| `ufw-cheatsheet.md` | UFW (Uncomplicated Firewall) Command Reference for Ubuntu/Debian |
+| [`AdGuard_Home_Management_Cheat_Sheet.md`](networking-and-security/AdGuard_Home_Management_Cheat_Sheet.md) | Commands and config paths for managing AdGuard Home DNS rules and filters |
+| [`OpenWrt_UCI_Command_Cheat_Sheet.md`](networking-and-security/OpenWrt_UCI_Command_Cheat_Sheet.md) | How to configure OpenWrt router settings straight from the terminal using UCI |
+| [`Pentesting_Toolkit_Cheat_Sheet.md`](networking-and-security/Pentesting_Toolkit_Cheat_Sheet.md) | A quick reference for everyday penetration testing tools and frameworks |
+| [`Tailscale_Mesh_CLI_Cheat_Sheet.md`](networking-and-security/Tailscale_Mesh_CLI_Cheat_Sheet.md) | Terminal commands for setting up and managing Tailscale mesh networks |
+| [`networking_cheatsheet.md`](networking-and-security/networking_cheatsheet.md) | Networking Concepts and Explanations Cheatsheet |
+| [`nftables_Cheat_Sheet.md`](networking-and-security/nftables_Cheat_Sheet.md) | How to properly configure network filtering, manage firewall rulesets, and set up NAT using the nftables command-line utility |
+| [`opkg_cheatsheet.md`](networking-and-security/opkg_cheatsheet.md) | quick reference for the ⁠opkg⁠ package manager, commonly used on OpenWrt and embedded Linux systems. It covers the essential commands needed to install, upgrade, query, and manage software packages and their dependencies |
+| [`ufw-cheatsheet.md`](networking-and-security/ufw-cheatsheet.md) | UFW (Uncomplicated Firewall) Command Reference for Ubuntu/Debian |
 
 
 ### 📁 virtualization/ (Hypervisor & VM Runbooks)
 
 | File | Description |
 |---|---|
-| `Hyper-V_PowerShell_Cheat_Sheet.md` | PowerShell commands to spin up and manage Hyper-V virtual machines |
-| `proxmox-cheatsheet.md` | Proxmox Virtual Machine Commands (qm) Cheat Sheet |
-| `virt-manager-cheatsheet.md` | Virt-Manager & Virsh Command Line Cheat Sheet |
-| `virt-manager-docker-conflict.md` | How to fix network bridge conflicts when running Virt-Manager and Docker on the same machine |
-| `virtualization_virt-manager-troubleshooting-fedora.md` | Fixes and tweaks for running Virt-Manager smoothly on Fedora |
+| [`Hyper-V_PowerShell_Cheat_Sheet.md`](virtualization/Hyper-V_PowerShell_Cheat_Sheet.md) | PowerShell commands to spin up and manage Hyper-V virtual machines |
+| [`proxmox-cheatsheet.md`](virtualization/proxmox-cheatsheet.md) | Proxmox Virtual Machine Commands (qm) Cheat Sheet |
+| [`virt-manager-cheatsheet.md`](virtualization/virt-manager-cheatsheet.md) | Virt-Manager & Virsh Command Line Cheat Sheet |
+| [`virt-manager-docker-conflict.md`](virtualization/virt-manager-docker-conflict.md) | How to fix network bridge conflicts when running Virt-Manager and Docker on the same machine |
+| [`virtualization_virt-manager-troubleshooting-fedora.md`](virtualization/virtualization_virt-manager-troubleshooting-fedora.md) | Fixes and tweaks for running Virt-Manager smoothly on Fedora |
 
 
 ### 📁 windows-and-macos/ (Windows & macOS References)
 
 | File | Description |
 |---|---|
-| `Windows_Sysinternals_Cheat_Sheet.md` | A practical guide to core Microsoft Sysinternals tools (Process Explorer, Process Monitor, Autoruns, PsExec, and TCPView), highlighting specific filters, shortcuts, and commands for advanced troubleshooting, malware isolation, and remote system administration |
-| `Winget_Cheat_Sheet.md` | A quick-reference guide for managing Windows software packages using the Winget command-line tool, covering package discovery, silent installations, bulk upgrades, and system provisioning |
-| `macOS_Terminal_Package_Management_Cheat_Sheet.md` | A quick-reference guide for macOS command-line operations, covering Homebrew package management, system software updates, networking tools, process management, and essential Finder modifications |
-| `windows-cmd-cheatsheet.md` | A quick-reference cheat sheet for Windows Command Prompt (CMD) and PowerShell, covering file navigation, system management, and package provisioning |
-| `windows-powershell-active-directory.md` | A quick-reference guide for Windows PowerShell administration, covering Registry manipulation, Active Directory user and group management, remote networking, and object-oriented data filtering |
+| [`Windows_Sysinternals_Cheat_Sheet.md`](windows-and-macos/Windows_Sysinternals_Cheat_Sheet.md) | A practical guide to core Microsoft Sysinternals tools (Process Explorer, Process Monitor, Autoruns, PsExec, and TCPView), highlighting specific filters, shortcuts, and commands for advanced troubleshooting, malware isolation, and remote system administration |
+| [`Winget_Cheat_Sheet.md`](windows-and-macos/Winget_Cheat_Sheet.md) | A quick-reference guide for managing Windows software packages using the Winget command-line tool, covering package discovery, silent installations, bulk upgrades, and system provisioning |
+| [`macOS_Terminal_Package_Management_Cheat_Sheet.md`](windows-and-macos/macOS_Terminal_Package_Management_Cheat_Sheet.md) | A quick-reference guide for macOS command-line operations, covering Homebrew package management, system software updates, networking tools, process management, and essential Finder modifications |
+| [`windows-cmd-cheatsheet.md`](windows-and-macos/windows-cmd-cheatsheet.md) | A quick-reference cheat sheet for Windows Command Prompt (CMD) and PowerShell, covering file navigation, system management, and package provisioning |
+| [`windows-powershell-active-directory.md`](windows-and-macos/windows-powershell-active-directory.md) | A quick-reference guide for Windows PowerShell administration, covering Registry manipulation, Active Directory user and group management, remote networking, and object-oriented data filtering |
 <!-- END_SECTION:tree -->
