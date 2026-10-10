@@ -76,7 +76,7 @@ jobs:
               for f in files:
                   file_path = os.path.join(sub_path, f)
                   desc = get_file_description(file_path)
-                  table_output.append(f"| `{f}` | {desc} |")
+                  table_output.append(f"| [`{f}`]({d}/{f}) | {desc} |")
               
               table_output.append("\n")
           final_str = "\n".join(table_output).strip()
