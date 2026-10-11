@@ -42,7 +42,7 @@ The script presents a checklist menu using `whiptail`. Users can toggle the foll
 
 * Installs a predefined list of essential applications using the native package manager.
 
-* Packages include: Brave, Firefox, Sublime Text, Podman, Virt-Manager, Btop, VLC, Nmap, Fastfetch, Tailscale, Alacritty, and Dolphin (plus Spectacle for KDE users).
+* Packages include: Brave, Firefox, Sublime Text, Podman, Btop, VLC, Nmap, Fastfetch, Tailscale, Alacritty, and Dolphin (plus Spectacle for KDE users).
 
 #### DEBLOAT: Desktop Environment Debloat
 
