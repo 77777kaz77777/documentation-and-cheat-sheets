@@ -50,4 +50,4 @@ After applying the fix above, open your KDE Audio Volume widget, click the three
 * **Why:** Because the Bluetooth adapter on this laptop does not expose the LC3 codec, mSBC is the next best option. It provides wideband speech (16kHz), which is significantly clearer than the older, default CVSD codec.
 
 **Verification:**
-Once the correct profile is selected, "Karim's AirPods Pro" will immediately appear under the **Input Devices** section in your audio widget, confirming the microphone is active and ready to use.
+Once the correct profile is selected, " AirPods Pro" will immediately appear under the **Input Devices** section in your audio widget, confirming the microphone is active and ready to use.
