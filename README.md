@@ -12,21 +12,19 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 |---|---|
 | <a href="ansible/Ansible_Automation_Cheat_Sheet.md"><code>Ansible_Automation_Cheat_Sheet.md</code></a> | Quick-reference CLI and syntax cheat sheet for Ansible |
 
-
 ### 📁 containers/ (Docker, Podman, and LXC Guides)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | <a href="containers/Docker_CLI_Compose_Cheat_Sheet.md"><code>Docker_CLI_Compose_Cheat_Sheet.md</code></a> | reference guide for essential Docker and Docker Compose commands |
 | <a href="containers/lxc-cheatsheet.md"><code>lxc-cheatsheet.md</code></a> | quick-reference CLI guide for managing LXC/LXD system containers |
 | <a href="containers/podman-cheatsheet.md"><code>podman-cheatsheet.md</code></a> | Essential commands for running daemonless containers with Podman |
 | <a href="containers/podman-desktop-guide.md"><code>podman-desktop-guide.md</code></a> | How to install and set up the Podman Desktop GUI |
 
-
 ### 📁 fedora/ (Fedora Linux Specific Documentation)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | <a href="fedora/ Fedora_NVIDIA_Installation_Guide.md"><code> Fedora_NVIDIA_Installation_Guide.md</code></a> | A guide to safely installing NVIDIA drivers on Fedora Workstation utilizing RPM Fusion repositories |
 | <a href="fedora/Btrbk_Snapshot_Automation_Cheat_Sheet.md"><code>Btrbk_Snapshot_Automation_Cheat_Sheet.md</code></a> | Steps to automate Btrfs snapshots and backups using Btrbk |
 | <a href="fedora/ClamAV_SELinux_Implementation_Guide.md"><code>ClamAV_SELinux_Implementation_Guide.md</code></a> | Fedora ClamAV & SELinux Implementation Guide |
@@ -52,11 +50,10 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="fedora/fix-mux-plymouth-deadlock.md"><code>fix-mux-plymouth-deadlock.md</code></a> | How to fix boot deadlocks caused by MUX switches and Plymouth |
 | <a href="fedora/kdeconnect-fedora44-ios-troubleshooting.md"><code>kdeconnect-fedora44-ios-troubleshooting.md</code></a> | KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora 44 KDE Plasma, even after adding firewall rules to the `home` zone |
 
-
 ### 📁 linux-general/ (General Linux Reference)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | <a href="linux-general/Enterprise_Linux_Ecosystem_and_Commands_2026.md"><code>Enterprise_Linux_Ecosystem_and_Commands_2026.md</code></a> | A breakdown of the 2026 Enterprise Linux landscape plus core admin commands |
 | <a href="linux-general/Fastfetch_Configuration_Guide.md"><code>Fastfetch_Configuration_Guide.md</code></a> | How to tweak and customize system info outputs using Fastfetch |
 | <a href="linux-general/Git_Dotfiles_Maintenance_Cheat_Sheet.md"><code>Git_Dotfiles_Maintenance_Cheat_Sheet.md</code></a> | Commands and scripts for backing up system configurations and dotfiles with Git |
@@ -106,11 +103,10 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="linux-general/wifi-hardware-replacement-guide.md"><code>wifi-hardware-replacement-guide.md</code></a> | Comprehensive Post-Wi-Fi Hardware Replacement Diagnostic Guide |
 | <a href="linux-general/zypper_command_reference.md"><code>zypper_command_reference.md</code></a> | Everyday commands for managing packages on openSUSE and SLES using Zypper |
 
-
 ### 📁 networking-and-security/ (Networking & Security Configurations)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | <a href="networking-and-security/AdGuard_Home_Management_Cheat_Sheet.md"><code>AdGuard_Home_Management_Cheat_Sheet.md</code></a> | Commands and config paths for managing AdGuard Home DNS rules and filters |
 | <a href="networking-and-security/OpenWrt_UCI_Command_Cheat_Sheet.md"><code>OpenWrt_UCI_Command_Cheat_Sheet.md</code></a> | How to configure OpenWrt router settings straight from the terminal using UCI |
 | <a href="networking-and-security/Pentesting_Toolkit_Cheat_Sheet.md"><code>Pentesting_Toolkit_Cheat_Sheet.md</code></a> | A quick reference for everyday penetration testing tools and frameworks |
@@ -120,22 +116,20 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="networking-and-security/opkg_cheatsheet.md"><code>opkg_cheatsheet.md</code></a> | quick reference for the ⁠opkg⁠ package manager, commonly used on OpenWrt and embedded Linux systems. It covers the essential commands needed to install, upgrade, query, and manage software packages and their dependencies |
 | <a href="networking-and-security/ufw-cheatsheet.md"><code>ufw-cheatsheet.md</code></a> | UFW (Uncomplicated Firewall) Command Reference for Ubuntu/Debian |
 
-
 ### 📁 virtualization/ (Hypervisor & VM Runbooks)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | <a href="virtualization/Hyper-V_PowerShell_Cheat_Sheet.md"><code>Hyper-V_PowerShell_Cheat_Sheet.md</code></a> | PowerShell commands to spin up and manage Hyper-V virtual machines |
 | <a href="virtualization/proxmox-cheatsheet.md"><code>proxmox-cheatsheet.md</code></a> | Proxmox Virtual Machine Commands (qm) Cheat Sheet |
 | <a href="virtualization/virt-manager-cheatsheet.md"><code>virt-manager-cheatsheet.md</code></a> | Virt-Manager & Virsh Command Line Cheat Sheet |
 | <a href="virtualization/virt-manager-docker-conflict.md"><code>virt-manager-docker-conflict.md</code></a> | How to fix network bridge conflicts when running Virt-Manager and Docker on the same machine |
 | <a href="virtualization/virtualization_virt-manager-troubleshooting-fedora.md"><code>virtualization_virt-manager-troubleshooting-fedora.md</code></a> | Fixes and tweaks for running Virt-Manager smoothly on Fedora |
 
-
 ### 📁 windows-and-macos/ (Windows & macOS References)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | <a href="windows-and-macos/Windows_Sysinternals_Cheat_Sheet.md"><code>Windows_Sysinternals_Cheat_Sheet.md</code></a> | A practical guide to core Microsoft Sysinternals tools (Process Explorer, Process Monitor, Autoruns, PsExec, and TCPView), highlighting specific filters, shortcuts, and commands for advanced troubleshooting, malware isolation, and remote system administration |
 | <a href="windows-and-macos/Winget_Cheat_Sheet.md"><code>Winget_Cheat_Sheet.md</code></a> | A quick-reference guide for managing Windows software packages using the Winget command-line tool, covering package discovery, silent installations, bulk upgrades, and system provisioning |
 | <a href="windows-and-macos/macOS_Terminal_Package_Management_Cheat_Sheet.md"><code>macOS_Terminal_Package_Management_Cheat_Sheet.md</code></a> | A quick-reference guide for macOS command-line operations, covering Homebrew package management, system software updates, networking tools, process management, and essential Finder modifications |
