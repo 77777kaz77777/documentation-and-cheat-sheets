@@ -42,7 +42,7 @@ jobs:
               "windows-and-macos": "Windows & macOS References"
           }
           
-          IGNORE_PATHS = {".git", ".github", "README.md", "tree_output.txt"}
+          IGNORE_FILES = {"README.md", "readme.md", "tree_output.txt"}
           
           def get_file_description(filepath):
               if not os.path.isfile(filepath):
@@ -51,7 +51,7 @@ jobs:
                   with open(filepath, "r", encoding="utf-8", errors="ignore") as f:
                       content = f.read()
                       
-                  # Strip out the YAML frontmatter block so the script ignores it
+                  # Strip out the YAML frontmatter block
                   content = re.sub(r"^---\n.*?\n---\n", "", content, flags=re.DOTALL)
                   
                   # Scan the remaining text for the actual description
@@ -65,26 +65,40 @@ jobs:
                   pass
               return ""
               
-          entries = sorted([e for e in os.listdir(".") if e not in IGNORE_PATHS and os.path.isdir(e)])
           table_output = []
-          for d in entries:
-              folder_desc = FOLDER_DESCS.get(d, "")
+          directories = []
+          
+          # Recursively walk through all directories
+          for root, dirs, files in os.walk("."):
+              # Skip hidden directories like .git and .github
+              dirs[:] = [d for d in dirs if not d.startswith(".")]
+              
+              # Check if the folder has any markdown files
+              md_files = [f for f in files if f.endswith(".md") and f not in IGNORE_FILES]
+              if md_files:
+                  directories.append(root)
+                  
+          directories = sorted(directories)
+          
+          for d_path in directories:
+              if d_path == ".":
+                  continue
+                  
+              folder_name = os.path.basename(d_path)
+              folder_desc = FOLDER_DESCS.get(folder_name, "")
               header_desc = f" ({folder_desc})" if folder_desc else ""
               
-              table_output.append(f"### 📁 {d}{header_desc}\n")
+              clean_path = d_path.lstrip("./")
+              table_output.append(f"### 📁 {clean_path}{header_desc}\n")
               table_output.append("| File | Description |")
               table_output.append("|---|---|")
               
-              sub_path = os.path.join(".", d)
-              files = sorted([f for f in os.listdir(sub_path) if f not in IGNORE_PATHS and os.path.isfile(os.path.join(sub_path, f))])
-              
-              if not files:
-                  table_output.append("| *(Empty)* | |")
+              files = sorted([f for f in os.listdir(d_path) if f.endswith(".md") and f not in IGNORE_FILES])
               
               for f in files:
-                  file_path = os.path.join(sub_path, f)
+                  file_path = os.path.join(d_path, f)
                   desc = get_file_description(file_path)
-                  table_output.append(f"| <a href=\"{d}/{f}\"><code>{f}</code></a> | {desc} |")
+                  table_output.append(f"| <a href=\"{clean_path}/{f}\"><code>{f}</code></a> | {desc} |")
               
               table_output.append("\n")
               
@@ -106,4 +120,4 @@ jobs:
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
-          commit_message: "ci: fix python script to ignore yaml frontmatter for descriptions"
+          commit_message: "ci: update python script to recursively scan subdirectories"
