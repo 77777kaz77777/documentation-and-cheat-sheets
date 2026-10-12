@@ -1,7 +1,3 @@
----
-title: "Asus Rog Fedora Setup"
----
-
 ## ASUS ROG Zephyrus G15 Setup Guide for Fedora 44 KDE
 
 This document outlines the complete procedure for configuring and optimizing ASUS ROG hardware running Fedora 44 KDE, specifically targeting the AMD Ryzen 9 6900HS and NVIDIA RTX 3070 Ti architecture.

@@ -1,7 +1,3 @@
----
-title: " Fedora Nvidia Installation Guide"
----
-
 ## A guide to safely installing NVIDIA drivers on Fedora Workstation utilizing RPM Fusion repositories
 
 Below is the complete installation process

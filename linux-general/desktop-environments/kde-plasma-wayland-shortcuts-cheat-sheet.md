@@ -1,8 +1,3 @@
----
-title: "Kde Plasma Wayland Shortcuts Cheat Sheet"
----
-
-
 # Essential keyboard shortcuts for getting around KDE Plasma on Wayland
 
 ## KWin Window Management

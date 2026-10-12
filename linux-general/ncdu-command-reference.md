@@ -1,7 +1,3 @@
----
-title: "Ncdu Command Reference"
----
-
 # How to hunt down large files and analyze disk usage using NCDU
 
 ## Basic Usage

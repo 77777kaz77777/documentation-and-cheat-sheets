@@ -1,7 +1,3 @@
----
-title: "Appimage Installation Guide"
----
-
 # How to Install and Run AppImages on Linux
 
 An AppImage is a downloadable file for Linux that contains an application and everything it needs to run. Unlike traditional package managers, AppImages do not require formal "installation" or root permissions. Instead, you simply make the downloaded file executable and run it.

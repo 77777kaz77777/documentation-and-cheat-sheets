@@ -1,7 +1,3 @@
----
-title: "Zypper Command Reference"
----
-
 ## Everyday commands for managing packages on openSUSE and SLES using Zypper
 
 # Zypper Command Reference Guide (openSUSE / SUSE Linux Enterprise)

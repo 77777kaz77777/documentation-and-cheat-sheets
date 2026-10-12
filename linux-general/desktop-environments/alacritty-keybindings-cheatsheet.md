@@ -1,7 +1,3 @@
----
-title: "Alacritty Keybindings Cheatsheet"
----
-
 ## This document is a comprehensive Alacritty keybinding cheatsheet that outlines standard terminal shortcuts
 
 ## Custom Keybindings (Your Override Configuration)

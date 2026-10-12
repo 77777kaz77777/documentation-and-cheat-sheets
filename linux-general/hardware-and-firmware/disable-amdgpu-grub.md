@@ -1,7 +1,3 @@
----
-title: "Disable Amdgpu Grub"
----
-
 ## instructions for disabling the integrated AMD GPU on Fedora 44 by blacklisting the amdgpu module in the GRUB bootloader, ensuring the system relies exclusively on the dedicated NVIDIA GPU. It also includes troubleshooting steps using grubby and dracut to resolve issues where Boot Loader Specification (BLS) files retain outdated kernel parameters
 
 Disable the integrated AMD GPU at the OS level by adding the `amdgpu` module to the GRUB bootloader blacklist. This ensures the system relies exclusively on the dedicated NVIDIA GPU.

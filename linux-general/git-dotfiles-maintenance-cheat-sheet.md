@@ -1,7 +1,3 @@
----
-title: "Git Dotfiles Maintenance Cheat Sheet"
----
-
 # Commands and scripts for backing up system configurations and dotfiles with Git
 
 ## Repository Syncing

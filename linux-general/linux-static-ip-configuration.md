@@ -1,7 +1,3 @@
----
-title: "Linux Static Ip Configuration"
----
-
 # Linux Static IP Configuration Guide
 
 ## Step 0: Identify Network Details

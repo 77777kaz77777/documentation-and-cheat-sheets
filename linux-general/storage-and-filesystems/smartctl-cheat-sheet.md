@@ -1,7 +1,3 @@
----
-title: "Smartctl Cheat Sheet"
----
-
 # `smartctl` Comprehensive Cheat Sheet
 
 `smartctl` is a command-line tool for controlling and monitoring storage systems using the Self-Monitoring, Analysis, and Reporting Technology (S.M.A.R.T.) system built into most modern ATA, Serial ATA, SCSI, and NVMe hard drives.

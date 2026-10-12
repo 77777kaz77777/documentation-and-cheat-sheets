@@ -1,7 +1,3 @@
----
-title: "Librepods Setup Guide"
----
-
 # LibrePods Setup Guide
 
 ## A comprehensive setup for deploying LibrePods on Linux to enable native Apple AirPods capabilities, including advanced configuration for Bluetooth and media controls. It also includes an automated Bash script and instructions for managing the application via Gearlever

@@ -1,7 +1,3 @@
----
-title: "Pacman Command Reference"
----
-
 ## Essential commands for managing Arch Linux packages with Pacman
 
 # Pacman Command Reference Guide

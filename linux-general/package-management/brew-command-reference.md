@@ -1,7 +1,3 @@
----
-title: "Brew Command Reference"
----
-
 # Essential Homebrew commands for installing software on macOS and Linux
 
 ## Core Package Management

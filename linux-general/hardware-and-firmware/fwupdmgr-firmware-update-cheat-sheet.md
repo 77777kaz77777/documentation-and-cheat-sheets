@@ -1,7 +1,3 @@
----
-title: "Fwupdmgr Firmware Update Cheat Sheet"
----
-
 ## How to check for and apply hardware firmware updates with fwupdmgr
 
 # fwupdmgr Firmware Update Cheat Sheet

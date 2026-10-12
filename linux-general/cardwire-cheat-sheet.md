@@ -1,7 +1,3 @@
----
-title: "Cardwire Cheat Sheet"
----
-
 ## Cardwire Cheat Sheet
 
 ## Core Commands

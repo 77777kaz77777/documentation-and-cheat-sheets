@@ -1,7 +1,3 @@
----
-title: "Alacritty Font Rendering Fix"
----
-
 # Alacritty Rendering Troubleshooting Guide (Fedora KDE)
 
 ## Problem

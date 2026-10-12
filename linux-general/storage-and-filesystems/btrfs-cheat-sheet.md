@@ -1,7 +1,3 @@
----
-title: "Btrfs Cheat Sheet"
----
-
 ## quick-reference guide for managing Btrfs filesystems
 
 **Btrfs** (B-tree Filesystem / Better FS) is a modern Copy-on-Write (CoW) filesystem for Linux designed for fault tolerance, online repair, flexible multi-device management, and instant snapshotting.

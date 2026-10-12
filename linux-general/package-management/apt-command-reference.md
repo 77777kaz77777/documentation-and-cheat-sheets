@@ -1,7 +1,3 @@
----
-title: "Apt Command Reference"
----
-
 # Everyday package management commands for Debian and Ubuntu using APT
 
 ## Core Package Management

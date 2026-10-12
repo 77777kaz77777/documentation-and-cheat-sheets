@@ -1,7 +1,3 @@
----
-title: "Fedora Kde Grub Btrfs Integration"
----
-
 # How to get Btrfs snapshots showing up directly in the GRUB boot menu on Fedora KDE
 
 ## Prerequisites

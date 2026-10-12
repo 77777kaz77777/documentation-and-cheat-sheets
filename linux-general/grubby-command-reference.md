@@ -1,7 +1,3 @@
----
-title: "Grubby Command Reference"
----
-
 ## provides a quick-reference guide for using the grubby utility to view, switch, and modify Linux kernel boot parameters and default entries directly from the command line
 
 ## Viewing Kernel Information

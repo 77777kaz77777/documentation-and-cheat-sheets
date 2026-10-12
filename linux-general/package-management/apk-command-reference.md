@@ -1,7 +1,3 @@
----
-title: "Apk Command Reference"
----
-
 # Commands for installing and updating packages in Alpine Linux and containers using APK
 
 ## Core Package Management

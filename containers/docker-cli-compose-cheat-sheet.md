@@ -1,7 +1,3 @@
----
-title: "Docker Cli Compose Cheat Sheet"
----
-
 ## reference guide for essential Docker and Docker Compose commands
 
 ## Docker CLI Essentials

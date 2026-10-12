@@ -1,7 +1,3 @@
----
-title: "Wifi Hardware Replacement Guide"
----
-
 # Comprehensive Post-Wi-Fi Hardware Replacement Diagnostic Guide
 
 ## 1. Hardware Detection & Bus Audit

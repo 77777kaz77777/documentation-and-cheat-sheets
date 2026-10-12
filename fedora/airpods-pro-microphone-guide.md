@@ -1,7 +1,3 @@
----
-title: "Airpods Pro Microphone Guide"
----
-
 # AirPods Pro 3 Microphone Configuration on Fedora 44 KDE
 
 When connecting AirPods to Fedora Linux, the system defaults to a high-fidelity playback profile (A2DP) which disables the microphone. To use the microphone, you must switch to a Headset profile (HSP/HFP).

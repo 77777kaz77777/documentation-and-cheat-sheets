@@ -1,7 +1,3 @@
----
-title: "Fedora Tpm2 Luks Autounlock Guide"
----
-
 ## Step-by-step guide for configuring automatic LUKS2 root volume decryption using hardware TPM 2.0 and systemd-cryptenroll
 
 ## 1. Install Dependencies

@@ -1,7 +1,3 @@
----
-title: "Winget Cheat Sheet"
----
-
 ## A quick-reference guide for managing Windows software packages using the Winget command-line tool, covering package discovery, silent installations, bulk upgrades, and system provisioning
 
 ## Search & Discovery

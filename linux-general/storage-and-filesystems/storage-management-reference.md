@@ -1,7 +1,3 @@
----
-title: "Storage Management Reference"
----
-
 ## Commands to manage block devices, format partitions, and handle filesystems
 
 # Storage Management Command Reference Guide

@@ -1,7 +1,3 @@
----
-title: "Vim Vi Editor Cheat Sheet"
----
-
 # Core commands for opening, editing, saving, and exiting Vi/Vim
 
 Essential navigation, editing, and saving commands for Vi and Vim.

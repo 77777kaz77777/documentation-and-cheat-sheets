@@ -1,7 +1,3 @@
----
-title: "Raid Cheatsheet"
----
-
 # RAID Cheatsheet for Beginners
 
 RAID (Redundant Array of Independent Disks) is a way of combining multiple physical hard drives or SSDs into a single logical storage drive. To your operating system, three or four separate drives appear as one large volume.
