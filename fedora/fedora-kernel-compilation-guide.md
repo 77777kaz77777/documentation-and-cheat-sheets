@@ -1,3 +1,7 @@
+---
+title: "Fedora Kernel Compilation Guide"
+---
+
 ## This guide provides step-by-step instructions for manually configuring, compiling, and installing a custom or vanilla Linux kernel on Fedora systems
 
 ## Overview

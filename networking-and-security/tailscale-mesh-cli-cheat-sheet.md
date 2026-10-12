@@ -1,3 +1,7 @@
+---
+title: "Tailscale Mesh Cli Cheat Sheet"
+---
+
 ## Terminal commands for setting up and managing Tailscale mesh networks
 
 # Tailscale Mesh Networking Cheat Sheet

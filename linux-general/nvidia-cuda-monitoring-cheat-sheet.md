@@ -1,3 +1,7 @@
+---
+title: "Nvidia Cuda Monitoring Cheat Sheet"
+---
+
 # Commands to monitor NVIDIA GPU performance and CUDA workloads
 
 ## Hardware Monitoring Tools

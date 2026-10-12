@@ -1,3 +1,7 @@
+---
+title: "Openwrt Uci Command Cheat Sheet"
+---
+
 ## How to configure OpenWrt router settings straight from the terminal using UCI
 
 # OpenWrt UCI (Unified Configuration Interface) Cheat Sheet

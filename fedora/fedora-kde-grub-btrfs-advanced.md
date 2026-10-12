@@ -1,3 +1,7 @@
+---
+title: "Fedora Kde Grub Btrfs Advanced"
+---
+
 # Advanced fixes and config steps for GRUB and Btrfs integration on Fedora KDE
 
 ## 📋 Prerequisites

@@ -1,3 +1,7 @@
+---
+title: "Systemd Journalctl Cheat Sheet"
+---
+
 # reference sheet for managing systemd services and inspecting system logs with journalctl
 
 Systemd is the system and service manager responsible for controlling system units, background services, boots, and logs.

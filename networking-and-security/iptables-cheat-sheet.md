@@ -1,3 +1,7 @@
+---
+title: "Iptables Cheat Sheet"
+---
+
 # How to properly configure network filtering, manage firewall rulesets, and set up NAT using the iptables command-line utility
 
 `iptables` is a command-line firewall utility for Linux systems. It uses policy chains to allow or block traffic.

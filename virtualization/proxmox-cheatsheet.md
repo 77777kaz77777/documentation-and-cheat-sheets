@@ -1,3 +1,7 @@
+---
+title: "Proxmox Cheatsheet"
+---
+
 ## Proxmox Virtual Machine Commands (qm) Cheat Sheet
 
 this Proxmox VE (Virtual Environment) cheatsheet is divided into the two main command sets: qm for Virtual Machines (QEMU/KVM) and pct for Containers (LXC).

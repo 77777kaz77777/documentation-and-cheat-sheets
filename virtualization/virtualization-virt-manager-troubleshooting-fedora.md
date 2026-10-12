@@ -1,3 +1,7 @@
+---
+title: "Virtualization Virt Manager Troubleshooting Fedora"
+---
+
 ## Fixes and tweaks for running Virt-Manager smoothly on Fedora
 
 ## Virt-Manager troubleshooting guide tailored for Fedora with notes for other distributions

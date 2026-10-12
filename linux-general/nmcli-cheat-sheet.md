@@ -1,3 +1,7 @@
+---
+title: "Nmcli Cheat Sheet"
+---
+
 ## Commands for managing network interfaces and Wi-Fi connections via nmcli
 
 # nmcli Cheat Sheet

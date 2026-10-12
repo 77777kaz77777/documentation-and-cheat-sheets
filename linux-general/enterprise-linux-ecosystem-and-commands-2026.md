@@ -1,3 +1,7 @@
+---
+title: "Enterprise Linux Ecosystem And Commands 2026"
+---
+
 ## A breakdown of the 2026 Enterprise Linux landscape plus core admin commands
 
 ## 1. Enterprise Linux Ecosystem Overview (Current as of August 2026)

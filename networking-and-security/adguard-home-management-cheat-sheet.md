@@ -1,3 +1,7 @@
+---
+title: "Adguard Home Management Cheat Sheet"
+---
+
 ## Commands and config paths for managing AdGuard Home DNS rules and filters
 
 # AdGuard Home Management & DNS Filtering Cheat Sheet

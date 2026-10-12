@@ -1,3 +1,7 @@
+---
+title: "Ansible Automation Cheat Sheet"
+---
+
 # Quick-reference CLI and syntax cheat sheet for Ansible
 
 ## 🚀 Ansible Ad-Hoc Commands

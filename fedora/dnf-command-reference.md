@@ -1,3 +1,7 @@
+---
+title: "Dnf Command Reference"
+---
+
 # useful commands for Fedora’s DNF package manager
 
 ## Core Package Management

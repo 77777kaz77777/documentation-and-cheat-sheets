@@ -1,3 +1,7 @@
+---
+title: "Linux Comprehensive Networking Guide"
+---
+
 # Linux Comprehensive Networking Tools Guide
 
 This document covers the configuration, management, and troubleshooting of networking interfaces across all major Linux distributions, utilizing both modern standard and legacy tools.

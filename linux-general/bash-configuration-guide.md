@@ -1,3 +1,7 @@
+---
+title: "Bash Configuration Guide"
+---
+
 # Bash Configuration and Environment Automation Guide
 
 This document breaks down a custom `.bashrc` configuration file and explains how automation scripts, such as `setup-bashrc.sh`, streamline the management of your Linux environment.

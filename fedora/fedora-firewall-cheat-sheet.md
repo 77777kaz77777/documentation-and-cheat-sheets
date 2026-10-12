@@ -1,3 +1,7 @@
+---
+title: "Fedora Firewall Cheat Sheet"
+---
+
 # Firewalld Cheat Sheet (Fedora / RHEL / CentOS)
 
 Fedora and other RHEL-based distributions use **firewalld** as the default dynamic firewall manager. It uses the concept of "Zones" to define trust levels for network connections and interfaces.

@@ -1,3 +1,7 @@
+---
+title: "Snapper Snapshot Management Cheat Sheet"
+---
+
 # Commands to create filesystem snapshots and roll back changes using Snapper
 
 ## Configuration Setup & Management
