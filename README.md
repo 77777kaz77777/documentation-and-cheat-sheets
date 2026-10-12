@@ -86,6 +86,52 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="linux-general/vim-vi-editor-cheat-sheet.md"><code>vim-vi-editor-cheat-sheet.md</code></a> | Core commands for opening, editing, saving, and exiting Vi/Vim |
 
 
+### 📁 linux-general/desktop-environments (KDE Plasma, Terminals & Desktop Tools)
+
+| File | Description |
+|---|---|
+| <a href="linux-general/desktop-environments/alacritty-font-rendering-fix.md"><code>alacritty-font-rendering-fix.md</code></a> | Alacritty Rendering Troubleshooting Guide (Fedora KDE) |
+| <a href="linux-general/desktop-environments/alacritty-keybindings-cheatsheet.md"><code>alacritty-keybindings-cheatsheet.md</code></a> | This document is a comprehensive Alacritty keybinding cheatsheet that outlines standard terminal shortcuts |
+| <a href="linux-general/desktop-environments/fastfetch-configuration-guide.md"><code>fastfetch-configuration-guide.md</code></a> | How to tweak and customize system info outputs using Fastfetch |
+| <a href="linux-general/desktop-environments/kde-plasma-wayland-shortcuts-cheat-sheet.md"><code>kde-plasma-wayland-shortcuts-cheat-sheet.md</code></a> | Essential keyboard shortcuts for getting around KDE Plasma on Wayland |
+| <a href="linux-general/desktop-environments/sublime-text-linux-shortcuts.md"><code>sublime-text-linux-shortcuts.md</code></a> | Must-know keyboard shortcuts for Sublime Text on Linux |
+
+
+### 📁 linux-general/hardware-and-firmware (Firmware Updates & Hardware Quirks)
+
+| File | Description |
+|---|---|
+| <a href="linux-general/hardware-and-firmware/disable-amdgpu-grub.md"><code>disable-amdgpu-grub.md</code></a> | instructions for disabling the integrated AMD GPU on Fedora 44 by blacklisting the amdgpu module in the GRUB bootloader, ensuring the system relies exclusively on the dedicated NVIDIA GPU. It also includes troubleshooting steps using grubby and dracut to resolve issues where Boot Loader Specification (BLS) files retain outdated kernel parameters |
+| <a href="linux-general/hardware-and-firmware/fwupdmgr-firmware-update-cheat-sheet.md"><code>fwupdmgr-firmware-update-cheat-sheet.md</code></a> | How to check for and apply hardware firmware updates with fwupdmgr |
+| <a href="linux-general/hardware-and-firmware/wifi-hardware-replacement-guide.md"><code>wifi-hardware-replacement-guide.md</code></a> | Comprehensive Post-Wi-Fi Hardware Replacement Diagnostic Guide |
+
+
+### 📁 linux-general/package-management (Package Managers & App Formats)
+
+| File | Description |
+|---|---|
+| <a href="linux-general/package-management/apk-command-reference.md"><code>apk-command-reference.md</code></a> | Commands for installing and updating packages in Alpine Linux and containers using APK |
+| <a href="linux-general/package-management/appimage-installation-guide.md"><code>appimage-installation-guide.md</code></a> | How to Install and Run AppImages on Linux |
+| <a href="linux-general/package-management/apt-command-reference.md"><code>apt-command-reference.md</code></a> | Everyday package management commands for Debian and Ubuntu using APT |
+| <a href="linux-general/package-management/brew-command-reference.md"><code>brew-command-reference.md</code></a> | Essential Homebrew commands for installing software on macOS and Linux |
+| <a href="linux-general/package-management/flatpak-command-reference.md"><code>flatpak-command-reference.md</code></a> | Commands to install, update, and manage sandboxed Flatpak apps |
+| <a href="linux-general/package-management/pacman-command-reference.md"><code>pacman-command-reference.md</code></a> | Essential commands for managing Arch Linux packages with Pacman |
+| <a href="linux-general/package-management/zypper-command-reference.md"><code>zypper-command-reference.md</code></a> | Everyday commands for managing packages on openSUSE and SLES using Zypper |
+
+
+### 📁 linux-general/storage-and-filesystems (BTRFS, ZFS, RAID & Storage Utilities)
+
+| File | Description |
+|---|---|
+| <a href="linux-general/storage-and-filesystems/btrfs-cheat-sheet.md"><code>btrfs-cheat-sheet.md</code></a> | quick-reference guide for managing Btrfs filesystems |
+| <a href="linux-general/storage-and-filesystems/nvme-cli-cheat-sheet.md"><code>nvme-cli-cheat-sheet.md</code></a> | nvme-cli Cheat Sheet |
+| <a href="linux-general/storage-and-filesystems/nvme-troubleshooting-guide.md"><code>nvme-troubleshooting-guide.md</code></a> | NVMe Unsafe Shutdown Troubleshooting Guide |
+| <a href="linux-general/storage-and-filesystems/raid-cheatsheet.md"><code>raid-cheatsheet.md</code></a> | RAID Cheatsheet for Beginners |
+| <a href="linux-general/storage-and-filesystems/smartctl-cheat-sheet.md"><code>smartctl-cheat-sheet.md</code></a> | `smartctl` Comprehensive Cheat Sheet |
+| <a href="linux-general/storage-and-filesystems/storage-management-reference.md"><code>storage-management-reference.md</code></a> | Commands to manage block devices, format partitions, and handle filesystems |
+| <a href="linux-general/storage-and-filesystems/zfs-administration-cheat-sheet.md"><code>zfs-administration-cheat-sheet.md</code></a> | A technical reference detailing essential commands for managing ZFS physical storage pools and logical datasets, including pool creation, dataset properties, snapshot replication, and disk replacement workflows |
+
+
 ### 📁 networking-and-security (Networking & Security Configurations)
 
 | File | Description |
