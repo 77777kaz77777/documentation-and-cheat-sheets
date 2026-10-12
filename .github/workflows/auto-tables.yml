@@ -43,7 +43,7 @@ jobs:
               "windows-and-macos": "Windows & macOS References"
           }
           
-          IGNORE_PATHS = {".git", ".github", "README.md", "tree_output.txt"}
+          IGNORE_PATHS = {".git", ".github", "readme.md", "tree_output.txt"}
           
           def get_file_description(filepath):
               if not os.path.isfile(filepath):
