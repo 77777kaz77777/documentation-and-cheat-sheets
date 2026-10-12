@@ -13,21 +13,19 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 |---|---|
 | <a href="ansible/ansible-automation-cheat-sheet.md"><code>ansible-automation-cheat-sheet.md</code></a> | Quick-reference CLI and syntax cheat sheet for Ansible |
 
-
 ### 📁 containers (Docker, Podman, and LXC Guides)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | <a href="containers/docker-cli-compose-cheat-sheet.md"><code>docker-cli-compose-cheat-sheet.md</code></a> | reference guide for essential Docker and Docker Compose commands |
 | <a href="containers/lxc-cheatsheet.md"><code>lxc-cheatsheet.md</code></a> | quick-reference CLI guide for managing LXC/LXD system containers |
 | <a href="containers/podman-cheatsheet.md"><code>podman-cheatsheet.md</code></a> | Essential commands for running daemonless containers with Podman |
 | <a href="containers/podman-desktop-guide.md"><code>podman-desktop-guide.md</code></a> | How to install and set up the Podman Desktop GUI |
 
-
 ### 📁 fedora (Fedora Linux Specific Documentation)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | <a href="fedora/airpods-pro-microphone-guide.md"><code>airpods-pro-microphone-guide.md</code></a> | AirPods Pro 3 Microphone Configuration on Fedora 44 KDE |
 | <a href="fedora/asus-rog-fedora-setup.md"><code>asus-rog-fedora-setup.md</code></a> | ASUS ROG Zephyrus G15 Setup Guide for Fedora 44 KDE |
 | <a href="fedora/asusctl-cheat-sheet-guide.md"><code>asusctl-cheat-sheet-guide.md</code></a> | Commands to control fans, lighting, and performance profiles on ASUS ROG laptops (GA503RW) with asusctl |
@@ -53,11 +51,10 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="fedora/kdeconnect-fedora44-ios-troubleshooting.md"><code>kdeconnect-fedora44-ios-troubleshooting.md</code></a> | KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora 44 KDE Plasma, even after adding firewall rules to the `home` zone |
 | <a href="fedora/snapper-snapshot-management-cheat-sheet.md"><code>snapper-snapshot-management-cheat-sheet.md</code></a> | Commands to create filesystem snapshots and roll back changes using Snapper |
 
-
 ### 📁 linux-general (General Linux Reference)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | <a href="linux-general/arkenfox-configuration-guide.md"><code>arkenfox-configuration-guide.md</code></a> | Arkenfox Configuration and Updater Guide |
 | <a href="linux-general/bash-configuration-guide.md"><code>bash-configuration-guide.md</code></a> | Bash Configuration and Environment Automation Guide |
 | <a href="linux-general/cardwire-cheat-sheet.md"><code>cardwire-cheat-sheet.md</code></a> | Cardwire Cheat Sheet |
@@ -85,11 +82,10 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="linux-general/systemd-journalctl-cheat-sheet.md"><code>systemd-journalctl-cheat-sheet.md</code></a> | reference sheet for managing systemd services and inspecting system logs with journalctl |
 | <a href="linux-general/vim-vi-editor-cheat-sheet.md"><code>vim-vi-editor-cheat-sheet.md</code></a> | Core commands for opening, editing, saving, and exiting Vi/Vim |
 
-
 ### 📁 networking-and-security (Networking & Security Configurations)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | <a href="networking-and-security/adguard-home-management-cheat-sheet.md"><code>adguard-home-management-cheat-sheet.md</code></a> | Commands and config paths for managing AdGuard Home DNS rules and filters |
 | <a href="networking-and-security/iptables-cheat-sheet.md"><code>iptables-cheat-sheet.md</code></a> | How to properly configure network filtering, manage firewall rulesets, and set up NAT using the iptables command-line utility |
 | <a href="networking-and-security/networking-cheatsheet.md"><code>networking-cheatsheet.md</code></a> | Networking Concepts and Explanations Cheatsheet |
@@ -100,22 +96,20 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="networking-and-security/tailscale-mesh-cli-cheat-sheet.md"><code>tailscale-mesh-cli-cheat-sheet.md</code></a> | Terminal commands for setting up and managing Tailscale mesh networks |
 | <a href="networking-and-security/ufw-cheatsheet.md"><code>ufw-cheatsheet.md</code></a> | UFW (Uncomplicated Firewall) Command Reference for Ubuntu/Debian |
 
-
 ### 📁 virtualization (Hypervisor & VM Runbooks)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | <a href="virtualization/hyper-v-powershell-cheat-sheet.md"><code>hyper-v-powershell-cheat-sheet.md</code></a> | PowerShell commands to spin up and manage Hyper-V virtual machines |
 | <a href="virtualization/proxmox-cheatsheet.md"><code>proxmox-cheatsheet.md</code></a> | Proxmox Virtual Machine Commands (qm) Cheat Sheet |
 | <a href="virtualization/virt-manager-cheatsheet.md"><code>virt-manager-cheatsheet.md</code></a> | Virt-Manager & Virsh Command Line Cheat Sheet |
 | <a href="virtualization/virt-manager-docker-conflict.md"><code>virt-manager-docker-conflict.md</code></a> | How to fix network bridge conflicts when running Virt-Manager and Docker on the same machine |
 | <a href="virtualization/virtualization-virt-manager-troubleshooting-fedora.md"><code>virtualization-virt-manager-troubleshooting-fedora.md</code></a> | Fixes and tweaks for running Virt-Manager smoothly on Fedora |
 
-
 ### 📁 windows-and-macos (Windows & macOS References)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | <a href="windows-and-macos/macos-terminal-package-management-cheat-sheet.md"><code>macos-terminal-package-management-cheat-sheet.md</code></a> | A quick-reference guide for macOS command-line operations, covering Homebrew package management, system software updates, networking tools, process management, and essential Finder modifications |
 | <a href="windows-and-macos/windows-cmd-cheatsheet.md"><code>windows-cmd-cheatsheet.md</code></a> | A quick-reference cheat sheet for Windows Command Prompt (CMD) and PowerShell, covering file navigation, system management, and package provisioning |
 | <a href="windows-and-macos/windows-powershell-active-directory.md"><code>windows-powershell-active-directory.md</code></a> | A quick-reference guide for Windows PowerShell administration, covering Registry manipulation, Active Directory user and group management, remote networking, and object-oriented data filtering |
