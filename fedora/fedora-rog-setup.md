@@ -38,4 +38,4 @@ Specific fixes are applied based on the hardware generation of the Zephyrus G15.
 
 ## Repository Reference
 
-* Script Source: [`fedora_rog_setup.sh`](https://github.com/77777kaz77777/linux-environment-automation/blob/main/utils/fedora_rog_setup.sh)
+* Script Source: [`fedora_rog_setup.sh`](https://github.com/77777kaz77777/linux-environment-automation/blob/main/provisioning/fedora-rog-setup.sh)
