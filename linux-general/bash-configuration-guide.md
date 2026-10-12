@@ -105,7 +105,7 @@ export PS1="\u@\h:\w\$ "
 
 ## Part 2: Automating with `setup-bashrc.sh`
 
-In my linux environment automation repositories (such as [77777kaz77777/linux-environment-automation](https://github.com/77777kaz77777/linux-environment-automation/blob/main/configs/setup-bashrc.sh)), manual copy-pasting is replaced by executable scripts to bootstrap environments effortlessly on new machines.
+In my linux environment automation repositories (such as [77777kaz77777/linux-environment-automation](https://github.com/77777kaz77777/linux-environment-automation/blob/main/configs/setup-scripts/setup-bashrc.sh)), manual copy-pasting is replaced by executable scripts to bootstrap environments effortlessly on new machines.
 While specific script implementations vary, a typical `setup-bashrc.sh` script automates the deployment of the configuration above by performing the following tasks:
 
 1. **Backing Up Existing Configs:**
