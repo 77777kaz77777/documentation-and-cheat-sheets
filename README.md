@@ -115,7 +115,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="networking-and-security/OpenWrt_UCI_Command_Cheat_Sheet.md"><code>OpenWrt_UCI_Command_Cheat_Sheet.md</code></a> | How to configure OpenWrt router settings straight from the terminal using UCI |
 | <a href="networking-and-security/Pentesting_Toolkit_Cheat_Sheet.md"><code>Pentesting_Toolkit_Cheat_Sheet.md</code></a> | A quick reference for everyday penetration testing tools and frameworks |
 | <a href="networking-and-security/Tailscale_Mesh_CLI_Cheat_Sheet.md"><code>Tailscale_Mesh_CLI_Cheat_Sheet.md</code></a> | Terminal commands for setting up and managing Tailscale mesh networks |
-| <a href="networking-and-security/iptables_cheat_sheet.md"><code>iptables_cheat_sheet.md</code></a> | iptables Cheat Sheet |
+| <a href="networking-and-security/iptables_cheat_sheet.md"><code>iptables_cheat_sheet.md</code></a> | How to properly configure network filtering, manage firewall rulesets, and set up NAT using the iptables command-line utility |
 | <a href="networking-and-security/networking_cheatsheet.md"><code>networking_cheatsheet.md</code></a> | Networking Concepts and Explanations Cheatsheet |
 | <a href="networking-and-security/nftables_Cheat_Sheet.md"><code>nftables_Cheat_Sheet.md</code></a> | How to properly configure network filtering, manage firewall rulesets, and set up NAT using the nftables command-line utility |
 | <a href="networking-and-security/opkg_cheatsheet.md"><code>opkg_cheatsheet.md</code></a> | quick reference for the ⁠opkg⁠ package manager, commonly used on OpenWrt and embedded Linux systems. It covers the essential commands needed to install, upgrade, query, and manage software packages and their dependencies |
