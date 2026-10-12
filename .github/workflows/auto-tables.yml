@@ -27,31 +27,39 @@ jobs:
         run: |
           python3 -c '
           import os, re
+          
+          # Updated to include the new directory structure
           FOLDER_DESCS = {
-              "updates": "Distro maintenance & update scripts",
-              "configs": "Terminal & CLI tool dotfiles",
-              "desktop-tweaks": "UI customization & desktop scripts",
-              "security": "Antivirus & system defense utilities",
-              "utils": "General standalone helper scripts",
               "ansible": "Ansible Automation Guides",
               "containers": "Docker, Podman, and LXC Guides",
               "fedora": "Fedora Linux Specific Documentation",
               "linux-general": "General Linux Reference",
+              "package-management": "Package Managers & App Formats",
+              "storage-and-filesystems": "BTRFS, ZFS, RAID & Storage Utilities",
+              "desktop-environments": "KDE Plasma, Terminals & Desktop Tools",
+              "hardware-and-firmware": "Firmware Updates & Hardware Quirks",
               "networking-and-security": "Networking & Security Configurations",
               "virtualization": "Hypervisor & VM Runbooks",
-              "windows-and-macos": "Windows & macOS References",
-              "networking": "Networking Automation",
-              "provisioning": "User Provisioning & Bootstrapping",
-              "proxmox": "Proxmox Virtual Environment Scripts"
+              "windows-and-macos": "Windows & macOS References"
           }
+          
           IGNORE_PATHS = {".git", ".github", "README.md", "tree_output.txt"}
+          
           def get_file_description(filepath):
               if not os.path.isfile(filepath):
                   return ""
               try:
                   with open(filepath, "r", encoding="utf-8", errors="ignore") as f:
-                      for _ in range(5):
-                          line = f.readline().strip()
+                      # Read up to 15 lines to bypass frontmatter
+                      lines = [f.readline().strip() for _ in range(15)]
+                      
+                      # 1. Try to extract the title from the new YAML frontmatter
+                      for line in lines:
+                          if line.startswith("title:"):
+                              return line.replace("title:", "").replace("\"", "").replace("\x27", "").strip()
+                      
+                      # 2. Fallback to old behavior
+                      for line in lines:
                           if line.startswith("# Description:"):
                               return line.replace("# Description:", "").strip()
                           elif line.startswith("#") and not line.startswith("#!"):
@@ -59,13 +67,14 @@ jobs:
               except Exception:
                   pass
               return ""
+              
           entries = sorted([e for e in os.listdir(".") if e not in IGNORE_PATHS and os.path.isdir(e)])
           table_output = []
           for d in entries:
               folder_desc = FOLDER_DESCS.get(d, "")
               header_desc = f" ({folder_desc})" if folder_desc else ""
               
-              table_output.append(f"### 📁 {d}/{header_desc}\n")
+              table_output.append(f"### 📁 {d}{header_desc}\n")
               table_output.append("| File | Description |")
               table_output.append("|---|---|")
               
@@ -81,11 +90,15 @@ jobs:
                   table_output.append(f"| <a href=\"{d}/{f}\"><code>{f}</code></a> | {desc} |")
               
               table_output.append("\n")
+              
           final_str = "\n".join(table_output).strip()
+          
           with open("README.md", "r") as f:
               readme = f.read()
+              
           pattern = r"(<!-- START_SECTION:tree -->)(.*?)(<!-- END_SECTION:tree -->)"
           updated = re.sub(pattern, lambda m: m.group(1) + "\n" + final_str + "\n" + m.group(3), readme, flags=re.DOTALL)
+          
           with open("README.md", "w") as f:
               f.write(updated)
           '
@@ -96,4 +109,4 @@ jobs:
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
-          commit_message: "docs: auto-update directory tables in README"
+          commit_message: "docs: update actions script for yaml frontmatter and new folders"
