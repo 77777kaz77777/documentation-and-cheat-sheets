@@ -1,6 +1,3 @@
----
-title: "Readme"
----
 
 # documentation-and-cheat-sheets
 
