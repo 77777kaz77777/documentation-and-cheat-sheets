@@ -1,3 +1,7 @@
+---
+title: "Arkenfox Configuration Guide"
+---
+
 # Arkenfox Configuration and Updater Guide
 
 ## 1. Script Download and Initialization
