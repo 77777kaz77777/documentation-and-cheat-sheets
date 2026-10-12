@@ -1,7 +1,3 @@
----
-title: "Linux Permissions Reference Expanded"
----
-
 # A deep dive into managing Linux file permissions, ownership, and ACLs
 
 ## 1. Numeric (Octal) Permission Breakdown

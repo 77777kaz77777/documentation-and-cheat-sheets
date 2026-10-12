@@ -1,7 +1,3 @@
----
-title: "Hyper V Powershell Cheat Sheet"
----
-
 ## PowerShell commands to spin up and manage Hyper-V virtual machines
 
 # Hyper-V PowerShell Management Cheat Sheet

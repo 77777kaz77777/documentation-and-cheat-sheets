@@ -1,7 +1,3 @@
----
-title: "Linux Commands Cheat Sheet Tables"
----
-
 ## Essential Linux commands, administration tools, and text editor shortcuts organized into tables
 
 ## 1. File Operations Commands

@@ -1,7 +1,3 @@
----
-title: "Setup Script Documentation"
----
-
 # `setup.sh` - Workstation Setup Script Documentation
 
 ## Overview

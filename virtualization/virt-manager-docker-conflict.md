@@ -1,7 +1,3 @@
----
-title: "Virt Manager Docker Conflict"
----
-
 ## How to fix network bridge conflicts when running Virt-Manager and Docker on the same machine
 
 # Virt-Manager and Docker: Networking Conflicts Explained

@@ -1,7 +1,3 @@
----
-title: "Fedora Linux Btrfs Recovery"
----
-
 # CLI methods for rescuing a corrupted Btrfs filesystem on Fedora
 
 ## Scenario 1: You can reach a TTY / Command Line Terminal

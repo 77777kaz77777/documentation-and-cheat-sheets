@@ -1,7 +1,3 @@
----
-title: "Fedora Quick Reference"
----
-
 # CLI reference for Fedora Linux system administration. Provides direct syntax for DNF package management, systemd service control, journalctl diagnostics, firewalld rules, SELinux enforcement, and network operations
 
 ## Package Management (DNF / DNF5)

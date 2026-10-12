@@ -1,7 +1,3 @@
----
-title: "Kde Plasma 6 Multi Monitor Troubleshooting"
----
-
 # Fixes for multi-monitor display glitches in KDE Plasma 6
 
 **Issue:** An external monitor connected via USB-C/Dock or DisplayPort is not detected in KDE System Settings (`kscreen`), even though the monitor is powered on and connected.

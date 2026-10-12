@@ -1,7 +1,3 @@
----
-title: "Kdeconnect Fedora44 Ios Troubleshooting"
----
-
 ## KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora 44 KDE Plasma, even after adding firewall rules to the `home` zone
 
 # Troubleshooting KDE Connect: Fedora 44 KDE to iOS

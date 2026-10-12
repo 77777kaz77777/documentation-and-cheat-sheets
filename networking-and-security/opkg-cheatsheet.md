@@ -1,7 +1,3 @@
----
-title: "Opkg Cheatsheet"
----
-
 ## quick reference for the ⁠opkg⁠ package manager, commonly used on OpenWrt and embedded Linux systems. It covers the essential commands needed to install, upgrade, query, and manage software packages and their dependencies
 
 ## Updating & Upgrading

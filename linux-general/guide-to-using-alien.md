@@ -1,7 +1,3 @@
----
-title: "Guide To Using Alien"
----
-
 # The Comprehensive Guide to Using `alien`
 
 `alien` is a powerful command-line tool for Linux that converts between different package formats. If you find a software package built for a different Linux distribution (like an `.rpm` for Fedora when you are using Debian), `alien` allows you to convert that package into a format your package manager can understand.

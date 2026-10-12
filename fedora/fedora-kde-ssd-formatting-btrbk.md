@@ -1,7 +1,3 @@
----
-title: "Fedora Kde Ssd Formatting Btrbk"
----
-
 # Steps to format a secondary SSD and set up automated Btrbk snapshots on Fedora KDE
 
 ## Prerequisites

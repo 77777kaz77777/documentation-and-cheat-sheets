@@ -1,7 +1,3 @@
----
-title: "Btrbk Snapshot Automation Cheat Sheet"
----
-
 ## Steps to automate Btrfs snapshots and backups using Btrbk
 
 ## Execution & Dry Runs

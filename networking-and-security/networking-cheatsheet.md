@@ -1,7 +1,3 @@
----
-title: "Networking Cheatsheet"
----
-
 # Networking Concepts and Explanations Cheatsheet
 
 # Comprehensive Networking Concepts & Explanations
