@@ -14,12 +14,6 @@ The core issue stems from how both Docker and libvirt handle Linux networking an
 
 Because Docker dynamically rewrites these `iptables` rules upon every restart or container deployment, manually adding libvirt rules is not a permanent fix; Docker will continually overwrite or bypass them.
 
-## Counter Argument: Coexistence is Technically Possible
-
-While standard deployments conflict, it is technically possible to run both on the same host. The solution requires configuring Docker's `daemon.json` file to set `"iptables": false`. However, doing so strips Docker of its ability to manage container networking automatically. You become entirely responsible for manually writing and maintaining the routing and NAT rules required for your Docker containers to communicate with the internet, which is highly error-prone and defeats much of Docker's convenience.
-
----
-
 ## Complete Purge of Docker and Docker Compose (Multi-Distribution)
 
 To restore standard networking for Virt-Manager, Docker and all its associated networking rules, dependencies, and configuration files must be completely removed from the host.
@@ -28,9 +22,9 @@ The following command block provides the full, updated script. It is now designe
 
 ### Package Manager Explanations
 
-* **APT (Debian/Ubuntu):** Uses `purge` to remove packages and their configuration files, followed by `autoremove --purge` to strip out orphaned dependencies left behind.
-* **DNF (Fedora/RHEL):** Uses `remove` targeting a wide array of legacy and modern Docker package names to ensure a clean sweep, followed by `autoremove` to clear unused dependencies.
-* **Pacman (Arch Linux):** Uses the `-Rns` flag. `R` removes the packages, `n` removes global configuration files (acting like `purge`), and `s` removes recursive dependencies that are no longer needed (acting like `autoremove`). This completes both steps in one command.
+- **APT (Debian/Ubuntu):** Uses `purge` to remove packages and their configuration files, followed by `autoremove --purge` to strip out orphaned dependencies left behind.
+- **DNF (Fedora/RHEL):** Uses `remove` targeting a wide array of legacy and modern Docker package names to ensure a clean sweep, followed by `autoremove` to clear unused dependencies.
+- **Pacman (Arch Linux):** Uses the `-Rns` flag. `R` removes the packages, `n` removes global configuration files (acting like `purge`), and `s` removes recursive dependencies that are no longer needed (acting like `autoremove`). This completes both steps in one command.
 
 ```bash
 #!/bin/bash
