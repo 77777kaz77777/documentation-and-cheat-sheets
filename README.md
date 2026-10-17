@@ -157,6 +157,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="virtualization/virt-manager-cheatsheet.md"><code>virt-manager-cheatsheet.md</code></a> | Virt-Manager & Virsh Command Line Cheat Sheet |
 | <a href="virtualization/virt-manager-docker-conflict.md"><code>virt-manager-docker-conflict.md</code></a> | How to fix network bridge conflicts when running Virt-Manager and Docker on the same machine |
 | <a href="virtualization/virtualization-virt-manager-troubleshooting-fedora.md"><code>virtualization-virt-manager-troubleshooting-fedora.md</code></a> | Fixes and tweaks for running Virt-Manager smoothly on Fedora |
+| <a href="virtualization/vmware_btrfs_recovery_guide.md"><code>vmware_btrfs_recovery_guide.md</code></a> | VMware VM Recovery Guide (Btrfs Snapshots) |
 
 
 ### 📁 windows-and-macos (Windows & macOS References)
