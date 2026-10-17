@@ -1,0 +1,48 @@
+site_name: Sysadmin Documentation & Cheat Sheets
+site_description: Personal repository for administrative cheat sheets, virtualization runbooks, container references, and cross-platform CLI documentation.
+site_author: Kaz
+repo_url: https://github.com/77777kaz77777/documentation-and-cheat-sheets
+repo_name: 77777kaz77777/documentation-and-cheat-sheets
+docs_dir: docs
+
+theme:
+  name: material
+  palette:
+    # Forces dark mode to match your terminal/CLI aesthetic
+    scheme: slate 
+    primary: deep purple
+    accent: purple
+  features:
+    - navigation.tabs # Creates a top navigation bar for your main folders
+    - navigation.sections # Groups items in the left sidebar
+    - navigation.top # Adds a "back to top" button
+    - navigation.expand # Automatically expands sidebar categories
+    - search.suggest # Search auto-complete
+    - search.highlight # Highlights search terms in the text
+    - search.share # Allows sharing deep-links to search queries
+    - content.code.copy # Adds a copy button to all terminal commands/code blocks
+    - content.code.annotate # Allows adding + icons to explain specific lines of code
+    - content.tabs.link # Syncs tab selections across the site
+
+# Essential Markdown parsing extensions for technical cheat sheets
+markdown_extensions:
+  - admonition # Enables warning/info/danger callout boxes
+  - tables
+  - attr_list
+  - def_list
+  - md_in_html
+  - toc:
+      permalink: true # Adds permanent link anchors to all headers
+  - pymdownx.highlight:
+      anchor_linenums: true
+      guess_lang: false
+  - pymdownx.inlinehilite
+  - pymdownx.snippets # Allows embedding code from actual script files into the markdown
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search
