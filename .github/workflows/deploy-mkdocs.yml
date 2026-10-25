@@ -1,12 +1,16 @@
-name: Deploy MkDocs
+name: Deploy Zensical
 on:
   push:
     branches:
       - main
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 jobs:
   deploy:
+    environment:
+      name: github-pages
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -14,4 +18,8 @@ jobs:
         with:
           python-version: '3.x'
       - run: pip install zensical
-      - run: zensical gh-deploy --force
+      - run: zensical build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/
+      - uses: actions/deploy-pages@v4
