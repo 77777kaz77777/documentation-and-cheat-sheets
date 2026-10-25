@@ -4,9 +4,9 @@
 
 Ensure your system meets the following requirements before proceeding:
 
-* **OS:** Fedora KDE installed on a Btrfs filesystem.
-* **Snapshot Utility:** Active snapshot tool configured (e.g., `snapper` or `btrbk`).
-* **Required Packages:** Install build tools, filesystem utilities, and file-monitoring daemons:
+- **OS:** Fedora KDE installed on a Btrfs filesystem.
+- **Snapshot Utility:** Active snapshot tool configured (e.g., `snapper` or `btrbk`).
+- **Required Packages:** Install build tools, filesystem utilities, and file-monitoring daemons:
 
 ```bash
 sudo dnf install git make btrfs-progs inotify-tools
@@ -100,9 +100,9 @@ sudo reboot
 
 ### Issue 1: `grub-script-check: No such file or directory`
 
-* **Symptom:** `grub2-mkconfig` output reports `grub-btrfs: Error: Syntax errors were detected in generated /boot/grub/grub-btrfs.new file.`
-* **Cause:** grub-btrfs cannot locate Fedora's renamed binary `/usr/bin/grub2-script-check`.
-* **Resolution:**
+- **Symptom:** `grub2-mkconfig` output reports `grub-btrfs: Error: Syntax errors were detected in generated /boot/grub/grub-btrfs.new file.`
+- **Cause:** grub-btrfs cannot locate Fedora's renamed binary `/usr/bin/grub2-script-check`.
+- **Resolution:**
 
 ```bash
 sudo ln -s /usr/bin/grub2-script-check /usr/bin/grub-script-check
@@ -111,9 +111,9 @@ sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 
 ### Issue 2: `grub-btrfsd.service Fails with status=1/FAILURE`
 
-* **Symptom:** `systemctl status grub-btrfsd` shows `Active: failed (Result: exit-code)`.
-* **Cause:** `inotify-tools` is missing or the service was started before creating the binary symlinks.
-* **Resolution:**
+- **Symptom:** `systemctl status grub-btrfsd` shows `Active: failed (Result: exit-code)`.
+- **Cause:** `inotify-tools` is missing or the service was started before creating the binary symlinks.
+- **Resolution:**
 
 ```bash
 sudo dnf install inotify-tools
@@ -122,9 +122,9 @@ sudo systemctl restart grub-btrfsd
 
 ### Issue 3: GRUB Menu Is Skipped During Reboot
 
-* **Symptom:** System boots straight into Fedora without displaying GRUB or snapshot options.
-* **Cause:** Fedora's default `menu_auto_hide` feature bypasses the GRUB menu.
-* **Resolution:**
+- **Symptom:** System boots straight into Fedora without displaying GRUB or snapshot options.
+- **Cause:** Fedora's default `menu_auto_hide` feature bypasses the GRUB menu.
+- **Resolution:**
 
 ```bash
 sudo grub2-editenv - unset menu_auto_hide
@@ -133,9 +133,9 @@ sudo grub2-editenv - set timeout=5
 
 ### Issue 4: Snapshots Saved on Secondary Drives Do Not Appear in GRUB
 
-* **Symptom:** Snapshots stored on a secondary NVMe/SSD drive fail to appear as GRUB boot options.
-* **Cause:** Btrfs snapshots **cannot cross physical drive or filesystem boundaries**. GRUB can only boot snapshots residing on the primary boot volume (`/.snapshots`).
-* **Resolution:** Keep bootable rollback snapshots on the main OS drive. Use secondary drives strictly for secondary backups via `btrfs send/receive` or `btrbk`.
+- **Symptom:** Snapshots stored on a secondary NVMe/SSD drive fail to appear as GRUB boot options.
+- **Cause:** Btrfs snapshots **cannot cross physical drive or filesystem boundaries**. GRUB can only boot snapshots residing on the primary boot volume (`/.snapshots`).
+- **Resolution:** Keep bootable rollback snapshots on the main OS drive. Use secondary drives strictly for secondary backups via `btrfs send/receive` or `btrbk`.
 
 ## 🧹 Maintenance & Updates
 

@@ -15,8 +15,8 @@ lspci \
   -i network
 ```
 
-* **Expected Output:** Shows the card's vendor ID, product name (e.g., MediaTek MT7922 / Intel AX210), and the `Kernel driver in use:` line.
-* **Verification:** If no output appears, the card is not physically seated in the M.2 slot or lacks PCIe power.
+- **Expected Output:** Shows the card's vendor ID, product name (e.g., MediaTek MT7922 / Intel AX210), and the `Kernel driver in use:` line.
+- **Verification:** If no output appears, the card is not physically seated in the M.2 slot or lacks PCIe power.
 
 ### 1.2 USB Bus Audit (For USB-based Wi-Fi Modules)
 
@@ -31,7 +31,7 @@ lsusb \
   wireless
 ```
 
-* **Verification:** Device must be enumerated with an assigned driver (`btusb`, `rtw88`, etc.).
+- **Verification:** Device must be enumerated with an assigned driver (`btusb`, `rtw88`, etc.).
 
 ---
 
@@ -48,7 +48,7 @@ lsmod \
   -E 'mt79|iwl|ath|rtw|b43'
 ```
 
-* **Verification:** Confirm the relevant driver module (e.g., `mt7921e` for MediaTek MT7921/MT7922, `iwlwifi` for Intel, `rtw89` for Realtek) is listed as loaded.
+- **Verification:** Confirm the relevant driver module (e.g., `mt7921e` for MediaTek MT7921/MT7922, `iwlwifi` for Intel, `rtw89` for Realtek) is listed as loaded.
 
 ### 2.2 Kernel Ring Buffer Audit
 
@@ -59,8 +59,8 @@ sudo dmesg \
   -iE 'wlan|firmware|wifi|mt79|iwl|ath|rtw'
 ```
 
-* **Verification:** Look for lines indicating firmware load success (e.g., `firmware: direct-loading firmware...`).
-* **Troubleshooting:** If `dmesg` reports `failed to load firmware (-2)`, install missing binary blobs:
+- **Verification:** Look for lines indicating firmware load success (e.g., `firmware: direct-loading firmware...`).
+- **Troubleshooting:** If `dmesg` reports `failed to load firmware (-2)`, install missing binary blobs:
 
 ```bash
 # On Fedora / RHEL
@@ -96,7 +96,7 @@ ip link \
 iw dev
 ```
 
-* **Verification:** Identify your active wireless interface name (e.g., `wlan0`, `wlp2s0`, `wlp3s0`).
+- **Verification:** Identify your active wireless interface name (e.g., `wlan0`, `wlp2s0`, `wlp3s0`).
 
 ### 3.2 RF Kill State Audit & Clearing
 
@@ -112,7 +112,7 @@ sudo rfkill \
   all
 ```
 
-* **Verification:** Confirm that both `Soft blocked` and `Hard blocked` report `no` for `Wireless LAN` and `Bluetooth`.
+- **Verification:** Confirm that both `Soft blocked` and `Hard blocked` report `no` for `Wireless LAN` and `Bluetooth`.
 
 ### 3.3 Set Regulatory Domain
 
@@ -129,7 +129,7 @@ sudo iw \
   CA
 ```
 
-* **Verification:** Running `sudo iw reg get` reflects your specified country code to unlock region-specific 5 GHz and 6 GHz channels.
+- **Verification:** Running `sudo iw reg get` reflects your specified country code to unlock region-specific 5 GHz and 6 GHz channels.
 
 ---
 
@@ -160,7 +160,7 @@ nmcli \
   list
 ```
 
-* **Verification:** Confirm target SSID appears with appropriate signal strength (`SIGNAL`), channel (`CHAN`), and security protocols.
+- **Verification:** Confirm target SSID appears with appropriate signal strength (`SIGNAL`), channel (`CHAN`), and security protocols.
 
 ### 4.2 Legacy Profile Cleanup
 
@@ -177,7 +177,7 @@ sudo nmcli \
   "OLD_PROFILE_NAME"
 ```
 
-* **Verification:** Running `nmcli connection show` confirms legacy connections are removed.
+- **Verification:** Running `nmcli connection show` confirms legacy connections are removed.
 
 ### 4.3 Connect to Target Access Point
 
@@ -192,7 +192,7 @@ nmcli \
   "WIFI_PASSWORD"
 ```
 
-* **Verification:** `nmcli device` reports the interface state as `connected`.
+- **Verification:** `nmcli device` reports the interface state as `connected`.
 
 ---
 
@@ -214,7 +214,7 @@ ip route \
   show
 ```
 
-* **Verification:** Confirm an IP address (DHCP or static) is bound to the interface and a `default via <GATEWAY_IP>` route exists.
+- **Verification:** Confirm an IP address (DHCP or static) is bound to the interface and a `default via <GATEWAY_IP>` route exists.
 
 ### 5.2 DNS Resolution & Connectivity Test
 
@@ -234,7 +234,7 @@ ping \
   fedoraproject.org
 ```
 
-* **Verification:** Packet loss must be 0%, and domain name queries must resolve to valid IP addresses.
+- **Verification:** Packet loss must be 0%, and domain name queries must resolve to valid IP addresses.
 
 ---
 
@@ -253,7 +253,7 @@ iw \
   power_save
 ```
 
-* **Verification:** Displays whether wireless power saving is currently `on` or `off`.
+- **Verification:** Displays whether wireless power saving is currently `on` or `off`.
 
 ### 6.2 Disable Power Save in NetworkManager (Persistent)
 
@@ -281,7 +281,7 @@ sudo systemctl \
   NetworkManager
 ```
 
-* **Verification:** Running `iw dev <interface> get power_save` outputs `Power save: off`.
+- **Verification:** Running `iw dev <interface> get power_save` outputs `Power save: off`.
 
 ---
 
@@ -302,7 +302,7 @@ bluetoothctl \
   show
 ```
 
-* **Verification:** `bluetoothctl show` displays controller details including MAC address and `Powered: yes`.
+- **Verification:** `bluetoothctl show` displays controller details including MAC address and `Powered: yes`.
 
 ### 7.2 Unblock & Restart Bluetooth Stack
 
@@ -318,19 +318,19 @@ sudo systemctl \
   bluetooth
 ```
 
-* **Verification:** Run `bluetoothctl devices` to verify active scanning and discovery of nearby Bluetooth devices.
+- **Verification:** Run `bluetoothctl devices` to verify active scanning and discovery of nearby Bluetooth devices.
 
 ---
 
 ## 8. Diagnostic Command Reference Matrix
 
-| Diagnostic Stage | Command | Success Indicator |
-| --- | --- | --- |
-| **PCI Hardware** | `lspci -nnk \| grep -A 3 -i network` | Driver module listed under `Kernel driver in use` |
-| **Kernel Log** | `sudo dmesg \| grep -iE 'mt79\|iwl\|ath\|rtw'` | `firmware: direct-loading...` with no failure code |
-| **RF Block State** | `rfkill list all` | `Soft blocked: no`, `Hard blocked: no` |
-| **Scanning** | `nmcli device wifi list` | Target SSIDs listed with signal percentages |
-| **Connection** | `nmcli device wifi connect "SSID" password "PASS"` | `Device 'wlan0' successfully activated` |
-| **Routing** | `ip route show` | `default via <gateway_ip> dev <interface>` present |
-| **DNS Resolution** | `resolvectl status` | Valid DNS servers listed under interface |
-| **Power Management** | `iw dev <interface> get power_save` | `Power save: off` |
+| Diagnostic Stage     | Command                                            | Success Indicator                                  |
+| -------------------- | -------------------------------------------------- | -------------------------------------------------- |
+| **PCI Hardware**     | `lspci -nnk \| grep -A 3 -i network`               | Driver module listed under `Kernel driver in use`  |
+| **Kernel Log**       | `sudo dmesg \| grep -iE 'mt79\|iwl\|ath\|rtw'`     | `firmware: direct-loading...` with no failure code |
+| **RF Block State**   | `rfkill list all`                                  | `Soft blocked: no`, `Hard blocked: no`             |
+| **Scanning**         | `nmcli device wifi list`                           | Target SSIDs listed with signal percentages        |
+| **Connection**       | `nmcli device wifi connect "SSID" password "PASS"` | `Device 'wlan0' successfully activated`            |
+| **Routing**          | `ip route show`                                    | `default via <gateway_ip> dev <interface>` present |
+| **DNS Resolution**   | `resolvectl status`                                | Valid DNS servers listed under interface           |
+| **Power Management** | `iw dev <interface> get power_save`                | `Power save: off`                                  |

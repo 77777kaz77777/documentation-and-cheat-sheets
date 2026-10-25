@@ -4,8 +4,8 @@ Disable the integrated AMD GPU at the OS level by adding the `amdgpu` module to 
 
 ## Prerequisites
 
-* Root/sudo privileges.
-* Terminal access.
+- Root/sudo privileges.
+- Terminal access.
 
 ## Procedure
 

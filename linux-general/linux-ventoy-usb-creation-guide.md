@@ -56,7 +56,7 @@ Run `Ventoy2Disk.sh` with the `-i` flag targeting your USB drive:
 sudo ./Ventoy2Disk.sh -i /dev/sdX
 ```
 
-*(Replace `/dev/sdX` with your actual drive path, e.g., `/dev/sdb`)*
+_(Replace `/dev/sdX` with your actual drive path, e.g., `/dev/sdb`)_
 
 ---
 

@@ -2,52 +2,52 @@
 
 ## Core Commands
 
-* **Switch to Integrated Mode (Max Battery):**
+- **Switch to Integrated Mode (Max Battery):**
 
-~~~bash
+```bash
 cardwire \
   set \
   integrated
-~~~
+```
 
-* **Switch to Smart Mode (Dynamic/Optimal Performance):**
+- **Switch to Smart Mode (Dynamic/Optimal Performance):**
 
-~~~bash
+```bash
 cardwire \
   set \
   smart
-~~~
+```
 
-* **Switch to Hybrid Mode (Standard Offloading):**
+- **Switch to Hybrid Mode (Standard Offloading):**
 
-~~~bash
+```bash
 cardwire \
   set \
   hybrid
-~~~
+```
 
-* **Switch to Manual Mode (Manual Control):**
+- **Switch to Manual Mode (Manual Control):**
 
-~~~bash
+```bash
 cardwire \
   set \
   manual
-~~~
+```
 
-* **Check Current Status:**
+- **Check Current Status:**
 
-~~~bash
+```bash
 cardwire \
   get
-~~~
+```
 
 ## Hardware Verification
 
-* **Check NVIDIA Power State:**
+- **Check NVIDIA Power State:**
 
-~~~bash
+```bash
 cat \
   /sys/bus/pci/devices/0000:01:00.0/power_state
-~~~
+```
 
-*(Expected output is `D3cold` when the GPU is successfully powered off).*
+_(Expected output is `D3cold` when the GPU is successfully powered off)._

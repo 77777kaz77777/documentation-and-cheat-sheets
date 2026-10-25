@@ -2,9 +2,9 @@
 
 ## Prerequisites
 
-* Fedora KDE installed on a Btrfs filesystem.
-* Active snapshot utility configured (snapper or btrbk).
-* `git` and `make` installed (`sudo dnf install git make`).
+- Fedora KDE installed on a Btrfs filesystem.
+- Active snapshot utility configured (snapper or btrbk).
+- `git` and `make` installed (`sudo dnf install git make`).
 
 ## Phase 1: Fedora Path Compatibility Fix
 
@@ -78,7 +78,7 @@ Upon restarting, your system will be permanently restored to that clean state.
 
 Because grub-btrfs was installed from source, updates are managed via Git:
 
-* To Update grub-btrfs:
+- To Update grub-btrfs:
 
 ```bash
 cd ~/grub-btrfs
@@ -86,7 +86,7 @@ git pull
 sudo make install
 ```
 
-* To Uninstall grub-btrfs:
+- To Uninstall grub-btrfs:
 
 ```bash
 cd ~/grub-btrfs

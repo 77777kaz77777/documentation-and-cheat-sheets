@@ -52,5 +52,5 @@ By default, AppImages do not automatically show up in your application menu or d
 
 ### Sources and Verification
 
-* **Official AppImage Documentation (Making AppImages Executable):** <https://docs.appimage.org/introduction/quickstart.html#how-to-run-an-appimage>
-* **AppImageLauncher Official Repository:** <https://github.com/TheAssassin/AppImageLauncher>
+- **Official AppImage Documentation (Making AppImages Executable):** <https://docs.appimage.org/introduction/quickstart.html#how-to-run-an-appimage>
+- **AppImageLauncher Official Repository:** <https://github.com/TheAssassin/AppImageLauncher>

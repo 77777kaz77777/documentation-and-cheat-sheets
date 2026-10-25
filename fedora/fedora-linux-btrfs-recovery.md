@@ -13,7 +13,7 @@ If your system boots to a black screen, terminal prompt, or you can press **Ctrl
 sudo snapper -c root list
 ```
 
-1. Roll back to a snapshot number created *before* the issue occurred (e.g., #2):
+1. Roll back to a snapshot number created _before_ the issue occurred (e.g., #2):
 
 ```bash
 sudo snapper -c root rollback 2
@@ -36,8 +36,8 @@ Identify primary and secondary NVMe partitions.
 1. Insert your Fedora Live USB drive and boot into it.
 2. Open the terminal.
 3. Identify your drive partitions using `lsblk`:
-   * **Primary 500GB SSD:** `/dev/nvme0n1p3` (or similar main Btrfs partition).
-   * **Secondary 1TB SSD:** `/dev/nvme1n1p1` (contains your `btrfs-backups` folder).
+   - **Primary 500GB SSD:** `/dev/nvme0n1p3` (or similar main Btrfs partition).
+   - **Secondary 1TB SSD:** `/dev/nvme1n1p1` (contains your `btrfs-backups` folder).
 
 ### 2. Mount Primary and Secondary Drives
 

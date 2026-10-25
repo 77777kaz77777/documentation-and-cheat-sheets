@@ -39,7 +39,7 @@ sudo firewall-cmd \
 sudo firewall-cmd --reload
 ```
 
-*Verification:* Check your active zone with `firewall-cmd --get-active-zones` to ensure your interface (e.g., `wlan0`) is covered by the zones above.
+_Verification:_ Check your active zone with `firewall-cmd --get-active-zones` to ensure your interface (e.g., `wlan0`) is covered by the zones above.
 
 ## Step 3: Restart the KDE Connect Daemon
 
@@ -57,7 +57,7 @@ Because Fedora 44 uses D-Bus for KDE Connect, `systemctl --user restart plasma-k
 kdeconnect-cli --refresh
 ```
 
-*Verification:* Run `kdeconnect-cli -l`. If it outputs a list of devices (even if it says 0 devices found) without a D-Bus error, the daemon is successfully running.
+_Verification:_ Run `kdeconnect-cli -l`. If it outputs a list of devices (even if it says 0 devices found) without a D-Bus error, the daemon is successfully running.
 
 ## Step 4: Force iOS Pairing via IP Address (If Auto-Discovery Fails)
 
@@ -69,7 +69,7 @@ If the firewall is open and the daemon is running but the iPhone still cannot se
 ip -br a
 ```
 
-*(Note the IPv4 address assigned to your active connection, e.g., `192.168.8.x` on a GL.iNet router).*
+_(Note the IPv4 address assigned to your active connection, e.g., `192.168.8.x` on a GL.iNet router)._
 
 1. Open the KDE Connect app on the iPhone.
 2. Tap the **three-dot menu** (top right corner).
@@ -80,6 +80,6 @@ ip -br a
 
 **Sources & Verification:**
 
-* Commands utilize standard Fedora Linux native tooling (`firewalld` for port management, `iproute2` for network queries).
-* Daemon paths reflect the official KDE Plasma 6 file system hierarchy (`/usr/libexec/kdeconnectd`).
-* Workarounds for iOS discovery align with KDE Connect official documentation for Apple devices.
+- Commands utilize standard Fedora Linux native tooling (`firewalld` for port management, `iproute2` for network queries).
+- Daemon paths reflect the official KDE Plasma 6 file system hierarchy (`/usr/libexec/kdeconnectd`).
+- Workarounds for iOS discovery align with KDE Connect official documentation for Apple devices.

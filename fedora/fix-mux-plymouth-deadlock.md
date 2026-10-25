@@ -10,14 +10,15 @@ To force text mode and bypass the MUX/Plymouth deadlock, edit the GRUB parameter
 
 ## Step 2: Boot the System
 
-* Press **Ctrl + X** (or **F10**) to boot using these temporary parameters.
-* Enter your LUKS passphrase when prompted and log in to the text terminal.
+- Press **Ctrl + X** (or **F10**) to boot using these temporary parameters.
+- Enter your LUKS passphrase when prompted and log in to the text terminal.
 
 ## Step 3: Reconfigure GPU MUX & Reboot
 
 Run **one** of the following commands based on your installed utilities:
 
-* **Using `supergfxctl`:**
+- **Using `supergfxctl`:**
 
   ```bash
   supergfxctl -m Hybrid
+  ```

@@ -21,3 +21,4 @@ export MY_EXPORT="Visible to child"
 # Spawn a child subshell and attempt to print both variables
 bash -c 'echo "Local: $MY_LOCAL \vert{} Export:$MY_EXPORT"'
 # Output: Local:  | Export: Visible to child
+```

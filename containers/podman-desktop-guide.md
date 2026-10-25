@@ -7,7 +7,7 @@ Podman Desktop is a graphical user interface (GUI) that allows developers to eas
 If you are using Linux, Flatpak is the officially recommended way to install Podman Desktop. Open your terminal and run the following commands:
 
 **Step 1: Add the Flathub Repository**
-*(If you haven't already enabled Flathub on your system)*
+_(If you haven't already enabled Flathub on your system)_
 
 ```bash
 flatpak remote-add --if-not-exists flathub [https://flathub.org/repo/flathub.flatpakrepo](https://flathub.org/repo/flathub.flatpakrepo)
@@ -36,28 +36,28 @@ Once installed and running, Podman Desktop provides an intuitive interface for c
 
 ### Dashboard
 
-* The main screen shows the health of your container engine (e.g., Podman, Docker, etc.).
-* It provides a quick summary of your running containers, pods, and system resource usage (CPU/Memory).
+- The main screen shows the health of your container engine (e.g., Podman, Docker, etc.).
+- It provides a quick summary of your running containers, pods, and system resource usage (CPU/Memory).
 
 ### Managing Images
 
-* **Pulling Images:** Go to the **Images** tab. Click "Pull", enter a registry name (e.g., `docker.io/library/nginx` or `quay.io/fedora/fedora`), and download it.
-* **Building Images:** You can click "Build" to select a local `Dockerfile` and build a container image directly from the GUI.
+- **Pulling Images:** Go to the **Images** tab. Click "Pull", enter a registry name (e.g., `docker.io/library/nginx` or `quay.io/fedora/fedora`), and download it.
+- **Building Images:** You can click "Build" to select a local `Dockerfile` and build a container image directly from the GUI.
 
 ### Managing Containers
 
-* **Starting a Container:** In the **Images** tab, click the "Play" (Run) button next to any downloaded image to instantly spin up a container. A prompt will let you configure ports, volumes, and environment variables before starting it.
-* **Monitoring:** Go to the **Containers** tab to see a list of everything currently running or stopped.
-* **Interacting:** Click on any active container to:
-  * View live **Logs**.
-  * Open a **Terminal** (TTY) directly inside the container.
-  * Inspect the container's underlying JSON configuration.
+- **Starting a Container:** In the **Images** tab, click the "Play" (Run) button next to any downloaded image to instantly spin up a container. A prompt will let you configure ports, volumes, and environment variables before starting it.
+- **Monitoring:** Go to the **Containers** tab to see a list of everything currently running or stopped.
+- **Interacting:** Click on any active container to:
+  - View live **Logs**.
+  - Open a **Terminal** (TTY) directly inside the container.
+  - Inspect the container's underlying JSON configuration.
 
 ### Working with Pods
 
-* Podman uniquely supports **Pods** (a Kubernetes concept where multiple containers share the same network namespace and resources).
-* In the **Pods** tab, you can group related containers together and manage them as a single entity. This makes it easy to test multi-container setups and transition your workloads to Kubernetes later.
+- Podman uniquely supports **Pods** (a Kubernetes concept where multiple containers share the same network namespace and resources).
+- In the **Pods** tab, you can group related containers together and manage them as a single entity. This makes it easy to test multi-container setups and transition your workloads to Kubernetes later.
 
 ### Extensions
 
-* Podman Desktop is highly extensible. Go to **Settings > Extensions** to add features like Docker Compose support, local Kubernetes integration (Kind/Minikube), or developer tools.
+- Podman Desktop is highly extensible. Go to **Settings > Extensions** to add features like Docker Compose support, local Kubernetes integration (Kind/Minikube), or developer tools.

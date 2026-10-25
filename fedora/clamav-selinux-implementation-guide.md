@@ -86,6 +86,6 @@ sudo chmod +x /usr/local/bin/sys-scan
 
 ### Operational Troubleshooting
 
-* **`Can't send to clamd: Broken pipe`**: Daemon not listening. Restart via `sudo systemctl restart clamd@scan`.
-* **`Control message truncated`**: SELinux intercepted file descriptor transfer. Ensure script uses `--stream`.
-* **SELinux Audit Logging**: Query raw AVC denials with `sudo ausearch -m avc -ts recent -c clamd`.
+- **`Can't send to clamd: Broken pipe`**: Daemon not listening. Restart via `sudo systemctl restart clamd@scan`.
+- **`Control message truncated`**: SELinux intercepted file descriptor transfer. Ensure script uses `--stream`.
+- **SELinux Audit Logging**: Query raw AVC denials with `sudo ausearch -m avc -ts recent -c clamd`.

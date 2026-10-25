@@ -79,7 +79,7 @@ sudo systemd-cryptenroll \
 New TPM2 token enrolled as key slot 1.
 ```
 
-*(You can verify the enrollment with `sudo systemd-cryptenroll /dev/<YOUR_PARTITION>`, which will show the new `tpm2` keyslot alongside your existing password slot.)*
+_(You can verify the enrollment with `sudo systemd-cryptenroll /dev/<YOUR_PARTITION>`, which will show the new `tpm2` keyslot alongside your existing password slot.)_
 
 ## 5. Update Crypttab
 
@@ -132,6 +132,6 @@ dracut: *** Creating initramfs image file '/boot/initramfs-6.9.X-XXX.fc44.x86_64
 
 **Sources & Verification:**
 
-* **ArchWiki:** Systemd-cryptenroll and TPM 2.0 configuration
-* **Freedesktop.org Manual:** crypttab(5) syntax for `tpm2-device`
-* **Fedora Magazine:** Native LUKS decoupling and TPM integration documentation
+- **ArchWiki:** Systemd-cryptenroll and TPM 2.0 configuration
+- **Freedesktop.org Manual:** crypttab(5) syntax for `tpm2-device`
+- **Fedora Magazine:** Native LUKS decoupling and TPM integration documentation

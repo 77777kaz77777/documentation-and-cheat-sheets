@@ -27,7 +27,7 @@ Add your user to the `libvirt` group using the Fedora-compatible command:
 sudo usermod -aG libvirt $USER
 ```
 
-*Note: You will need to log out and log back in (or reboot) for this group change to take effect.*
+_Note: You will need to log out and log back in (or reboot) for this group change to take effect._
 
 ## 3. Manually Connect in Virt-Manager
 

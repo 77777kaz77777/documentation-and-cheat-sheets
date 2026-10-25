@@ -261,8 +261,8 @@ mtr 1.1.1.1
 
 ### Sources
 
-* **NetworkManager:** Red Hat Official Documentation, GNOME NetworkManager Reference.
-* **Netplan:** Canonical Netplan Official Documentation.
-* **systemd-networkd:** FreeDesktop systemd.network manual.
-* **iproute2:** Linux Foundation iproute2 suite documentation.
-* **Debian Interfaces:** Debian Administrator's Handbook.
+- **NetworkManager:** Red Hat Official Documentation, GNOME NetworkManager Reference.
+- **Netplan:** Canonical Netplan Official Documentation.
+- **systemd-networkd:** FreeDesktop systemd.network manual.
+- **iproute2:** Linux Foundation iproute2 suite documentation.
+- **Debian Interfaces:** Debian Administrator's Handbook.

@@ -16,7 +16,7 @@ First, locate a snapshot taken before the corruption occurred. You can list the 
 sudo btrfs subvolume list /mnt/storage
 ```
 
-*Note the path to the desired snapshot, for example: `.snapshots/43/snapshot`*
+_Note the path to the desired snapshot, for example: `.snapshots/43/snapshot`_
 
 ### 2. Verify Snapshot Contents
 

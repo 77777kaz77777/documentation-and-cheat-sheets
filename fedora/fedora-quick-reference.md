@@ -4,48 +4,48 @@
 
 ### System Updates & Maintenance
 
-| Action | Command |
-| --- | --- |
-| Refresh metadata & update all packages | `sudo dnf upgrade` |
-| Refresh package database only | `sudo dnf check-update` |
-| Remove unused/orphaned dependencies | `sudo dnf autoremove` |
-| Clean all cached package data & metadata | `sudo dnf clean all` |
+| Action                                   | Command                 |
+| ---------------------------------------- | ----------------------- |
+| Refresh metadata & update all packages   | `sudo dnf upgrade`      |
+| Refresh package database only            | `sudo dnf check-update` |
+| Remove unused/orphaned dependencies      | `sudo dnf autoremove`   |
+| Clean all cached package data & metadata | `sudo dnf clean all`    |
 
 ### Package Operations
 
-| Action | Command |
-| --- | --- |
-| Search for a package | `dnf search <package>` |
-| Display package information | `dnf info <package>` |
-| Install package(s) | `sudo dnf install <package>` |
-| Reinstall package | `sudo dnf reinstall <package>` |
-| Remove package(s) | `sudo dnf remove <package>` |
-| Find package providing a specific file or binary | `dnf provides <file_or_path>` |
-| List installed packages | `dnf list --installed` |
+| Action                                           | Command                        |
+| ------------------------------------------------ | ------------------------------ |
+| Search for a package                             | `dnf search <package>`         |
+| Display package information                      | `dnf info <package>`           |
+| Install package(s)                               | `sudo dnf install <package>`   |
+| Reinstall package                                | `sudo dnf reinstall <package>` |
+| Remove package(s)                                | `sudo dnf remove <package>`    |
+| Find package providing a specific file or binary | `dnf provides <file_or_path>`  |
+| List installed packages                          | `dnf list --installed`         |
 
 ### Groups & Transaction History
 
-| Action | Command |
-| --- | --- |
-| List available package groups | `dnf group list` |
-| Install a package group | `sudo dnf group install "<group_name>"` |
-| View DNF transaction history | `dnf history` |
-| Undo a specific transaction | `sudo dnf history undo <transaction_id>` |
+| Action                        | Command                                  |
+| ----------------------------- | ---------------------------------------- |
+| List available package groups | `dnf group list`                         |
+| Install a package group       | `sudo dnf group install "<group_name>"`  |
+| View DNF transaction history  | `dnf history`                            |
+| Undo a specific transaction   | `sudo dnf history undo <transaction_id>` |
 
 ---
 
 ## Flatpak Application Management
 
-| Action | Command |
-| --- | --- |
-| Add Flathub repository | `flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo` |
-| Search for flatpak applications | `flatpak search <app_name>` |
-| Install an application | `flatpak install flathub <app_id>` |
-| Update all installed flatpaks | `flatpak update` |
-| List installed flatpaks | `flatpak list` |
-| Remove an application | `flatpak uninstall <app_id>` |
-| Clean up unused runtimes & dependencies | `flatpak uninstall --unused` |
-| Grant/revoke filesystem access permissions | `sudo flatpak override <app_id> --filesystem=<path>` |
+| Action                                     | Command                                                                                      |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| Add Flathub repository                     | `flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo` |
+| Search for flatpak applications            | `flatpak search <app_name>`                                                                  |
+| Install an application                     | `flatpak install flathub <app_id>`                                                           |
+| Update all installed flatpaks              | `flatpak update`                                                                             |
+| List installed flatpaks                    | `flatpak list`                                                                               |
+| Remove an application                      | `flatpak uninstall <app_id>`                                                                 |
+| Clean up unused runtimes & dependencies    | `flatpak uninstall --unused`                                                                 |
+| Grant/revoke filesystem access permissions | `sudo flatpak override <app_id> --filesystem=<path>`                                         |
 
 ---
 
@@ -66,14 +66,14 @@
 
 ## System Logging (`journalctl`)
 
-| Action | Command |
-| --- | --- |
-| Tail live system logs | `journalctl -f` |
-| View logs for a specific service | `journalctl -u <service> -f` |
-| View logs for the current boot | `journalctl -b` |
-| View logs for the previous boot | `journalctl -b -1` |
-| Filter logs by priority (errors/critical) | `journalctl -p err..emerg` |
-| Limit log size by age | `sudo journalctl --vacuum-time=7d` |
+| Action                                    | Command                            |
+| ----------------------------------------- | ---------------------------------- |
+| Tail live system logs                     | `journalctl -f`                    |
+| View logs for a specific service          | `journalctl -u <service> -f`       |
+| View logs for the current boot            | `journalctl -b`                    |
+| View logs for the previous boot           | `journalctl -b -1`                 |
+| Filter logs by priority (errors/critical) | `journalctl -p err..emerg`         |
+| Limit log size by age                     | `sudo journalctl --vacuum-time=7d` |
 
 ---
 
@@ -88,34 +88,34 @@
 | Reload firewall configuration              | `sudo firewall-cmd --reload`                                            |                   |
 | List allowed services/ports in active zone | `sudo firewall-cmd --list-all`                                          |                   |
 | Check SELinux status                       | `sestatus`                                                              |                   |
-| Change SELinux mode temporarily            | `sudo setenforce 0` *(Permissive)* \| `sudo setenforce 1` *(Enforcing)* |                   |
+| Change SELinux mode temporarily            | `sudo setenforce 0` _(Permissive)_ \| `sudo setenforce 1` _(Enforcing)_ |                   |
 
 ---
 
 ## Network Management (`nmcli` & `ip`)
 
-| Action | Command |
-| --- | --- |
-| List active connections | `nmcli connection show` |
-| List network interfaces | `nmcli device status` |
-| Connect to a Wi-Fi network | `nmcli dev wifi connect "<SSID>" password "<password>"` |
-| Bring a connection up or down | `nmcli connection up | down <connection_name>` |
-| Display IP addresses | `ip -brief address` |
-| Display routing table | `ip route` |
+| Action                        | Command                                                 |
+| ----------------------------- | ------------------------------------------------------- |
+| List active connections       | `nmcli connection show`                                 |
+| List network interfaces       | `nmcli device status`                                   |
+| Connect to a Wi-Fi network    | `nmcli dev wifi connect "<SSID>" password "<password>"` |
+| Bring a connection up or down | `nmcli connection up                                    | down <connection_name>` |
+| Display IP addresses          | `ip -brief address`                                     |
+| Display routing table         | `ip route`                                              |
 
 ---
 
 ## System Diagnostics & Maintenance
 
-| Action | Command |
-| --- | --- |
-| Show Fedora release info | `cat /etc/os-release` |
-| Show active kernel version | `uname -r` |
-| Rebuild initramfs image | `sudo dracut -f` |
-| Update GRUB configuration | `sudo grub2-mkconfig -o /boot/grub2/grub.cfg` |
-| Check disk usage | `df -h` |
-| Check directory space utilization | `du -sh <path>` |
-| Hardware summary | `lscpu` / `lspci` / `lsusb` |
+| Action                            | Command                                       |
+| --------------------------------- | --------------------------------------------- |
+| Show Fedora release info          | `cat /etc/os-release`                         |
+| Show active kernel version        | `uname -r`                                    |
+| Rebuild initramfs image           | `sudo dracut -f`                              |
+| Update GRUB configuration         | `sudo grub2-mkconfig -o /boot/grub2/grub.cfg` |
+| Check disk usage                  | `df -h`                                       |
+| Check directory space utilization | `du -sh <path>`                               |
+| Hardware summary                  | `lscpu` / `lspci` / `lsusb`                   |
 
 ---
 

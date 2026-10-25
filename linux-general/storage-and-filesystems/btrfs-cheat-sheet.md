@@ -54,16 +54,16 @@ sudo mkfs.btrfs -d raid1 -m raid1 -L "MyRaid" /dev/sdb /dev/sdc
 
 ### Recommended Mount Options
 
-| Option | Description |
-| :--- | :--- |
-| `compress=zstd:N` | Enables ZSTD transparent compression at level `N` (1 to 15, default is 3). |
+| Option                  | Description                                                                    |
+| :---------------------- | :----------------------------------------------------------------------------- |
+| `compress=zstd:N`       | Enables ZSTD transparent compression at level `N` (1 to 15, default is 3).     |
 | `compress-force=zstd:N` | Forces compression on all files, bypassing initial compressibility heuristics. |
-| `noatime` | Disables access-time updates on files, reducing unnecessary CoW write cycles. |
-| `discard=async` | Enables asynchronous TRIM for SSDs/NVMe drives without blocking I/O. |
-| `autodefrag` | Automatically detects random small writes and queues them for defragmentation. |
-| `space_cache=v2` | Uses free space tree (v2 cache) for fast free space tracking on large drives. |
-| `commit=N` | Sets data flush interval to disk in seconds (default is `30`). |
-| `nodatacow` | Disables Copy-on-Write for all new files on the mounted subvolume/filesystem. |
+| `noatime`               | Disables access-time updates on files, reducing unnecessary CoW write cycles.  |
+| `discard=async`         | Enables asynchronous TRIM for SSDs/NVMe drives without blocking I/O.           |
+| `autodefrag`            | Automatically detects random small writes and queues them for defragmentation. |
+| `space_cache=v2`        | Uses free space tree (v2 cache) for fast free space tracking on large drives.  |
+| `commit=N`              | Sets data flush interval to disk in seconds (default is `30`).                 |
+| `nodatacow`             | Disables Copy-on-Write for all new files on the mounted subvolume/filesystem.  |
 
 ### Mount Commands
 
@@ -190,7 +190,7 @@ lsattr -d /var/lib/libvirt/images
 # Output includes 'C': ---------------C------ /var/lib/libvirt/images
 ```
 
-*Note: Setting `chattr +C` on an existing file with data will not disable CoW retroactively. You must set it on an empty file or directory first.*
+_Note: Setting `chattr +C` on an existing file with data will not disable CoW retroactively. You must set it on an empty file or directory first._
 
 ---
 
@@ -268,16 +268,16 @@ Btrfs handles multi-device pools natively without requiring hardware RAID or LVM
 
 ### RAID Profiles Summary
 
-| Profile | Min Devices | Data Redundancy | Space Efficiency | Notes |
-| :--- | :--- | :--- | :--- | :--- |
-| **Single** | 1 | None | 100% | Striped across devices if multiple. |
-| **DUP** | 1 | 2 Copies | 50% | Duplicates data on same physical drive. |
-| **RAID0** | 2 | None | 100% | Pure striping for maximum performance. |
-| **RAID1** | 2 | 2 Copies | 50% | Mirroring across 2 separate devices. |
-| **RAID1c3** | 3 | 3 Copies | 33.3% | Mirroring across 3 separate devices. |
-| **RAID1c4** | 4 | 4 Copies | 25% | Mirroring across 4 separate devices. |
-| **RAID10** | 4 | 1 Parity Set | 50% | Striping across mirrored pairs. |
-| **RAID5/6** | 3 (R5) / 4 (R6) | Parity | 66–75% | **Unstable**: Parity write-hole bug present. Avoid for critical data. |
+| Profile     | Min Devices     | Data Redundancy | Space Efficiency | Notes                                                                 |
+| :---------- | :-------------- | :-------------- | :--------------- | :-------------------------------------------------------------------- |
+| **Single**  | 1               | None            | 100%             | Striped across devices if multiple.                                   |
+| **DUP**     | 1               | 2 Copies        | 50%              | Duplicates data on same physical drive.                               |
+| **RAID0**   | 2               | None            | 100%             | Pure striping for maximum performance.                                |
+| **RAID1**   | 2               | 2 Copies        | 50%              | Mirroring across 2 separate devices.                                  |
+| **RAID1c3** | 3               | 3 Copies        | 33.3%            | Mirroring across 3 separate devices.                                  |
+| **RAID1c4** | 4               | 4 Copies        | 25%              | Mirroring across 4 separate devices.                                  |
+| **RAID10**  | 4               | 1 Parity Set    | 50%              | Striping across mirrored pairs.                                       |
+| **RAID5/6** | 3 (R5) / 4 (R6) | Parity          | 66–75%           | **Unstable**: Parity write-hole bug present. Avoid for critical data. |
 
 ### Adding, Removing & Live Drive Replacement
 
@@ -353,7 +353,7 @@ sudo btrfs filesystem defragment -r /mnt/btrfs/@data
 sudo btrfs filesystem defragment -r -czstd /mnt/btrfs/@data
 ```
 
-*Warning: Defragmenting files involved in active snapshot chains will clone shared extents, increasing overall disk space usage.*
+_Warning: Defragmenting files involved in active snapshot chains will clone shared extents, increasing overall disk space usage._
 
 ### Device Hardware Statistics
 
@@ -409,7 +409,7 @@ sudo btrfs check --readonly /dev/sdb1
 sudo btrfs inspect-internal dump-super /dev/sdb1
 ```
 
-*CRITICAL WARNING: Never run `btrfs check --repair` unless explicitly instructed as an absolute last resort by developers or after creating a complete block-level disk image (`dd`). Running `--repair` on a partially damaged filesystem can cause irreversible data loss.*
+_CRITICAL WARNING: Never run `btrfs check --repair` unless explicitly instructed as an absolute last resort by developers or after creating a complete block-level disk image (`dd`). Running `--repair` on a partially damaged filesystem can cause irreversible data loss._
 
 ---
 

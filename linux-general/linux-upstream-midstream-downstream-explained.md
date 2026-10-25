@@ -56,9 +56,9 @@ To understand upstream, midstream, and downstream, picture software development 
 
 ## 📊 Comparison Summary
 
-| Trait | Upstream | Midstream | Downstream |
-| :--- | :--- | :--- | :--- |
-| **Role** | Creation & Innovation | Integration & Preview | Packaging & Long-term Support |
-| **Code Direction** | Flows down to distributors | Receives from upstream, feeds downstream | Final recipient of code |
-| **Target User** | Developers, contributors | ISVs, hardware vendors, testers | System Administrators, Enterprise Production |
-| **Risk Level** | Highest (Bleeding edge) | Medium (Testing phase) | Lowest (Battle-tested) |
+| Trait              | Upstream                   | Midstream                                | Downstream                                   |
+| :----------------- | :------------------------- | :--------------------------------------- | :------------------------------------------- |
+| **Role**           | Creation & Innovation      | Integration & Preview                    | Packaging & Long-term Support                |
+| **Code Direction** | Flows down to distributors | Receives from upstream, feeds downstream | Final recipient of code                      |
+| **Target User**    | Developers, contributors   | ISVs, hardware vendors, testers          | System Administrators, Enterprise Production |
+| **Risk Level**     | Highest (Bleeding edge)    | Medium (Testing phase)                   | Lowest (Battle-tested)                       |

@@ -56,7 +56,7 @@ Execute the following commands whenever applying new overrides or updating Arken
    ./updater.sh
    ```
 
-   *Downloads the latest upstream `user.js` and appends `user-overrides.js` to the bottom.*
+   _Downloads the latest upstream `user.js` and appends `user-overrides.js` to the bottom._
 
 2. **Run the Preferences Cleaner:**
 
@@ -64,7 +64,7 @@ Execute the following commands whenever applying new overrides or updating Arken
    ./prefsCleaner.sh
    ```
 
-   *Forces Firefox to forget any old, orphaned configurations no longer present in the updated `user.js`.*
+   _Forces Firefox to forget any old, orphaned configurations no longer present in the updated `user.js`._
 
 3. **Restart Firefox** to apply the merged configuration.
 
@@ -72,8 +72,8 @@ Execute the following commands whenever applying new overrides or updating Arken
 
 The official `updater.sh` script includes strict system safeguards:
 
-* **Root Privilege Prevention:** The script actively checks for elevated privileges (`sudo`/`doas`) and aborts execution to prevent unintended system-wide modifications.
-* **Permissions Safeguards:** It scans the current directory for files owned by root (`user 0`) and halts if any are found, protecting profile permissions.
-* **Secure File Retrieval:** Downloads are strictly fetched over HTTPS directly from the official Arkenfox GitHub repository (`raw.githubusercontent.com`).
-* **Safe Staging:** Incoming updates are downloaded into temporary files (`mktemp`) to ensure complete retrieval before altering active configurations.
-* **Non-Destructive Backups:** The script automatically copies the active `user.js` into a `userjs_backups` directory before overwriting it, allowing immediate rollbacks.
+- **Root Privilege Prevention:** The script actively checks for elevated privileges (`sudo`/`doas`) and aborts execution to prevent unintended system-wide modifications.
+- **Permissions Safeguards:** It scans the current directory for files owned by root (`user 0`) and halts if any are found, protecting profile permissions.
+- **Secure File Retrieval:** Downloads are strictly fetched over HTTPS directly from the official Arkenfox GitHub repository (`raw.githubusercontent.com`).
+- **Safe Staging:** Incoming updates are downloaded into temporary files (`mktemp`) to ensure complete retrieval before altering active configurations.
+- **Non-Destructive Backups:** The script automatically copies the active `user.js` into a `userjs_backups` directory before overwriting it, allowing immediate rollbacks.

@@ -85,23 +85,23 @@ export PS1="\u@\h:\w\$ "
 
 ```
 
-* **`alias ll='ls -alF'`**: Executes the list command with three flags. The `-a` flag includes hidden files (those starting with a dot). The `-l` flag outputs a long-format list showing exact file permissions, owner, group, size in bytes, and modification timestamp. The `-F` flag appends an indicator to the end of filenames to show their type (e.g., `/` for directories, `*` for executables, `@` for symlinks).
+- **`alias ll='ls -alF'`**: Executes the list command with three flags. The `-a` flag includes hidden files (those starting with a dot). The `-l` flag outputs a long-format list showing exact file permissions, owner, group, size in bytes, and modification timestamp. The `-F` flag appends an indicator to the end of filenames to show their type (e.g., `/` for directories, `*` for executables, `@` for symlinks).
 
-* **`alias la='ls -A'`**: Lists all files, including hidden ones, but explicitly omits the `.` (current directory) and `..` (parent directory) entries. This provides a clean view of everything in a directory without the redundant navigation links.
+- **`alias la='ls -A'`**: Lists all files, including hidden ones, but explicitly omits the `.` (current directory) and `..` (parent directory) entries. This provides a clean view of everything in a directory without the redundant navigation links.
 
-* **`alias l='ls -CF'`**: Forces the directory list into a multi-column format (`-C`) and appends the file type indicators (`-F`).
+- **`alias l='ls -CF'`**: Forces the directory list into a multi-column format (`-C`) and appends the file type indicators (`-F`).
 
-* **`alias c='clear'`**: Clears the visible terminal window, pushing all previous output up into the scrollback buffer.
+- **`alias c='clear'`**: Clears the visible terminal window, pushing all previous output up into the scrollback buffer.
 
-* **`alias u='sudo update'`**: Executes your custom shell script located at `/usr/local/bin/update` with elevated root privileges.
+- **`alias u='sudo update'`**: Executes your custom shell script located at `/usr/local/bin/update` with elevated root privileges.
 
-* **`alias g='ssh -T git@github.com'`**: Authenticates your local machine with GitHub via SSH. The `-T` flag disables pseudo-terminal allocation, which is necessary because GitHub's SSH servers do not grant interactive shell access. When run, it outputs a success message verifying your SSH keys and then closes the connection.
+- **`alias g='ssh -T git@github.com'`**: Authenticates your local machine with GitHub via SSH. The `-T` flag disables pseudo-terminal allocation, which is necessary because GitHub's SSH servers do not grant interactive shell access. When run, it outputs a success message verifying your SSH keys and then closes the connection.
 
-* **`alias s='sudo shutdown now'`**: Immediately halts the system processes and powers off the machine using root privileges. The `now` argument overrides the default behavior of `shutdown`, which otherwise waits one minute and broadcasts a warning message to any logged-in users.
+- **`alias s='sudo shutdown now'`**: Immediately halts the system processes and powers off the machine using root privileges. The `now` argument overrides the default behavior of `shutdown`, which otherwise waits one minute and broadcasts a warning message to any logged-in users.
 
-* **`export PS1="\u@\h:\w\$ "`**: Customizes the command prompt string. `\u` renders your username, `\h` renders the machine's hostname, and `\w` renders the current working directory.
+- **`export PS1="\u@\h:\w\$ "`**: Customizes the command prompt string. `\u` renders your username, `\h` renders the machine's hostname, and `\w` renders the current working directory.
 
-* **`export DBX_CONTAINER_MANAGER="podman"`**: An environment variable instructing Distrobox to utilize Podman as its container backend engine instead of Docker.
+- **`export DBX_CONTAINER_MANAGER="podman"`**: An environment variable instructing Distrobox to utilize Podman as its container backend engine instead of Docker.
 
 ## Part 2: Automating with `setup-bashrc.sh`
 

@@ -2,9 +2,9 @@
 
 ## Prerequisites
 
-* Fedora KDE running on Btrfs (primary drive).
-* A secondary internal SSD (e.g., 1TB NVMe drive).
-* Administrator (`sudo`) access.
+- Fedora KDE running on Btrfs (primary drive).
+- A secondary internal SSD (e.g., 1TB NVMe drive).
+- Administrator (`sudo`) access.
 
 ## Phase 1: Wipe & Format Secondary SSD
 
@@ -12,8 +12,8 @@
 2. Identify the secondary SSD (e.g., `/dev/nvme1n1`, ~953 GiB) by verifying drive size and partition scheme.
 3. Select the drive and click **New Partition Table** -> Choose **GPT** -> Click **Apply**.
 4. Right-click the unallocated space -> Click **New**:
-   * **File system:** `btrfs`
-   * **Label:** `Storage`
+   - **File system:** `btrfs`
+   - **Label:** `Storage`
 5. Click **Apply** to write the filesystem. The new partition will be at `/dev/nvme1n1p1`.
 
 ## Phase 2: Configure Auto-Mounting (`/etc/fstab`)
@@ -30,7 +30,7 @@ sudo mkdir -p /mnt/storage
 sudo blkid /dev/nvme1n1p1
 ```
 
-*Locate and copy the UUID="..." value from the output.*
+_Locate and copy the UUID="..." value from the output._
 
 ### 3. Edit `/etc/fstab`
 
@@ -46,10 +46,10 @@ UUID=YOUR-COPIED-UUID-HERE /mnt/storage btrfs defaults,noatime 0 2
 
 **Mount Option Breakdown:**
 
-* `defaults`: Enables standard read/write, boot auto-mount, and execution flags.
-* `noatime`: Disables access timestamp updates to reduce SSD write wear and improve read speeds.
-* `0`: Ignores drive for legacy dump backups.
-* `2`: Sets secondary priority for boot filesystem checks (`fsck`).
+- `defaults`: Enables standard read/write, boot auto-mount, and execution flags.
+- `noatime`: Disables access timestamp updates to reduce SSD write wear and improve read speeds.
+- `0`: Ignores drive for legacy dump backups.
+- `2`: Sets secondary priority for boot filesystem checks (`fsck`).
 
 ### 4. Mount & Set User Permissions
 

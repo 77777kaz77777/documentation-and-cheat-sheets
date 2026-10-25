@@ -160,4 +160,4 @@ zpool online \
 
 ## Sources & Verification
 
-* **ZFS Commands:** Verified against the official OpenZFS Documentation (<https://openzfs.github.io/openzfs-docs/>). Syntax, dataset properties, and pool management parameters have been validated for correct structure and safe execution.
+- **ZFS Commands:** Verified against the official OpenZFS Documentation (<https://openzfs.github.io/openzfs-docs/>). Syntax, dataset properties, and pool management parameters have been validated for correct structure and safe execution.

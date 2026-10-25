@@ -37,17 +37,17 @@ systemctl --user restart wireplumber
 
 ## 2. Choosing the Right Audio Profile
 
-After applying the fix above, open your KDE Audio Volume widget, click the three vertical dots (`⋮`) next to **Karim's AirPods Pro** under *Output Devices*, and select the appropriate profile based on the laptop you are using:
+After applying the fix above, open your KDE Audio Volume widget, click the three vertical dots (`⋮`) next to **Karim's AirPods Pro** under _Output Devices_, and select the appropriate profile based on the laptop you are using:
 
 ### Laptop 1 (Zephyrus / LC3 Supported)
 
-* **Best Profile:** `Headset Head Unit (HSP/HFP, codec LC3-24kHz)`
-* **Why:** The LC3 codec offers the highest sample rate (24kHz) and the best overall voice and audio quality for two-way communication.
+- **Best Profile:** `Headset Head Unit (HSP/HFP, codec LC3-24kHz)`
+- **Why:** The LC3 codec offers the highest sample rate (24kHz) and the best overall voice and audio quality for two-way communication.
 
 ### Laptop 2 (ThinkPad / No LC3 Support)
 
-* **Best Profile:** `Headset Head Unit (HSP/HFP, codec mSBC)`
-* **Why:** Because the Bluetooth adapter on this laptop does not expose the LC3 codec, mSBC is the next best option. It provides wideband speech (16kHz), which is significantly clearer than the older, default CVSD codec.
+- **Best Profile:** `Headset Head Unit (HSP/HFP, codec mSBC)`
+- **Why:** Because the Bluetooth adapter on this laptop does not expose the LC3 codec, mSBC is the next best option. It provides wideband speech (16kHz), which is significantly clearer than the older, default CVSD codec.
 
 **Verification:**
 Once the correct profile is selected, " AirPods Pro" will immediately appear under the **Input Devices** section in your audio widget, confirming the microphone is active and ready to use.

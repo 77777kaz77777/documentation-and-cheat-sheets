@@ -37,7 +37,7 @@ The JSONC file is broken down into three major pillars:
   },
   "modules": [
     // 3. System information pieces to show or hide
-  ]
+  ],
 }
 ```
 
@@ -141,7 +141,7 @@ Replace simple strings with objects to customize layout, labels, colors, and for
     },
     {
         "type": "cpu",
-        "format": "{name} ({cores-physical}C/{cores-logical}T) @ {freq-max}" 
+        "format": "{name} ({cores-physical}C/{cores-logical}T) @ {freq-max}"
     },
     {
         "type": "memory",

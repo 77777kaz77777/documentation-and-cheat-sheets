@@ -4,15 +4,15 @@ UFW is a user-friendly frontend for managing iptables (or nftables) firewall rul
 
 ## 1. Service Control & Status
 
-| Command | Description |
-| :--- | :--- |
-| `sudo ufw status` | Display active firewall status and configured rules. |
-| `sudo ufw status verbose` | Show detailed status including default policies, logging level, and active profiles. |
-| `sudo ufw status numbered` | Display active rules with index numbers (required for precise deletion or insertion). |
-| `sudo ufw enable` | Enable UFW and configure systemd to start the firewall service on boot. **Warning:** Ensure SSH is allowed before enabling! |
-| `sudo ufw disable` | Stop UFW and disable automatic launch at system boot. |
-| `sudo ufw reload` | Reload configuration files and re-apply rules without dropping active connections. |
-| `sudo ufw reset` | Disable UFW and delete all custom rules, returning it to factory defaults. |
+| Command                    | Description                                                                                                                 |
+| :------------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| `sudo ufw status`          | Display active firewall status and configured rules.                                                                        |
+| `sudo ufw status verbose`  | Show detailed status including default policies, logging level, and active profiles.                                        |
+| `sudo ufw status numbered` | Display active rules with index numbers (required for precise deletion or insertion).                                       |
+| `sudo ufw enable`          | Enable UFW and configure systemd to start the firewall service on boot. **Warning:** Ensure SSH is allowed before enabling! |
+| `sudo ufw disable`         | Stop UFW and disable automatic launch at system boot.                                                                       |
+| `sudo ufw reload`          | Reload configuration files and re-apply rules without dropping active connections.                                          |
+| `sudo ufw reset`           | Disable UFW and delete all custom rules, returning it to factory defaults.                                                  |
 
 ## 2. Default Policies
 

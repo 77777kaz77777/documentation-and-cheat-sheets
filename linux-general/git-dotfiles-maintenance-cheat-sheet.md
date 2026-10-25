@@ -10,18 +10,18 @@
 
 ## Staging & Committing
 
-| Command | Description |
-| :--- | :--- |
-| `git add .` | Stage all modified maintenance scripts and dotfiles. |
-| `git add -u` | Stage only modified and deleted files (ignore new untracked files). |
-| `git commit -m "Update firewall rules and dnf configs"` | Commit staged changes with a descriptive message. |
-| `git push origin main` | Push committed changes to GitHub. |
+| Command                                                 | Description                                                         |
+| :------------------------------------------------------ | :------------------------------------------------------------------ |
+| `git add .`                                             | Stage all modified maintenance scripts and dotfiles.                |
+| `git add -u`                                            | Stage only modified and deleted files (ignore new untracked files). |
+| `git commit -m "Update firewall rules and dnf configs"` | Commit staged changes with a descriptive message.                   |
+| `git push origin main`                                  | Push committed changes to GitHub.                                   |
 
 ## Status & History
 
-| Command | Description |
-| :--- | :--- |
-| `git status` | Show working tree status (modified dotfiles, untracked scripts). |
-| `git diff` | Show unstaged changes within the scripts. |
-| `git log --oneline -5` | View the last 5 commits to track recent system changes. |
-| `git restore <file>` | Discard uncommitted local changes to a specific script. |
+| Command                | Description                                                      |
+| :--------------------- | :--------------------------------------------------------------- |
+| `git status`           | Show working tree status (modified dotfiles, untracked scripts). |
+| `git diff`             | Show unstaged changes within the scripts.                        |
+| `git log --oneline -5` | View the last 5 commits to track recent system changes.          |
+| `git restore <file>`   | Discard uncommitted local changes to a specific script.          |

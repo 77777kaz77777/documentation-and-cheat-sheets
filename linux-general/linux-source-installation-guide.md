@@ -1,6 +1,6 @@
 ## Steps to compile and install Linux software directly from source code
 
- Installing software from source on Linux involves downloading the raw source code, satisfying its dependencies, compiling it into executable binary files, and placing those binaries into your system path.
+Installing software from source on Linux involves downloading the raw source code, satisfying its dependencies, compiling it into executable binary files, and placing those binaries into your system path.
 
 ---
 
@@ -84,7 +84,7 @@ cd \
   repository.name
 ```
 
-*Note: Using `--recursive` ensures git fetches any required submodules inside the project.*
+_Note: Using `--recursive` ensures git fetches any required submodules inside the project._
 
 **From a Source Tarball Archive (`.tar.gz`, `.tar.bz2`, `.tar.xz`):**
 
@@ -106,7 +106,7 @@ cat \
   README.md
 ```
 
-*or*
+_or_
 
 ```bash
 cat \
@@ -121,7 +121,7 @@ Follow the method matching the repository's configuration files. Choose **one** 
 
 #### Option A: GNU Autotools (`./configure`)
 
-*Used if the project contains a `configure` or `autogen.sh` file.*
+_Used if the project contains a `configure` or `autogen.sh` file._
 
 ```bash
 # Generate the configure script if only autogen.sh or bootstrap.sh exists
@@ -143,7 +143,7 @@ sudo \
 
 #### Option B: CMake
 
-*Used if the project contains a `CMakeLists.txt` file.*
+_Used if the project contains a `CMakeLists.txt` file._
 
 ```bash
 # Create and enter a dedicated build directory
@@ -173,7 +173,7 @@ sudo \
 
 #### Option C: Meson & Ninja
 
-*Used if the project contains a `meson.build` file.*
+_Used if the project contains a `meson.build` file._
 
 ```bash
 # Set up the build directory
@@ -197,7 +197,7 @@ sudo \
 
 #### Option D: Standard `Makefile` Only
 
-*Used if the project only contains a plain `Makefile` without a configure step.*
+_Used if the project only contains a plain `Makefile` without a configure step._
 
 ```bash
 # Compile directly
@@ -233,9 +233,9 @@ program-name \
 
 ## Key Concepts and Flags Explained
 
-* **`--prefix=/usr/local`**: Controls where the software gets installed. Installing to `/usr/local` is standard practice for software compiled from source so it does not overwrite distribution-managed system files in `/usr/bin` or `/usr/lib`.
-* **`-j$(nproc)`**: Passes the total count of available CPU processing cores to the build tool, compiling multiple files concurrently to reduce build time.
-* **`checkinstall` (Safer Uninstallation Alternative)**: Running `sudo checkinstall` instead of `sudo make install` creates a native package (`.deb` or `.rpm`) and registers it with your system package manager. This makes cleanly uninstalling the software easier later using standard package manager commands.
+- **`--prefix=/usr/local`**: Controls where the software gets installed. Installing to `/usr/local` is standard practice for software compiled from source so it does not overwrite distribution-managed system files in `/usr/bin` or `/usr/lib`.
+- **`-j$(nproc)`**: Passes the total count of available CPU processing cores to the build tool, compiling multiple files concurrently to reduce build time.
+- **`checkinstall` (Safer Uninstallation Alternative)**: Running `sudo checkinstall` instead of `sudo make install` creates a native package (`.deb` or `.rpm`) and registers it with your system package manager. This makes cleanly uninstalling the software easier later using standard package manager commands.
 
 ---
 

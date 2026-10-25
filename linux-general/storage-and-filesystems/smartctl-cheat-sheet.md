@@ -6,13 +6,13 @@
 
 ## 1. Installation
 
-| Distribution / OS | Command |
-| :--- | :--- |
-| **Debian / Ubuntu** | `sudo apt install smartmontools` |
+| Distribution / OS          | Command                          |
+| :------------------------- | :------------------------------- |
+| **Debian / Ubuntu**        | `sudo apt install smartmontools` |
 | **RHEL / CentOS / Fedora** | `sudo dnf install smartmontools` |
-| **Arch Linux** | `sudo pacman -S smartmontools` |
-| **Alpine Linux** | `sudo apk add smartmontools` |
-| **macOS** (Homebrew) | `brew install smartmontools` |
+| **Arch Linux**             | `sudo pacman -S smartmontools`   |
+| **Alpine Linux**           | `sudo apk add smartmontools`     |
+| **macOS** (Homebrew)       | `brew install smartmontools`     |
 
 ---
 
@@ -93,14 +93,14 @@ sudo smartctl -l selftest /dev/sda
 
 When reviewing `smartctl -A /dev/sda`, pay special attention to the `RAW_VALUE` of these attributes:
 
-| ID | Attribute Name | Description & Risk |
-| :--- | :--- | :--- |
-| **5** | `Reallocated_Sector_Ct` | **Critical.** Count of damaged sectors moved to spare area. Non-zero = drive degrading. |
-| **187** | `Reported_Uncorrect` | Uncorrectable read errors reported to OS. Non-zero = imminent failure risk. |
-| **188** | `Command_Timeout` | Aborted operations due to HDD timeout. Often power/cable issue or failing drive. |
-| **197** | `Current_Pending_Sector` | **Critical.** "Unstable" sectors waiting to be remapped on next write. |
-| **198** | `Offline_Uncorrectable` | Uncorrectable errors during background scan. Drive is failing. |
-| **199** | `UDMA_CRC_Error_Count` | Interface errors. Usually bad SATA cable/connection, not drive failure. |
+| ID      | Attribute Name           | Description & Risk                                                                      |
+| :------ | :----------------------- | :-------------------------------------------------------------------------------------- |
+| **5**   | `Reallocated_Sector_Ct`  | **Critical.** Count of damaged sectors moved to spare area. Non-zero = drive degrading. |
+| **187** | `Reported_Uncorrect`     | Uncorrectable read errors reported to OS. Non-zero = imminent failure risk.             |
+| **188** | `Command_Timeout`        | Aborted operations due to HDD timeout. Often power/cable issue or failing drive.        |
+| **197** | `Current_Pending_Sector` | **Critical.** "Unstable" sectors waiting to be remapped on next write.                  |
+| **198** | `Offline_Uncorrectable`  | Uncorrectable errors during background scan. Drive is failing.                          |
+| **199** | `UDMA_CRC_Error_Count`   | Interface errors. Usually bad SATA cable/connection, not drive failure.                 |
 
 ---
 

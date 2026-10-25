@@ -12,7 +12,7 @@ This configuration replaces legacy repositories with the official Terra reposito
 
 Remove deprecated COPR repositories and old software versions to prevent dependency errors.
 
-~~~bash
+```bash
 sudo dnf copr remove \
   -y \
   lukenukem/asus-linux
@@ -22,13 +22,13 @@ sudo dnf remove \
   asusctl \
   supergfxctl \
   asusctl-rog-gui
-~~~
+```
 
 ## Step 2: Install the Terra Repository
 
 Add the official Terra repository maintained by Fyra Labs to source modern ASUS packages.
 
-~~~bash
+```bash
 sudo dnf install \
   -y \
   --nogpgcheck \
@@ -38,66 +38,66 @@ sudo dnf install \
 sudo dnf update \
   -y \
   --refresh
-~~~
+```
 
 ## Step 3: Install ASUS Utilities and Cardwire
 
 Install the core management tools while allowing DNF to automatically resolve conflicts with default package managers like `switcheroo-control`.
 
-~~~bash
+```bash
 sudo dnf install \
   -y \
   --allowerasing \
   asusctl \
   cardwire \
   asusctl-rog-gui
-~~~
+```
 
 ## Step 4: Enable System Daemons
 
 Enable the required background services to manage hardware states.
 
-~~~bash
+```bash
 sudo systemctl enable \
   --now \
   cardwired.service
-~~~
+```
 
 ---
 
 ## Managing GPU Modes
 
-* **Integrated Mode (Max Battery):**
+- **Integrated Mode (Max Battery):**
 
-    ~~~bash
-    cardwire \
-      set \
-      integrated
-    ~~~
+  ```bash
+  cardwire \
+    set \
+    integrated
+  ```
 
-* **Hybrid Mode (Default):**
+- **Hybrid Mode (Default):**
 
-    ~~~bash
-    cardwire \
-      set \
-      hybrid
-    ~~~
+  ```bash
+  cardwire \
+    set \
+    hybrid
+  ```
 
-* **Dedicated Mode (Max Performance):**
+- **Dedicated Mode (Max Performance):**
 
-    ~~~bash
-    cardwire \
-      set \
-      dedicated
-    ~~~
+  ```bash
+  cardwire \
+    set \
+    dedicated
+  ```
 
 ## Verification
 
 To verify that the NVIDIA GPU has successfully powered down to save battery in integrated mode, inspect the power state on the PCI bus:
 
-~~~bash
+```bash
 cat \
   /sys/bus/pci/devices/0000:01:00.0/power_state
-~~~
+```
 
-*(A return value of `D3cold` indicates the GPU is successfully powered off).*
+_(A return value of `D3cold` indicates the GPU is successfully powered off)._

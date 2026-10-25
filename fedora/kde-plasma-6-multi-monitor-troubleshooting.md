@@ -17,11 +17,11 @@ for d in /sys/class/drm/card*-*; do echo "$d: $(cat $d/status)"; done
 ### Interpreting the Results
 
 - **Scenario A: Kernel sees fewer connected displays than physically plugged in**
-  - *Example:* Only 2 displays show connected.
-  - *Cause:* Physical cable, missing dock power, or hardware bandwidth limitations. Try swapping cables or testing monitors individually.
+  - _Example:_ Only 2 displays show connected.
+  - _Cause:_ Physical cable, missing dock power, or hardware bandwidth limitations. Try swapping cables or testing monitors individually.
 - **Scenario B: Kernel sees all physical displays as connected**
-  - *Example:* 3 displays show connected (`eDP-1`, `DP-3`, `DP-4`), but KDE Settings only shows 2.
-  - *Cause:* KWin / KScreen display server allocation error, bandwidth lockout (e.g., high refresh rate), or stale cached display profiles. Proceed to **Step 2**.
+  - _Example:_ 3 displays show connected (`eDP-1`, `DP-3`, `DP-4`), but KDE Settings only shows 2.
+  - _Cause:_ KWin / KScreen display server allocation error, bandwidth lockout (e.g., high refresh rate), or stale cached display profiles. Proceed to **Step 2**.
 
 ---
 
@@ -76,7 +76,7 @@ If `kscreen-doctor` lists the display port (e.g., `DP-4`) but it remains dark, m
 kscreen-doctor output.DP-4.enable
 ```
 
-*(Replace `DP-4` with the specific port name identified in Step 1.)*
+_(Replace `DP-4` with the specific port name identified in Step 1.)_
 
 ---
 

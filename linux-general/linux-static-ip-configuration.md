@@ -16,7 +16,7 @@ ip addr
 ip route
 ```
 
-*(Look for the line starting with `default via`)*
+_(Look for the line starting with `default via`)_
 
 ---
 
@@ -30,7 +30,7 @@ ip route
 nmcli connection show
 ```
 
-*(Locate the "NAME" column for your active device, e.g., "System eth0" or "Wired connection 1")*.
+_(Locate the "NAME" column for your active device, e.g., "System eth0" or "Wired connection 1")_.
 
 **Apply Static Configuration:**
 
@@ -136,5 +136,5 @@ echo "nameserver 1.1.1.1" | sudo tee /etc/resolv.conf
 
 ### Verification and Sources
 
-* **Verify changes:** Run `ip addr` to check the IP, and ping an external address (e.g., `ping 1.1.1.1`) to verify the gateway.
-* **Sources verified via:** ElderNode Linux Static IP Guide, `nmcli` Documentation, Canonical Netplan Reference, systemd.network manual.
+- **Verify changes:** Run `ip addr` to check the IP, and ping an external address (e.g., `ping 1.1.1.1`) to verify the gateway.
+- **Sources verified via:** ElderNode Linux Static IP Guide, `nmcli` Documentation, Canonical Netplan Reference, systemd.network manual.

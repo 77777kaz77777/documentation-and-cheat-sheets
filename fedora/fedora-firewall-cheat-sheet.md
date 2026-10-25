@@ -4,33 +4,33 @@ Fedora and other RHEL-based distributions use **firewalld** as the default dynam
 
 > **Crucial Concept: Runtime vs. Permanent**
 >
-> * Commands run *without* `--permanent` apply immediately but are lost on reboot or reload.
-> * Commands run *with* `--permanent` are saved to disk but do not apply immediately. You must run `sudo firewall-cmd --reload` to activate them.
+> - Commands run _without_ `--permanent` apply immediately but are lost on reboot or reload.
+> - Commands run _with_ `--permanent` are saved to disk but do not apply immediately. You must run `sudo firewall-cmd --reload` to activate them.
 
 ## 1. Service Control & Status
 
 Manage the underlying `firewalld` system service and check overall status.
 
-| Command | Description |
-| :--- | :--- |
-| `sudo systemctl status firewalld` | Check if the firewalld systemd service is running. |
-| `sudo systemctl enable --now firewalld` | Start firewalld and enable it to launch on boot. |
-| `sudo firewall-cmd --state` | Quick check to see if the firewall is actively running. |
-| `sudo firewall-cmd --reload` | Reload permanent rules into runtime (does not drop connections). |
-| `sudo firewall-cmd --complete-reload` | Reload rules and *drop* all active connections (use if state matching breaks). |
+| Command                                 | Description                                                                    |
+| :-------------------------------------- | :----------------------------------------------------------------------------- |
+| `sudo systemctl status firewalld`       | Check if the firewalld systemd service is running.                             |
+| `sudo systemctl enable --now firewalld` | Start firewalld and enable it to launch on boot.                               |
+| `sudo firewall-cmd --state`             | Quick check to see if the firewall is actively running.                        |
+| `sudo firewall-cmd --reload`            | Reload permanent rules into runtime (does not drop connections).               |
+| `sudo firewall-cmd --complete-reload`   | Reload rules and _drop_ all active connections (use if state matching breaks). |
 
 ## 2. Managing Zones
 
 Zones dictate the default behavior for incoming traffic on the interfaces or sources assigned to them.
 
-| Command | Description |
-| :--- | :--- |
-| `sudo firewall-cmd --get-default-zone` | View the current default zone. |
-| `sudo firewall-cmd --set-default-zone=public` | Set the default zone for all unassigned interfaces. |
-| `sudo firewall-cmd --get-active-zones` | List currently active zones and their bound interfaces/sources. |
-| `sudo firewall-cmd --get-zones` | List all available zones on the system. |
-| `sudo firewall-cmd --list-all` | List all settings for the default zone. |
-| `sudo firewall-cmd --zone=home --list-all` | List all settings for a specific zone (e.g., `home`). |
+| Command                                       | Description                                                     |
+| :-------------------------------------------- | :-------------------------------------------------------------- |
+| `sudo firewall-cmd --get-default-zone`        | View the current default zone.                                  |
+| `sudo firewall-cmd --set-default-zone=public` | Set the default zone for all unassigned interfaces.             |
+| `sudo firewall-cmd --get-active-zones`        | List currently active zones and their bound interfaces/sources. |
+| `sudo firewall-cmd --get-zones`               | List all available zones on the system.                         |
+| `sudo firewall-cmd --list-all`                | List all settings for the default zone.                         |
+| `sudo firewall-cmd --zone=home --list-all`    | List all settings for a specific zone (e.g., `home`).           |
 
 ### Interface Management
 
@@ -125,10 +125,10 @@ sudo firewall-cmd --permanent --zone=public --add-forward-port=port=80:proto=tcp
 
 ## 7. Panic Mode (Emergency)
 
-If you are under attack or need to immediately sever all network communications, use Panic Mode. *Warning: This will drop SSH connections!*
+If you are under attack or need to immediately sever all network communications, use Panic Mode. _Warning: This will drop SSH connections!_
 
-| Command | Description |
-| :--- | :--- |
-| `sudo firewall-cmd --panic-on` | Drop all incoming and outgoing packets immediately. |
-| `sudo firewall-cmd --panic-off` | Disable panic mode and restore normal routing. |
-| `sudo firewall-cmd --query-panic` | Check if panic mode is currently active. |
+| Command                           | Description                                         |
+| :-------------------------------- | :-------------------------------------------------- |
+| `sudo firewall-cmd --panic-on`    | Drop all incoming and outgoing packets immediately. |
+| `sudo firewall-cmd --panic-off`   | Disable panic mode and restore normal routing.      |
+| `sudo firewall-cmd --query-panic` | Check if panic mode is currently active.            |

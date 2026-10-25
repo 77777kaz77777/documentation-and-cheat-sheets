@@ -4,11 +4,11 @@ Security-Enhanced Linux (SELinux) is a mandatory access control (MAC) security m
 
 ## 1. State & Mode Management
 
-| Action | Command |
-| :--- | :--- |
-| **Check Full SELinux Status** | `sestatus` |
-| **Check Current Mode** | `getenforce` |
-| **Set Mode Temporarily (Enforcing)** | `sudo setenforce 1` (Blocks policy violations) |
+| Action                                | Command                                                       |
+| :------------------------------------ | :------------------------------------------------------------ |
+| **Check Full SELinux Status**         | `sestatus`                                                    |
+| **Check Current Mode**                | `getenforce`                                                  |
+| **Set Mode Temporarily (Enforcing)**  | `sudo setenforce 1` (Blocks policy violations)                |
 | **Set Mode Temporarily (Permissive)** | `sudo setenforce 0` (Logs violations but does not block them) |
 
 > **Permanent Mode Configuration:**
@@ -18,12 +18,12 @@ Security-Enhanced Linux (SELinux) is a mandatory access control (MAC) security m
 
 SELinux contexts are typically displayed in the format: `user:role:type:level`. The **type** (e.g., `httpd_sys_content_t`) is the most important part for standard administration.
 
-| Target | Command |
-| :--- | :--- |
-| **View File/Directory Contexts** | `ls -lZ /path/to/dir` |
-| **View Process Contexts** | `ps -Z` or `ps -eZ` |
-| **View Current User Context** | `id -Z` |
-| **View Port Contexts** | `sudo semanage port -l` |
+| Target                           | Command                 |
+| :------------------------------- | :---------------------- |
+| **View File/Directory Contexts** | `ls -lZ /path/to/dir`   |
+| **View Process Contexts**        | `ps -Z` or `ps -eZ`     |
+| **View Current User Context**    | `id -Z`                 |
+| **View Port Contexts**           | `sudo semanage port -l` |
 
 ## 3. Modifying File Contexts
 
@@ -52,11 +52,11 @@ sudo restorecon -Rv /mnt/storage/vms
 
 Booleans are on/off switches that allow you to modify SELinux policy behavior on the fly without having to write custom policy modules.
 
-| Action | Command |
-| :--- | :--- |
-| **List All Booleans & Current State** | `getsebool -a` |
-| **List Booleans with Descriptions** | `sudo semanage boolean -l` |
-| **Change a Boolean Temporarily** | `sudo setsebool httpd_can_network_connect on` |
+| Action                                | Command                                          |
+| :------------------------------------ | :----------------------------------------------- |
+| **List All Booleans & Current State** | `getsebool -a`                                   |
+| **List Booleans with Descriptions**   | `sudo semanage boolean -l`                       |
+| **Change a Boolean Temporarily**      | `sudo setsebool httpd_can_network_connect on`    |
 | **Change a Boolean Permanently (-P)** | `sudo setsebool -P httpd_can_network_connect on` |
 
 ## 5. Troubleshooting & Audit Logs
@@ -96,9 +96,9 @@ sudo semodule -i mypol.pp
 
 ## 6. Common Context Types Reference
 
-* `httpd_sys_content_t`: Standard read-only web server content.
-* `httpd_sys_rw_content_t`: Web server content that the web daemon needs to write to (e.g., upload directories).
-* `public_content_t`: Read-only files shared via FTP, Samba, or Apache.
-* `public_content_rw_t`: Read/write files shared via FTP, Samba, or Apache.
-* `virt_image_t`: Disk image files used by KVM/libvirt.
-* `container_file_t`: Files and directories mapped into Podman/Docker containers.
+- `httpd_sys_content_t`: Standard read-only web server content.
+- `httpd_sys_rw_content_t`: Web server content that the web daemon needs to write to (e.g., upload directories).
+- `public_content_t`: Read-only files shared via FTP, Samba, or Apache.
+- `public_content_rw_t`: Read/write files shared via FTP, Samba, or Apache.
+- `virt_image_t`: Disk image files used by KVM/libvirt.
+- `container_file_t`: Files and directories mapped into Podman/Docker containers.

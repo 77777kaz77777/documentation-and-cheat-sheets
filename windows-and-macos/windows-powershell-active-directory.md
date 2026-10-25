@@ -6,30 +6,30 @@
 
 In PowerShell, the Registry is treated like a file drive (HKLM: for HKEY_LOCAL_MACHINE and HKCU: for HKEY_CURRENT_USER).
 
-| | |
-| :- | :- |
-| Action | PowerShell Command |
-| **Go to Registry Key** | cd HKLM:\Software\Microsoft |
-| **List Values in Key** | Get-ItemProperty -Path . |
-| **Create New Key** | New-Item -Path .\MyNewKey |
-| **Set/Change Value** | Set-ItemProperty -Path . -Name "Version" -Value "1.1" |
-| **Get Specific Value** | Get-ItemProperty -Path . -Name "Version" |
-| **Remove Key/Value** | Remove-ItemProperty or Remove-Item |
+|                        |                                                       |
+| :--------------------- | :---------------------------------------------------- |
+| Action                 | PowerShell Command                                    |
+| **Go to Registry Key** | cd HKLM:\Software\Microsoft                           |
+| **List Values in Key** | Get-ItemProperty -Path .                              |
+| **Create New Key**     | New-Item -Path .\MyNewKey                             |
+| **Set/Change Value**   | Set-ItemProperty -Path . -Name "Version" -Value "1.1" |
+| **Get Specific Value** | Get-ItemProperty -Path . -Name "Version"              |
+| **Remove Key/Value**   | Remove-ItemProperty or Remove-Item                    |
 
 ### **Active Directory (AD) Management**
 
-*Note: These require the RSAT (Remote Server Administration Tools) to be installed on your machine.*
+_Note: These require the RSAT (Remote Server Administration Tools) to be installed on your machine._
 
-| | |
-| :- | :- |
-| Action | PowerShell Command |
-| **Get User Info** | Get-ADUser -Identity [username] -Properties * |
-| **Create New User** | New-ADUser -Name "John Doe" -SamAccountName jdoe |
-| **Unlock Account** | Unlock-ADAccount -Identity [username] |
-| **Reset Password** | Set-ADAccountPassword -Identity [username] |
-| **Add to Group** | Add-ADGroupMember -Identity [Group] -Members [User] |
-| **List Group Members** | Get-ADGroupMember -Identity [GroupName] |
-| **Find Computers** | Get-ADComputer -Filter 'Name -like "*Desktop*"' |
+|                        |                                                     |
+| :--------------------- | :-------------------------------------------------- |
+| Action                 | PowerShell Command                                  |
+| **Get User Info**      | Get-ADUser -Identity [username] -Properties *       |
+| **Create New User**    | New-ADUser -Name "John Doe" -SamAccountName jdoe    |
+| **Unlock Account**     | Unlock-ADAccount -Identity [username]               |
+| **Reset Password**     | Set-ADAccountPassword -Identity [username]          |
+| **Add to Group**       | Add-ADGroupMember -Identity [Group] -Members [User] |
+| **List Group Members** | Get-ADGroupMember -Identity [GroupName]             |
+| **Find Computers**     | Get-ADComputer -Filter 'Name -like "_Desktop_"'     |
 
 ### **Windows Networking & Remote Management**
 
@@ -45,5 +45,5 @@ The biggest hurdle is realizing that PowerShell doesn't just return text; it ret
 
 - **Linux/CMD style (Text):** You grep or find a string of text.
 - **PowerShell style (Objects):** You filter by properties.
-- *Example:* Get-Service | Where-Object {$_.Status -eq "Running"} only shows services that are actually started.
-Would you like me to create a dedicated section for **Azure CLI** or **Microsoft 365** PowerShell commands to round out your cloud administration toolkit?
+- _Example:_ Get-Service | Where-Object {$_.Status -eq "Running"} only shows services that are actually started.
+  Would you like me to create a dedicated section for **Azure CLI** or **Microsoft 365** PowerShell commands to round out your cloud administration toolkit?

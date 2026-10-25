@@ -30,7 +30,7 @@ sudo grubby --update-kernel=ALL --args="nvme_core.default_ps_max_latency_us=0"
 **Step 2: Update `/etc/default/grub`**
 To ensure future kernel updates retain this setting, update your GRUB configuration file. Ensure the `GRUB_CMDLINE_LINUX` line includes the new parameter.
 
-*Example `/etc/default/grub`:*
+_Example `/etc/default/grub`:_
 
 ```text
 GRUB_TIMEOUT=5
@@ -73,7 +73,7 @@ To verify if `deep` sleep is now available, run:
 cat /sys/power/mem_sleep
 ```
 
-*Expected output if successful:* `s2idle [deep]`
+_Expected output if successful:_ `s2idle [deep]`
 
 ---
 
@@ -85,4 +85,4 @@ To verify that the kernel parameter was successfully applied after rebooting, ru
 cat /sys/module/nvme_core/parameters/default_ps_max_latency_us
 ```
 
-*Expected output:* `0`
+_Expected output:_ `0`

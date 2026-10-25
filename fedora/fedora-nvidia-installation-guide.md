@@ -32,7 +32,7 @@ sudo dnf \
   -y
 ```
 
-*(If you updated your kernel in this step, reboot your system before proceeding: `sudo reboot`)*
+_(If you updated your kernel in this step, reboot your system before proceeding: `sudo reboot`)_
 
 ---
 
@@ -65,7 +65,7 @@ sudo mokutil \
   /etc/pki/akmods/certs/public_key.der
 ```
 
-*You will be prompted to create a password. Remember this password.*
+_You will be prompted to create a password. Remember this password._
 
 ### 3. Reboot to complete MOK enrollment
 
@@ -73,7 +73,7 @@ sudo mokutil \
 sudo reboot
 ```
 
-*During boot, a blue screen (Shim UEFI Key Management / MOK Manager) will appear. Select **Enroll MOK** -> **Continue** -> **Yes**, enter the password you just set, and let the system reboot.*
+_During boot, a blue screen (Shim UEFI Key Management / MOK Manager) will appear. Select **Enroll MOK** -> **Continue** -> **Yes**, enter the password you just set, and let the system reboot._
 
 ---
 

@@ -11,11 +11,11 @@
 
 ## Process Management
 
-| Command | Description |
-| :--- | :--- |
+| Command                 | Description                                                                |
+| :---------------------- | :------------------------------------------------------------------------- |
 | `fuser -v /dev/nvidia*` | Identify PID and users of applications currently accessing the NVIDIA GPU. |
-| `nvidia-smi -q -d PIDS` | List detailed process information running on the GPU. |
-| `kill -9 <PID>` | Force-terminate a frozen process locking GPU VRAM. |
+| `nvidia-smi -q -d PIDS` | List detailed process information running on the GPU.                      |
+| `kill -9 <PID>`         | Force-terminate a frozen process locking GPU VRAM.                         |
 
 ## Prime Render Offload (Fedora/Wayland)
 
@@ -27,3 +27,4 @@ __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia <application_execut
 
 
 
+```

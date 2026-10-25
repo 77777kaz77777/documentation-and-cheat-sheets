@@ -50,7 +50,7 @@ The simplest and most efficient way to configure a new kernel is to base it on y
 make localmodconfig
 ```
 
-*(Note: Press `Enter` to accept the default answers for any new kernel features introduced since your current kernel version).*
+_(Note: Press `Enter` to accept the default answers for any new kernel features introduced since your current kernel version)._
 
 Alternatively, if you prefer to build the kernel exactly as your current one without stripping out unused modules, you can copy the existing configuration and use oldconfig:
 
@@ -103,9 +103,9 @@ make menuconfig
 
 ### Step 2: Customize and Save
 
-* Navigate using your keyboard's arrow keys.
-* Press the `Spacebar` to toggle features on `[*]`, off `[ ]`, or as a loadable module `[M]`.
-* Once finished, navigate to `<Save>`, keep the filename as `.config`, and exit.
+- Navigate using your keyboard's arrow keys.
+- Press the `Spacebar` to toggle features on `[*]`, off `[ ]`, or as a loadable module `[M]`.
+- Once finished, navigate to `<Save>`, keep the filename as `.config`, and exit.
 
 ### Step 3: Build and Install
 
@@ -134,5 +134,5 @@ sudo grub2-mkconfig \
 
 ## Sources
 
-* **Fedora Quick Docs**: Building a Custom Kernel - <https://docs.fedoraproject.org/en-US/quick-docs/kernel-build-custom/>
-* **Fedora Project Wiki**: Building a custom kernel - <https://fedoraproject.org/wiki/Building_a_custom_kernel>
+- **Fedora Quick Docs**: Building a Custom Kernel - <https://docs.fedoraproject.org/en-US/quick-docs/kernel-build-custom/>
+- **Fedora Project Wiki**: Building a custom kernel - <https://fedoraproject.org/wiki/Building_a_custom_kernel>

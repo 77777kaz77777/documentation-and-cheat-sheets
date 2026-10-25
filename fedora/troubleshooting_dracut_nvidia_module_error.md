@@ -22,7 +22,7 @@ If you recently updated your kernel via `dnf`, the Nvidia driver module builds i
    sudo dracut --regenerate-all --force
    ```
 
-*Verification:* Running the `dracut` command should complete cleanly without returning any `Failed to find module 'nvidia'` output.
+_Verification:_ Running the `dracut` command should complete cleanly without returning any `Failed to find module 'nvidia'` output.
 
 ---
 
@@ -48,7 +48,7 @@ If you are intentionally running an open-source/integrated GPU setup (or AMD/Int
    sudo dracut --regenerate-all --force
    ```
 
-*Verification:* Rebuilding initramfs succeeds without attempting to pull in `nvidia` modules.
+_Verification:_ Rebuilding initramfs succeeds without attempting to pull in `nvidia` modules.
 
 ---
 

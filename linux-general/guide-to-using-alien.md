@@ -6,12 +6,12 @@
 
 `alien` can convert to and from the following formats:
 
-* **Linux Standard Base (LSB):** `.lsb`
-* **Red Hat/CentOS/Fedora:** `.rpm`
-* **Debian/Ubuntu/Mint:** `.deb`
-* **Stampede:** `.slp`
-* **Solaris:** `.pkg`
-* **Slackware:** `.tgz`
+- **Linux Standard Base (LSB):** `.lsb`
+- **Red Hat/CentOS/Fedora:** `.rpm`
+- **Debian/Ubuntu/Mint:** `.deb`
+- **Stampede:** `.slp`
+- **Solaris:** `.pkg`
+- **Slackware:** `.tgz`
 
 ---
 
@@ -60,7 +60,7 @@ By default, `alien` converts packages into `.deb` format.
 sudo alien package_name.rpm
 ```
 
-*This outputs `package_name.deb` in your current directory.*
+_This outputs `package_name.deb` in your current directory._
 
 **To install the result:**
 
@@ -77,7 +77,7 @@ Use the `-r` or `--to-rpm` flag.
 sudo alien -r package_name.deb
 ```
 
-*This outputs `package_name.rpm` in your current directory.*
+_This outputs `package_name.rpm` in your current directory._
 
 **To install the result:**
 
@@ -107,7 +107,7 @@ By default, `alien` **does not** convert the pre-install or post-install scripts
 sudo alien -c package_name.rpm
 ```
 
-*(Use this with extreme caution!)*
+_(Use this with extreme caution!)_
 
 ### Install Automatically (`-i` or `--install`)
 
@@ -141,25 +141,25 @@ Let's say you have an `.rpm` driver (`printer-driver-1.0.rpm`) for your printer,
 
 1. **Convert the package, including scripts (often needed for drivers):**
 
-    ```bash
-    sudo alien -c printer-driver-1.0.rpm
-    ```
+   ```bash
+   sudo alien -c printer-driver-1.0.rpm
+   ```
 
 2. **Install the newly generated `.deb` file:**
 
-    ```bash
-    sudo dpkg -i printer-driver-1.0-2_amd64.deb
-    ```
+   ```bash
+   sudo dpkg -i printer-driver-1.0-2_amd64.deb
+   ```
 
 3. **Check for missing dependencies (Optional but recommended):**
 
-    ```bash
-    sudo apt --fix-broken install
-    ```
+   ```bash
+   sudo apt --fix-broken install
+   ```
 
 ## 5. Alternatives to `alien`
 
 If `alien` fails because of complex dependencies, consider these modern alternatives:
 
-* **Distrobox:** Run any Linux distribution inside the terminal (e.g., run a Fedora container natively on Ubuntu to install RPMs).
-* **Flatpak / Snap / AppImage:** Universal package formats that run on any distribution without conversion.
+- **Distrobox:** Run any Linux distribution inside the terminal (e.g., run a Fedora container natively on Ubuntu to install RPMs).
+- **Flatpak / Snap / AppImage:** Universal package formats that run on any distribution without conversion.

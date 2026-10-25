@@ -18,13 +18,13 @@ Before picking a RAID level, you need to understand the three fundamental buildi
 
 ## The Common RAID Levels Explained
 
-| RAID Level | Primary Purpose | How It Works | Usable Capacity | Drive Failure Tolerance | When to Use It |
-| --- | --- | --- | --- | --- | --- |
-| **RAID 0** | Maximum Speed | Pure Striping. Data splits evenly across all drives. | 100% of total drive space | **0 Drives** (1 dead drive destroys all data) | Temporary scratch disks, video editing caches |
-| **RAID 1** | Simple Safety | Pure Mirroring. Every file is cloned across drives. | 50% (assuming 2 equal drives) | **1 Drive** (per pair) | Operating system drives, boot volumes |
-| **RAID 5** | Speed + Safety | Striping + Single Parity distributed across all drives. | Total space minus 1 drive | **1 Drive** | Media servers, general NAS storage |
-| **RAID 6** | Double Safety | Striping + Dual Parity distributed across all drives. | Total space minus 2 drives | **2 Drives** simultaneously | Large capacity HDD arrays where rebuilds take days |
-| **RAID 10** | Speed + Heavy Safety | Nested RAID (1+0). Mirrors drives in pairs, then stripes across them. | 50% of total drive space | **1 Drive per mirror pair** (up to half total drives) | High-performance databases, virtual machine storage |
+| RAID Level  | Primary Purpose      | How It Works                                                          | Usable Capacity               | Drive Failure Tolerance                               | When to Use It                                      |
+| ----------- | -------------------- | --------------------------------------------------------------------- | ----------------------------- | ----------------------------------------------------- | --------------------------------------------------- |
+| **RAID 0**  | Maximum Speed        | Pure Striping. Data splits evenly across all drives.                  | 100% of total drive space     | **0 Drives** (1 dead drive destroys all data)         | Temporary scratch disks, video editing caches       |
+| **RAID 1**  | Simple Safety        | Pure Mirroring. Every file is cloned across drives.                   | 50% (assuming 2 equal drives) | **1 Drive** (per pair)                                | Operating system drives, boot volumes               |
+| **RAID 5**  | Speed + Safety       | Striping + Single Parity distributed across all drives.               | Total space minus 1 drive     | **1 Drive**                                           | Media servers, general NAS storage                  |
+| **RAID 6**  | Double Safety        | Striping + Dual Parity distributed across all drives.                 | Total space minus 2 drives    | **2 Drives** simultaneously                           | Large capacity HDD arrays where rebuilds take days  |
+| **RAID 10** | Speed + Heavy Safety | Nested RAID (1+0). Mirrors drives in pairs, then stripes across them. | 50% of total drive space      | **1 Drive per mirror pair** (up to half total drives) | High-performance databases, virtual machine storage |
 
 ---
 
@@ -40,7 +40,7 @@ Before running creation commands, list all connected drives to make sure you tar
 lsblk -p
 ```
 
-*Look for unformatted drives, such as `/dev/sdb` and `/dev/sdc`.*
+_Look for unformatted drives, such as `/dev/sdb` and `/dev/sdc`._
 
 ---
 
@@ -54,13 +54,13 @@ sudo mdadm --create --verbose /dev/md0 --level=1 --raid-devices=2 /dev/sdb /dev/
 
 **What each flag means:**
 
-* `sudo mdadm`: Runs the Linux RAID management utility with administrative privileges.
-* `--create`: Instructs `mdadm` to initialize a brand-new array.
-* `--verbose`: Outputs step-by-step diagnostic details to your screen.
-* `/dev/md0`: The virtual drive name assigned to this new array.
-* `--level=1`: Sets the RAID mode (1 for Mirroring).
-* `--raid-devices=2`: Specifies the number of active physical drives in the array.
-* `/dev/sdb /dev/sdc`: The exact paths of the physical target drives.
+- `sudo mdadm`: Runs the Linux RAID management utility with administrative privileges.
+- `--create`: Instructs `mdadm` to initialize a brand-new array.
+- `--verbose`: Outputs step-by-step diagnostic details to your screen.
+- `/dev/md0`: The virtual drive name assigned to this new array.
+- `--level=1`: Sets the RAID mode (1 for Mirroring).
+- `--raid-devices=2`: Specifies the number of active physical drives in the array.
+- `/dev/sdb /dev/sdc`: The exact paths of the physical target drives.
 
 **Verification:** Check if the array was successfully created and initialized:
 
@@ -68,7 +68,7 @@ sudo mdadm --create --verbose /dev/md0 --level=1 --raid-devices=2 /dev/sdb /dev/
 cat /proc/mdstat
 ```
 
-*You should see `/dev/md0` listed as `active` along with a sync progress bar.*
+_You should see `/dev/md0` listed as `active` along with a sync progress bar._
 
 ---
 
@@ -110,7 +110,7 @@ If you do not save your configuration, Linux will forget the array mapping when 
    ```bash
    # Use dracut for RHEL/Fedora/CentOS
    sudo dracut --force
-   
+
    # Use update-initramfs for Ubuntu/Debian
    sudo update-initramfs -u
    ```
@@ -151,4 +151,4 @@ When a physical drive breaks, the array enters a **degraded** state. Here is the
    watch -n 1 cat /proc/mdstat
    ```
 
-   *Press `Ctrl + C` to exit the monitoring screen once recovery hits 100%.*
+   _Press `Ctrl + C` to exit the monitoring screen once recovery hits 100%._
