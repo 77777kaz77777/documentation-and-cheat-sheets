@@ -2,15 +2,15 @@
 
 ## 🚀 Ansible Ad-Hoc Commands
 
-| Action | Command |
-| :--- | :--- |
-| **Ping all hosts** | `ansible all -m ping` |
-| **Ping with custom inventory** | `ansible all -i inventory.ini -m ping` |
-| **Check uptime** | `ansible all -a "uptime"` |
-| **Install a package** | `ansible webservers -m apt -a "name=nginx state=present" --become` |
-| **Restart a service** | `ansible db -m service -a "name=mysql state=restarted" --become` |
-| **Copy a file** | `ansible all -m copy -a "src=/etc/hosts dest=/tmp/hosts"` |
-| **Gather facts** | `ansible hostname -m setup` |
+| Action                         | Command                                                            |
+| :----------------------------- | :----------------------------------------------------------------- |
+| **Ping all hosts**             | `ansible all -m ping`                                              |
+| **Ping with custom inventory** | `ansible all -i inventory.ini -m ping`                             |
+| **Check uptime**               | `ansible all -a "uptime"`                                          |
+| **Install a package**          | `ansible webservers -m apt -a "name=nginx state=present" --become` |
+| **Restart a service**          | `ansible db -m service -a "name=mysql state=restarted" --become`   |
+| **Copy a file**                | `ansible all -m copy -a "src=/etc/hosts dest=/tmp/hosts"`          |
+| **Gather facts**               | `ansible hostname -m setup`                                        |
 
 ## 📝 Playbook Management
 

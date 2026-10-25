@@ -46,14 +46,14 @@
 
 ## Process & Service Management
 
-| Action | Command |
-| :--- | :--- |
-| **List Active Services** | `launchctl list` |
-| **Start a Daemon/Service** | `launchctl load ~/Library/LaunchAgents/[plist_file]` |
-| **Stop a Daemon/Service** | `launchctl unload ~/Library/LaunchAgents/[plist_file]` |
-| **Kill a Process by Name** | `killall [ProcessName]` (e.g., `killall Dock`) |
-| **Kill a Process by PID** | `kill -9 [PID]` |
-| **Manage Brew Services** | `brew services start/stop/restart [formula]` (Requires Homebrew) |
+| Action                     | Command                                                          |
+| :------------------------- | :--------------------------------------------------------------- |
+| **List Active Services**   | `launchctl list`                                                 |
+| **Start a Daemon/Service** | `launchctl load ~/Library/LaunchAgents/[plist_file]`             |
+| **Stop a Daemon/Service**  | `launchctl unload ~/Library/LaunchAgents/[plist_file]`           |
+| **Kill a Process by Name** | `killall [ProcessName]` (e.g., `killall Dock`)                   |
+| **Kill a Process by PID**  | `kill -9 [PID]`                                                  |
+| **Manage Brew Services**   | `brew services start/stop/restart [formula]` (Requires Homebrew) |
 
 ## macOS defaults & Finder Tweaks
 

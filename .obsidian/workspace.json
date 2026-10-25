@@ -1,0 +1,220 @@
+{
+  "main": {
+    "id": "0ac0efcd0fca9155",
+    "type": "split",
+    "children": [
+      {
+        "id": "65f75b71b2fef6e9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "08f466a55857516b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux-general/nvidia-cuda-monitoring-cheat-sheet.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "nvidia-cuda-monitoring-cheat-sheet"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9a0323b2e33ce598",
+    "type": "split",
+    "children": [
+      {
+        "id": "65c6484b40efdeaf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9ccb54a5fb933673",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "76c019a71509593a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "40b9e79acbc9cc3f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "99f7c35148c985f9",
+    "type": "split",
+    "children": [
+      {
+        "id": "7ba24777b2d8c96e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b0b7f59f74515cc1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "linux-general/nvidia-cuda-monitoring-cheat-sheet.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "6fa6dc941bb563dc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "linux-general/nvidia-cuda-monitoring-cheat-sheet.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "d5120b74d18c41b3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "0dfb1439fb53a683",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "2d946d48548ad423",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "linux-general/nvidia-cuda-monitoring-cheat-sheet.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "08f466a55857516b",
+  "lastOpenFiles": [
+    "linux-general/setup-script-documentation.md",
+    "linux-general/package-management/zypper-command-reference.md",
+    "linux-general/package-management/flatpak-command-reference.md",
+    "linux-general/package-management/brew-command-reference.md",
+    "linux-general/package-management/apt-command-reference.md",
+    "linux-general/package-management/appimage-installation-guide.md",
+    "linux-general/package-management/apk-command-reference.md",
+    "fedora/snapper-snapshot-management-cheat-sheet.md",
+    "fedora/kdeconnect-fedora44-ios-troubleshooting.md",
+    "fedora/kde-plasma-6-multi-monitor-troubleshooting.md",
+    "fedora/fix-mux-plymouth-deadlock.md",
+    "fedora/fedora-tpm2-luks-autounlock-guide.md",
+    "fedora/fedora-selinux-management-cheat-sheet.md",
+    "fedora/fedora-rog-setup.md",
+    "fedora/fedora-quick-reference.md",
+    "fedora/asusctl-cheat-sheet-guide.md",
+    "fedora/asus-rog-fedora-setup.md",
+    "fedora/airpods-pro-microphone-guide.md",
+    "containers/podman-desktop-guide.md",
+    "containers/podman-cheatsheet.md",
+    "containers/lxc-cheatsheet.md",
+    "containers/docker-cli-compose-cheat-sheet.md",
+    "README.md",
+    "windows-and-macos/winget-cheat-sheet.md",
+    "windows-and-macos/windows-sysinternals-cheat-sheet.md",
+    "windows-and-macos/windows-powershell-active-directory.md"
+  ]
+}

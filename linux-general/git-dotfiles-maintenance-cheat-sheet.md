@@ -2,11 +2,11 @@
 
 ## Repository Syncing
 
-| Command | Description |
-| :--- | :--- |
-| `git clone git@github.com:77777kaz77777/linux-maintenance-and-dotfiles.git` | Clone the maintenance repository via SSH. |
-| `git pull origin main` | Fetch and merge the latest dotfile changes from the remote repository. |
-| `git fetch --all && git reset --hard origin/main` | Force overwrite local files with the remote main branch (useful for fresh installs). |
+| Command                                                                     | Description                                                                          |
+| :-------------------------------------------------------------------------- | :----------------------------------------------------------------------------------- |
+| `git clone git@github.com:77777kaz77777/linux-maintenance-and-dotfiles.git` | Clone the maintenance repository via SSH.                                            |
+| `git pull origin main`                                                      | Fetch and merge the latest dotfile changes from the remote repository.               |
+| `git fetch --all && git reset --hard origin/main`                           | Force overwrite local files with the remote main branch (useful for fresh installs). |
 
 ## Staging & Committing
 

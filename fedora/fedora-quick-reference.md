@@ -51,16 +51,16 @@
 
 ## Service & Systemd Management (`systemctl`)
 
-| Action | Command |
-| --- | --- |
-| Check status of a service | `systemctl status <service>` |
-| Start / Stop / Restart a service | `sudo systemctl start | stop | restart <service>` |
-| Enable service on boot | `sudo systemctl enable <service>` |
-| Enable and start service immediately | `sudo systemctl enable --now <service>` |
-| Disable service from starting on boot | `sudo systemctl disable <service>` |
-| Mask / Unmask a service | `sudo systemctl mask | unmask <service>` |
-| List all active services | `systemctl list-units --type=service --state=running` |
-| List failed services | `systemctl --failed` |
+| Action                                | Command                                               |                   |                    |
+| ------------------------------------- | ----------------------------------------------------- | ----------------- | ------------------ |
+| Check status of a service             | `systemctl status <service>`                          |                   |                    |
+| Start / Stop / Restart a service      | `sudo systemctl start                                 | stop              | restart <service>` |
+| Enable service on boot                | `sudo systemctl enable <service>`                     |                   |                    |
+| Enable and start service immediately  | `sudo systemctl enable --now <service>`               |                   |                    |
+| Disable service from starting on boot | `sudo systemctl disable <service>`                    |                   |                    |
+| Mask / Unmask a service               | `sudo systemctl mask                                  | unmask <service>` |                    |
+| List all active services              | `systemctl list-units --type=service --state=running` |                   |                    |
+| List failed services                  | `systemctl --failed`                                  |                   |                    |
 
 ---
 
@@ -79,16 +79,16 @@
 
 ## Security & Firewall (`firewalld` & SELinux)
 
-| Action | Command |
-| --- | --- |
-| Check firewall status | `sudo firewall-cmd --state` |
-| Get active zones and assigned interfaces | `sudo firewall-cmd --get-active-zones` |
-| Allow service permanently | `sudo firewall-cmd --add-service=<service> --permanent` |
-| Allow TCP/UDP port permanently | `sudo firewall-cmd --add-port=<port>/<tcp | udp> --permanent` |
-| Reload firewall configuration | `sudo firewall-cmd --reload` |
-| List allowed services/ports in active zone | `sudo firewall-cmd --list-all` |
-| Check SELinux status | `sestatus` |
-| Change SELinux mode temporarily | `sudo setenforce 0` *(Permissive)* \| `sudo setenforce 1` *(Enforcing)* |
+| Action                                     | Command                                                                 |                   |
+| ------------------------------------------ | ----------------------------------------------------------------------- | ----------------- |
+| Check firewall status                      | `sudo firewall-cmd --state`                                             |                   |
+| Get active zones and assigned interfaces   | `sudo firewall-cmd --get-active-zones`                                  |                   |
+| Allow service permanently                  | `sudo firewall-cmd --add-service=<service> --permanent`                 |                   |
+| Allow TCP/UDP port permanently             | `sudo firewall-cmd --add-port=<port>/<tcp                               | udp> --permanent` |
+| Reload firewall configuration              | `sudo firewall-cmd --reload`                                            |                   |
+| List allowed services/ports in active zone | `sudo firewall-cmd --list-all`                                          |                   |
+| Check SELinux status                       | `sestatus`                                                              |                   |
+| Change SELinux mode temporarily            | `sudo setenforce 0` *(Permissive)* \| `sudo setenforce 1` *(Enforcing)* |                   |
 
 ---
 

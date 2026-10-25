@@ -5,7 +5,9 @@
 The current Enterprise Linux ecosystem relies on a specific upstream and downstream relationship structure:
 
 * **CentOS Stream:** Serves as the continuously delivered upstream public development branch for RHEL. The current active major branches are CentOS Stream 10 (tracking ahead of RHEL 10) and CentOS Stream 9.
+
 * **Red Hat Enterprise Linux (RHEL):** The primary commercial enterprise release. The current latest flagship version is RHEL 10.2, released in May 2026, with full support extending to May 2030 and maintenance to May 2035.
+
 * **Rocky Linux:** A downstream, 100% bug-for-bug compatible community rebuild of RHEL. The current latest version is Rocky Linux 10.2, released in May 2026.
 
 ## 2. The Difference Between Fedora and Enterprise Linux
@@ -13,7 +15,9 @@ The current Enterprise Linux ecosystem relies on a specific upstream and downstr
 Understanding where Fedora sits in the Red Hat ecosystem clarifies its use case compared to RHEL, CentOS Stream, and Rocky Linux:
 
 * **Fedora Linux:** The extreme upstream source. Fedora is a community-driven, fast-paced distribution sponsored by Red Hat. It acts as the testing ground for new technologies before they reach the enterprise. It features aggressive update cycles with a new major release every 6 months and a short lifecycle of roughly 13 months per release. It prioritizes cutting-edge software, innovation, and daily desktop usage.
+
 * **CentOS Stream:** The mid-stream development branch. Red Hat takes a snapshot of a specific Fedora release (e.g., Fedora 40 was branched to create CentOS Stream 10) and begins stabilizing it. CentOS Stream receives continuous updates but moves slower than Fedora, providing a direct preview of what will be in the next minor release of RHEL.
+
 * **RHEL & Rocky Linux:** The downstream enterprise releases. RHEL takes the stabilized CentOS Stream code and freezes it, providing up to 10-year lifecycles prioritizing extreme reliability, security compliance, and backwards compatibility over new features. Rocky Linux takes the published RHEL source code, removes the Red Hat branding, and rebuilds it to provide the exact same enterprise stability for free.
 
 ## 3. Package Management (DNF5)

@@ -2,12 +2,12 @@
 
 ## Hardware Monitoring Tools
 
-| Command | Description |
-| :--- | :--- |
-| `watch -n 1 nvidia-smi` | Monitor GPU usage, VRAM consumption, and temperature, updating every 1 second. |
-| `nvidia-smi -l 2` | Built-in looping mode, updating every 2 seconds. |
-| `nvidia-smi --query-gpu=utilization.gpu,memory.used,temperature.gpu --format=csv -l 1` | Stream minimal GPU metrics to the console in CSV format. |
-| `nvtop` | Interactive, `htop`-style visual monitor for NVIDIA GPUs (requires installation: `sudo dnf install nvtop`). |
+| Command                                                                                | Description                                                                                                 |
+| :------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------- |
+| `watch -n 1 nvidia-smi`                                                                | Monitor GPU usage, VRAM consumption, and temperature, updating every 1 second.                              |
+| `nvidia-smi -l 2`                                                                      | Built-in looping mode, updating every 2 seconds.                                                            |
+| `nvidia-smi --query-gpu=utilization.gpu,memory.used,temperature.gpu --format=csv -l 1` | Stream minimal GPU metrics to the console in CSV format.                                                    |
+| `nvtop`                                                                                | Interactive, `htop`-style visual monitor for NVIDIA GPUs (requires installation: `sudo dnf install nvtop`). |
 
 ## Process Management
 
