@@ -1,3 +1,4 @@
+---
 name: Deploy Zensical
 on:
   push:
@@ -18,6 +19,35 @@ jobs:
         with:
           python-version: '3.x'
       - run: pip install zensical
+      
+      - name: Auto-generate Code Reference Page
+        run: |
+          python3 -c '
+          import os
+          
+          extensions = (".sh", ".py", ".json")
+          exclude_dirs = {".git", ".github"}
+          
+          output = ["# Source Code Reference\n\nAutomatically generated list of all scripts in this repository.\n"]
+          
+          for root, dirs, files in os.walk("."):
+              dirs[:] = [d for d in dirs if d not in exclude_dirs]
+              for file in sorted(files):
+                  if file.endswith(extensions):
+                      filepath = os.path.join(root, file).lstrip("./")
+                      ext = filepath.split(".")[-1]
+                      
+                      lang = "bash" if ext == "sh" else "python" if ext == "py" else "json"
+                      
+                      output.append(f"## {filepath}\n")
+                      output.append(f"```{lang} title=\"{filepath}\"")
+                      output.append(f"--8<-- \"{filepath}\"")
+                      output.append("```\n")
+          
+          with open("code-reference.md", "w") as f:
+              f.write("\n".join(output))
+          '
+          
       - run: zensical build
       - uses: actions/upload-pages-artifact@v3
         with:
