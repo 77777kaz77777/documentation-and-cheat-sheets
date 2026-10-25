@@ -1,9 +1,10 @@
 site_name: System Administration Runbooks
 site_url: https://77777kaz77777.github.io/documentation-and-cheat-sheets/
+docs_dir: '.'
 theme:
   name: material
   palette:
     scheme: slate
     primary: deep purple
   features:
-    - content.code.copymkdocs.yml
+    - content.code.copy
