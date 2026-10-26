@@ -19,6 +19,7 @@ jobs:
         with:
           python-version: '3.x'
       - run: pip install zensical
+      - run: python generate_nav.py
       - run: zensical build
       - uses: actions/upload-pages-artifact@v5
         with:
