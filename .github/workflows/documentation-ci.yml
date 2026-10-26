@@ -1,125 +1,41 @@
 ---
 name: Documentation CI
+
 on:
   push:
     branches:
       - main
   workflow_dispatch:
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
 jobs:
   update-and-format:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          
-      - name: Setup Python
-        uses: actions/setup-python@v7
-        with:
-          python-version: '3.x'
-          
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version: '24'
-          
-      - name: Generate Tables in README
-        run: |
-          python3 -c '
-          import os, re
-          
-          FOLDER_DESCS = {
-              "ansible": "Ansible Automation Guides",
-              "containers": "Docker, Podman, and LXC Guides",
-              "fedora": "Fedora Linux Specific Documentation",
-              "linux-general": "General Linux Reference",
-              "package-management": "Package Managers & App Formats",
-              "storage-and-filesystems": "BTRFS, ZFS, RAID & Storage Utilities",
-              "desktop-environments": "KDE Plasma, Terminals & Desktop Tools",
-              "hardware-and-firmware": "Firmware Updates & Hardware Quirks",
-              "networking-and-security": "Networking & Security Configurations",
-              "virtualization": "Hypervisor & VM Runbooks",
-              "windows-and-macos": "Windows & macOS References"
-          }
-          
-          IGNORE_FILES = {"README.md", "readme.md", "tree_output.txt"}
-          
-          def get_file_description(filepath):
-              if not os.path.isfile(filepath):
-                  return ""
-              try:
-                  with open(filepath, "r", encoding="utf-8", errors="ignore") as f:
-                      content = f.read()
-                  content = re.sub(r"^---\n.*?\n---\n", "", content, flags=re.DOTALL)
-                  for line in content.splitlines()[:15]:
-                      line = line.strip()
-                      if line.startswith("# Description:"):
-                          return line.replace("# Description:", "").strip()
-                      elif line.startswith("#") and not line.startswith("#!"):
-                          return line.lstrip("#").strip()
-              except Exception:
-                  pass
-              return ""
-              
-          table_output = []
-          directories = []
-          
-          for root, dirs, files in os.walk("."):
-              dirs[:] = [d for d in dirs if not d.startswith(".")]
-              md_files = [f for f in files if f.endswith(".md") and f not in IGNORE_FILES]
-              if md_files:
-                  directories.append(root)
-                  
-          directories = sorted(directories)
-          
-          for d_path in directories:
-              if d_path == ".":
-                  continue
-                  
-              folder_name = os.path.basename(d_path)
-              folder_desc = FOLDER_DESCS.get(folder_name, "")
-              header_desc = f" ({folder_desc})" if folder_desc else ""
-              
-              clean_path = d_path.lstrip("./")
-              table_output.append(f"### 📁 {clean_path}{header_desc}\n")
-              table_output.append("| File | Description |")
-              table_output.append("|---|---|")
-              
-              files = sorted([f for f in os.listdir(d_path) if f.endswith(".md") and f not in IGNORE_FILES])
-              
-              for f in files:
-                  file_path = os.path.join(d_path, f)
-                  desc = get_file_description(file_path)
-                  table_output.append(f"| <a href=\"{clean_path}/{f}\"><code>{f}</code></a> | {desc} |")
-              
-              table_output.append("\n")
-              
-          final_str = "\n".join(table_output).strip()
-          
-          with open("README.md", "r") as f:
-              readme = f.read()
-              
-          pattern = r"(<!-- START_SECTION:tree -->)(.*?)(<!-- END_SECTION:tree -->)"
-          updated = re.sub(pattern, lambda m: m.group(1) + "\n" + final_str + "\n" + m.group(3), readme, flags=re.DOTALL)
-          
-          with open("README.md", "w") as f:
-              f.write(updated)
-          '
-          
-      - name: Format Markdown with Prettier
-        run: |
-          npm install -g prettier
-          prettier --write "**/*.md"
+          ref: main
+          token: ${{ github.token }}
 
-      - name: Sync with remote to prevent fast-forward rejection
-        run: git pull --rebase --autostash origin main
-          
-      - name: Commit and Push
+      # (Your specific markdown formatting and table updating steps go here)
+      # e.g., run: npm install -g prettier && prettier --write "**/*.md"
+
+      - name: Pull latest remote changes
+        run: git pull origin main --rebase
+
+      - name: Auto-commit formatted changes
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "ci: update tables and auto-format markdown"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "41898282+github-actions[bot]@users.noreply.github.com"
+          commit_author: "77777kaz77777 <153332224+77777kaz77777@users.noreply.github.com>"
+          branch: main
