@@ -1,48 +1,27 @@
 ---
-name: Linter Bot
+name: Deploy Zensical
 on:
   push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
+    branches:
+      - main
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 jobs:
-  lint-and-fix:
-    name: Auto-Fix Codebase
+  deploy:
+    environment:
+      name: github-pages
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v7
-        with:
-          ref: ${{ github.head_ref }}
-      
-      - name: Setup Latest Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version: 'current'
-      
-      - name: Setup Python
-        uses: actions/setup-python@v7
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.x'
-      
-      - name: Install Python Linters
-        run: |
-          python -m pip install --upgrade pip
-          pip install ruff yamllint
-      
-      - name: Auto-Fix Python (Ruff)
-        run: ruff check . --fix --unsafe-fixes --exit-zero
-      
-      - name: Auto-Fix JSON and YAML (Prettier)
-        run: npx --yes prettier --write "**/*.{json,yml,yaml}" || true
-      
-      - name: Lint YAML (yamllint)
-        run: yamllint . || true
-      
-      - name: Commit and Push Changes
-        uses: stefanzweifel/git-auto-commit-action@v7
+      - run: pip install zensical
+      - run: python generate_nav.py
+      - run: zensical build
+      - uses: actions/upload-pages-artifact@v5
         with:
-          commit_message: "chore: auto-fix linting and formatting errors"
-          skip_dirty_check: false
+          path: site/
+      - uses: actions/deploy-pages@v4
