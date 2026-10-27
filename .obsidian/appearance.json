@@ -1,1 +1,7 @@
-{}
+{
+  "theme": "obsidian",
+  "accentColor": "#ffffff",
+  "showViewHeader": true,
+  "showRibbon": true,
+  "nativeMenus": false
+}

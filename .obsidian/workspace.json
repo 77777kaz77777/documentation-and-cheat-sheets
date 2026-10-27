@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux-general/nvidia-cuda-monitoring-cheat-sheet.md",
+                "file": "fedora/airpods-pro-microphone-guide.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "nvidia-cuda-monitoring-cheat-sheet"
+              "title": "airpods-pro-microphone-guide"
             }
           }
         ]
@@ -190,6 +190,9 @@
   },
   "active": "08f466a55857516b",
   "lastOpenFiles": [
+    "containers/lxc-cheatsheet.md",
+    "containers/docker-cli-compose-cheat-sheet.md",
+    "linux-general/nvidia-cuda-monitoring-cheat-sheet.md",
     "linux-general/setup-script-documentation.md",
     "linux-general/package-management/zypper-command-reference.md",
     "linux-general/package-management/flatpak-command-reference.md",
@@ -210,11 +213,8 @@
     "fedora/airpods-pro-microphone-guide.md",
     "containers/podman-desktop-guide.md",
     "containers/podman-cheatsheet.md",
-    "containers/lxc-cheatsheet.md",
-    "containers/docker-cli-compose-cheat-sheet.md",
     "README.md",
     "windows-and-macos/winget-cheat-sheet.md",
-    "windows-and-macos/windows-sysinternals-cheat-sheet.md",
-    "windows-and-macos/windows-powershell-active-directory.md"
+    "windows-and-macos/windows-sysinternals-cheat-sheet.md"
   ]
 }

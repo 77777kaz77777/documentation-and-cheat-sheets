@@ -1,4 +1,4 @@
-## reference guide for essential Docker and Docker Compose commands
+## Reference guide for essential Docker and Docker Compose commands
 
 ## Docker CLI Essentials
 
