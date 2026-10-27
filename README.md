@@ -13,19 +13,21 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 |---|---|
 | <a href="ansible/ansible-automation-cheat-sheet.md"><code>ansible-automation-cheat-sheet.md</code></a> | Quick-reference CLI and syntax cheat sheet for Ansible |
 
+
 ### 📁 containers (Docker, Podman, and LXC Guides)
 
 | File | Description |
-| --- | --- |
+|---|---|
 | <a href="containers/docker-cli-compose-cheat-sheet.md"><code>docker-cli-compose-cheat-sheet.md</code></a> | Reference guide for essential Docker and Docker Compose commands |
 | <a href="containers/lxc-cheatsheet.md"><code>lxc-cheatsheet.md</code></a> | quick-reference CLI guide for managing LXC/LXD system containers |
 | <a href="containers/podman-cheatsheet.md"><code>podman-cheatsheet.md</code></a> | Essential commands for running daemonless containers with Podman |
 | <a href="containers/podman-desktop-guide.md"><code>podman-desktop-guide.md</code></a> | How to install and set up the Podman Desktop GUI |
 
+
 ### 📁 fedora (Fedora Linux Specific Documentation)
 
 | File | Description |
-| --- | --- |
+|---|---|
 | <a href="fedora/airpods-pro-microphone-guide.md"><code>airpods-pro-microphone-guide.md</code></a> | AirPods Pro 3 Microphone Configuration on Fedora 44 KDE |
 | <a href="fedora/asus-rog-fedora-setup.md"><code>asus-rog-fedora-setup.md</code></a> | ASUS ROG Zephyrus G15 Setup Guide for Fedora 44 KDE |
 | <a href="fedora/asusctl-cheat-sheet-guide.md"><code>asusctl-cheat-sheet-guide.md</code></a> | Commands to control fans, lighting, and performance profiles on ASUS ROG laptops (GA503RW) with asusctl |
@@ -52,10 +54,11 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="fedora/snapper-snapshot-management-cheat-sheet.md"><code>snapper-snapshot-management-cheat-sheet.md</code></a> | Commands to create filesystem snapshots and roll back changes using Snapper |
 | <a href="fedora/troubleshooting_dracut_nvidia_module_error.md"><code>troubleshooting_dracut_nvidia_module_error.md</code></a> | Troubleshooting: dracut-install Failed to find module 'nvidia' |
 
+
 ### 📁 linux-general (General Linux Reference)
 
 | File | Description |
-| --- | --- |
+|---|---|
 | <a href="linux-general/arkenfox-configuration-guide.md"><code>arkenfox-configuration-guide.md</code></a> | Arkenfox Configuration and Updater Guide |
 | <a href="linux-general/bash-configuration-guide.md"><code>bash-configuration-guide.md</code></a> | Bash Configuration and Environment Automation Guide |
 | <a href="linux-general/cardwire-cheat-sheet.md"><code>cardwire-cheat-sheet.md</code></a> | Cardwire Cheat Sheet |
@@ -83,28 +86,31 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="linux-general/systemd-journalctl-cheat-sheet.md"><code>systemd-journalctl-cheat-sheet.md</code></a> | reference sheet for managing systemd services and inspecting system logs with journalctl |
 | <a href="linux-general/vim-vi-editor-cheat-sheet.md"><code>vim-vi-editor-cheat-sheet.md</code></a> | Core commands for opening, editing, saving, and exiting Vi/Vim |
 
+
 ### 📁 linux-general/desktop-environments (KDE Plasma, Terminals & Desktop Tools)
 
 | File | Description |
-| --- | --- |
+|---|---|
 | <a href="linux-general/desktop-environments/alacritty-font-rendering-fix.md"><code>alacritty-font-rendering-fix.md</code></a> | Alacritty Rendering Troubleshooting Guide (Fedora KDE) |
 | <a href="linux-general/desktop-environments/alacritty-keybindings-cheatsheet.md"><code>alacritty-keybindings-cheatsheet.md</code></a> | This document is a comprehensive Alacritty keybinding cheatsheet that outlines standard terminal shortcuts |
 | <a href="linux-general/desktop-environments/fastfetch-configuration-guide.md"><code>fastfetch-configuration-guide.md</code></a> | How to tweak and customize system info outputs using Fastfetch |
 | <a href="linux-general/desktop-environments/kde-plasma-wayland-shortcuts-cheat-sheet.md"><code>kde-plasma-wayland-shortcuts-cheat-sheet.md</code></a> | Essential keyboard shortcuts for getting around KDE Plasma on Wayland |
 | <a href="linux-general/desktop-environments/sublime-text-linux-shortcuts.md"><code>sublime-text-linux-shortcuts.md</code></a> | Must-know keyboard shortcuts for Sublime Text on Linux |
 
+
 ### 📁 linux-general/hardware-and-firmware (Firmware Updates & Hardware Quirks)
 
 | File | Description |
-| --- | --- |
+|---|---|
 | <a href="linux-general/hardware-and-firmware/disable-amdgpu-grub.md"><code>disable-amdgpu-grub.md</code></a> | instructions for disabling the integrated AMD GPU on Fedora 44 by blacklisting the amdgpu module in the GRUB bootloader, ensuring the system relies exclusively on the dedicated NVIDIA GPU. It also includes troubleshooting steps using grubby and dracut to resolve issues where Boot Loader Specification (BLS) files retain outdated kernel parameters |
 | <a href="linux-general/hardware-and-firmware/fwupdmgr-firmware-update-cheat-sheet.md"><code>fwupdmgr-firmware-update-cheat-sheet.md</code></a> | How to check for and apply hardware firmware updates with fwupdmgr |
 | <a href="linux-general/hardware-and-firmware/wifi-hardware-replacement-guide.md"><code>wifi-hardware-replacement-guide.md</code></a> | Comprehensive Post-Wi-Fi Hardware Replacement Diagnostic Guide |
 
+
 ### 📁 linux-general/package-management (Package Managers & App Formats)
 
 | File | Description |
-| --- | --- |
+|---|---|
 | <a href="linux-general/package-management/apk-command-reference.md"><code>apk-command-reference.md</code></a> | Commands for installing and updating packages in Alpine Linux and containers using APK |
 | <a href="linux-general/package-management/appimage-installation-guide.md"><code>appimage-installation-guide.md</code></a> | How to Install and Run AppImages on Linux |
 | <a href="linux-general/package-management/apt-command-reference.md"><code>apt-command-reference.md</code></a> | Everyday package management commands for Debian and Ubuntu using APT |
@@ -113,10 +119,11 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="linux-general/package-management/pacman-command-reference.md"><code>pacman-command-reference.md</code></a> | Essential commands for managing Arch Linux packages with Pacman |
 | <a href="linux-general/package-management/zypper-command-reference.md"><code>zypper-command-reference.md</code></a> | Everyday commands for managing packages on openSUSE and SLES using Zypper |
 
+
 ### 📁 linux-general/storage-and-filesystems (BTRFS, ZFS, RAID & Storage Utilities)
 
 | File | Description |
-| --- | --- |
+|---|---|
 | <a href="linux-general/storage-and-filesystems/btrfs-cheat-sheet.md"><code>btrfs-cheat-sheet.md</code></a> | quick-reference guide for managing Btrfs filesystems |
 | <a href="linux-general/storage-and-filesystems/nvme-cli-cheat-sheet.md"><code>nvme-cli-cheat-sheet.md</code></a> | nvme-cli Cheat Sheet |
 | <a href="linux-general/storage-and-filesystems/nvme-troubleshooting-guide.md"><code>nvme-troubleshooting-guide.md</code></a> | NVMe Unsafe Shutdown Troubleshooting Guide |
@@ -125,10 +132,11 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="linux-general/storage-and-filesystems/storage-management-reference.md"><code>storage-management-reference.md</code></a> | Commands to manage block devices, format partitions, and handle filesystems |
 | <a href="linux-general/storage-and-filesystems/zfs-administration-cheat-sheet.md"><code>zfs-administration-cheat-sheet.md</code></a> | A technical reference detailing essential commands for managing ZFS physical storage pools and logical datasets, including pool creation, dataset properties, snapshot replication, and disk replacement workflows |
 
+
 ### 📁 networking-and-security (Networking & Security Configurations)
 
 | File | Description |
-| --- | --- |
+|---|---|
 | <a href="networking-and-security/adguard-home-management-cheat-sheet.md"><code>adguard-home-management-cheat-sheet.md</code></a> | Commands and config paths for managing AdGuard Home DNS rules and filters |
 | <a href="networking-and-security/iptables-cheat-sheet.md"><code>iptables-cheat-sheet.md</code></a> | How to properly configure network filtering, manage firewall rulesets, and set up NAT using the iptables command-line utility |
 | <a href="networking-and-security/networking-cheatsheet.md"><code>networking-cheatsheet.md</code></a> | Networking Concepts and Explanations Cheatsheet |
@@ -139,10 +147,11 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="networking-and-security/tailscale-mesh-cli-cheat-sheet.md"><code>tailscale-mesh-cli-cheat-sheet.md</code></a> | Terminal commands for setting up and managing Tailscale mesh networks |
 | <a href="networking-and-security/ufw-cheatsheet.md"><code>ufw-cheatsheet.md</code></a> | UFW (Uncomplicated Firewall) Command Reference for Ubuntu/Debian |
 
+
 ### 📁 virtualization (Hypervisor & VM Runbooks)
 
 | File | Description |
-| --- | --- |
+|---|---|
 | <a href="virtualization/hyper-v-powershell-cheat-sheet.md"><code>hyper-v-powershell-cheat-sheet.md</code></a> | PowerShell commands to spin up and manage Hyper-V virtual machines |
 | <a href="virtualization/proxmox-cheatsheet.md"><code>proxmox-cheatsheet.md</code></a> | Proxmox Virtual Machine Commands (qm) Cheat Sheet |
 | <a href="virtualization/virt-manager-cheatsheet.md"><code>virt-manager-cheatsheet.md</code></a> | Virt-Manager & Virsh Command Line Cheat Sheet |
@@ -150,10 +159,11 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="virtualization/virtualization-virt-manager-troubleshooting-fedora.md"><code>virtualization-virt-manager-troubleshooting-fedora.md</code></a> | Fixes and tweaks for running Virt-Manager smoothly on Fedora |
 | <a href="virtualization/vmware_btrfs_recovery_guide.md"><code>vmware_btrfs_recovery_guide.md</code></a> | VMware VM Recovery Guide (Btrfs Snapshots) |
 
+
 ### 📁 windows-and-macos (Windows & macOS References)
 
 | File | Description |
-| --- | --- |
+|---|---|
 | <a href="windows-and-macos/macos-terminal-package-management-cheat-sheet.md"><code>macos-terminal-package-management-cheat-sheet.md</code></a> | A quick-reference guide for macOS command-line operations, covering Homebrew package management, system software updates, networking tools, process management, and essential Finder modifications |
 | <a href="windows-and-macos/windows-cmd-cheatsheet.md"><code>windows-cmd-cheatsheet.md</code></a> | A quick-reference cheat sheet for Windows Command Prompt (CMD) and PowerShell, covering file navigation, system management, and package provisioning |
 | <a href="windows-and-macos/windows-powershell-active-directory.md"><code>windows-powershell-active-directory.md</code></a> | A quick-reference guide for Windows PowerShell administration, covering Registry manipulation, Active Directory user and group management, remote networking, and object-oriented data filtering |
