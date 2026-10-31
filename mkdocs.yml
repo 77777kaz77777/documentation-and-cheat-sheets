@@ -1,10 +1,91 @@
 site_name: System Administration Runbooks
+site_description: System administration runbooks, documentation, and technical cheat sheets.
 site_url: https://77777kaz77777.github.io/documentation-and-cheat-sheets/
-docs_dir: '.'
+repo_url: https://github.com/77777kaz77777/documentation-and-cheat-sheets
+repo_name: 77777kaz77777/documentation-and-cheat-sheets
+
+docs_dir: .
+
+exclude_docs: |
+  mkdocs.yml
+  zensical.toml
+  LICENSE
+  *.sh
+  *.py
+  .github/
+  .gitignore
+
 theme:
   name: material
+  variant: modern
+  language: en
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    logo: lucide/terminal
+    repo: fontawesome/brands/github
   palette:
-    scheme: slate
-    primary: deep purple
+    # Dark mode (Pure Monochrome Dark)
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: white
+      toggle:
+        icon: lucide/moon
+        name: Switch to light mode
+    # Light mode (Clean Monochrome Light)
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: black
+      toggle:
+        icon: lucide/sun
+        name: Switch to dark mode
   features:
+    - content.code.annotate
     - content.code.copy
+    - content.code.select
+    - content.tabs.link
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.path
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
