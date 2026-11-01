@@ -1,4 +1,4 @@
-/* stylesheets/extra.css */
+/* extra.css */
 
 /* 1. Crisp Monochrome Dark Palette */
 [data-md-color-scheme="slate"] {
@@ -7,6 +7,7 @@
   --md-default-bg-color--lighter: #18181b;
   --md-code-bg-color: #121215;
   --md-typeset-a-color: #e4e4e7;
+  --md-accent-fg-color: #ffffff;
 }
 
 /* 2. Header Bar Separation */
@@ -19,46 +20,47 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-/* 3. Clean Sidebar Scrollbars (Replaces the thick blue bar) */
+/* 3. Clean Thin Sidebar Scrollbars (Removes thick blue/grey scrollbar) */
 .md-sidebar__scrollwrap {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.14) transparent;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent !important;
 }
 
 [data-md-color-scheme="default"] .md-sidebar__scrollwrap {
-  scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+  scrollbar-color: rgba(0, 0, 0, 0.18) transparent !important;
 }
 
 .md-sidebar__scrollwrap::-webkit-scrollbar {
-  width: 4px;
+  width: 4px !important;
 }
 
 .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.14);
-  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 4px !important;
 }
 
-/* 4. Left Sidebar — Top-Level Category Headers (Ansible, Containers, Fedora, etc.) */
+/* 4. Left Sidebar — Category Section Headers (Ansible, Containers, Fedora, etc.) */
 .md-nav--primary .md-nav__item--section {
-  margin-top: 1.25rem;
-  margin-bottom: 0.4rem;
+  margin-top: 1.2rem !important;
+  margin-bottom: 0.35rem !important;
 }
 
-.md-nav--primary .md-nav__item--section > .md-nav__link {
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: rgba(255, 255, 255, 0.45);
-  padding: 0.25rem 0.6rem;
-  pointer-events: none;
+.md-nav--primary .md-nav__item--section > .md-nav__link,
+.md-nav--primary .md-nav__item--section > .md-nav__container > .md-nav__link {
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color: rgba(255, 255, 255, 0.45) !important;
+  padding: 0.25rem 0.6rem !important;
 }
 
-[data-md-color-scheme="default"] .md-nav--primary .md-nav__item--section > .md-nav__link {
-  color: rgba(0, 0, 0, 0.45);
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__item--section > .md-nav__link,
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__item--section > .md-nav__container > .md-nav__link {
+  color: rgba(0, 0, 0, 0.48) !important;
 }
 
-/* 5. Left Sidebar — All Links & Collapsible Subfolders */
+/* 5. Left Sidebar — Individual Links & Spacing */
 .md-nav__list {
   display: flex;
   flex-direction: column;
@@ -66,113 +68,103 @@
 }
 
 .md-nav--primary .md-nav__link {
-  font-size: 0.82rem;
-  line-height: 1.35;
-  padding: 0.38rem 0.6rem;
-  border-radius: 6px;
-  color: rgba(255, 255, 255, 0.72);
-  transition: background-color 0.12s ease, color 0.12s ease;
-  word-break: break-word;
+  font-size: 0.82rem !important;
+  line-height: 1.35 !important;
+  padding: 0.38rem 0.65rem !important;
+  border-radius: 6px !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+  transition: background-color 0.12s ease, color 0.12s ease !important;
 }
 
 [data-md-color-scheme="default"] .md-nav--primary .md-nav__link {
-  color: rgba(0, 0, 0, 0.72);
+  color: rgba(0, 0, 0, 0.75) !important;
 }
 
 /* Hover state on any sidebar item */
 .md-nav--primary .md-nav__link:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  color: #ffffff !important;
 }
 
 [data-md-color-scheme="default"] .md-nav--primary .md-nav__link:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  color: #000000;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  color: #000000 !important;
 }
 
-/* Active/Selected Page Pill */
-.md-nav--primary .md-nav__item .md-nav__link--active {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  font-weight: 600;
-  box-shadow: inset 2px 0 0 #ffffff;
+/* Active/Selected Page Pill (Overrides Zensical Modern's blue highlight box) */
+.md-nav--primary .md-nav__item .md-nav__link--active,
+.md-nav--primary .md-nav__link--active {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  box-shadow: inset 2px 0 0 #ffffff !important;
 }
 
-[data-md-color-scheme="default"] .md-nav--primary .md-nav__item .md-nav__link--active {
-  background-color: rgba(0, 0, 0, 0.08);
-  color: #000000;
-  box-shadow: inset 2px 0 0 #000000;
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__item .md-nav__link--active,
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__link--active {
+  background-color: rgba(0, 0, 0, 0.08) !important;
+  color: #000000 !important;
+  box-shadow: inset 2px 0 0 #000000 !important;
 }
 
-/* 6. Nested Subfolders Tree Guide Line (e.g., linux-general/* subdirectories) */
+/* 6. Nested Subfolders Tree Line (e.g., linux-general subdirectories) */
 .md-nav--primary .md-nav__item--nested .md-nav > .md-nav__list {
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-  margin-left: 0.75rem;
-  padding-left: 0.5rem;
-  margin-top: 2px;
-  margin-bottom: 4px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+  margin-left: 0.7rem !important;
+  padding-left: 0.5rem !important;
+  margin-top: 2px !important;
+  margin-bottom: 4px !important;
 }
 
 [data-md-color-scheme="default"] .md-nav--primary .md-nav__item--nested .md-nav > .md-nav__list {
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-/* Bold collapsible subfolder labels slightly so they stand out from files */
-.md-nav--primary .md-nav__item--nested > .md-nav__link {
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.88);
-}
-
-[data-md-color-scheme="default"] .md-nav--primary .md-nav__item--nested > .md-nav__link {
-  color: rgba(0, 0, 0, 0.88);
+  border-left: 1px solid rgba(0, 0, 0, 0.12) !important;
 }
 
 /* 7. Right Sidebar ("On this page" Table of Contents) */
 .md-nav--secondary .md-nav__title {
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: rgba(255, 255, 255, 0.45);
-  padding-bottom: 0.4rem;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color: rgba(255, 255, 255, 0.45) !important;
 }
 
 .md-nav--secondary .md-nav__list {
-  border-left: 1px solid rgba(255, 255, 255, 0.08);
-  padding-left: 0.5rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding-left: 0.45rem !important;
 }
 
 .md-nav--secondary .md-nav__link {
-  font-size: 0.78rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.78rem !important;
+  padding: 0.25rem 0.5rem !important;
+  border-radius: 4px !important;
+  color: rgba(255, 255, 255, 0.62) !important;
 }
 
 .md-nav--secondary .md-nav__link--active {
-  color: #ffffff;
-  font-weight: 600;
-  background-color: rgba(255, 255, 255, 0.06);
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  background-color: rgba(255, 255, 255, 0.07) !important;
 }
 
 /* 8. Modern Card Tables in Main Content */
 .md-typeset table:not([class]) {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: var(--md-default-bg-color--light);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  background-color: var(--md-default-bg-color--light) !important;
 }
 
 .md-typeset table:not([class]) th {
-  background-color: rgba(255, 255, 255, 0.04);
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.04em !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 .md-typeset table:not([class]) td {
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  vertical-align: middle;
+  border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+  vertical-align: middle !important;
 }
