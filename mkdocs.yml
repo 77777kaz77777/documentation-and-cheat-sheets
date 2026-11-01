@@ -10,12 +10,13 @@ docs_dir: .
 exclude_docs: |
   mkdocs.yml
   zensical.toml
+  .markdownlint.yaml
   LICENSE
   *.sh
   *.py
   .github/
   .gitignore
-  stylesheets/
+  .obsidian/
 
 theme:
   name: material
@@ -64,7 +65,7 @@ theme:
     - toc.follow
 
 extra_css:
-  - stylesheets/extra.css
+  - extra.css
 
 plugins:
   - search
