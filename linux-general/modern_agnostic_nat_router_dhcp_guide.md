@@ -65,14 +65,19 @@ A Virtual Machine provides complete kernel isolation and is the most straightfor
 > **⚠️ Note on Docker:** Running a full NAT router and DHCP server inside a standard Docker container is an anti-pattern because Docker manages its own `iptables`/`nftables` chains and network namespaces. **LXC/LXD system containers** are strongly recommended instead.
 
 1. **Create an Isolated LAN Bridge on the Host:**
+
    ```bash
    lxc network create lan0 ipv4.address=none ipv6.address=none
    ```
+
 2. **Launch the Router Container:**
+
    ```bash
    lxc launch images:debian/12 router-ct
    ```
+
 3. **Attach WAN and LAN Interfaces:**
+
    ```bash
    # Attach WAN interface (connected to default internet-facing lxdbr0)
    lxc config device add router-ct eth0 nic nictype=bridged parent=lxdbr0 name=eth0
@@ -80,8 +85,10 @@ A Virtual Machine provides complete kernel isolation and is the most straightfor
    # Attach LAN interface (connected to isolated lan0 bridge)
    lxc config device add router-ct eth1 nic nictype=bridged parent=lan0 name=eth1
    ```
+
 4. **Grant Networking Capabilities:**
    To manipulate `nftables` and bind raw sockets for DHCP, ensure the container has sufficient permissions:
+
    ```bash
    lxc config set router-ct security.privileged true
    lxc restart router-ct
@@ -311,17 +318,23 @@ echo "============================================="
 Once you have run the script, you can verify everything is working using these commands:
 
 * **Check Active `nftables` Rules:**
+
   ```bash
   sudo nft list ruleset
   ```
+
 * **Check `dnsmasq` Service & Logs:**
+
   ```bash
   sudo systemctl status dnsmasq
   sudo tail -f /var/log/dnsmasq.log
   ```
+
 * **View Active DHCP Leases:**
+
   ```bash
   cat /var/lib/misc/dnsmasq.leases
   ```
+
 * **Persist LAN IP Across Reboots:**
    note that `ip addr replace` configures the interface immediately in memory. To ensure the static IP on `$LAN_IF` persists across full system reboots, add `192.168.1.1/24` to your distribution's network manager (`/etc/network/interfaces`, Netplan, or `nmcli`).
