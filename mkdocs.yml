@@ -1,4 +1,3 @@
-# mkdocs.yml
 site_name: System Administration Runbooks
 site_description: System administration runbooks, documentation, and technical cheat sheets.
 site_url: https://77777kaz77777.github.io/documentation-and-cheat-sheets/
@@ -56,7 +55,6 @@ theme:
     - navigation.instant.progress
     - navigation.path
     - navigation.prune
-    - navigation.sections
     - navigation.top
     - navigation.tracking
     - search.highlight
