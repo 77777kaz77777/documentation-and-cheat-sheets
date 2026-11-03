@@ -1,3 +1,4 @@
+# mkdocs.yml
 site_name: System Administration Runbooks
 site_description: System administration runbooks, documentation, and technical cheat sheets.
 site_url: https://77777kaz77777.github.io/documentation-and-cheat-sheets/
@@ -20,7 +21,6 @@ exclude:
 
 theme:
   name: material
-  variant: modern
   language: en
   font:
     text: Inter
@@ -40,7 +40,7 @@ theme:
     # Light mode (Clean Monochrome Light)
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: black  # FIXED: Changed from white to black so header text is readable
+      primary: white
       accent: black
       toggle:
         icon: lucide/sun
