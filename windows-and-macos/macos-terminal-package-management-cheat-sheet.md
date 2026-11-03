@@ -259,8 +259,8 @@ A comprehensive reference guide for modern macOS command-line administration on 
 
 ## Sources & Official Documentation
 
-* **Apple Developer macOS Release Notes:** https://developer.apple.com/documentation/macos-release-notes
-* **Apple Terminal User Guide:** https://support.apple.com/guide/terminal/welcome/mac
-* **Homebrew Official Documentation & Manpage:** https://docs.brew.sh/Manpage
+* **Apple Developer macOS Release Notes:** <https://developer.apple.com/documentation/macos-release-notes>
+* **Apple Terminal User Guide:** <https://support.apple.com/guide/terminal/welcome/mac>
+* **Homebrew Official Documentation & Manpage:** <https://docs.brew.sh/Manpage>
 * **Apple Built-in Manual Pages (`launchctl`, `wdutil`, `softwareupdate`, `powermetrics`, `codesign`, `stapler`):** Accessible locally via `man [command]`
-* **macOS `defaults` Reference:** https://macos-defaults.com/
+* **macOS `defaults` Reference:** <https://macos-defaults.com/>
