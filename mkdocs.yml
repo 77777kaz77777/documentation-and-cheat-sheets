@@ -7,7 +7,6 @@ repo_name: 77777kaz77777/documentation-and-cheat-sheets
 
 docs_dir: .
 
-# FIXED: 'exclude' is the correct MkDocs configuration key, replacing 'exclude_docs'
 exclude:
   - mkdocs.yml
   - zensical.toml
@@ -29,7 +28,6 @@ theme:
     logo: lucide/terminal
     repo: fontawesome/brands/github
   palette:
-    # Dark mode (Pure Monochrome Dark)
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
@@ -37,7 +35,6 @@ theme:
       toggle:
         icon: lucide/moon
         name: Switch to light mode
-    # Light mode (Clean Monochrome Light)
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: white
@@ -79,6 +76,9 @@ markdown_extensions:
   - pymdownx.betterem
   - pymdownx.caret
   - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
