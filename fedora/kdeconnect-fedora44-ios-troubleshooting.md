@@ -1,13 +1,13 @@
-## KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora 44 KDE Plasma, even after adding firewall rules to the `home` zone
+## KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora  KDE Plasma, even after adding firewall rules to the `home` zone
 
-# Troubleshooting KDE Connect: Fedora 44 KDE to iOS
+# Troubleshooting KDE Connect: Fedora  KDE to iOS
 
-**Issue:** KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora 44 KDE Plasma, even after adding firewall rules to the `home` zone.
+**Issue:** KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora  KDE Plasma, even after adding firewall rules to the `home` zone.
 
 **Root Causes:**
 
 1. Fedora's active network interface defaults to `FedoraWorkstation` or `public` zones, causing `home` zone rules to be ignored.
-2. Fedora 44 (Plasma 6) utilizes D-Bus activation for KDE Connect; standard `systemctl` restart commands will fail if the daemon is killed.
+2. Fedora  (Plasma 6) utilizes D-Bus activation for KDE Connect; standard `systemctl` restart commands will fail if the daemon is killed.
 3. iOS aggressively filters UDP broadcast packets, often requiring manual IP configuration.
 
 ---
@@ -43,7 +43,7 @@ _Verification:_ Check your active zone with `firewall-cmd --get-active-zones` to
 
 ## Step 3: Restart the KDE Connect Daemon
 
-Because Fedora 44 uses D-Bus for KDE Connect, `systemctl --user restart plasma-kdeconnect.service` will return an error. Use the direct executable or D-Bus refresh instead.
+Because Fedora  uses D-Bus for KDE Connect, `systemctl --user restart plasma-kdeconnect.service` will return an error. Use the direct executable or D-Bus refresh instead.
 
 **Option A (Direct execution):**
 
