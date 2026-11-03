@@ -50,7 +50,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="fedora/fedora-tpm2-luks-autounlock-guide.md"><code>fedora-tpm2-luks-autounlock-guide.md</code></a> | Step-by-step guide for configuring automatic LUKS2 root volume decryption using hardware TPM 2.0 and systemd-cryptenroll |
 | <a href="fedora/fix-mux-plymouth-deadlock.md"><code>fix-mux-plymouth-deadlock.md</code></a> | How to fix boot deadlocks caused by MUX switches and Plymouth |
 | <a href="fedora/kde-plasma-6-multi-monitor-troubleshooting.md"><code>kde-plasma-6-multi-monitor-troubleshooting.md</code></a> | Fixes for multi-monitor display glitches in KDE Plasma 6 |
-| <a href="fedora/kdeconnect-fedora44-ios-troubleshooting.md"><code>kdeconnect-fedora44-ios-troubleshooting.md</code></a> | KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora  KDE Plasma, even after adding firewall rules to the `home` zone |
+| <a href="fedora/kdeconnect-fedora-ios-troubleshooting.md"><code>kdeconnect-fedora-ios-troubleshooting.md</code></a> | KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora  KDE Plasma, even after adding firewall rules to the `home` zone |
 | <a href="fedora/snapper-snapshot-management-cheat-sheet.md"><code>snapper-snapshot-management-cheat-sheet.md</code></a> | Commands to create filesystem snapshots and roll back changes using Snapper |
 | <a href="fedora/troubleshooting_dracut_nvidia_module_error.md"><code>troubleshooting_dracut_nvidia_module_error.md</code></a> | Troubleshooting: dracut-install Failed to find module 'nvidia' |
 
