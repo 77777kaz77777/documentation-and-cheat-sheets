@@ -37,7 +37,7 @@ systemctl --user restart wireplumber
 
 ## 2. Choosing the Right Audio Profile
 
-After applying the fix above, open your KDE Audio Volume widget, click the three vertical dots (`⋮`) next to **Karim's AirPods Pro** under _Output Devices_, and select the appropriate profile based on the laptop you are using:
+After applying the fix above, open your KDE Audio Volume widget, click the three vertical dots (`⋮`) next to **Kaz's AirPods Pro** under _Output Devices_, and select the appropriate profile based on the laptop you are using:
 
 ### Laptop 1 (Zephyrus / LC3 Supported)
 
