@@ -165,7 +165,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 
 | File | Description |
 |---|---|
-| <a href="windows-and-macos/macos-terminal-package-management-cheat-sheet.md"><code>macos-terminal-package-management-cheat-sheet.md</code></a> | macOS 27 (Golden Gate) Command-Line Reference Guide |
+| <a href="windows-and-macos/macos-terminal-package-management-cheat-sheet.md"><code>macos-terminal-package-management-cheat-sheet.md</code></a> | macOS Command-Line Reference Guide (Apple Silicon) |
 | <a href="windows-and-macos/windows-cmd-cheatsheet.md"><code>windows-cmd-cheatsheet.md</code></a> | A quick-reference cheat sheet for Windows Command Prompt (CMD) and PowerShell, covering file navigation, system management, and package provisioning |
 | <a href="windows-and-macos/windows-powershell-active-directory.md"><code>windows-powershell-active-directory.md</code></a> | A quick-reference guide for Windows PowerShell administration, covering Registry manipulation, Active Directory user and group management, remote networking, and object-oriented data filtering |
 | <a href="windows-and-macos/windows-sysinternals-cheat-sheet.md"><code>windows-sysinternals-cheat-sheet.md</code></a> | A practical guide to core Microsoft Sysinternals tools (Process Explorer, Process Monitor, Autoruns, PsExec, and TCPView), highlighting specific filters, shortcuts, and commands for advanced troubleshooting, malware isolation, and remote system administration |
