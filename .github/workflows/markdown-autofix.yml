@@ -1,36 +1,46 @@
-name: Auto-Fix Markdown Formatting
+name: Auto-Format Markdown
+
 on:
   push:
     branches:
       - main
+    paths:
+      - '**.md'
   workflow_dispatch:
+
+# Prevent race conditions when multiple pushes happen back-to-back
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+
+permissions:
+  contents: write
+
 jobs:
-  markdownlint-fix:
+  format-markdown:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v7
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref }}
+          ref: ${{ github.head_ref }}
           fetch-depth: 0
-        
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
+
+      - name: Run Markdownlint Auto-Fix
+        uses: Noskcaj19/markdownlint-action@v3
         with:
-          node-version: '22'
-        
-      - name: Run markdownlint auto-fix
-        run: npx markdownlint-cli2 --fix "**/*.md" || true
-        
-      - name: Sync with remote branch
-        run: git pull --rebase --autostash origin main
-        
-      - name: Commit and Push changes
+          files: .
+          fix: true
+        continue-on-error: true
+
+      - name: Pull latest changes to avoid ref lock conflicts
+        run: |
+          git pull --rebase --autostash origin ${{ github.ref_name }}
+
+      - name: Commit and push formatting changes
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "style: auto-fix markdown formatting spacing"
+          commit_user_name: github-actions[bot]
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
