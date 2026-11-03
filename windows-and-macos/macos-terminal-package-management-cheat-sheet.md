@@ -1,18 +1,19 @@
-# macOS 27 (Golden Gate) Command-Line Reference Guide
+# macOS Command-Line Reference Guide (Apple Silicon)
 
-A comprehensive reference guide for macOS 27 (Golden Gate) command-line administration on Apple Silicon (`arm64`), covering Homebrew environment management, OS updates, Apple Silicon telemetry, networking diagnostics, launchd services, security controls, and system defaults.
+A comprehensive reference guide for modern macOS command-line administration on Apple Silicon (`arm64`), covering Homebrew environment management, OS updates, hardware telemetry, networking diagnostics, launchd services, security controls, and system defaults.
 
 ---
 
-## 1. Architecture & macOS 27 Environment Specifics
+## Architecture & Environment Specifics
 
-* **Apple Silicon Exclusivity:** macOS 27 (Golden Gate) drops all Intel (`x86_64`) Mac support. Every macOS 27 host runs natively on Apple Silicon (`arm64`).
-* **Homebrew Prefix:** Native Apple Silicon packages install strictly to `/opt/homebrew` (unlike the legacy `/usr/local` Intel prefix).
+* **Apple Silicon Architecture:** Modern macOS runs natively on Apple Silicon (`arm64`).
+* **Homebrew Prefix:** Native Apple Silicon packages install strictly to `/opt/homebrew`.
 * **Signed System Volume (SSV):** The root volume (`/`) is cryptographically sealed and mounted read-only. Dynamic user and system data lives on `/System/Volumes/Data` (firmlinked to `/Users`, `/Library`, and `/Applications`).
+* **File System Behavior:** APFS is **Case-Insensitive but Case-Preserving** by default (`File.txt` and `file.txt` resolve to the same file). External drives mount under `/Volumes/`, and GUI applications in `/Applications/` are `.app` directory bundles with binaries located inside `Contents/MacOS/`.
 
 ---
 
-## 2. Package Management (Homebrew)
+## Package Management (Homebrew)
 
 * **Install Homebrew:**
   `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` * **Configure Shell Environment (`~/.zprofile`):** `eval "$(/opt/homebrew/bin/brew shellenv)"`
@@ -52,7 +53,7 @@ A comprehensive reference guide for macOS 27 (Golden Gate) command-line administ
 
 ---
 
-## 3. System, Hardware Telemetry & Power Management
+## System, Hardware Telemetry & Power Management
 
 * **Check Detailed macOS Build & Version:**
   `sw_vers`
@@ -60,8 +61,10 @@ A comprehensive reference guide for macOS 27 (Golden Gate) command-line administ
   `softwareupdate -l`
 * **Install All Available Updates & Reboot Automatically:**
   `sudo softwareupdate -iaR`
-* **Download a Full macOS 27 Installer to `/Applications`:**
-  `softwareupdate --fetch-full-installer --full-installer-version 27.0.1`
+* **Download the Latest Full macOS Installer to `/Applications`:**
+  `softwareupdate --fetch-full-installer`
+* **Download a Specific Full macOS Installer Version:**
+  `softwareupdate --fetch-full-installer --full-installer-version [version]`
 * **Install Xcode Command Line Tools (CLT):**
   `xcode-select --install`
 * **Query Hardware, Software & NVMe Storage Profiles:**
@@ -87,20 +90,20 @@ A comprehensive reference guide for macOS 27 (Golden Gate) command-line administ
   `pmset -g assertions`
 * **Prevent System & Display Sleep Indefinitely:**
   `caffeinate -di` (Runs until `Ctrl+C` is pressed)
+* **Prevent Sleep Until a Specific Command Finishes:**
+  `caffeinate -i [command]`
 * **Prevent Sleep Until a Specific Process (PID) Completes:**
   `caffeinate -w [PID]`
 
 ---
 
-## 4. Networking, Wi-Fi & Firewall Diagnostics
+## Networking, Wi-Fi & Firewall Diagnostics
 
-*Note: The legacy `airport` binary was removed in macOS 14.4, and `networksetup -getairportnetwork` redacts SSIDs without GUI Location Services permissions. Use `wdutil` or `ipconfig` on macOS 27 for accurate CLI wireless diagnostics.*
-
-* **View Complete Interface Summary (Unhidden SSID, BSSID, DHCP, IPv4/IPv6, DNS):**
+* **View Complete Interface Summary (SSID, BSSID, DHCP, IPv4/IPv6, DNS):**
   `ipconfig getsummary en0`
 * **Run Comprehensive Apple Wireless Diagnostics (Channel, RSSI, Noise, MCS, Tx Rate):**
   `sudo wdutil info`
-* **Check Local IPv4 Address (Wi-Fi is `en0` on MacBook Air/Pro):**
+* **Check Local IPv4 Address (Wi-Fi is `en0` on MacBooks):**
   `ipconfig getifaddr en0`
 * **Check Public IP Address (IPv4/IPv6):**
   `curl -s https://ifconfig.me`
@@ -108,15 +111,15 @@ A comprehensive reference guide for macOS 27 (Golden Gate) command-line administ
   `networksetup -listallhardwareports`
 * **Get Active DNS Servers for Wi-Fi:**
   `networksetup -getdnsservers Wi-Fi`
-* **Set Custom DNS Servers for Wi-Fi (e.g., Local Resolver or Quad9):**
+* **Set Custom DNS Servers for Wi-Fi (e.g., Quad9):**
   `sudo networksetup -setdnsservers Wi-Fi 9.9.9.9 149.112.112.112`
 * **Revert Wi-Fi DNS to DHCP Default:**
   `sudo networksetup -setdnsservers Wi-Fi "Empty"`
 * **Flush System DNS Cache:**
   `sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder`
-* **Query DNS Resolution Using macOS Native Resolver (Replaces `dig` for mDNS/VPNs):**
+* **Query DNS Resolution Using macOS Native Resolver (Respects mDNS & VPN Split-DNS):**
   `dscacheutil -q host -a name [example.com]`
-* **Inspect Full System DNS Routing & Scoped Resolvers (Tailscale/VPN Split-DNS):**
+* **Inspect Full System DNS Routing & Scoped Resolvers:**
   `scutil --dns`
 * **Run Built-in Network Throughput, Responsiveness (RPM) & Latency Test:**
   `networkQuality -v`
@@ -135,9 +138,7 @@ A comprehensive reference guide for macOS 27 (Golden Gate) command-line administ
 
 ---
 
-## 5. Process, Service (`launchd`) & Log Management
-
-*Note: `launchctl load` and `unload` are deprecated. On macOS 27, always use `bootstrap`, `bootout`, `enable`, `disable`, and `kickstart` with explicit target domains (`gui/$(id -u)` for user agents, `system` for root daemons).*
+## Process, Service (`launchd`) & Log Management
 
 * **List All Loaded Services in Current Session:**
   `launchctl list`
@@ -162,6 +163,8 @@ A comprehensive reference guide for macOS 27 (Golden Gate) command-line administ
   `killall [ProcessName]`
 * **Kill Processes Matching a Pattern:**
   `pkill -f [pattern]`
+* **Kill a Process Immediately by PID:**
+  `kill -9 [PID]`
 * **Stream Live Unified System Logs Filtered by Process or Subsystem:**
   `log stream --predicate 'process == "sshd"' --info`
 * **Query Historical Unified System Logs (Last 1 Hour):**
@@ -169,31 +172,30 @@ A comprehensive reference guide for macOS 27 (Golden Gate) command-line administ
 
 ---
 
-## 6. Security, Gatekeeper, XProtect & Disk Encryption
+## Security, Gatekeeper, XProtect & Disk Encryption
 
 * **Check FileVault Full-Disk Encryption Status:**
   `fdesetup status`
 * **Check System Integrity Protection (SIP) Status:**
   `csrutil status`
-* **Check Gatekeeper Assessment Status:**
-  `spctl --status`
-* **Verify Code Signature & Notarization of an Application Bundle:**
-  `codesign -dv --verbose=4 /Applications/[AppName].app`
-  `spctl -a -vvv -t exec /Applications/[AppName].app`
+* **Verify Code Signature, Notarization & Gatekeeper Acceptance of an App Bundle:**
+  `codesign -dvv --deep --strict /Applications/[AppName].app`
+  `stapler validate /Applications/[AppName].app`
 * **Inspect Extended Attributes (`xattr`) on a File or Application:**
   `xattr -l /Applications/[AppName].app`
 * **Remove Quarantine Flag from a Downloaded Binary or Unsigned App:**
   `sudo xattr -dr com.apple.quarantine /Applications/[AppName].app`
-* **Check XProtect Antivirus Version & Perform Manual Scan (macOS 15–27):**
+* **Check XProtect Antivirus Version & Perform Manual Scan/Update:**
   `xprotect version`
   `sudo xprotect check`
   `sudo xprotect update`
 * **List Installed Configuration / MDM Profiles:**
-  `profiles list`
+  `profiles status`
+  `sudo profiles list`
 
 ---
 
-## 7. macOS `defaults`, Finder & UI Tweaks
+## macOS `defaults`, Finder & UI Tweaks
 
 *Apply changes immediately by restarting the affected daemon (`killall Finder`, `killall Dock`, or `killall SystemUIServer`).*
 
@@ -215,8 +217,6 @@ A comprehensive reference guide for macOS 27 (Golden Gate) command-line administ
 * **Prevent Creation of `.DS_Store` Files on Network (SMB/NFS) & USB Volumes:**
   `defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true`
   `defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true`
-* **Disable `.DS_Store` Verification Dialog When Opening Network Folders:**
-  `defaults write com.apple.LaunchServices LSQuarantine -bool false` (Optional—use with caution)
 * **Set Custom Screenshot Save Directory:**
   `mkdir -p ~/Pictures/Screenshots`
   `defaults write com.apple.screencapture location ~/Pictures/Screenshots && killall SystemUIServer`
@@ -227,14 +227,14 @@ A comprehensive reference guide for macOS 27 (Golden Gate) command-line administ
 * **Speed Up Dock Auto-Hide & Remove Reveal Delay:**
   `defaults write com.apple.dock autohide-delay -float 0`
   `defaults write com.apple.dock autohide-time-modifier -float 0.15 && killall Dock`
-* **Disable macOS "Press and Hold" Accents in Favor of Fast Key Repeat (Essential for Vim/Terminal):**
+* **Disable "Press and Hold" Accents in Favor of Fast Key Repeat (Essential for Vim/Terminal):**
   `defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false`
   `defaults write NSGlobalDomain KeyRepeat -int 2`
   `defaults write NSGlobalDomain InitialKeyRepeat -int 15`
 
 ---
 
-## 8. Daily CLI Productivity & Bridge Utilities
+## Daily CLI Productivity & Bridge Utilities
 
 * **Copy Command Output Directly to macOS Clipboard (Pasteboard):**
   `cat ~/.ssh/id_ed25519.pub | pbcopy`
@@ -246,7 +246,7 @@ A comprehensive reference guide for macOS 27 (Golden Gate) command-line administ
   `open -a "Firefox" index.html`
 * **Search Files Instantly via Spotlight Metadata Index (`mdfind`):**
   `mdfind "kMDItemDisplayName == '*config*'c"`
-  `mdfind -onlyin ~/Documents "cybersecurity"`
+  `mdfind -onlyin ~/Documents "security"`
 * **Inspect Spotlight Metadata Attributes of a File:**
   `mdls [file_path]`
 * **Convert Property List (`.plist`) Files Between Binary and XML for Editing:**
@@ -257,10 +257,10 @@ A comprehensive reference guide for macOS 27 (Golden Gate) command-line administ
 
 ---
 
-## 9. Sources & Official Documentation
+## Sources & Official Documentation
 
-* **Apple macOS 27 (Golden Gate) Release Notes:** <https://developer.apple.com/documentation/macos-release-notes/macos-27-release-notes>
-* **Apple Support — What's New in macOS 27 Golden Gate:** <https://support.apple.com/en-us/127257>
-* **Homebrew Official Documentation (macOS 15–27 Support & Manpage):** <https://docs.brew.sh/Installation> and <https://docs.brew.sh/Manpage>
-* **Apple Developer Man Pages (`launchctl`, `wdutil`, `softwareupdate`, `powermetrics`):** Accessible locally via `man [command]` or at <https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/>
-* **macOS `defaults` Community Reference:** <https://macos-defaults.com/>
+* **Apple Developer macOS Release Notes:** https://developer.apple.com/documentation/macos-release-notes
+* **Apple Terminal User Guide:** https://support.apple.com/guide/terminal/welcome/mac
+* **Homebrew Official Documentation & Manpage:** https://docs.brew.sh/Manpage
+* **Apple Built-in Manual Pages (`launchctl`, `wdutil`, `softwareupdate`, `powermetrics`, `codesign`, `stapler`):** Accessible locally via `man [command]`
+* **macOS `defaults` Reference:** https://macos-defaults.com/
