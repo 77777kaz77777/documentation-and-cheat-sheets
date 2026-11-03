@@ -259,8 +259,8 @@ A comprehensive reference guide for macOS 27 (Golden Gate) command-line administ
 
 ## 9. Sources & Official Documentation
 
-* **Apple macOS 27 (Golden Gate) Release Notes:** https://developer.apple.com/documentation/macos-release-notes/macos-27-release-notes
-* **Apple Support — What's New in macOS 27 Golden Gate:** https://support.apple.com/en-us/127257
-* **Homebrew Official Documentation (macOS 15–27 Support & Manpage):** https://docs.brew.sh/Installation and https://docs.brew.sh/Manpage
-* **Apple Developer Man Pages (`launchctl`, `wdutil`, `softwareupdate`, `powermetrics`):** Accessible locally via `man [command]` or at https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/
-* **macOS `defaults` Community Reference:** https://macos-defaults.com/
+* **Apple macOS 27 (Golden Gate) Release Notes:** <https://developer.apple.com/documentation/macos-release-notes/macos-27-release-notes>
+* **Apple Support — What's New in macOS 27 Golden Gate:** <https://support.apple.com/en-us/127257>
+* **Homebrew Official Documentation (macOS 15–27 Support & Manpage):** <https://docs.brew.sh/Installation> and <https://docs.brew.sh/Manpage>
+* **Apple Developer Man Pages (`launchctl`, `wdutil`, `softwareupdate`, `powermetrics`):** Accessible locally via `man [command]` or at <https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/>
+* **macOS `defaults` Community Reference:** <https://macos-defaults.com/>
