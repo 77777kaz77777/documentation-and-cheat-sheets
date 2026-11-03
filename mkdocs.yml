@@ -6,16 +6,17 @@ repo_name: 77777kaz77777/documentation-and-cheat-sheets
 
 docs_dir: .
 
-exclude_docs: |
-  mkdocs.yml
-  zensical.toml
-  .markdownlint.yaml
-  LICENSE
-  *.sh
-  *.py
-  .github/
-  .gitignore
-  .obsidian/
+# FIXED: 'exclude' is the correct MkDocs configuration key, replacing 'exclude_docs'
+exclude:
+  - mkdocs.yml
+  - zensical.toml
+  - .markdownlint.yaml
+  - LICENSE
+  - "*.sh"
+  - "*.py"
+  - .github/
+  - .gitignore
+  - .obsidian/
 
 theme:
   name: material
@@ -39,7 +40,7 @@ theme:
     # Light mode (Clean Monochrome Light)
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: white
+      primary: black  # FIXED: Changed from white to black so header text is readable
       accent: black
       toggle:
         icon: lucide/sun
