@@ -129,9 +129,17 @@
   color: rgba(255, 255, 255, 0.45) !important;
 }
 
+[data-md-color-scheme="default"] .md-nav--secondary .md-nav__title {
+  color: rgba(0, 0, 0, 0.48) !important;
+}
+
 .md-nav--secondary .md-nav__list {
   border-left: 1px solid rgba(255, 255, 255, 0.08) !important;
   padding-left: 0.45rem !important;
+}
+
+[data-md-color-scheme="default"] .md-nav--secondary .md-nav__list {
+  border-left: 1px solid rgba(0, 0, 0, 0.12) !important;
 }
 
 .md-nav--secondary .md-nav__link {
@@ -141,10 +149,19 @@
   color: rgba(255, 255, 255, 0.62) !important;
 }
 
+[data-md-color-scheme="default"] .md-nav--secondary .md-nav__link {
+  color: rgba(0, 0, 0, 0.62) !important;
+}
+
 .md-nav--secondary .md-nav__link--active {
   color: #ffffff !important;
   font-weight: 600 !important;
   background-color: rgba(255, 255, 255, 0.07) !important;
+}
+
+[data-md-color-scheme="default"] .md-nav--secondary .md-nav__link--active {
+  color: #000000 !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
 }
 
 /* 8. Modern Card Tables in Main Content */
@@ -153,6 +170,11 @@
   border-radius: 8px !important;
   overflow: hidden !important;
   background-color: var(--md-default-bg-color--light) !important;
+}
+
+[data-md-color-scheme="default"] .md-typeset table:not([class]) {
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  background-color: #ffffff !important;
 }
 
 .md-typeset table:not([class]) th {
@@ -164,7 +186,16 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
+[data-md-color-scheme="default"] .md-typeset table:not([class]) th {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
+}
+
 .md-typeset table:not([class]) td {
   border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
   vertical-align: middle !important;
+}
+
+[data-md-color-scheme="default"] .md-typeset table:not([class]) td {
+  border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
 }
