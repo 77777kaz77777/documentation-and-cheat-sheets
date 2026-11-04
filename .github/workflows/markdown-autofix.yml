@@ -21,13 +21,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
 
       - name: Run Markdownlint Auto-Fix
-        uses: Noskcaj19/markdownlint-action@v3
+        uses: igorshubovych/markdownlint-cli-action@v4
         with:
           files: .
           fix: true
@@ -38,7 +38,7 @@ jobs:
           git pull --rebase --autostash origin ${{ github.ref_name }}
 
       - name: Commit and push formatting changes
-        uses: stefanzweifel/git-auto-commit-action@v7
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "style: auto-fix markdown formatting spacing"
           commit_user_name: github-actions[bot]
