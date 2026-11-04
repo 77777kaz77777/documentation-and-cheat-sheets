@@ -2,37 +2,81 @@
 
 ## Search & Discovery
 
-| Command                   | Action                                                               |
-| :------------------------ | :------------------------------------------------------------------- |
-| `winget search <name>`    | Searches repositories for a package matching the name.               |
-| `winget search --id <id>` | Searches for a specific, exact package ID.                           |
-| `winget list`             | Lists all installed applications on the system.                      |
-| `winget list <name>`      | Checks if a specific application is currently installed.             |
-| `winget show <package>`   | Displays detailed metadata (version, publisher, URLs) for a package. |
+**Searches repositories for a package matching the name:**
+```powershell
+winget search <name>
+```
+
+**Searches for a specific, exact package ID:**
+```powershell
+winget search --id <id>
+```
+
+**Lists all installed applications on the system:**
+```powershell
+winget list
+```
+
+**Checks if a specific application is currently installed:**
+```powershell
+winget list <name>
+```
+
+**Displays detailed metadata (version, publisher, URLs) for a package:**
+```powershell
+winget show <package>
+```
 
 ## Installation & Removal
 
-| Command                       | Action                                                       |
-| :---------------------------- | :----------------------------------------------------------- |
-| `winget install <name>`       | Installs the best match for the given name.                  |
-| `winget install --id <id> -e` | **Best Practice:** Installs an exact match by its unique ID. |
-| `winget uninstall <name>`     | Uninstalls the specified package.                            |
-| `winget uninstall --id <id>`  | Uninstalls a package using its exact ID.                     |
+**Installs the best match for the given name:**
+```powershell
+winget install <name>
+```
+
+****Best Practice:** Installs an exact match by its unique ID:**
+```powershell
+winget install --id <id> -e
+```
+
+**Uninstalls the specified package:**
+```powershell
+winget uninstall <name>
+```
+
+**Uninstalls a package using its exact ID:**
+```powershell
+winget uninstall --id <id>
+```
 
 ## Updates & Upgrades
 
-| Command                 | Action                                                      |
-| :---------------------- | :---------------------------------------------------------- |
-| `winget upgrade`        | Lists all installed packages that have an available update. |
-| `winget upgrade <name>` | Upgrades a specific package.                                |
-| `winget upgrade --all`  | Upgrades all eligible packages to their latest versions.    |
+**Lists all installed packages that have an available update:**
+```powershell
+winget upgrade
+```
+
+**Upgrades a specific package:**
+```powershell
+winget upgrade <name>
+```
+
+**Upgrades all eligible packages to their latest versions:**
+```powershell
+winget upgrade --all
+```
 
 ## Automation & Provisioning
 
-| Command                        | Action                                                                    |
-| :----------------------------- | :------------------------------------------------------------------------ |
-| `winget export -o <file.json>` | Exports a list of all currently installed winget packages to a JSON file. |
-| `winget import -i <file.json>` | Installs all packages listed in a previously exported JSON file.          |
+**Exports a list of all currently installed winget packages to a JSON file:**
+```powershell
+winget export -o <file.json>
+```
+
+**Installs all packages listed in a previously exported JSON file:**
+```powershell
+winget import -i <file.json>
+```
 
 ## Essential Modifiers & Flags
 

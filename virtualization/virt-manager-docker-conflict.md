@@ -68,7 +68,6 @@ sudo rm -rf ~/.docker
 # 5. Remove the Docker user group
 sudo groupdel docker
 
-
 # 6. Restart the libvirt daemon to allow it to safely rebuild its network rules
 sudo systemctl restart libvirtd
 ```

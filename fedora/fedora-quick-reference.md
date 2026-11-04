@@ -4,48 +4,128 @@
 
 ### System Updates & Maintenance
 
-| Action                                   | Command                 |
-| ---------------------------------------- | ----------------------- |
-| Refresh metadata & update all packages   | `sudo dnf upgrade`      |
-| Refresh package database only            | `sudo dnf check-update` |
-| Remove unused/orphaned dependencies      | `sudo dnf autoremove`   |
-| Clean all cached package data & metadata | `sudo dnf clean all`    |
+**Refresh metadata & update all packages:**
+```bash
+sudo dnf upgrade
+```
+
+**Refresh package database only:**
+```bash
+sudo dnf check-update
+```
+
+**Remove unused/orphaned dependencies:**
+```bash
+sudo dnf autoremove
+```
+
+**Clean all cached package data & metadata:**
+```bash
+sudo dnf clean all
+```
 
 ### Package Operations
 
-| Action                                           | Command                        |
-| ------------------------------------------------ | ------------------------------ |
-| Search for a package                             | `dnf search <package>`         |
-| Display package information                      | `dnf info <package>`           |
-| Install package(s)                               | `sudo dnf install <package>`   |
-| Reinstall package                                | `sudo dnf reinstall <package>` |
-| Remove package(s)                                | `sudo dnf remove <package>`    |
-| Find package providing a specific file or binary | `dnf provides <file_or_path>`  |
-| List installed packages                          | `dnf list --installed`         |
+**Search for a package:**
+```bash
+dnf search <package>
+```
+
+**Display package information:**
+```bash
+dnf info <package>
+```
+
+**Install package(s):**
+```bash
+sudo dnf install <package>
+```
+
+**Reinstall package:**
+```bash
+sudo dnf reinstall <package>
+```
+
+**Remove package(s):**
+```bash
+sudo dnf remove <package>
+```
+
+**Find package providing a specific file or binary:**
+```bash
+dnf provides <file_or_path>
+```
+
+**List installed packages:**
+```bash
+dnf list --installed
+```
 
 ### Groups & Transaction History
 
-| Action                        | Command                                  |
-| ----------------------------- | ---------------------------------------- |
-| List available package groups | `dnf group list`                         |
-| Install a package group       | `sudo dnf group install "<group_name>"`  |
-| View DNF transaction history  | `dnf history`                            |
-| Undo a specific transaction   | `sudo dnf history undo <transaction_id>` |
+**List available package groups:**
+```bash
+dnf group list
+```
+
+**Install a package group:**
+```bash
+sudo dnf group install "<group_name>"
+```
+
+**View DNF transaction history:**
+```bash
+dnf history
+```
+
+**Undo a specific transaction:**
+```bash
+sudo dnf history undo <transaction_id>
+```
 
 ---
 
 ## Flatpak Application Management
 
-| Action                                     | Command                                                                                      |
-| ------------------------------------------ | -------------------------------------------------------------------------------------------- |
-| Add Flathub repository                     | `flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo` |
-| Search for flatpak applications            | `flatpak search <app_name>`                                                                  |
-| Install an application                     | `flatpak install flathub <app_id>`                                                           |
-| Update all installed flatpaks              | `flatpak update`                                                                             |
-| List installed flatpaks                    | `flatpak list`                                                                               |
-| Remove an application                      | `flatpak uninstall <app_id>`                                                                 |
-| Clean up unused runtimes & dependencies    | `flatpak uninstall --unused`                                                                 |
-| Grant/revoke filesystem access permissions | `sudo flatpak override <app_id> --filesystem=<path>`                                         |
+**Add Flathub repository:**
+```bash
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+```
+
+**Search for flatpak applications:**
+```bash
+flatpak search <app_name>
+```
+
+**Install an application:**
+```bash
+flatpak install flathub <app_id>
+```
+
+**Update all installed flatpaks:**
+```bash
+flatpak update
+```
+
+**List installed flatpaks:**
+```bash
+flatpak list
+```
+
+**Remove an application:**
+```bash
+flatpak uninstall <app_id>
+```
+
+**Clean up unused runtimes & dependencies:**
+```bash
+flatpak uninstall --unused
+```
+
+**Grant/revoke filesystem access permissions:**
+```bash
+sudo flatpak override <app_id> --filesystem=<path>
+```
 
 ---
 
@@ -66,56 +146,152 @@
 
 ## System Logging (`journalctl`)
 
-| Action                                    | Command                            |
-| ----------------------------------------- | ---------------------------------- |
-| Tail live system logs                     | `journalctl -f`                    |
-| View logs for a specific service          | `journalctl -u <service> -f`       |
-| View logs for the current boot            | `journalctl -b`                    |
-| View logs for the previous boot           | `journalctl -b -1`                 |
-| Filter logs by priority (errors/critical) | `journalctl -p err..emerg`         |
-| Limit log size by age                     | `sudo journalctl --vacuum-time=7d` |
+**Tail live system logs:**
+```bash
+journalctl -f
+```
+
+**View logs for a specific service:**
+```bash
+journalctl -u <service> -f
+```
+
+**View logs for the current boot:**
+```bash
+journalctl -b
+```
+
+**View logs for the previous boot:**
+```bash
+journalctl -b -1
+```
+
+**Filter logs by priority (errors/critical):**
+```bash
+journalctl -p err..emerg
+```
+
+**Limit log size by age:**
+```bash
+sudo journalctl --vacuum-time=7d
+```
 
 ---
 
 ## Security & Firewall (`firewalld` & SELinux)
 
-| Action                                     | Command                                                                 |                   |
-| ------------------------------------------ | ----------------------------------------------------------------------- | ----------------- |
-| Check firewall status                      | `sudo firewall-cmd --state`                                             |                   |
-| Get active zones and assigned interfaces   | `sudo firewall-cmd --get-active-zones`                                  |                   |
-| Allow service permanently                  | `sudo firewall-cmd --add-service=<service> --permanent`                 |                   |
-| Allow TCP/UDP port permanently             | `sudo firewall-cmd --add-port=<port>/<tcp                               | udp> --permanent` |
-| Reload firewall configuration              | `sudo firewall-cmd --reload`                                            |                   |
-| List allowed services/ports in active zone | `sudo firewall-cmd --list-all`                                          |                   |
-| Check SELinux status                       | `sestatus`                                                              |                   |
-| Change SELinux mode temporarily            | `sudo setenforce 0` _(Permissive)_ \| `sudo setenforce 1` _(Enforcing)_ |                   |
+**`Check firewall status` — sudo firewall-cmd --state:**
+```bash
+
+```
+
+**`Get active zones and assigned interfaces` — sudo firewall-cmd --get-active-zones:**
+```bash
+
+```
+
+**`Allow service permanently` — sudo firewall-cmd --add-service=<service> --permanent:**
+```bash
+
+```
+
+**`Allow TCP/UDP port permanently` — `sudo firewall-cmd --add-port=<port>/<tcp:**
+```bash
+udp> --permanent`
+```
+
+**`Reload firewall configuration` — sudo firewall-cmd --reload:**
+```bash
+
+```
+
+**`List allowed services/ports in active zone` — sudo firewall-cmd --list-all:**
+```bash
+
+```
+
+**`Check SELinux status` — sestatus:**
+```bash
+
+```
+
+**`Change SELinux mode temporarily` — `sudo setenforce 0` _(Permissive)_ \:**
+```bash
+`sudo setenforce 1` _(Enforcing)_
+```
 
 ---
 
 ## Network Management (`nmcli` & `ip`)
 
-| Action                        | Command                                                 |
-| ----------------------------- | ------------------------------------------------------- |
-| List active connections       | `nmcli connection show`                                 |
-| List network interfaces       | `nmcli device status`                                   |
-| Connect to a Wi-Fi network    | `nmcli dev wifi connect "<SSID>" password "<password>"` |
-| Bring a connection up or down | `nmcli connection up                                    | down <connection_name>` |
-| Display IP addresses          | `ip -brief address`                                     |
-| Display routing table         | `ip route`                                              |
+**List active connections:**
+```bash
+nmcli connection show
+```
+
+**List network interfaces:**
+```bash
+nmcli device status
+```
+
+**Connect to a Wi-Fi network:**
+```bash
+nmcli dev wifi connect "<SSID>" password "<password>"
+```
+
+**Bring a connection up or down:**
+```bash
+`nmcli connection up
+```
+
+**Display IP addresses:**
+```bash
+ip -brief address
+```
+
+**Display routing table:**
+```bash
+ip route
+```
 
 ---
 
 ## System Diagnostics & Maintenance
 
-| Action                            | Command                                       |
-| --------------------------------- | --------------------------------------------- |
-| Show Fedora release info          | `cat /etc/os-release`                         |
-| Show active kernel version        | `uname -r`                                    |
-| Rebuild initramfs image           | `sudo dracut -f`                              |
-| Update GRUB configuration         | `sudo grub2-mkconfig -o /boot/grub2/grub.cfg` |
-| Check disk usage                  | `df -h`                                       |
-| Check directory space utilization | `du -sh <path>`                               |
-| Hardware summary                  | `lscpu` / `lspci` / `lsusb`                   |
+**Show Fedora release info:**
+```bash
+cat /etc/os-release
+```
+
+**Show active kernel version:**
+```bash
+uname -r
+```
+
+**Rebuild initramfs image:**
+```bash
+sudo dracut -f
+```
+
+**Update GRUB configuration:**
+```bash
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+```
+
+**Check disk usage:**
+```bash
+df -h
+```
+
+**Check directory space utilization:**
+```bash
+du -sh <path>
+```
+
+**Hardware summary:**
+```bash
+`lscpu` / `lspci` / `lsusb`
+```
 
 ---
 

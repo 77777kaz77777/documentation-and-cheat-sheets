@@ -4,24 +4,51 @@
 
 ## Discovery and Refresh
 
-| Command                | Description                                                                          |
-| :--------------------- | :----------------------------------------------------------------------------------- |
-| `fwupdmgr get-devices` | List all detected hardware devices capable of firmware updates.                      |
-| `fwupdmgr refresh`     | Download the latest firmware metadata from the Linux Vendor Firmware Service (LVFS). |
-| `fwupdmgr get-updates` | Check if any updates are available for your specific hardware.                       |
+**List all detected hardware devices capable of firmware updates:**
+```bash
+fwupdmgr get-devices
+```
+
+**Download the latest firmware metadata from the Linux Vendor Firmware Service (LVFS):**
+```bash
+fwupdmgr refresh
+```
+
+**Check if any updates are available for your specific hardware:**
+```bash
+fwupdmgr get-updates
+```
 
 ## Installation and Management
 
-| Command                | Description                                                                     |
-| :--------------------- | :------------------------------------------------------------------------------ |
-| `fwupdmgr update`      | Apply all available firmware updates. (May require a reboot).                   |
-| `fwupdmgr downgrade`   | Downgrade a specific device to an earlier firmware version (if supported).      |
-| `fwupdmgr reinstall`   | Reinstall the current firmware version (useful for troubleshooting corruption). |
-| `fwupdmgr get-history` | View the history of all firmware updates applied to the system.                 |
+**Apply all available firmware updates. (May require a reboot):**
+```bash
+fwupdmgr update
+```
+
+**Downgrade a specific device to an earlier firmware version (if supported):**
+```bash
+fwupdmgr downgrade
+```
+
+**Reinstall the current firmware version (useful for troubleshooting corruption):**
+```bash
+fwupdmgr reinstall
+```
+
+**View the history of all firmware updates applied to the system:**
+```bash
+fwupdmgr get-history
+```
 
 ## Security and Diagnostics
 
-| Command             | Description                                                                                    |
-| :------------------ | :--------------------------------------------------------------------------------------------- |
-| `fwupdmgr security` | Run an analysis of system security attributes (e.g., Secure Boot, TPM state, Intel BootGuard). |
-| `fwupdmgr verify`   | Cryptographically verify that installed firmware matches the signatures on LVFS.               |
+**Run an analysis of system security attributes (e.g., Secure Boot, TPM state, Intel BootGuard):**
+```bash
+fwupdmgr security
+```
+
+**Cryptographically verify that installed firmware matches the signatures on LVFS:**
+```bash
+fwupdmgr verify
+```

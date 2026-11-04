@@ -2,32 +2,102 @@
 
 ## Docker CLI Essentials
 
-| Action                      | Command                                      |
-| :-------------------------- | :------------------------------------------- |
-| **Run a Container**         | `docker run -d --name [name] [image]`        |
-| **List Running Containers** | `docker ps`                                  |
-| **List All Containers**     | `docker ps -a`                               |
-| **Stop a Container**        | `docker stop [container_id/name]`            |
-| **Start a Container**       | `docker start [container_id/name]`           |
-| **Remove a Container**      | `docker rm -f [container_id/name]`           |
-| **List Local Images**       | `docker images`                              |
-| **Remove an Image**         | `docker rmi [image_id]`                      |
-| **View Logs**               | `docker logs -f [container_name]`            |
-| **Enter Container Shell**   | `docker exec -it [container_name] /bin/bash` |
-| **Prune (Clean) System**    | `docker system prune -a`                     |
+**Run a Container:**
+```bash
+docker run -d --name [name] [image]
+```
+
+**List Running Containers:**
+```bash
+docker ps
+```
+
+**List All Containers:**
+```bash
+docker ps -a
+```
+
+**Stop a Container:**
+```bash
+docker stop [container_id/name]
+```
+
+**Start a Container:**
+```bash
+docker start [container_id/name]
+```
+
+**Remove a Container:**
+```bash
+docker rm -f [container_id/name]
+```
+
+**List Local Images:**
+```bash
+docker images
+```
+
+**Remove an Image:**
+```bash
+docker rmi [image_id]
+```
+
+**View Logs:**
+```bash
+docker logs -f [container_name]
+```
+
+**Enter Container Shell:**
+```bash
+docker exec -it [container_name] /bin/bash
+```
+
+**Prune (Clean) System:**
+```bash
+docker system prune -a
+```
 
 ## Docker Compose Commands
 
-| Action                          | Command                  |
-| :------------------------------ | :----------------------- |
-| **Start Services (Background)** | `docker-compose up -d`   |
-| **Stop & Remove Services**      | `docker-compose down`    |
-| **Stop Services (Keep Data)**   | `docker-compose stop`    |
-| **Build/Rebuild Services**      | `docker-compose build`   |
-| **View Composite Logs**         | `docker-compose logs -f` |
-| **Check Service Status**        | `docker-compose ps`      |
-| **Restart Services**            | `docker-compose restart` |
-| **Pull New Images**             | `docker-compose pull`    |
+**Start Services (Background):**
+```bash
+docker-compose up -d
+```
+
+**Stop & Remove Services:**
+```bash
+docker-compose down
+```
+
+**Stop Services (Keep Data):**
+```bash
+docker-compose stop
+```
+
+**Build/Rebuild Services:**
+```bash
+docker-compose build
+```
+
+**View Composite Logs:**
+```bash
+docker-compose logs -f
+```
+
+**Check Service Status:**
+```bash
+docker-compose ps
+```
+
+**Restart Services:**
+```bash
+docker-compose restart
+```
+
+**Pull New Images:**
+```bash
+docker-compose pull
+```
 
 ## Helpful Shortcuts & Tips
 

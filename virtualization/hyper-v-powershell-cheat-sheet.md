@@ -6,55 +6,148 @@ _Note: Ensure you run these in a PowerShell window with **Administrator** privil
 
 ## Hyper-V VM Management
 
-| Action                    | PowerShell Command                         |
-| :------------------------ | :----------------------------------------- |
-| **List All VMs**          | `Get-VM`                                   |
-| **Start a VM**            | `Start-VM -Name "[VMName]"`                |
-| **Stop a VM (Shut down)** | `Stop-VM -Name "[VMName]"`                 |
-| **Turn Off (Hard Reset)** | `Stop-VM -Name "[VMName]" -TurnOff`        |
-| **Restart a VM**          | `Restart-VM -Name "[VMName]"`              |
-| **Suspend (Pause) VM**    | `Suspend-VM -Name "[VMName]"`              |
-| **Resume VM**             | `Resume-VM -Name "[VMName]"`               |
-| **Rename a VM**           | `Rename-VM -Name "[Old]" -NewName "[New]"` |
-| **Remove/Delete VM**      | `Remove-VM -Name "[VMName]"`               |
+**List All VMs:**
+```powershell
+Get-VM
+```
+
+**Start a VM:**
+```powershell
+Start-VM -Name "[VMName]"
+```
+
+**Stop a VM (Shut down):**
+```powershell
+Stop-VM -Name "[VMName]"
+```
+
+**Turn Off (Hard Reset):**
+```powershell
+Stop-VM -Name "[VMName]" -TurnOff
+```
+
+**Restart a VM:**
+```powershell
+Restart-VM -Name "[VMName]"
+```
+
+**Suspend (Pause) VM:**
+```powershell
+Suspend-VM -Name "[VMName]"
+```
+
+**Resume VM:**
+```powershell
+Resume-VM -Name "[VMName]"
+```
+
+**Rename a VM:**
+```powershell
+Rename-VM -Name "[Old]" -NewName "[New]"
+```
+
+**Remove/Delete VM:**
+```powershell
+Remove-VM -Name "[VMName]"
+```
 
 ## Configuration & Hardware
 
-| Action                    | PowerShell Command                                       |
-| :------------------------ | :------------------------------------------------------- |
-| **Show VM Settings**      | `Get-VM -Name "[VMName]"`                                |
-| **Set Memory (Static)**   | `Set-VMMemory -VMName "[VMName]" -StartupBytes 4GB`      |
-| **Set CPU Count**         | `Set-VMProcessor "[VMName]" -Count 4`                    |
-| **Enable Dynamic Mem**    | `Set-VMMemory "[VMName]" -DynamicMemoryEnabled $true`    |
-| **List Network Adapters** | `Get-VMNetworkAdapter -VMName "[VMName]"`                |
-| **Connect ISO/DVD**       | `Set-VMDvdDrive -VMName "[VMName]" -Path "C:\image.iso"` |
+**Show VM Settings:**
+```powershell
+Get-VM -Name "[VMName]"
+```
+
+**Set Memory (Static):**
+```powershell
+Set-VMMemory -VMName "[VMName]" -StartupBytes 4GB
+```
+
+**Set CPU Count:**
+```powershell
+Set-VMProcessor "[VMName]" -Count 4
+```
+
+**Enable Dynamic Mem:**
+```powershell
+Set-VMMemory "[VMName]" -DynamicMemoryEnabled $true
+```
+
+**List Network Adapters:**
+```powershell
+Get-VMNetworkAdapter -VMName "[VMName]"
+```
+
+**Connect ISO/DVD:**
+```powershell
+Set-VMDvdDrive -VMName "[VMName]" -Path "C:\image.iso"
+```
 
 ## Snapshots (Checkpoints)
 
-| Action                | PowerShell Command                                       |
-| :-------------------- | :------------------------------------------------------- |
-| **Create Checkpoint** | `Checkpoint-VM -Name "[VMName]" -SnapshotName "[Label]"` |
-| **List Checkpoints**  | `Get-VMSnapshot -VMName "[VMName]"`                      |
-| **Apply Checkpoint**  | `Restore-VMSnapshot -Name "[Label]" -VMName "[VMName]"`  |
-| **Delete Checkpoint** | `Remove-VMSnapshot -Name "[Label]" -VMName "[VMName]"`   |
+**Create Checkpoint:**
+```powershell
+Checkpoint-VM -Name "[VMName]" -SnapshotName "[Label]"
+```
+
+**List Checkpoints:**
+```powershell
+Get-VMSnapshot -VMName "[VMName]"
+```
+
+**Apply Checkpoint:**
+```powershell
+Restore-VMSnapshot -Name "[Label]" -VMName "[VMName]"
+```
+
+**Delete Checkpoint:**
+```powershell
+Remove-VMSnapshot -Name "[Label]" -VMName "[VMName]"
+```
 
 ## Virtual Networking (V-Switches)
 
-| Action                     | PowerShell Command                                                                   |
-| :------------------------- | :----------------------------------------------------------------------------------- |
-| **List All Switches**      | `Get-VMSwitch`                                                                       |
-| **Create External Switch** | `New-VMSwitch -Name "ExtSwitch" -NetAdapterName "Ethernet" -AllowManagementOS $true` |
-| **Create Private Switch**  | `New-VMSwitch -Name "PrivateNet" -SwitchType Private`                                |
-| **Connect VM to Switch**   | `Connect-VMNetworkAdapter -VMName "[VMName]" -SwitchName "[SwitchName]"`             |
+**List All Switches:**
+```powershell
+Get-VMSwitch
+```
+
+**Create External Switch:**
+```powershell
+New-VMSwitch -Name "ExtSwitch" -NetAdapterName "Ethernet" -AllowManagementOS $true
+```
+
+**Create Private Switch:**
+```powershell
+New-VMSwitch -Name "PrivateNet" -SwitchType Private
+```
+
+**Connect VM to Switch:**
+```powershell
+Connect-VMNetworkAdapter -VMName "[VMName]" -SwitchName "[SwitchName]"
+```
 
 ## Virtual Disks (VHD/VHDX)
 
-| Action                | PowerShell Command                                          |
-| :-------------------- | :---------------------------------------------------------- |
-| **Create New Disk**   | `New-VHD -Path "C:\VMs\disk.vhdx" -SizeBytes 50GB -Dynamic` |
-| **Mount VHD to Host** | `Mount-VHD -Path "C:\VMs\disk.vhdx"`                        |
-| **Expand Disk Size**  | `Resize-VHD -Path "C:\VMs\disk.vhdx" -SizeBytes 100GB`      |
-| **Get Disk Info**     | `Get-VHD -Path "C:\VMs\disk.vhdx"`                          |
+**Create New Disk:**
+```powershell
+New-VHD -Path "C:\VMs\disk.vhdx" -SizeBytes 50GB -Dynamic
+```
+
+**Mount VHD to Host:**
+```powershell
+Mount-VHD -Path "C:\VMs\disk.vhdx"
+```
+
+**Expand Disk Size:**
+```powershell
+Resize-VHD -Path "C:\VMs\disk.vhdx" -SizeBytes 100GB
+```
+
+**Get Disk Info:**
+```powershell
+Get-VHD -Path "C:\VMs\disk.vhdx"
+```
 
 ## Quick Diagnostics
 

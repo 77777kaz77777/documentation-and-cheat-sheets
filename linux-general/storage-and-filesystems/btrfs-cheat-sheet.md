@@ -54,16 +54,45 @@ sudo mkfs.btrfs -d raid1 -m raid1 -L "MyRaid" /dev/sdb /dev/sdc
 
 ### Recommended Mount Options
 
-| Option                  | Description                                                                    |
-| :---------------------- | :----------------------------------------------------------------------------- |
-| `compress=zstd:N`       | Enables ZSTD transparent compression at level `N` (1 to 15, default is 3).     |
-| `compress-force=zstd:N` | Forces compression on all files, bypassing initial compressibility heuristics. |
-| `noatime`               | Disables access-time updates on files, reducing unnecessary CoW write cycles.  |
-| `discard=async`         | Enables asynchronous TRIM for SSDs/NVMe drives without blocking I/O.           |
-| `autodefrag`            | Automatically detects random small writes and queues them for defragmentation. |
-| `space_cache=v2`        | Uses free space tree (v2 cache) for fast free space tracking on large drives.  |
-| `commit=N`              | Sets data flush interval to disk in seconds (default is `30`).                 |
-| `nodatacow`             | Disables Copy-on-Write for all new files on the mounted subvolume/filesystem.  |
+**Enables ZSTD transparent compression at level `N` (1 to 15, default is 3):**
+```bash
+compress=zstd:N
+```
+
+**Forces compression on all files, bypassing initial compressibility heuristics:**
+```bash
+compress-force=zstd:N
+```
+
+**Disables access-time updates on files, reducing unnecessary CoW write cycles:**
+```bash
+noatime
+```
+
+**Enables asynchronous TRIM for SSDs/NVMe drives without blocking I/O:**
+```bash
+discard=async
+```
+
+**Automatically detects random small writes and queues them for defragmentation:**
+```bash
+autodefrag
+```
+
+**Uses free space tree (v2 cache) for fast free space tracking on large drives:**
+```bash
+space_cache=v2
+```
+
+**Sets data flush interval to disk in seconds (default is `30`):**
+```bash
+commit=N
+```
+
+**Disables Copy-on-Write for all new files on the mounted subvolume/filesystem:**
+```bash
+nodatacow
+```
 
 ### Mount Commands
 

@@ -11,26 +11,64 @@ Fedora and other RHEL-based distributions use **firewalld** as the default dynam
 
 Manage the underlying `firewalld` system service and check overall status.
 
-| Command                                 | Description                                                                    |
-| :-------------------------------------- | :----------------------------------------------------------------------------- |
-| `sudo systemctl status firewalld`       | Check if the firewalld systemd service is running.                             |
-| `sudo systemctl enable --now firewalld` | Start firewalld and enable it to launch on boot.                               |
-| `sudo firewall-cmd --state`             | Quick check to see if the firewall is actively running.                        |
-| `sudo firewall-cmd --reload`            | Reload permanent rules into runtime (does not drop connections).               |
-| `sudo firewall-cmd --complete-reload`   | Reload rules and _drop_ all active connections (use if state matching breaks). |
+**Check if the firewalld systemd service is running:**
+```bash
+sudo systemctl status firewalld
+```
+
+**Start firewalld and enable it to launch on boot:**
+```bash
+sudo systemctl enable --now firewalld
+```
+
+**Quick check to see if the firewall is actively running:**
+```bash
+sudo firewall-cmd --state
+```
+
+**Reload permanent rules into runtime (does not drop connections):**
+```bash
+sudo firewall-cmd --reload
+```
+
+**Reload rules and _drop_ all active connections (use if state matching breaks):**
+```bash
+sudo firewall-cmd --complete-reload
+```
 
 ## 2. Managing Zones
 
 Zones dictate the default behavior for incoming traffic on the interfaces or sources assigned to them.
 
-| Command                                       | Description                                                     |
-| :-------------------------------------------- | :-------------------------------------------------------------- |
-| `sudo firewall-cmd --get-default-zone`        | View the current default zone.                                  |
-| `sudo firewall-cmd --set-default-zone=public` | Set the default zone for all unassigned interfaces.             |
-| `sudo firewall-cmd --get-active-zones`        | List currently active zones and their bound interfaces/sources. |
-| `sudo firewall-cmd --get-zones`               | List all available zones on the system.                         |
-| `sudo firewall-cmd --list-all`                | List all settings for the default zone.                         |
-| `sudo firewall-cmd --zone=home --list-all`    | List all settings for a specific zone (e.g., `home`).           |
+**View the current default zone:**
+```bash
+sudo firewall-cmd --get-default-zone
+```
+
+**Set the default zone for all unassigned interfaces:**
+```bash
+sudo firewall-cmd --set-default-zone=public
+```
+
+**List currently active zones and their bound interfaces/sources:**
+```bash
+sudo firewall-cmd --get-active-zones
+```
+
+**List all available zones on the system:**
+```bash
+sudo firewall-cmd --get-zones
+```
+
+**List all settings for the default zone:**
+```bash
+sudo firewall-cmd --list-all
+```
+
+**List all settings for a specific zone (e.g., `home`):**
+```bash
+sudo firewall-cmd --zone=home --list-all
+```
 
 ### Interface Management
 
@@ -127,8 +165,17 @@ sudo firewall-cmd --permanent --zone=public --add-forward-port=port=80:proto=tcp
 
 If you are under attack or need to immediately sever all network communications, use Panic Mode. _Warning: This will drop SSH connections!_
 
-| Command                           | Description                                         |
-| :-------------------------------- | :-------------------------------------------------- |
-| `sudo firewall-cmd --panic-on`    | Drop all incoming and outgoing packets immediately. |
-| `sudo firewall-cmd --panic-off`   | Disable panic mode and restore normal routing.      |
-| `sudo firewall-cmd --query-panic` | Check if panic mode is currently active.            |
+**Drop all incoming and outgoing packets immediately:**
+```bash
+sudo firewall-cmd --panic-on
+```
+
+**Disable panic mode and restore normal routing:**
+```bash
+sudo firewall-cmd --panic-off
+```
+
+**Check if panic mode is currently active:**
+```bash
+sudo firewall-cmd --query-panic
+```

@@ -49,12 +49,25 @@ systemctl --user restart wireplumber
 
 LibrePods includes `librepods-ctl` to control the AirPods directly from the terminal or in scripts while the main application is running.
 
-| Command                            | Description                      |
-| ---------------------------------- | -------------------------------- |
-| `librepods-ctl noise:off`          | Disable noise control            |
-| `librepods-ctl noise:anc`          | Enable Active Noise Cancellation |
-| `librepods-ctl noise:transparency` | Enable Transparency mode         |
-| `librepods-ctl noise:adaptive`     | Enable Adaptive mode             |
+**Disable noise control:**
+```bash
+librepods-ctl noise:off
+```
+
+**Enable Active Noise Cancellation:**
+```bash
+librepods-ctl noise:anc
+```
+
+**Enable Transparency mode:**
+```bash
+librepods-ctl noise:transparency
+```
+
+**Enable Adaptive mode:**
+```bash
+librepods-ctl noise:adaptive
+```
 
 ## 5. Automated Setup Script
 

@@ -324,13 +324,42 @@ sudo systemctl \
 
 ## 8. Diagnostic Command Reference Matrix
 
-| Diagnostic Stage     | Command                                            | Success Indicator                                  |
-| -------------------- | -------------------------------------------------- | -------------------------------------------------- |
-| **PCI Hardware**     | `lspci -nnk \| grep -A 3 -i network`               | Driver module listed under `Kernel driver in use`  |
-| **Kernel Log**       | `sudo dmesg \| grep -iE 'mt79\|iwl\|ath\|rtw'`     | `firmware: direct-loading...` with no failure code |
-| **RF Block State**   | `rfkill list all`                                  | `Soft blocked: no`, `Hard blocked: no`             |
-| **Scanning**         | `nmcli device wifi list`                           | Target SSIDs listed with signal percentages        |
-| **Connection**       | `nmcli device wifi connect "SSID" password "PASS"` | `Device 'wlan0' successfully activated`            |
-| **Routing**          | `ip route show`                                    | `default via <gateway_ip> dev <interface>` present |
-| **DNS Resolution**   | `resolvectl status`                                | Valid DNS servers listed under interface           |
-| **Power Management** | `iw dev <interface> get power_save`                | `Power save: off`                                  |
+**`PCI Hardware` — `lspci -nnk \:**
+```bash
+grep -A 3 -i network`
+```
+
+**`Kernel Log` — `sudo dmesg \:**
+```bash
+grep -iE 'mt79\
+```
+
+**`RF Block State` — rfkill list all:**
+```bash
+`Soft blocked: no`, `Hard blocked: no`
+```
+
+**`Scanning` — nmcli device wifi list:**
+```bash
+Target SSIDs listed with signal percentages
+```
+
+**`Connection` — nmcli device wifi connect "SSID" password "PASS":**
+```bash
+Device 'wlan0' successfully activated
+```
+
+**`Routing` — ip route show:**
+```bash
+`default via <gateway_ip> dev <interface>` present
+```
+
+**`DNS Resolution` — resolvectl status:**
+```bash
+Valid DNS servers listed under interface
+```
+
+**`Power Management` — iw dev <interface> get power_save:**
+```bash
+Power save: off
+```

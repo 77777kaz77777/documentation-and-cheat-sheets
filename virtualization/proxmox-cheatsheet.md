@@ -3,64 +3,172 @@
 this Proxmox VE (Virtual Environment) cheatsheet is divided into the two main command sets: qm for Virtual Machines (QEMU/KVM) and pct for Containers (LXC).
 These commands manage full virtual machines. Replace [vmid] with the numerical ID of your VM (e.g., 100).
 
-|                         |                                         |
-| :---------------------- | :-------------------------------------- |
-| Action                  | Command                                 |
-| **List All VMs**        | qm list                                 |
-| **Start VM**            | qm start [vmid]                         |
-| **Stop VM (Graceful)**  | qm shutdown [vmid]                      |
-| **Stop VM (Immediate)** | qm stop [vmid]                          |
-| **Reset VM**            | qm reset [vmid]                         |
-| **Clone VM**            | qm clone [vmid] [newid] --name [name]   |
-| **Remove VM**           | qm destroy [vmid]                       |
-| **Unlock VM**           | qm unlock [vmid] (Used if a task hangs) |
-| **Show Config**         | qm config [vmid]                        |
-| **Terminal Proxy**      | qm terminal [vmid]                      |
+**List All VMs:**
+```bash
+qm list
+```
+
+**Start VM:**
+```bash
+qm start [vmid]
+```
+
+**Stop VM (Graceful):**
+```bash
+qm shutdown [vmid]
+```
+
+**Stop VM (Immediate):**
+```bash
+qm stop [vmid]
+```
+
+**Reset VM:**
+```bash
+qm reset [vmid]
+```
+
+**Clone VM:**
+```bash
+qm clone [vmid] [newid] --name [name]
+```
+
+**Remove VM:**
+```bash
+qm destroy [vmid]
+```
+
+**Unlock VM:**
+```bash
+qm unlock [vmid] (Used if a task hangs)
+```
+
+**Show Config:**
+```bash
+qm config [vmid]
+```
+
+**Terminal Proxy:**
+```bash
+qm terminal [vmid]
+```
 
 ## **Proxmox Container Commands (pct)**
 
 These are specific to the LXC containers running on your Proxmox host.
 
-|                         |                                            |
-| :---------------------- | :----------------------------------------- |
-| Action                  | Command                                    |
-| **List All Containers** | pct list                                   |
-| **Start Container**     | pct start [vmid]                           |
-| **Stop Container**      | pct stop [vmid]                            |
-| **Enter Shell**         | pct enter [vmid]                           |
-| **Execute Command**     | pct exec [vmid] -- [command]               |
-| **Show Config**         | pct config [vmid]                          |
-| **Clone Container**     | pct clone [vmid] [newid] --hostname [name] |
-| **Mount CT Disk**       | pct mount [vmid]                           |
-| **Unmount CT Disk**     | pct unmount [vmid]                         |
+**List All Containers:**
+```bash
+pct list
+```
+
+**Start Container:**
+```bash
+pct start [vmid]
+```
+
+**Stop Container:**
+```bash
+pct stop [vmid]
+```
+
+**Enter Shell:**
+```bash
+pct enter [vmid]
+```
+
+**Execute Command:**
+```bash
+pct exec [vmid] -- [command]
+```
+
+**Show Config:**
+```bash
+pct config [vmid]
+```
+
+**Clone Container:**
+```bash
+pct clone [vmid] [newid] --hostname [name]
+```
+
+**Mount CT Disk:**
+```bash
+pct mount [vmid]
+```
+
+**Unmount CT Disk:**
+```bash
+pct unmount [vmid]
+```
 
 ## **Storage & Backup (vzdump/pvesm)**
 
 Proxmox uses vzdump for backups and pvesm for storage management.
 
-|                          |                                                       |
-| :----------------------- | :---------------------------------------------------- |
-| Action                   | Command                                               |
-| **Backup VM/CT**         | vzdump [vmid] --storage [storage_name] --compress lzo |
-| **Restore VM**           | qmrestore [backup_file] [vmid]                        |
-| **Restore Container**    | pct restore [vmid] [backup_file]                      |
-| **List Storage Pools**   | pvesm status                                          |
-| **List Content in Pool** | pvesm list [storage_name]                             |
-| **Free Up Space**        | pvesm free [storage_name]:[volume]                    |
+**Backup VM/CT:**
+```bash
+vzdump [vmid] --storage [storage_name] --compress lzo
+```
+
+**Restore VM:**
+```bash
+qmrestore [backup_file] [vmid]
+```
+
+**Restore Container:**
+```bash
+pct restore [vmid] [backup_file]
+```
+
+**List Storage Pools:**
+```bash
+pvesm status
+```
+
+**List Content in Pool:**
+```bash
+pvesm list [storage_name]
+```
+
+**Free Up Space:**
+```bash
+pvesm free [storage_name]:[volume]
+```
 
 ## **Cluster & System Management**
 
 Use these for node-level operations and health checks.
 
-|                       |                              |
-| :-------------------- | :--------------------------- |
-| Action                | Command                      |
-| **Cluster Status**    | pvecm status                 |
-| **Check Services**    | systemctl status pve-cluster |
-| **Update Node Repos** | apt update                   |
-| **Update Proxmox**    | apt dist-upgrade             |
-| **View Task Logs**    | cat /var/log/pve/tasks/index |
-| **Restart Web GUI**   | systemctl restart pveproxy   |
+**Cluster Status:**
+```bash
+pvecm status
+```
+
+**Check Services:**
+```bash
+systemctl status pve-cluster
+```
+
+**Update Node Repos:**
+```bash
+apt update
+```
+
+**Update Proxmox:**
+```bash
+apt dist-upgrade
+```
+
+**View Task Logs:**
+```bash
+cat /var/log/pve/tasks/index
+```
+
+**Restart Web GUI:**
+```bash
+systemctl restart pveproxy
+```
 
 ## **Common Troubleshooting**
 

@@ -4,12 +4,25 @@ Security-Enhanced Linux (SELinux) is a mandatory access control (MAC) security m
 
 ## 1. State & Mode Management
 
-| Action                                | Command                                                       |
-| :------------------------------------ | :------------------------------------------------------------ |
-| **Check Full SELinux Status**         | `sestatus`                                                    |
-| **Check Current Mode**                | `getenforce`                                                  |
-| **Set Mode Temporarily (Enforcing)**  | `sudo setenforce 1` (Blocks policy violations)                |
-| **Set Mode Temporarily (Permissive)** | `sudo setenforce 0` (Logs violations but does not block them) |
+**Check Full SELinux Status:**
+```bash
+sestatus
+```
+
+**Check Current Mode:**
+```bash
+getenforce
+```
+
+**Set Mode Temporarily (Enforcing):**
+```bash
+`sudo setenforce 1` (Blocks policy violations)
+```
+
+**Set Mode Temporarily (Permissive):**
+```bash
+`sudo setenforce 0` (Logs violations but does not block them)
+```
 
 > **Permanent Mode Configuration:**
 > To permanently change the SELinux mode across reboots, you must edit `/etc/selinux/config` and change the `SELINUX=` directive to `enforcing`, `permissive`, or `disabled`. (Note: Disabling SELinux entirely is highly discouraged).
@@ -18,12 +31,25 @@ Security-Enhanced Linux (SELinux) is a mandatory access control (MAC) security m
 
 SELinux contexts are typically displayed in the format: `user:role:type:level`. The **type** (e.g., `httpd_sys_content_t`) is the most important part for standard administration.
 
-| Target                           | Command                 |
-| :------------------------------- | :---------------------- |
-| **View File/Directory Contexts** | `ls -lZ /path/to/dir`   |
-| **View Process Contexts**        | `ps -Z` or `ps -eZ`     |
-| **View Current User Context**    | `id -Z`                 |
-| **View Port Contexts**           | `sudo semanage port -l` |
+**View File/Directory Contexts:**
+```bash
+ls -lZ /path/to/dir
+```
+
+**View Process Contexts:**
+```bash
+`ps -Z` or `ps -eZ`
+```
+
+**View Current User Context:**
+```bash
+id -Z
+```
+
+**View Port Contexts:**
+```bash
+sudo semanage port -l
+```
 
 ## 3. Modifying File Contexts
 
@@ -52,12 +78,25 @@ sudo restorecon -Rv /mnt/storage/vms
 
 Booleans are on/off switches that allow you to modify SELinux policy behavior on the fly without having to write custom policy modules.
 
-| Action                                | Command                                          |
-| :------------------------------------ | :----------------------------------------------- |
-| **List All Booleans & Current State** | `getsebool -a`                                   |
-| **List Booleans with Descriptions**   | `sudo semanage boolean -l`                       |
-| **Change a Boolean Temporarily**      | `sudo setsebool httpd_can_network_connect on`    |
-| **Change a Boolean Permanently (-P)** | `sudo setsebool -P httpd_can_network_connect on` |
+**List All Booleans & Current State:**
+```bash
+getsebool -a
+```
+
+**List Booleans with Descriptions:**
+```bash
+sudo semanage boolean -l
+```
+
+**Change a Boolean Temporarily:**
+```bash
+sudo setsebool httpd_can_network_connect on
+```
+
+**Change a Boolean Permanently (-P):**
+```bash
+sudo setsebool -P httpd_can_network_connect on
+```
 
 ## 5. Troubleshooting & Audit Logs
 

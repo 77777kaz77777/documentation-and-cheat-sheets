@@ -6,33 +6,84 @@
 
 ## General Information
 
-| Command                 | Description                 |
-| :---------------------- | :-------------------------- |
-| `nmcli help`            | Show help for nmcli         |
-| `nmcli general status`  | Show overall network status |
-| `nmcli general logging` | Get/Set logging level       |
+**Show help for nmcli:**
+```bash
+nmcli help
+```
+
+**Show overall network status:**
+```bash
+nmcli general status
+```
+
+**Get/Set logging level:**
+```bash
+nmcli general logging
+```
 
 ## Device Management
 
-| Command                            | Description                            |
-| :--------------------------------- | :------------------------------------- |
-| `nmcli device`                     | List all network devices               |
-| `nmcli device status`              | Show status of all devices             |
-| `nmcli device show [device]`       | Show detailed information for a device |
-| `nmcli device connect [device]`    | Connect a device                       |
-| `nmcli device disconnect [device]` | Disconnect a device                    |
+**List all network devices:**
+```bash
+nmcli device
+```
+
+**Show status of all devices:**
+```bash
+nmcli device status
+```
+
+**Show detailed information for a device:**
+```bash
+nmcli device show [device]
+```
+
+**Connect a device:**
+```bash
+nmcli device connect [device]
+```
+
+**Disconnect a device:**
+```bash
+nmcli device disconnect [device]
+```
 
 ## Connection Management
 
-| Command                                          | Description                  |
-| :----------------------------------------------- | :--------------------------- |
-| `nmcli connection show`                          | List all connections         |
-| `nmcli connection show --active`                 | List only active connections |
-| `nmcli connection show [name]`                   | Show details of a connection |
-| `nmcli connection up [name]`                     | Activate a connection        |
-| `nmcli connection down [name]`                   | Deactivate a connection      |
-| `nmcli connection delete [name]`                 | Delete a connection profile  |
-| `nmcli connection modify [name] [param] [value]` | Modify a connection setting  |
+**List all connections:**
+```bash
+nmcli connection show
+```
+
+**List only active connections:**
+```bash
+nmcli connection show --active
+```
+
+**Show details of a connection:**
+```bash
+nmcli connection show [name]
+```
+
+**Activate a connection:**
+```bash
+nmcli connection up [name]
+```
+
+**Deactivate a connection:**
+```bash
+nmcli connection down [name]
+```
+
+**Delete a connection profile:**
+```bash
+nmcli connection delete [name]
+```
+
+**Modify a connection setting:**
+```bash
+nmcli connection modify [name] [param] [value]
+```
 
 ## Practical Examples
 

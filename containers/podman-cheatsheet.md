@@ -4,58 +4,167 @@ Podman is a daemonless, rootless container engine designed to manage containers,
 
 ### **Container Management**
 
-| Action                                      | Command                                                  |
-| :------------------------------------------ | :------------------------------------------------------- |
-| **List Running Containers**                 | `podman ps`                                              |
-| **List All Containers (Running & Stopped)** | `podman ps -a`                                           |
-| **Run a Container**                         | `podman run -dt --name [name] [image]`                   |
-| **Run Interactively with Port Forwarding**  | `podman run -it -p [host_port]:[container_port] [image]` |
-| **Start a Stopped Container**               | `podman start [name]`                                    |
-| **Stop a Container Gracefully**             | `podman stop [name]`                                     |
-| **Restart a Container**                     | `podman restart [name]`                                  |
-| **Remove a Container**                      | `podman rm [name]`                                       |
-| **Force Remove a Running Container**        | `podman rm -f [name]`                                    |
+**List Running Containers:**
+```bash
+podman ps
+```
+
+**List All Containers (Running & Stopped):**
+```bash
+podman ps -a
+```
+
+**Run a Container:**
+```bash
+podman run -dt --name [name] [image]
+```
+
+**Run Interactively with Port Forwarding:**
+```bash
+podman run -it -p [host_port]:[container_port] [image]
+```
+
+**Start a Stopped Container:**
+```bash
+podman start [name]
+```
+
+**Stop a Container Gracefully:**
+```bash
+podman stop [name]
+```
+
+**Restart a Container:**
+```bash
+podman restart [name]
+```
+
+**Remove a Container:**
+```bash
+podman rm [name]
+```
+
+**Force Remove a Running Container:**
+```bash
+podman rm -f [name]
+```
 
 ### **Execution & Inspection**
 
-| Action                                  | Command                            |
-| :-------------------------------------- | :--------------------------------- |
-| **Open Shell Inside Container**         | `podman exec -it [name] /bin/bash` |
-| **Run Single Command Inside Container** | `podman exec [name] [command]`     |
-| **View Container Logs**                 | `podman logs [name]`               |
-| **Stream Container Logs Live**          | `podman logs -f [name]`            |
-| **Inspect Container Details**           | `podman inspect [name]`            |
-| **View Resource Usage (Stats)**         | `podman stats`                     |
+**Open Shell Inside Container:**
+```bash
+podman exec -it [name] /bin/bash
+```
+
+**Run Single Command Inside Container:**
+```bash
+podman exec [name] [command]
+```
+
+**View Container Logs:**
+```bash
+podman logs [name]
+```
+
+**Stream Container Logs Live:**
+```bash
+podman logs -f [name]
+```
+
+**Inspect Container Details:**
+```bash
+podman inspect [name]
+```
+
+**View Resource Usage (Stats):**
+```bash
+podman stats
+```
 
 ### **Image Management**
 
-| Action                                        | Command                              |
-| :-------------------------------------------- | :----------------------------------- |
-| **List Local Images**                         | `podman images`                      |
-| **Pull Image from Registry**                  | `podman pull [image_name]`           |
-| **Build Image from Containerfile/Dockerfile** | `podman build -t [tag_name] .`       |
-| **Remove a Local Image**                      | `podman rmi [image_id]`              |
-| **Tag an Image**                              | `podman tag [image] [new_image:tag]` |
+**List Local Images:**
+```bash
+podman images
+```
+
+**Pull Image from Registry:**
+```bash
+podman pull [image_name]
+```
+
+**Build Image from Containerfile/Dockerfile:**
+```bash
+podman build -t [tag_name] .
+```
+
+**Remove a Local Image:**
+```bash
+podman rmi [image_id]
+```
+
+**Tag an Image:**
+```bash
+podman tag [image] [new_image:tag]
+```
 
 ### **Pods & Networking**
 
 _Unlike Docker, Podman allows you to group containers into "Pods" (similar to Kubernetes pods)._
 
-| Action                         | Command                                                          |
-| :----------------------------- | :--------------------------------------------------------------- |
-| **List Pods**                  | `podman pod ls`                                                  |
-| **Create a New Pod**           | `podman pod create --name [pod_name] -p [port]:[port]`           |
-| **Run Container Inside a Pod** | `podman run -d --pod [pod_name] --name [container_name] [image]` |
-| **Stop a Pod**                 | `podman pod stop [pod_name]`                                     |
-| **Remove a Pod**               | `podman pod rm [pod_name]`                                       |
-| **List Networks**              | `podman network ls`                                              |
+**List Pods:**
+```bash
+podman pod ls
+```
+
+**Create a New Pod:**
+```bash
+podman pod create --name [pod_name] -p [port]:[port]
+```
+
+**Run Container Inside a Pod:**
+```bash
+podman run -d --pod [pod_name] --name [container_name] [image]
+```
+
+**Stop a Pod:**
+```bash
+podman pod stop [pod_name]
+```
+
+**Remove a Pod:**
+```bash
+podman pod rm [pod_name]
+```
+
+**List Networks:**
+```bash
+podman network ls
+```
 
 ### **Volumes & Storage**
 
-| Action                | Command                               |
-| :-------------------- | :------------------------------------ |
-| **List Volumes**      | `podman volume ls`                    |
-| **Create a Volume**   | `podman volume create [volume_name]`  |
-| **Inspect a Volume**  | `podman volume inspect [volume_name]` |
-| **Remove a Volume**   | `podman volume rm [volume_name]`      |
-| **Prune Unused Data** | `podman system prune`                 |
+**List Volumes:**
+```bash
+podman volume ls
+```
+
+**Create a Volume:**
+```bash
+podman volume create [volume_name]
+```
+
+**Inspect a Volume:**
+```bash
+podman volume inspect [volume_name]
+```
+
+**Remove a Volume:**
+```bash
+podman volume rm [volume_name]
+```
+
+**Prune Unused Data:**
+```bash
+podman system prune
+```

@@ -6,30 +6,74 @@
 
 In PowerShell, the Registry is treated like a file drive (HKLM: for HKEY_LOCAL_MACHINE and HKCU: for HKEY_CURRENT_USER).
 
-|                        |                                                       |
-| :--------------------- | :---------------------------------------------------- |
-| Action                 | PowerShell Command                                    |
-| **Go to Registry Key** | cd HKLM:\Software\Microsoft                           |
-| **List Values in Key** | Get-ItemProperty -Path .                              |
-| **Create New Key**     | New-Item -Path .\MyNewKey                             |
-| **Set/Change Value**   | Set-ItemProperty -Path . -Name "Version" -Value "1.1" |
-| **Get Specific Value** | Get-ItemProperty -Path . -Name "Version"              |
-| **Remove Key/Value**   | Remove-ItemProperty or Remove-Item                    |
+**Go to Registry Key:**
+```powershell
+cd HKLM:\Software\Microsoft
+```
+
+**List Values in Key:**
+```powershell
+Get-ItemProperty -Path .
+```
+
+**Create New Key:**
+```powershell
+New-Item -Path .\MyNewKey
+```
+
+**Set/Change Value:**
+```powershell
+Set-ItemProperty -Path . -Name "Version" -Value "1.1"
+```
+
+**Get Specific Value:**
+```powershell
+Get-ItemProperty -Path . -Name "Version"
+```
+
+**Remove Key/Value:**
+```powershell
+Remove-ItemProperty or Remove-Item
+```
 
 ### **Active Directory (AD) Management**
 
 _Note: These require the RSAT (Remote Server Administration Tools) to be installed on your machine._
 
-|                        |                                                     |
-| :--------------------- | :-------------------------------------------------- |
-| Action                 | PowerShell Command                                  |
-| **Get User Info**      | Get-ADUser -Identity [username] -Properties *       |
-| **Create New User**    | New-ADUser -Name "John Doe" -SamAccountName jdoe    |
-| **Unlock Account**     | Unlock-ADAccount -Identity [username]               |
-| **Reset Password**     | Set-ADAccountPassword -Identity [username]          |
-| **Add to Group**       | Add-ADGroupMember -Identity [Group] -Members [User] |
-| **List Group Members** | Get-ADGroupMember -Identity [GroupName]             |
-| **Find Computers**     | Get-ADComputer -Filter 'Name -like "_Desktop_"'     |
+**Get User Info:**
+```powershell
+Get-ADUser -Identity [username] -Properties *
+```
+
+**Create New User:**
+```powershell
+New-ADUser -Name "John Doe" -SamAccountName jdoe
+```
+
+**Unlock Account:**
+```powershell
+Unlock-ADAccount -Identity [username]
+```
+
+**Reset Password:**
+```powershell
+Set-ADAccountPassword -Identity [username]
+```
+
+**Add to Group:**
+```powershell
+Add-ADGroupMember -Identity [Group] -Members [User]
+```
+
+**List Group Members:**
+```powershell
+Get-ADGroupMember -Identity [GroupName]
+```
+
+**Find Computers:**
+```powershell
+Get-ADComputer -Filter 'Name -like "_Desktop_"'
+```
 
 ### **Windows Networking & Remote Management**
 

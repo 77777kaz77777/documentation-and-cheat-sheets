@@ -82,7 +82,6 @@ alias g='ssh -T git@github.com'
 alias s='sudo shutdown now'
 export PS1="\u@\h:\w\$ "
 
-
 ```
 
 - **`alias ll='ls -alF'`**: Executes the list command with three flags. The `-a` flag includes hidden files (those starting with a dot). The `-l` flag outputs a long-format list showing exact file permissions, owner, group, size in bytes, and modification timestamp. The `-F` flag appends an indicator to the end of filenames to show their type (e.g., `/` for directories, `*` for executables, `@` for symlinks).
