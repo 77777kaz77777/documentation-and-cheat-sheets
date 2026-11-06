@@ -62,9 +62,9 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="linux-general/arkenfox-configuration-guide.md"><code>arkenfox-configuration-guide.md</code></a> | Arkenfox Configuration and Updater Guide |
 | <a href="linux-general/bash-configuration-guide.md"><code>bash-configuration-guide.md</code></a> | Bash Configuration and Environment Automation Guide |
 | <a href="linux-general/cardwire-cheat-sheet.md"><code>cardwire-cheat-sheet.md</code></a> | Cardwire Cheat Sheet |
-| <a href="linux-general/comprehensive_git_command_line_reference_guide.md"><code>comprehensive_git_command_line_reference_guide.md</code></a> | Git Command-Line Reference Guide |
 | <a href="linux-general/enterprise-linux-ecosystem-and-commands-2026.md"><code>enterprise-linux-ecosystem-and-commands-2026.md</code></a> | A breakdown of the 2026 Enterprise Linux landscape plus core admin commands |
 | <a href="linux-general/git-dotfiles-maintenance-cheat-sheet.md"><code>git-dotfiles-maintenance-cheat-sheet.md</code></a> | Commands and scripts for backing up system configurations and dotfiles with Git |
+| <a href="linux-general/git_command_line_guide.md"><code>git_command_line_guide.md</code></a> | Git Command-Line Reference Guide |
 | <a href="linux-general/grubby-command-reference.md"><code>grubby-command-reference.md</code></a> | provides a quick-reference guide for using the grubby utility to view, switch, and modify Linux kernel boot parameters and default entries directly from the command line |
 | <a href="linux-general/guide-to-using-alien.md"><code>guide-to-using-alien.md</code></a> | The Comprehensive Guide to Using `alien` |
 | <a href="linux-general/iproute2-reference-guide.md"><code>iproute2-reference-guide.md</code></a> | This document provides a concise quick-reference guide for essential `iproute2` commands used in Linux network administration. It covers practical syntax for managing interfaces, IP addresses, routing tables, and socket statistics, serving as a modern replacement for legacy `net-tools` |
