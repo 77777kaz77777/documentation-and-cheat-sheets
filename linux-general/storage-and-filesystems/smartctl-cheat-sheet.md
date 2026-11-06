@@ -7,26 +7,31 @@
 ## 1. Installation
 
 **Debian / Ubuntu:**
+
 ```bash
 sudo apt install smartmontools
 ```
 
 **RHEL / CentOS / Fedora:**
+
 ```bash
 sudo dnf install smartmontools
 ```
 
 **Arch Linux:**
+
 ```bash
 sudo pacman -S smartmontools
 ```
 
 **Alpine Linux:**
+
 ```bash
 sudo apk add smartmontools
 ```
 
 ****macOS** (Homebrew):**
+
 ```bash
 brew install smartmontools
 ```
@@ -111,31 +116,37 @@ sudo smartctl -l selftest /dev/sda
 When reviewing `smartctl -A /dev/sda`, pay special attention to the `RAW_VALUE` of these attributes:
 
 **`5` — Reallocated_Sector_Ct:**
+
 ```bash
 **Critical.** Count of damaged sectors moved to spare area. Non-zero = drive degrading.
 ```
 
 **`187` — Reported_Uncorrect:**
+
 ```bash
 Uncorrectable read errors reported to OS. Non-zero = imminent failure risk.
 ```
 
 **`188` — Command_Timeout:**
+
 ```bash
 Aborted operations due to HDD timeout. Often power/cable issue or failing drive.
 ```
 
 **`197` — Current_Pending_Sector:**
+
 ```bash
 **Critical.** "Unstable" sectors waiting to be remapped on next write.
 ```
 
 **`198` — Offline_Uncorrectable:**
+
 ```bash
 Uncorrectable errors during background scan. Drive is failing.
 ```
 
 **`199` — UDMA_CRC_Error_Count:**
+
 ```bash
 Interface errors. Usually bad SATA cable/connection, not drive failure.
 ```

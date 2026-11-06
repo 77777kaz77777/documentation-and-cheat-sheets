@@ -3,21 +3,25 @@
 ## Hardware Monitoring Tools
 
 **Monitor GPU usage, VRAM consumption, and temperature, updating every 1 second:**
+
 ```bash
 watch -n 1 nvidia-smi
 ```
 
 **Built-in looping mode, updating every 2 seconds:**
+
 ```bash
 nvidia-smi -l 2
 ```
 
 **Stream minimal GPU metrics to the console in CSV format:**
+
 ```bash
 nvidia-smi --query-gpu=utilization.gpu,memory.used,temperature.gpu --format=csv -l 1
 ```
 
 **Interactive, `htop`-style visual monitor for NVIDIA GPUs (requires installation: `sudo dnf install nvtop`):**
+
 ```bash
 nvtop
 ```
@@ -25,16 +29,19 @@ nvtop
 ## Process Management
 
 **Identify PID and users of applications currently accessing the NVIDIA GPU:**
+
 ```bash
 fuser -v /dev/nvidia*
 ```
 
 **List detailed process information running on the GPU:**
+
 ```bash
 nvidia-smi -q -d PIDS
 ```
 
 **Force-terminate a frozen process locking GPU VRAM:**
+
 ```bash
 kill -9 <PID>
 ```

@@ -5,36 +5,43 @@ UFW is a user-friendly frontend for managing iptables (or nftables) firewall rul
 ## 1. Service Control & Status
 
 **Display active firewall status and configured rules:**
+
 ```bash
 sudo ufw status
 ```
 
 **Show detailed status including default policies, logging level, and active profiles:**
+
 ```bash
 sudo ufw status verbose
 ```
 
 **Display active rules with index numbers (required for precise deletion or insertion):**
+
 ```bash
 sudo ufw status numbered
 ```
 
 **Enable UFW and configure systemd to start the firewall service on boot. **Warning:** Ensure SSH is allowed before enabling!:**
+
 ```bash
 sudo ufw enable
 ```
 
 **Stop UFW and disable automatic launch at system boot:**
+
 ```bash
 sudo ufw disable
 ```
 
 **Reload configuration files and re-apply rules without dropping active connections:**
+
 ```bash
 sudo ufw reload
 ```
 
 **Disable UFW and delete all custom rules, returning it to factory defaults:**
+
 ```bash
 sudo ufw reset
 ```

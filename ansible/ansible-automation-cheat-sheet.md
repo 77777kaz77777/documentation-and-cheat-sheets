@@ -3,36 +3,43 @@
 ## 🚀 Ansible Ad-Hoc Commands
 
 **Ping all hosts:**
+
 ```bash
 ansible all -m ping
 ```
 
 **Ping with custom inventory:**
+
 ```bash
 ansible all -i inventory.ini -m ping
 ```
 
 **Check uptime:**
+
 ```bash
 ansible all -a "uptime"
 ```
 
 **Install a package:**
+
 ```bash
 ansible webservers -m apt -a "name=nginx state=present" --become
 ```
 
 **Restart a service:**
+
 ```bash
 ansible db -m service -a "name=mysql state=restarted" --become
 ```
 
 **Copy a file:**
+
 ```bash
 ansible all -m copy -a "src=/etc/hosts dest=/tmp/hosts"
 ```
 
 **Gather facts:**
+
 ```bash
 ansible hostname -m setup
 ```
@@ -40,41 +47,49 @@ ansible hostname -m setup
 ## 📝 Playbook Management
 
 **Run a playbook:**
+
 ```bash
 ansible-playbook site.yml
 ```
 
 **Run with custom inventory:**
+
 ```bash
 ansible-playbook -i inventory.ini site.yml
 ```
 
 **Check for syntax errors:**
+
 ```bash
 ansible-playbook site.yml --syntax-check
 ```
 
 **Dry run (Check mode):**
+
 ```bash
 ansible-playbook site.yml --check
 ```
 
 **Run specific tags:**
+
 ```bash
 ansible-playbook site.yml --tags "packages,config"
 ```
 
 **Skip specific tags:**
+
 ```bash
 ansible-playbook site.yml --skip-tags "debug"
 ```
 
 **Limit to one host/group:**
+
 ```bash
 ansible-playbook site.yml --limit "webserver01"
 ```
 
 **Step-by-step execution:**
+
 ```bash
 ansible-playbook site.yml --step
 ```
@@ -82,31 +97,37 @@ ansible-playbook site.yml --step
 ## 🔐 Ansible Vault (Secrets)
 
 **Create encrypted file:**
+
 ```bash
 ansible-vault create secret.yml
 ```
 
 **Encrypt existing file:**
+
 ```bash
 ansible-vault encrypt vars.yml
 ```
 
 **Decrypt a file:**
+
 ```bash
 ansible-vault decrypt vars.yml
 ```
 
 **Edit encrypted file:**
+
 ```bash
 ansible-vault edit secret.yml
 ```
 
 **Run with vault pass prompt:**
+
 ```bash
 ansible-playbook site.yml --ask-vault-pass
 ```
 
 **Run with vault pass file:**
+
 ```bash
 ansible-playbook site.yml --vault-password-file ~/.vault_pass.txt
 ```
@@ -114,26 +135,31 @@ ansible-playbook site.yml --vault-password-file ~/.vault_pass.txt
 ## 🏗️ Inventory & Roles
 
 **List hosts in a group:**
+
 ```bash
 ansible webservers --list-hosts
 ```
 
 **Create a new role:**
+
 ```bash
 ansible-galaxy init my_new_role
 ```
 
 **Install role from Galaxy:**
+
 ```bash
 ansible-galaxy install geerlingguy.apache
 ```
 
 **Install roles from requirements:**
+
 ```bash
 ansible-galaxy install -r requirements.yml
 ```
 
 **List installed roles:**
+
 ```bash
 ansible-galaxy list
 ```

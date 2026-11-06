@@ -3,46 +3,55 @@
 ## File and System Navigation
 
 **`List Files` — dir:**
+
 ```powershell
 `ls` or `dir`
 ```
 
 **`Change Directory` — cd [folder]:**
+
 ```powershell
 cd [folder]
 ```
 
 **`Make Directory` — mkdir [name]:**
+
 ```powershell
 `mkdir` or `md`
 ```
 
 **`Move/Rename` — move [src] [dest]:**
+
 ```powershell
 `mv` or `Move-Item`
 ```
 
 **`Copy File` — copy [src] [dest]:**
+
 ```powershell
 `cp` or `Copy-Item`
 ```
 
 **`Delete File` — del [file]:**
+
 ```powershell
 `rm` or `Remove-Item`
 ```
 
 **`Clear Screen` — cls:**
+
 ```powershell
 `clear` or `cls`
 ```
 
 **`Show File Content` — type [file]:**
+
 ```powershell
 `cat` or `Get-Content`
 ```
 
 **`Check IP Address` — ipconfig:**
+
 ```powershell
 Get-NetIPAddress
 ```
@@ -50,31 +59,37 @@ Get-NetIPAddress
 ## System & Networking
 
 **`List Services` — sc query:**
+
 ```powershell
 Get-Service
 ```
 
 **`Stop Service` — net stop [name]:**
+
 ```powershell
 Stop-Service [name]
 ```
 
 **`List Running Apps` — tasklist:**
+
 ```powershell
 Get-Process
 ```
 
 **`Kill a Process` — taskkill /F /IM [app].exe:**
+
 ```powershell
 Stop-Process -Name [app]
 ```
 
 **`Check Network Path` — tracert [url]:**
+
 ```powershell
 Test-NetConnection [url]
 ```
 
 **`Environment Vars` — set:**
+
 ```powershell
 Get-ChildItem Env:
 ```

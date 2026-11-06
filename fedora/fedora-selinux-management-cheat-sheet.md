@@ -5,21 +5,25 @@ Security-Enhanced Linux (SELinux) is a mandatory access control (MAC) security m
 ## 1. State & Mode Management
 
 **Check Full SELinux Status:**
+
 ```bash
 sestatus
 ```
 
 **Check Current Mode:**
+
 ```bash
 getenforce
 ```
 
 **Set Mode Temporarily (Enforcing):**
+
 ```bash
 `sudo setenforce 1` (Blocks policy violations)
 ```
 
 **Set Mode Temporarily (Permissive):**
+
 ```bash
 `sudo setenforce 0` (Logs violations but does not block them)
 ```
@@ -32,21 +36,25 @@ getenforce
 SELinux contexts are typically displayed in the format: `user:role:type:level`. The **type** (e.g., `httpd_sys_content_t`) is the most important part for standard administration.
 
 **View File/Directory Contexts:**
+
 ```bash
 ls -lZ /path/to/dir
 ```
 
 **View Process Contexts:**
+
 ```bash
 `ps -Z` or `ps -eZ`
 ```
 
 **View Current User Context:**
+
 ```bash
 id -Z
 ```
 
 **View Port Contexts:**
+
 ```bash
 sudo semanage port -l
 ```
@@ -79,21 +87,25 @@ sudo restorecon -Rv /mnt/storage/vms
 Booleans are on/off switches that allow you to modify SELinux policy behavior on the fly without having to write custom policy modules.
 
 **List All Booleans & Current State:**
+
 ```bash
 getsebool -a
 ```
 
 **List Booleans with Descriptions:**
+
 ```bash
 sudo semanage boolean -l
 ```
 
 **Change a Boolean Temporarily:**
+
 ```bash
 sudo setsebool httpd_can_network_connect on
 ```
 
 **Change a Boolean Permanently (-P):**
+
 ```bash
 sudo setsebool -P httpd_can_network_connect on
 ```

@@ -7,16 +7,19 @@
 ## General Information
 
 **Show help for nmcli:**
+
 ```bash
 nmcli help
 ```
 
 **Show overall network status:**
+
 ```bash
 nmcli general status
 ```
 
 **Get/Set logging level:**
+
 ```bash
 nmcli general logging
 ```
@@ -24,26 +27,31 @@ nmcli general logging
 ## Device Management
 
 **List all network devices:**
+
 ```bash
 nmcli device
 ```
 
 **Show status of all devices:**
+
 ```bash
 nmcli device status
 ```
 
 **Show detailed information for a device:**
+
 ```bash
 nmcli device show [device]
 ```
 
 **Connect a device:**
+
 ```bash
 nmcli device connect [device]
 ```
 
 **Disconnect a device:**
+
 ```bash
 nmcli device disconnect [device]
 ```
@@ -51,36 +59,43 @@ nmcli device disconnect [device]
 ## Connection Management
 
 **List all connections:**
+
 ```bash
 nmcli connection show
 ```
 
 **List only active connections:**
+
 ```bash
 nmcli connection show --active
 ```
 
 **Show details of a connection:**
+
 ```bash
 nmcli connection show [name]
 ```
 
 **Activate a connection:**
+
 ```bash
 nmcli connection up [name]
 ```
 
 **Deactivate a connection:**
+
 ```bash
 nmcli connection down [name]
 ```
 
 **Delete a connection profile:**
+
 ```bash
 nmcli connection delete [name]
 ```
 
 **Modify a connection setting:**
+
 ```bash
 nmcli connection modify [name] [param] [value]
 ```

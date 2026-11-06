@@ -4,51 +4,61 @@ this Proxmox VE (Virtual Environment) cheatsheet is divided into the two main co
 These commands manage full virtual machines. Replace [vmid] with the numerical ID of your VM (e.g., 100).
 
 **List All VMs:**
+
 ```bash
 qm list
 ```
 
 **Start VM:**
+
 ```bash
 qm start [vmid]
 ```
 
 **Stop VM (Graceful):**
+
 ```bash
 qm shutdown [vmid]
 ```
 
 **Stop VM (Immediate):**
+
 ```bash
 qm stop [vmid]
 ```
 
 **Reset VM:**
+
 ```bash
 qm reset [vmid]
 ```
 
 **Clone VM:**
+
 ```bash
 qm clone [vmid] [newid] --name [name]
 ```
 
 **Remove VM:**
+
 ```bash
 qm destroy [vmid]
 ```
 
 **Unlock VM:**
+
 ```bash
 qm unlock [vmid] (Used if a task hangs)
 ```
 
 **Show Config:**
+
 ```bash
 qm config [vmid]
 ```
 
 **Terminal Proxy:**
+
 ```bash
 qm terminal [vmid]
 ```
@@ -58,46 +68,55 @@ qm terminal [vmid]
 These are specific to the LXC containers running on your Proxmox host.
 
 **List All Containers:**
+
 ```bash
 pct list
 ```
 
 **Start Container:**
+
 ```bash
 pct start [vmid]
 ```
 
 **Stop Container:**
+
 ```bash
 pct stop [vmid]
 ```
 
 **Enter Shell:**
+
 ```bash
 pct enter [vmid]
 ```
 
 **Execute Command:**
+
 ```bash
 pct exec [vmid] -- [command]
 ```
 
 **Show Config:**
+
 ```bash
 pct config [vmid]
 ```
 
 **Clone Container:**
+
 ```bash
 pct clone [vmid] [newid] --hostname [name]
 ```
 
 **Mount CT Disk:**
+
 ```bash
 pct mount [vmid]
 ```
 
 **Unmount CT Disk:**
+
 ```bash
 pct unmount [vmid]
 ```
@@ -107,31 +126,37 @@ pct unmount [vmid]
 Proxmox uses vzdump for backups and pvesm for storage management.
 
 **Backup VM/CT:**
+
 ```bash
 vzdump [vmid] --storage [storage_name] --compress lzo
 ```
 
 **Restore VM:**
+
 ```bash
 qmrestore [backup_file] [vmid]
 ```
 
 **Restore Container:**
+
 ```bash
 pct restore [vmid] [backup_file]
 ```
 
 **List Storage Pools:**
+
 ```bash
 pvesm status
 ```
 
 **List Content in Pool:**
+
 ```bash
 pvesm list [storage_name]
 ```
 
 **Free Up Space:**
+
 ```bash
 pvesm free [storage_name]:[volume]
 ```
@@ -141,31 +166,37 @@ pvesm free [storage_name]:[volume]
 Use these for node-level operations and health checks.
 
 **Cluster Status:**
+
 ```bash
 pvecm status
 ```
 
 **Check Services:**
+
 ```bash
 systemctl status pve-cluster
 ```
 
 **Update Node Repos:**
+
 ```bash
 apt update
 ```
 
 **Update Proxmox:**
+
 ```bash
 apt dist-upgrade
 ```
 
 **View Task Logs:**
+
 ```bash
 cat /var/log/pve/tasks/index
 ```
 
 **Restart Web GUI:**
+
 ```bash
 systemctl restart pveproxy
 ```
