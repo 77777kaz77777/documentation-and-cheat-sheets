@@ -1,201 +1,553 @@
-/* extra.css */
+/* extra.css — shared look for Kaz's Wiki and Linux Environment Automation.
+ *
+ * Monochrome, calm, readable. Colors come from the theme's own variables so
+ * light and dark mode both work without duplicating every rule.
+ */
 
-/* 1. Crisp Monochrome Dark Palette */
+/* ---------------------------------------------------------------------------
+ * 1. Palette
+ * ------------------------------------------------------------------------- */
+:root {
+  --kz-radius: 10px;
+  --kz-radius-sm: 6px;
+  --kz-border: rgba(0, 0, 0, 0.1);
+  --kz-border-strong: rgba(0, 0, 0, 0.18);
+  --kz-surface: #f7f7f8;
+  --kz-surface-hover: #efeff1;
+  --kz-muted: rgba(0, 0, 0, 0.58);
+}
+
 [data-md-color-scheme="slate"] {
-  --md-default-bg-color: #09090b;
-  --md-default-bg-color--light: #121215;
-  --md-default-bg-color--lighter: #18181b;
-  --md-code-bg-color: #121215;
-  --md-typeset-a-color: #e4e4e7;
+  --md-default-bg-color: #0b0b0d;
+  --md-default-bg-color--light: #131316;
+  --md-default-bg-color--lighter: #1a1a1e;
+  --md-code-bg-color: #131316;
+  --md-typeset-a-color: #f4f4f5;
   --md-accent-fg-color: #ffffff;
+  --kz-border: rgba(255, 255, 255, 0.09);
+  --kz-border-strong: rgba(255, 255, 255, 0.18);
+  --kz-surface: #131316;
+  --kz-surface-hover: #1b1b1f;
+  --kz-muted: rgba(255, 255, 255, 0.58);
 }
 
-/* 2. Header Bar Separation */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #ffffff;
+  --md-primary-bg-color: #111113;
+  --md-typeset-a-color: #111113;
+  --md-accent-fg-color: #000000;
+}
+
+/* Wider page so code blocks and tables have room on desktop */
+.md-grid {
+  max-width: 68rem;
+}
+
+/* Generated pages (home, folder overviews) have no source file to edit */
+.md-content__inner:has(.kz-generated) > .md-content__button {
+  display: none;
+}
+
+/* ---------------------------------------------------------------------------
+ * 2. Header and top tabs
+ * ------------------------------------------------------------------------- */
+.md-header,
+.md-tabs {
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+}
+
 .md-header {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
+  box-shadow: none;
+  border-bottom: 1px solid var(--kz-border);
 }
 
-[data-md-color-scheme="default"] .md-header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+.md-header--shadow {
+  box-shadow: none;
 }
 
-/* 3. Clean Thin Sidebar Scrollbars (Removes thick blue/grey scrollbar) */
+.md-tabs {
+  border-bottom: 1px solid var(--kz-border);
+}
+
+.md-tabs__link {
+  font-size: 0.72rem;
+  font-weight: 500;
+  opacity: 0.65;
+  margin-top: 0.55rem;
+}
+
+.md-tabs__link:hover,
+.md-tabs__item--active .md-tabs__link {
+  opacity: 1;
+  color: var(--md-default-fg-color);
+}
+
+.md-tabs__item--active .md-tabs__link {
+  font-weight: 600;
+}
+
+/* Search box: quiet pill instead of a heavy block */
+.md-search__form {
+  border-radius: 999px;
+  background-color: var(--kz-surface);
+  border: 1px solid var(--kz-border);
+}
+
+.md-search__form:hover {
+  background-color: var(--kz-surface-hover);
+}
+
+[data-md-toggle="search"]:checked ~ .md-header .md-search__form {
+  border-radius: var(--kz-radius) var(--kz-radius) 0 0;
+}
+
+/* ---------------------------------------------------------------------------
+ * 3. Left navigation
+ * ------------------------------------------------------------------------- */
 .md-sidebar__scrollwrap {
-  scrollbar-width: thin !important;
-  scrollbar-color: rgba(255, 255, 255, 0.15) transparent !important;
+  scrollbar-width: thin;
+  scrollbar-color: var(--kz-border-strong) transparent;
 }
 
-[data-md-color-scheme="default"] .md-sidebar__scrollwrap {
-  scrollbar-color: rgba(0, 0, 0, 0.18) transparent !important;
-}
-
-.md-sidebar__scrollwrap::-webkit-scrollbar {
-  width: 4px !important;
-}
-
-.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.15) !important;
-  border-radius: 4px !important;
-}
-
-/* 4. Left Sidebar — Category Section Headers (Ansible, Containers, Fedora, etc.) */
-.md-nav--primary .md-nav__item--section {
-  margin-top: 1.2rem !important;
-  margin-bottom: 0.35rem !important;
-}
-
-.md-nav--primary .md-nav__item--section > .md-nav__link,
-.md-nav--primary .md-nav__item--section > .md-nav__container > .md-nav__link {
-  font-size: 0.72rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.06em !important;
-  color: rgba(255, 255, 255, 0.45) !important;
-  padding: 0.25rem 0.6rem !important;
-}
-
-[data-md-color-scheme="default"] .md-nav--primary .md-nav__item--section > .md-nav__link,
-[data-md-color-scheme="default"] .md-nav--primary .md-nav__item--section > .md-nav__container > .md-nav__link {
-  color: rgba(0, 0, 0, 0.48) !important;
-}
-
-/* 5. Left Sidebar — Individual Links & Spacing */
-.md-nav__list {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+.md-nav {
+  font-size: 0.74rem;
 }
 
 .md-nav--primary .md-nav__link {
-  font-size: 0.82rem !important;
-  line-height: 1.35 !important;
-  padding: 0.38rem 0.65rem !important;
-  border-radius: 6px !important;
-  color: rgba(255, 255, 255, 0.75) !important;
-  transition: background-color 0.12s ease, color 0.12s ease !important;
+  padding: 0.3rem 0.6rem;
+  margin-top: 1px;
+  border-radius: var(--kz-radius-sm);
+  color: var(--md-default-fg-color--light);
+  transition: background-color 0.12s ease, color 0.12s ease;
 }
 
-[data-md-color-scheme="default"] .md-nav--primary .md-nav__link {
-  color: rgba(0, 0, 0, 0.75) !important;
-}
-
-/* Hover state on any sidebar item */
 .md-nav--primary .md-nav__link:hover {
-  background-color: rgba(255, 255, 255, 0.06) !important;
-  color: #ffffff !important;
+  background-color: var(--kz-surface-hover);
+  color: var(--md-default-fg-color);
 }
 
-[data-md-color-scheme="default"] .md-nav--primary .md-nav__link:hover {
-  background-color: rgba(0, 0, 0, 0.05) !important;
-  color: #000000 !important;
+.md-nav--primary .md-nav__link--active,
+.md-nav--primary .md-nav__item .md-nav__link--active {
+  background-color: var(--kz-surface-hover);
+  color: var(--md-default-fg-color);
+  font-weight: 600;
 }
 
-/* Active/Selected Page Pill (Overrides Zensical Modern's blue highlight box) */
-.md-nav--primary .md-nav__item .md-nav__link--active,
-.md-nav--primary .md-nav__link--active {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  color: #ffffff !important;
-  font-weight: 600 !important;
-  box-shadow: inset 2px 0 0 #ffffff !important;
+/* Section headings in the sidebar (e.g. "Desktop Environments") */
+.md-nav--primary .md-nav__item--section > .md-nav__link {
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--kz-muted);
+  background: none;
+  margin-top: 0.9rem;
 }
 
-[data-md-color-scheme="default"] .md-nav--primary .md-nav__item .md-nav__link--active,
-[data-md-color-scheme="default"] .md-nav--primary .md-nav__link--active {
-  background-color: rgba(0, 0, 0, 0.08) !important;
-  color: #000000 !important;
-  box-shadow: inset 2px 0 0 #000000 !important;
+/* Thin guide line for nested folders */
+.md-nav--primary .md-nav__item--nested > .md-nav > .md-nav__list {
+  border-left: 1px solid var(--kz-border);
+  margin-left: 0.75rem;
+  padding-left: 0.35rem;
 }
 
-/* 6. Nested Subfolders Tree Line (e.g., linux-general subdirectories) */
-.md-nav--primary .md-nav__item--nested .md-nav > .md-nav__list {
-  border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
-  margin-left: 0.7rem !important;
-  padding-left: 0.5rem !important;
-  margin-top: 2px !important;
-  margin-bottom: 4px !important;
-}
-
-[data-md-color-scheme="default"] .md-nav--primary .md-nav__item--nested .md-nav > .md-nav__list {
-  border-left: 1px solid rgba(0, 0, 0, 0.12) !important;
-}
-
-/* 7. Right Sidebar ("On this page" Table of Contents) */
+/* Right-hand "On this page" list */
 .md-nav--secondary .md-nav__title {
-  font-size: 0.72rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.06em !important;
-  color: rgba(255, 255, 255, 0.45) !important;
-}
-
-[data-md-color-scheme="default"] .md-nav--secondary .md-nav__title {
-  color: rgba(0, 0, 0, 0.48) !important;
-}
-
-.md-nav--secondary .md-nav__list {
-  border-left: 1px solid rgba(255, 255, 255, 0.08) !important;
-  padding-left: 0.45rem !important;
-}
-
-[data-md-color-scheme="default"] .md-nav--secondary .md-nav__list {
-  border-left: 1px solid rgba(0, 0, 0, 0.12) !important;
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--kz-muted);
+  background: none;
+  box-shadow: none;
 }
 
 .md-nav--secondary .md-nav__link {
-  font-size: 0.78rem !important;
-  padding: 0.25rem 0.5rem !important;
-  border-radius: 4px !important;
-  color: rgba(255, 255, 255, 0.62) !important;
-}
-
-[data-md-color-scheme="default"] .md-nav--secondary .md-nav__link {
-  color: rgba(0, 0, 0, 0.62) !important;
+  color: var(--md-default-fg-color--light);
 }
 
 .md-nav--secondary .md-nav__link--active {
-  color: #ffffff !important;
-  font-weight: 600 !important;
-  background-color: rgba(255, 255, 255, 0.07) !important;
+  color: var(--md-default-fg-color);
+  font-weight: 600;
 }
 
-[data-md-color-scheme="default"] .md-nav--secondary .md-nav__link--active {
-  color: #000000 !important;
-  background-color: rgba(0, 0, 0, 0.05) !important;
+/* ---------------------------------------------------------------------------
+ * 4. Page typography
+ * ------------------------------------------------------------------------- */
+.md-typeset {
+  font-size: 0.8rem;
+  line-height: 1.7;
 }
 
-/* 8. Modern Card Tables in Main Content */
+.md-typeset h1 {
+  font-size: 1.85em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--md-default-fg-color);
+  margin-bottom: 0.9em;
+}
+
+.md-typeset h2 {
+  font-size: 1.3em;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  margin-top: 2em;
+  padding-top: 1.2em;
+  border-top: 1px solid var(--kz-border);
+}
+
+.md-typeset h1 + h2,
+.md-typeset hr + h2 {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 1.2em;
+}
+
+.md-typeset h3 {
+  font-size: 1.05em;
+  font-weight: 600;
+}
+
+/* Horizontal rules are already implied by the h2 dividers above */
+.md-typeset hr {
+  border-bottom-color: var(--kz-border);
+  margin: 1.6em 0;
+}
+
+.md-typeset a {
+  text-decoration: underline;
+  text-decoration-color: var(--kz-border-strong);
+  text-underline-offset: 0.18em;
+}
+
+.md-typeset a:hover {
+  text-decoration-color: currentColor;
+}
+
+.md-typeset .headerlink,
+.md-typeset pre a,
+.md-typeset .linenodiv a,
+.md-typeset .md-button,
+.md-typeset .kz-card,
+.md-typeset .kz-list a {
+  text-decoration: none;
+}
+
+/* Inline code */
+.md-typeset code {
+  border-radius: 4px;
+  font-size: 0.86em;
+}
+
+.md-typeset :not(pre) > code {
+  border: 1px solid var(--kz-border);
+  padding: 0.05em 0.35em;
+}
+
+/* Code blocks */
+.md-typeset pre > code {
+  border-radius: var(--kz-radius);
+  border: 1px solid var(--kz-border);
+  padding: 0.9em 1.1em;
+}
+
+.md-typeset .highlight .filename {
+  border-radius: var(--kz-radius) var(--kz-radius) 0 0;
+  border: 1px solid var(--kz-border);
+  border-bottom: none;
+  font-size: 0.75em;
+}
+
+.md-typeset .highlight .filename + pre > code {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.md-clipboard {
+  color: var(--md-default-fg-color--lighter);
+}
+
+/* Admonitions: flatter, rounded */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: var(--kz-radius);
+  border-width: 1px;
+  box-shadow: none;
+  font-size: 0.78rem;
+}
+
+/* ---------------------------------------------------------------------------
+ * 5. Tables
+ * ------------------------------------------------------------------------- */
 .md-typeset table:not([class]) {
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  border-radius: 8px !important;
-  overflow: hidden !important;
-  background-color: var(--md-default-bg-color--light) !important;
-}
-
-[data-md-color-scheme="default"] .md-typeset table:not([class]) {
-  border: 1px solid rgba(0, 0, 0, 0.12) !important;
-  background-color: #ffffff !important;
+  border: 1px solid var(--kz-border);
+  border-radius: var(--kz-radius);
+  overflow: hidden;
+  font-size: 0.74rem;
+  box-shadow: none;
 }
 
 .md-typeset table:not([class]) th {
-  background-color: rgba(255, 255, 255, 0.04) !important;
-  font-weight: 600 !important;
-  text-transform: uppercase !important;
-  font-size: 0.72rem !important;
-  letter-spacing: 0.04em !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
-
-[data-md-color-scheme="default"] .md-typeset table:not([class]) th {
-  background-color: rgba(0, 0, 0, 0.04) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
+  background-color: var(--kz-surface);
+  font-weight: 600;
+  border-bottom: 1px solid var(--kz-border);
 }
 
 .md-typeset table:not([class]) td {
-  border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
-  vertical-align: middle !important;
+  border-top: 1px solid var(--kz-border);
+  vertical-align: top;
 }
 
-[data-md-color-scheme="default"] .md-typeset table:not([class]) td {
-  border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+.md-typeset table:not([class]) tr:hover td {
+  background-color: var(--kz-surface);
+}
+
+/* ---------------------------------------------------------------------------
+ * 6. Home page hero
+ * ------------------------------------------------------------------------- */
+.kz-hero {
+  padding: 0.4rem 0 0.2rem;
+}
+
+.md-typeset .kz-hero h1 {
+  font-size: 2.3em;
+  margin-bottom: 0.3em;
+}
+
+.kz-hero p {
+  font-size: 0.95rem;
+  color: var(--kz-muted);
+  max-width: 38rem;
+  margin-top: 0;
+}
+
+.kz-hero .kz-hint {
+  font-size: 0.74rem;
+}
+
+.kz-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 0.4rem;
+}
+
+.kz-stat {
+  white-space: nowrap;
+  border: 1px solid var(--kz-border);
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.72rem;
+  color: var(--kz-muted);
+}
+
+.kz-stat strong {
+  color: var(--md-default-fg-color);
+}
+
+/* ---------------------------------------------------------------------------
+ * 7. Cards (home page categories, folder overviews)
+ * ------------------------------------------------------------------------- */
+.kz-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr));
+  gap: 0.8rem;
+  margin: 1.2rem 0 2rem;
+}
+
+/* Markdown wraps the card links in paragraphs; let the links be the grid items */
+.kz-cards > p {
+  display: contents;
+}
+
+.md-typeset .kz-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--kz-border);
+  border-radius: var(--kz-radius);
+  background-color: var(--kz-surface);
+  color: var(--md-default-fg-color);
+  transition: border-color 0.15s ease, transform 0.15s ease, background-color 0.15s ease;
+}
+
+.md-typeset .kz-card:hover {
+  border-color: var(--kz-border-strong);
+  background-color: var(--kz-surface-hover);
+  transform: translateY(-1px);
+  color: var(--md-default-fg-color);
+}
+
+.kz-card__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-weight: 650;
+  font-size: 0.86rem;
+}
+
+.kz-card__count {
+  font-weight: 500;
+  font-size: 0.66rem;
+  color: var(--kz-muted);
+  border: 1px solid var(--kz-border);
+  border-radius: 999px;
+  padding: 0.05rem 0.5rem;
+  white-space: nowrap;
+}
+
+.kz-card__desc {
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: var(--kz-muted);
+}
+
+/* ---------------------------------------------------------------------------
+ * 8. Compact link lists (folder overview pages)
+ * ------------------------------------------------------------------------- */
+.md-typeset .kz-list > ul {
+  list-style: none;
+  margin: 0.6rem 0 1.6rem;
+  padding: 0;
+  border: 1px solid var(--kz-border);
+  border-radius: var(--kz-radius);
+  overflow: hidden;
+}
+
+.md-typeset .kz-list > ul > li {
+  margin: 0;
+  border-top: 1px solid var(--kz-border);
+}
+
+.md-typeset .kz-list > ul > li:first-child {
+  border-top: none;
+}
+
+.md-typeset .kz-list a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.65rem 0.95rem;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset .kz-list a:hover {
+  background-color: var(--kz-surface);
+}
+
+.kz-list__title {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.kz-list__desc {
+  font-size: 0.72rem;
+  color: var(--kz-muted);
+  line-height: 1.45;
+}
+
+/* ---------------------------------------------------------------------------
+ * 9. Script pages (Linux Environment Automation)
+ * ------------------------------------------------------------------------- */
+.kz-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: -0.3rem 0 1rem;
+}
+
+.kz-chip {
+  font-size: 0.66rem;
+  border: 1px solid var(--kz-border);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  color: var(--kz-muted);
+}
+
+.kz-chip--warn {
+  border-color: rgba(234, 179, 8, 0.55);
+  color: #b88a00;
+}
+
+[data-md-color-scheme="slate"] .kz-chip--warn {
+  color: #facc15;
+}
+
+.kz-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.2rem;
+}
+
+.md-typeset .md-button {
+  font-size: 0.72rem;
+  padding: 0.4em 1em;
+  border-radius: 999px;
+  border-width: 1px;
+  border-color: var(--kz-border-strong);
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset .md-button:hover,
+.md-typeset .md-button--primary {
+  background-color: var(--md-default-fg-color);
+  border-color: var(--md-default-fg-color);
+  color: var(--md-default-bg-color);
+}
+
+.md-typeset .md-button--primary:hover {
+  opacity: 0.85;
+}
+
+/* ---------------------------------------------------------------------------
+ * 10. Footer
+ * ------------------------------------------------------------------------- */
+.md-footer,
+.md-footer-meta {
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color--light);
+  border-top: 1px solid var(--kz-border);
+}
+
+.md-footer__link {
+  color: var(--md-default-fg-color);
+}
+
+/* ---------------------------------------------------------------------------
+ * 11. Small screens
+ * ------------------------------------------------------------------------- */
+@media screen and (max-width: 44.984375em) {
+  .md-typeset {
+    font-size: 0.78rem;
+  }
+
+  .md-typeset h1,
+  .md-typeset .kz-hero h1 {
+    font-size: 1.6em;
+  }
+
+  .kz-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .kz-stat--keys {
+    display: none;
+  }
+
+  .md-typeset pre > code {
+    border-radius: var(--kz-radius-sm);
+  }
+}
+
+/* Drawer (mobile/tablet nav) keeps the monochrome header */
+@media screen and (max-width: 76.234375em) {
+  .md-nav--primary .md-nav__title {
+    background-color: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+  }
 }
