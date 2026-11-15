@@ -31,13 +31,32 @@ jobs:
         run: npx markdownlint-cli@latest --fix "**/*.md"
         continue-on-error: true
 
-      - name: Pull latest changes to avoid ref lock conflicts
-        run: git pull --rebase --autostash origin ${{ github.ref_name }}
-
       - name: Commit and push formatting changes
+        id: auto-commit
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "style: auto-fix markdown formatting spacing"
           commit_user_name: github-actions[bot]
           commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
           commit_author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
+          skip_fetch: true
+          skip_push: true
+
+      - name: Push changes (rebase and retry if the branch moved)
+        if: steps.auto-commit.outputs.changes_detected == 'true'
+        env:
+          BRANCH: ${{ github.head_ref || github.ref_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Another workflow may have pushed to the same branch while this job ran.
+          # Rebase onto it (their side wins on overlapping lines) and retry.
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase -X ours origin "$BRANCH" && git push origin "HEAD:$BRANCH"; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            echo "Push attempt $attempt failed; retrying in $((attempt * 5))s..."
+            sleep $((attempt * 5))
+          done
+          exit 1
