@@ -3,20 +3,25 @@ site_name: Kaz's Wiki
 site_description: System administration runbooks, documentation, and technical cheat sheets.
 site_url: https://77777kaz77777.github.io/documentation-and-cheat-sheets/
 repo_url: https://github.com/77777kaz77777/documentation-and-cheat-sheets
-repo_name: 77777kaz77777/documentation-and-cheat-sheets
+repo_name: GitHub
+edit_uri: edit/main/
 
 docs_dir: .
 
-exclude:
-  - mkdocs.yml
-  - zensical.toml
-  - .markdownlint.yaml
-  - LICENSE
-  - "*.sh"
-  - "*.py"
-  - .github/
-  - .gitignore
-  - .obsidian/
+# Only the guides (and the generated overview pages) become pages.
+# The root README is the GitHub landing page; the site uses the generated index.md.
+exclude_docs: |
+  /README.md
+  mkdocs.yml
+  zensical.toml
+  .markdownlint.yaml
+  LICENSE
+  *.sh
+  *.py
+  *.txt
+  .github/
+  .gitignore
+  .obsidian/
 
 theme:
   name: material
@@ -46,12 +51,16 @@ theme:
     - content.code.annotate
     - content.code.copy
     - content.code.select
+    - content.action.edit
     - content.tabs.link
     - navigation.footer
     - navigation.indexes
     - navigation.instant
     - navigation.instant.progress
     - navigation.path
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.prune
     - navigation.top
     - navigation.tracking
