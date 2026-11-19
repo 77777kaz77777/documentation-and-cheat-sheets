@@ -1,4 +1,4 @@
-## Fedora ClamAV & SELinux Implementation Guide
+# Fedora ClamAV & SELinux Implementation Guide
 
 ### 1. Installation
 

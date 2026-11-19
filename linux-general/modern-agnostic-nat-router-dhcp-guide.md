@@ -6,7 +6,7 @@ This guide and automation script turns any Linux system (Virtual Machine, LXC/LX
 
 ---
 
-## 🚀 Why This Script Was Modernized
+## Why This Script Was Modernized
 
 Legacy Linux routing scripts typically rely on outdated tools (`iptables`, `isc-dhcp-server`, and `apt-get`) that are either deprecated or locked to Debian-based distributions. Here is how this script upgrades the stack:
 
@@ -18,7 +18,7 @@ Legacy Linux routing scripts typically rely on outdated tools (`iptables`, `isc-
 
 ---
 
-## 🗺️ Network Architecture
+## Network Architecture
 
 ```text
                         +---------------------------------------+
@@ -41,7 +41,7 @@ Legacy Linux routing scripts typically rely on outdated tools (`iptables`, `isc-
 
 ---
 
-## 🛠️ Environment Setup Guide
+## Environment Setup Guide
 
 ### Option 1: Virtual Machine Setup (Proxmox / KVM / VirtualBox / VMware)
 
@@ -96,7 +96,7 @@ A Virtual Machine provides complete kernel isolation and is the most straightfor
 
 ---
 
-## ⚡ Quick Start & Installation
+## Quick Start & Installation
 
 You can download and run the script directly from the [GitHub Repository](https://github.com/77777kaz77777/sysadmin-automation-scripts/blob/main/networking/setup-router.sh):
 
@@ -113,7 +113,7 @@ sudo ./setup-router.sh
 
 ---
 
-## 📜 Full Script (`setup-router.sh`)
+## Full Script (`setup-router.sh`)
 
 Below is the complete source code for reference:
 
@@ -313,7 +313,7 @@ echo "============================================="
 
 ---
 
-## 🔍 Verification & Troubleshooting
+## Verification & Troubleshooting
 
 Once you have run the script, you can verify everything is working using these commands:
 

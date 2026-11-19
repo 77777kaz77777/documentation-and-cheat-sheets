@@ -1,4 +1,6 @@
-# CLI reference for Fedora Linux system administration. Provides direct syntax for DNF package management, systemd service control, journalctl diagnostics, firewalld rules, SELinux enforcement, and network operations
+# Fedora Quick Reference
+
+CLI reference for Fedora Linux system administration. Provides direct syntax for DNF package management, systemd service control, journalctl diagnostics, firewalld rules, SELinux enforcement, and network operations.
 
 ## Package Management (DNF / DNF5)
 
@@ -209,46 +211,46 @@ sudo journalctl --vacuum-time=7d
 
 ## Security & Firewall (`firewalld` & SELinux)
 
-**`Check firewall status` — sudo firewall-cmd --state:**
+**Check firewall status:**
 
 ```bash
-
+sudo firewall-cmd --state
 ```
 
-**`Get active zones and assigned interfaces` — sudo firewall-cmd --get-active-zones:**
+**Get active zones and assigned interfaces:**
 
 ```bash
-
+sudo firewall-cmd --get-active-zones
 ```
 
-**`Allow service permanently` — sudo firewall-cmd --add-service=<service> --permanent:**
+**Allow service permanently:**
 
 ```bash
-
+sudo firewall-cmd --add-service=<service> --permanent
 ```
 
-**`Allow TCP/UDP port permanently` — `sudo firewall-cmd --add-port=<port>/<tcp:**
+**Allow TCP/UDP port permanently:**
 
 ```bash
-udp> --permanent`
+sudo firewall-cmd --add-port=<port>/tcp --permanent   # or /udp
 ```
 
-**`Reload firewall configuration` — sudo firewall-cmd --reload:**
+**Reload firewall configuration:**
 
 ```bash
-
+sudo firewall-cmd --reload
 ```
 
-**`List allowed services/ports in active zone` — sudo firewall-cmd --list-all:**
+**List allowed services/ports in active zone:**
 
 ```bash
-
+sudo firewall-cmd --list-all
 ```
 
-**`Check SELinux status` — sestatus:**
+**Check SELinux status:**
 
 ```bash
-
+sestatus
 ```
 
 **`Change SELinux mode temporarily` — `sudo setenforce 0` _(Permissive)_ \:**
@@ -340,7 +342,9 @@ du -sh <path>
 **Hardware summary:**
 
 ```bash
-`lscpu` / `lspci` / `lsusb`
+lscpu   # CPU
+lspci   # PCI devices
+lsusb   # USB devices
 ```
 
 ---

@@ -1,11 +1,14 @@
-## A quick-reference cheat sheet for Windows Command Prompt (CMD) and PowerShell, covering file navigation, system management, and package provisioning
+# Windows CMD and PowerShell Cheat Sheet
+
+A quick-reference cheat sheet for Windows Command Prompt (CMD) and PowerShell, covering file navigation, system management, and package provisioning.
 
 ## File and System Navigation
 
 **`List Files` — dir:**
 
 ```powershell
-`ls` or `dir`
+ls
+dir   # same thing
 ```
 
 **`Change Directory` — cd [folder]:**
@@ -17,37 +20,43 @@ cd [folder]
 **`Make Directory` — mkdir [name]:**
 
 ```powershell
-`mkdir` or `md`
+mkdir
+md   # same thing
 ```
 
 **`Move/Rename` — move [src] [dest]:**
 
 ```powershell
-`mv` or `Move-Item`
+mv
+Move-Item   # same thing
 ```
 
 **`Copy File` — copy [src] [dest]:**
 
 ```powershell
-`cp` or `Copy-Item`
+cp
+Copy-Item   # same thing
 ```
 
 **`Delete File` — del [file]:**
 
 ```powershell
-`rm` or `Remove-Item`
+rm
+Remove-Item   # same thing
 ```
 
 **`Clear Screen` — cls:**
 
 ```powershell
-`clear` or `cls`
+clear
+cls   # same thing
 ```
 
 **`Show File Content` — type [file]:**
 
 ```powershell
-`cat` or `Get-Content`
+cat
+Get-Content   # same thing
 ```
 
 **`Check IP Address` — ipconfig:**

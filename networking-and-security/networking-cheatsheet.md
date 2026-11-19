@@ -1,7 +1,5 @@
 # Networking Concepts and Explanations Cheatsheet
 
-# Comprehensive Networking Concepts & Explanations
-
 ## 1. The OSI Model & Protocol Data Units (PDUs)
 
 The Open Systems Interconnection (OSI) model conceptualizes how networks operate. The PDU is the form data takes at that specific layer.

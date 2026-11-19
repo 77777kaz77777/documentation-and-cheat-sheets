@@ -1,4 +1,4 @@
-## Steps to compile and install Linux software directly from source code
+# Steps to compile and install Linux software directly from source code
 
 Installing software from source on Linux involves downloading the raw source code, satisfying its dependencies, compiling it into executable binary files, and placing those binaries into your system path.
 
@@ -11,55 +11,23 @@ Before compiling software, you need a C/C++ compiler, build toolchains, and basi
 **Debian / Ubuntu:**
 
 ```bash
-sudo \
-  apt \
-  update
+sudo apt update
 
-sudo \
-  apt \
-  install \
-  build-essential \
-  cmake \
-  git \
-  autoconf \
-  automake \
-  libtool \
-  pkg-config
+sudo apt install build-essential cmake git autoconf automake libtool pkg-config
 ```
 
 **Fedora / RHEL / CentOS:**
 
 ```bash
-sudo \
-  dnf \
-  groupinstall \
-  "Development Tools"
+sudo dnf groupinstall "Development Tools"
 
-sudo \
-  dnf \
-  install \
-  cmake \
-  git \
-  autoconf \
-  automake \
-  libtool \
-  pkgconfig
+sudo dnf install cmake git autoconf automake libtool pkgconfig
 ```
 
 **Arch Linux:**
 
 ```bash
-sudo \
-  pacman \
-  -S \
-  --needed \
-  base-devel \
-  cmake \
-  git \
-  autoconf \
-  automake \
-  libtool \
-  pkgconf
+sudo pacman -S --needed base-devel cmake git autoconf automake libtool pkgconf
 ```
 
 ---
@@ -75,13 +43,10 @@ Obtain the source files directly from GitHub or a tarball archive.
 **From GitHub:**
 
 ```bash
-git \
-  clone \
-  --recursive \
+git clone --recursive \
   [https://github.com/username/repository.name.git](https://github.com/username/repository.name.git)
 
-cd \
-  repository.name
+cd repository.name
 ```
 
 _Note: Using `--recursive` ensures git fetches any required submodules inside the project._
@@ -89,12 +54,9 @@ _Note: Using `--recursive` ensures git fetches any required submodules inside th
 **From a Source Tarball Archive (`.tar.gz`, `.tar.bz2`, `.tar.xz`):**
 
 ```bash
-tar \
-  -xvf \
-  software-name-1.0.0.tar.gz
+tar -xvf software-name-1.0.0.tar.gz
 
-cd \
-  software-name-1.0.0
+cd software-name-1.0.0
 ```
 
 ### 2. Check for Dependencies and Build Instructions
@@ -102,15 +64,13 @@ cd \
 Always inspect project documentation before running build scripts. Read the project's documentation files to identify required library dependencies and specific build flags:
 
 ```bash
-cat \
-  README.md
+cat README.md
 ```
 
 _or_
 
 ```bash
-cat \
-  INSTALL
+cat INSTALL
 ```
 
 Install any missing development packages (usually named with a `-dev` suffix on Debian/Ubuntu or `-devel` on Fedora) via your package manager.
@@ -128,17 +88,13 @@ _Used if the project contains a `configure` or `autogen.sh` file._
 ./autogen.sh
 
 # Configure the build environment and check dependencies
-./configure \
-  --prefix=/usr/local
+./configure --prefix=/usr/local
 
 # Compile the software using available CPU cores
-make \
-  -j$(nproc)
+make -j$(nproc)
 
 # Install binaries to the system
-sudo \
-  make \
-  install
+sudo make install
 ```
 
 #### Option B: CMake
@@ -147,28 +103,16 @@ _Used if the project contains a `CMakeLists.txt` file._
 
 ```bash
 # Create and enter a dedicated build directory
-mkdir \
-  build && \
-cd \
-  build
+mkdir build && cd build
 
 # Generate native build files
-cmake \
-  -DCMAKE_BUILD_TYPE=Release \
-  -DCMAKE_INSTALL_PREFIX=/usr/local \
-  ..
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
 
 # Compile the binaries
-cmake \
-  --build \
-  . \
-  -j$(nproc)
+cmake --build . -j$(nproc)
 
 # Install binaries to the system
-sudo \
-  cmake \
-  --install \
-  .
+sudo cmake --install .
 ```
 
 #### Option C: Meson & Ninja
@@ -177,22 +121,15 @@ _Used if the project contains a `meson.build` file._
 
 ```bash
 # Set up the build directory
-meson \
-  setup \
-  build \
-  --buildtype=release \
-  --prefix=/usr/local
+meson setup build --buildtype=release --prefix=/usr/local
 
 # Enter build directory and compile
-cd \
-  build
+cd build
 
 ninja
 
 # Install binaries to the system
-sudo \
-  ninja \
-  install
+sudo ninja install
 ```
 
 #### Option D: Standard `Makefile` Only
@@ -201,13 +138,10 @@ _Used if the project only contains a plain `Makefile` without a configure step._
 
 ```bash
 # Compile directly
-make \
-  -j$(nproc)
+make -j$(nproc)
 
 # Install binaries
-sudo \
-  make \
-  install
+sudo make install
 ```
 
 ### 4. Update Shared Library Cache and Verify
@@ -215,18 +149,15 @@ sudo \
 Ensure your system links new libraries and binary paths correctly. If the installation added shared libraries (`.so` files), refresh the system dynamic linker cache:
 
 ```bash
-sudo \
-  ldconfig
+sudo ldconfig
 ```
 
 Verify that the executable is accessible in your standard system path:
 
 ```bash
-which \
-  program-name
+which program-name
 
-program-name \
-  --version
+program-name --version
 ```
 
 ---
@@ -244,15 +175,11 @@ program-name \
 If installed directly via `make install`, return to the project's `build` or source directory:
 
 ```bash
-sudo \
-  make \
-  uninstall
+sudo make uninstall
 ```
 
 If the original `Makefile` lacks an `uninstall` target, manually remove the installed binary and associated files:
 
 ```bash
-sudo \
-  rm \
-  /usr/local/bin/program-name
+sudo rm /usr/local/bin/program-name
 ```

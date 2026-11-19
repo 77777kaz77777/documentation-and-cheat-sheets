@@ -74,3 +74,11 @@ If `akmods` fails during Step 1, the kmod headers or driver packages for the cur
    sudo akmods --force
    sudo dracut --regenerate-all --force
    ```
+
+## Related guides
+
+- [Install NVIDIA Drivers on Fedora (RPM Fusion)](fedora-nvidia-installation-guide.md)
+- [Disable the Integrated AMD GPU on Fedora (GRUB Blacklist)](../linux-general/hardware-and-firmware/disable-amdgpu-grub.md)
+- [How to fix boot deadlocks caused by MUX switches and Plymouth](fix-mux-plymouth-deadlock.md)
+- [ASUS ROG Zephyrus G15 Setup Guide for Fedora KDE](asus-rog-fedora-setup.md)
+- [NVIDIA GPU and CUDA Monitoring Cheat Sheet](../linux-general/nvidia-cuda-monitoring-cheat-sheet.md)

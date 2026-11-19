@@ -1,4 +1,4 @@
-## Virt-Manager & Virsh Command Line Cheat Sheet
+# Virt-Manager & Virsh Command Line Cheat Sheet
 
 Virt-Manager is a graphical desktop user interface for managing virtual machines through libvirt. Below are the common GUI actions and their underlying `virsh` and `virt-*` command-line equivalents for headless management and automation.
 
@@ -157,12 +157,7 @@ _While Virt-Manager uses an interactive wizard to create VMs, you can achieve th
 - **Quick Install Example:**
 
   ```bash
-  virt-install \
-    --name [vm_name] \
-    --memory 4096 \
-    --vcpus 2 \
-    --disk size=20,pool=default \
-    --os-variant ubuntu24.04 \
-    --cdrom /path/to/install.iso \
-    --network network=default
+  virt-install --name [vm_name] --memory 4096 --vcpus 2 \
+    --disk size=20,pool=default --os-variant ubuntu24.04 \
+    --cdrom /path/to/install.iso --network network=default
   ```

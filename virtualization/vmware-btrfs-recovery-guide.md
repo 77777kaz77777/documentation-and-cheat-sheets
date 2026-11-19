@@ -49,3 +49,11 @@ sudo rm -rf /mnt/storage/vms/WorkVM/WorkVM.vmx.lck
 ### 5. Boot the Virtual Machine
 
 Open VMware and power on the virtual machine. It should boot normally from the exact state it was in when the chosen Btrfs snapshot was created.
+
+## Related guides
+
+- [Btrfs Cheat Sheet](../linux-general/storage-and-filesystems/btrfs-cheat-sheet.md)
+- [CLI methods for rescuing a corrupted Btrfs filesystem on Fedora](../fedora/fedora-linux-btrfs-recovery.md)
+- [Btrfs Snapshots in the GRUB Menu (grub-btrfs) on Fedora KDE](../fedora/fedora-kde-grub-btrfs-advanced.md)
+- [Steps to automate Btrfs snapshots and backups using Btrbk](../fedora/btrbk-snapshot-automation-cheat-sheet.md)
+- [Format a Second SSD and Automate Btrbk Snapshots](../fedora/fedora-kde-ssd-formatting-btrbk.md)

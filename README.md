@@ -29,7 +29,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | File | Description |
 |---|---|
 | <a href="fedora/airpods-pro-microphone-guide.md"><code>airpods-pro-microphone-guide.md</code></a> | AirPods Pro 3 Microphone Configuration on Fedora  KDE |
-| <a href="fedora/asus-rog-fedora-setup.md"><code>asus-rog-fedora-setup.md</code></a> | ASUS ROG Zephyrus G15 Setup Guide for Fedora  KDE |
+| <a href="fedora/asus-rog-fedora-setup.md"><code>asus-rog-fedora-setup.md</code></a> | ASUS ROG Zephyrus G15 Setup Guide for Fedora KDE |
 | <a href="fedora/asusctl-cheat-sheet-guide.md"><code>asusctl-cheat-sheet-guide.md</code></a> | Commands to control fans, lighting, and performance profiles on ASUS ROG laptops (GA503RW) with asusctl |
 | <a href="fedora/btrbk-snapshot-automation-cheat-sheet.md"><code>btrbk-snapshot-automation-cheat-sheet.md</code></a> | Steps to automate Btrfs snapshots and backups using Btrbk |
 | <a href="fedora/clamav-selinux-implementation-guide.md"><code>clamav-selinux-implementation-guide.md</code></a> | Fedora ClamAV & SELinux Implementation Guide |
@@ -39,7 +39,6 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="fedora/fedora-dnf5-tailscale-repository-fix.md"><code>fedora-dnf5-tailscale-repository-fix.md</code></a> | Fixes and syntax for setting up Tailscale repositories with DNF5 on Fedora |
 | <a href="fedora/fedora-firewall-cheat-sheet.md"><code>fedora-firewall-cheat-sheet.md</code></a> | Firewalld Cheat Sheet (Fedora / RHEL / CentOS) |
 | <a href="fedora/fedora-kde-grub-btrfs-advanced.md"><code>fedora-kde-grub-btrfs-advanced.md</code></a> | Advanced fixes and config steps for GRUB and Btrfs integration on Fedora KDE |
-| <a href="fedora/fedora-kde-grub-btrfs-integration.md"><code>fedora-kde-grub-btrfs-integration.md</code></a> | How to get Btrfs snapshots showing up directly in the GRUB boot menu on Fedora KDE |
 | <a href="fedora/fedora-kde-ssd-formatting-btrbk.md"><code>fedora-kde-ssd-formatting-btrbk.md</code></a> | Steps to format a secondary SSD and set up automated Btrbk snapshots on Fedora KDE |
 | <a href="fedora/fedora-kernel-compilation-guide.md"><code>fedora-kernel-compilation-guide.md</code></a> | This guide provides step-by-step instructions for manually configuring, compiling, and installing a custom or vanilla Linux kernel on Fedora systems |
 | <a href="fedora/fedora-linux-btrfs-recovery.md"><code>fedora-linux-btrfs-recovery.md</code></a> | CLI methods for rescuing a corrupted Btrfs filesystem on Fedora |
@@ -52,7 +51,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="fedora/kde-plasma-6-multi-monitor-troubleshooting.md"><code>kde-plasma-6-multi-monitor-troubleshooting.md</code></a> | Fixes for multi-monitor display glitches in KDE Plasma 6 |
 | <a href="fedora/kdeconnect-fedora-ios-troubleshooting.md"><code>kdeconnect-fedora-ios-troubleshooting.md</code></a> | KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora  KDE Plasma, even after adding firewall rules to the `home` zone |
 | <a href="fedora/snapper-snapshot-management-cheat-sheet.md"><code>snapper-snapshot-management-cheat-sheet.md</code></a> | Commands to create filesystem snapshots and roll back changes using Snapper |
-| <a href="fedora/troubleshooting_dracut_nvidia_module_error.md"><code>troubleshooting_dracut_nvidia_module_error.md</code></a> | Troubleshooting: dracut-install Failed to find module 'nvidia' |
+| <a href="fedora/troubleshooting-dracut-nvidia-module-error.md"><code>troubleshooting-dracut-nvidia-module-error.md</code></a> | Troubleshooting: dracut-install Failed to find module 'nvidia' |
 
 
 ### 📁 linux-general (General Linux Reference)
@@ -64,7 +63,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="linux-general/cardwire-cheat-sheet.md"><code>cardwire-cheat-sheet.md</code></a> | Cardwire Cheat Sheet |
 | <a href="linux-general/enterprise-linux-ecosystem-and-commands-2026.md"><code>enterprise-linux-ecosystem-and-commands-2026.md</code></a> | A breakdown of the 2026 Enterprise Linux landscape plus core admin commands |
 | <a href="linux-general/git-dotfiles-maintenance-cheat-sheet.md"><code>git-dotfiles-maintenance-cheat-sheet.md</code></a> | Commands and scripts for backing up system configurations and dotfiles with Git |
-| <a href="linux-general/git_command_line_guide.md"><code>git_command_line_guide.md</code></a> | Git Command-Line Reference Guide |
+| <a href="linux-general/git-command-line-guide.md"><code>git-command-line-guide.md</code></a> | Git Command-Line Reference Guide |
 | <a href="linux-general/grubby-command-reference.md"><code>grubby-command-reference.md</code></a> | provides a quick-reference guide for using the grubby utility to view, switch, and modify Linux kernel boot parameters and default entries directly from the command line |
 | <a href="linux-general/guide-to-using-alien.md"><code>guide-to-using-alien.md</code></a> | The Comprehensive Guide to Using `alien` |
 | <a href="linux-general/iproute2-reference-guide.md"><code>iproute2-reference-guide.md</code></a> | This document provides a concise quick-reference guide for essential `iproute2` commands used in Linux network administration. It covers practical syntax for managing interfaces, IP addresses, routing tables, and socket statistics, serving as a modern replacement for legacy `net-tools` |
@@ -78,10 +77,10 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="linux-general/linux-upstream-midstream-downstream-explained.md"><code>linux-upstream-midstream-downstream-explained.md</code></a> | A plain-English explanation of how upstream, midstream, and downstream open-source flows work |
 | <a href="linux-general/linux-ventoy-usb-creation-guide.md"><code>linux-ventoy-usb-creation-guide.md</code></a> | How to format and create a multi-boot Ventoy USB drive on Linux |
 | <a href="linux-general/make-bash-script-executable.md"><code>make-bash-script-executable.md</code></a> | How to make a Bash script executable and run it from anywhere on the system |
-| <a href="linux-general/modern_agnostic_nat_router_dhcp_guide.md"><code>modern_agnostic_nat_router_dhcp_guide.md</code></a> | Modern Distro-Agnostic NAT Router & DHCP Server |
+| <a href="linux-general/modern-agnostic-nat-router-dhcp-guide.md"><code>modern-agnostic-nat-router-dhcp-guide.md</code></a> | Modern Distro-Agnostic NAT Router & DHCP Server |
 | <a href="linux-general/ncdu-command-reference.md"><code>ncdu-command-reference.md</code></a> | How to hunt down large files and analyze disk usage using NCDU |
 | <a href="linux-general/nmcli-cheat-sheet.md"><code>nmcli-cheat-sheet.md</code></a> | Commands for managing network interfaces and Wi-Fi connections via nmcli |
-| <a href="linux-general/nvidia-cuda-monitoring-cheat-sheet.md"><code>nvidia-cuda-monitoring-cheat-sheet.md</code></a> | Commands to monitor NVIDIA GPU performance and CUDA workloads |
+| <a href="linux-general/nvidia-cuda-monitoring-cheat-sheet.md"><code>nvidia-cuda-monitoring-cheat-sheet.md</code></a> | NVIDIA GPU and CUDA Monitoring Cheat Sheet |
 | <a href="linux-general/samba-mount-guide.md"><code>samba-mount-guide.md</code></a> | Commands and configurations for connecting, temporarily mounting, and permanently automounting local SMB/CIFS network shares |
 | <a href="linux-general/setup-script-documentation.md"><code>setup-script-documentation.md</code></a> | `setup.sh` - Workstation Setup Script Documentation |
 | <a href="linux-general/ss-command-options-cheat-sheet.md"><code>ss-command-options-cheat-sheet.md</code></a> | How to inspect network sockets and connections using the ss command |
@@ -159,7 +158,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="virtualization/virt-manager-cheatsheet.md"><code>virt-manager-cheatsheet.md</code></a> | Virt-Manager & Virsh Command Line Cheat Sheet |
 | <a href="virtualization/virt-manager-docker-conflict.md"><code>virt-manager-docker-conflict.md</code></a> | How to fix network bridge conflicts when running Virt-Manager and Docker on the same machine |
 | <a href="virtualization/virtualization-virt-manager-troubleshooting-fedora.md"><code>virtualization-virt-manager-troubleshooting-fedora.md</code></a> | Fixes and tweaks for running Virt-Manager smoothly on Fedora |
-| <a href="virtualization/vmware_btrfs_recovery_guide.md"><code>vmware_btrfs_recovery_guide.md</code></a> | VMware VM Recovery Guide (Btrfs Snapshots) |
+| <a href="virtualization/vmware-btrfs-recovery-guide.md"><code>vmware-btrfs-recovery-guide.md</code></a> | VMware VM Recovery Guide (Btrfs Snapshots) |
 
 
 ### 📁 windows-and-macos (Windows & macOS References)

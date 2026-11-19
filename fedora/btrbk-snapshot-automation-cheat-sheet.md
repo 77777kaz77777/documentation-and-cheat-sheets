@@ -1,4 +1,4 @@
-## Steps to automate Btrfs snapshots and backups using Btrbk
+# Steps to automate Btrfs snapshots and backups using Btrbk
 
 ## Execution & Dry Runs
 
@@ -77,3 +77,11 @@ sudo journalctl -u btrbk.service
 ```bash
 sudo systemctl status btrbk.timer
 ```
+
+## Related guides
+
+- [Btrfs Cheat Sheet](../linux-general/storage-and-filesystems/btrfs-cheat-sheet.md)
+- [CLI methods for rescuing a corrupted Btrfs filesystem on Fedora](fedora-linux-btrfs-recovery.md)
+- [Btrfs Snapshots in the GRUB Menu (grub-btrfs) on Fedora KDE](fedora-kde-grub-btrfs-advanced.md)
+- [Format a Second SSD and Automate Btrbk Snapshots](fedora-kde-ssd-formatting-btrbk.md)
+- [VMware VM Recovery Guide (Btrfs Snapshots)](../virtualization/vmware-btrfs-recovery-guide.md)

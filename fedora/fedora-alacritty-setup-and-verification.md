@@ -1,4 +1,6 @@
-## Setting up the Alacritty terminal on Fedora, complete with custom fonts and themes
+# Set Up Alacritty on Fedora
+
+Setting up the Alacritty terminal on Fedora, complete with custom fonts and themes.
 
 ## Step 1: Install Alacritty
 
@@ -177,3 +179,8 @@ action = "SpawnNewInstance"  # Opens a fresh terminal window in your current pat
   - Press **Ctrl + =** to increase font size, **Ctrl + -** to decrease it, and **Ctrl + 0** to reset it to 12.0.
   - Press **Ctrl + Shift + Enter** to spawn a fresh Alacritty window pointing to your current working directory.
 - **Test Live Reload**: Open `~/.config/alacritty/alacritty.toml` in your text editor. Temporarily change `opacity = 1.0` to `0.5`, and save the file. The terminal window should immediately become transparent without requiring a restart. Revert back to `1.0` and save again.
+
+## Related guides
+
+- [Alacritty Rendering Troubleshooting Guide (Fedora KDE)](../linux-general/desktop-environments/alacritty-font-rendering-fix.md)
+- [Alacritty Keybindings Cheat Sheet](../linux-general/desktop-environments/alacritty-keybindings-cheatsheet.md)

@@ -1,4 +1,4 @@
-## Fedora SELinux Management & Context Resolution Cheat Sheet
+# Fedora SELinux Management & Context Resolution Cheat Sheet
 
 Security-Enhanced Linux (SELinux) is a mandatory access control (MAC) security mechanism provided in the kernel. In Fedora and RHEL-based systems, it is enabled by default and operates primarily by labeling files, processes, and ports with a "context" and enforcing rules on how they interact.
 
@@ -44,7 +44,8 @@ ls -lZ /path/to/dir
 **View Process Contexts:**
 
 ```bash
-`ps -Z` or `ps -eZ`
+ps -Z
+ps -eZ   # same thing
 ```
 
 **View Current User Context:**

@@ -1,8 +1,6 @@
-## KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora  KDE Plasma, even after adding firewall rules to the `home` zone
+# Troubleshooting KDE Connect: Fedora KDE to iOS
 
-# Troubleshooting KDE Connect: Fedora  KDE to iOS
-
-**Issue:** KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora  KDE Plasma, even after adding firewall rules to the `home` zone.
+**Issue:** KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora KDE Plasma, even after adding firewall rules to the `home` zone.
 
 **Root Causes:**
 
@@ -26,15 +24,9 @@ mv ~/.config/kdeconnect ~/.config/kdeconnect.bak
 Fedora defaults active connections to `FedoraWorkstation` or `public`. Apply the KDE Connect service rules to these zones instead of `home`.
 
 ```bash
-sudo firewall-cmd \
-  --permanent \
-  --zone=FedoraWorkstation \
-  --add-service=kdeconnect
+sudo firewall-cmd --permanent --zone=FedoraWorkstation --add-service=kdeconnect
 
-sudo firewall-cmd \
-  --permanent \
-  --zone=public \
-  --add-service=kdeconnect
+sudo firewall-cmd --permanent --zone=public --add-service=kdeconnect
 
 sudo firewall-cmd --reload
 ```

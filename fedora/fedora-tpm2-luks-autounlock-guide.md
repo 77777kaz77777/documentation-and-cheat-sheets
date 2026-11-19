@@ -1,4 +1,12 @@
-## Step-by-step guide for configuring automatic LUKS2 root volume decryption using hardware TPM 2.0 and systemd-cryptenroll
+# Unlock LUKS Automatically with TPM 2.0 on Fedora
+
+Step-by-step guide for configuring automatic LUKS2 root volume decryption using hardware TPM 2.0 and systemd-cryptenroll.
+
+## Before you start
+
+- **Your passphrase stays.** The TPM is added as an extra key slot; your existing LUKS passphrase keeps working and is the fallback whenever the TPM refuses to unlock.
+- **Expect to need it.** The binding uses PCR 7 (Secure Boot state), so turning Secure Boot off, enrolling new keys, or some firmware updates will make the TPM refuse, and you'll be asked for the passphrase. Make sure you know it before starting.
+- **Optional recovery key:** `sudo systemd-cryptenroll --recovery-key /dev/<YOUR_PARTITION>` prints a key you can store offline (password manager, paper).
 
 ## 1. Install Dependencies
 
@@ -7,10 +15,7 @@ Install the required packages to interact with the TPM 2.0 chip using `systemd-c
 **Command:**
 
 ```bash
-sudo dnf \
-install \
-tpm2-tss \
-tpm2-tools
+sudo dnf install tpm2-tss tpm2-tools
 ```
 
 **Example Output:**
@@ -38,9 +43,7 @@ The `initramfs` must load the TPM modules before attempting to mount the encrypt
 **Command:**
 
 ```bash
-echo 'add_dracutmodules+=" tpm2-tss "' \
-| sudo tee \
-/etc/dracut.conf.d/tpm2.conf
+echo 'add_dracutmodules+=" tpm2-tss "' | sudo tee /etc/dracut.conf.d/tpm2.conf
 ```
 
 **Full File Content (`/etc/dracut.conf.d/tpm2.conf`):**
@@ -56,8 +59,7 @@ Find the exact partition containing your encrypted volume.
 **Command:**
 
 ```bash
-lsblk \
--f
+lsblk -f
 ```
 
 ## 4. Enroll the TPM into the LUKS Volume
@@ -67,10 +69,7 @@ Bind the unlock process to PCR 7, which ensures the drive only unlocks if the Se
 **Command:**
 
 ```bash
-sudo systemd-cryptenroll \
---tpm2-device=auto \
---tpm2-pcrs=7 \
-/dev/<YOUR_PARTITION>
+sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=7 /dev/<YOUR_PARTITION>
 ```
 
 **Example Output:**
@@ -88,18 +87,16 @@ Modify your configuration to instruct the system to use the TPM during boot by a
 **Command:**
 
 ```bash
-sudo nano \
-/etc/crypttab
+sudo nano /etc/crypttab
 ```
 
 **Full Updated File Template (`/etc/crypttab`):**
 
 ```text
-luks-<YOUR-UUID> \
-UUID=<YOUR-UUID> \
-none \
-discard,tpm2-device=auto
+luks-<YOUR-UUID> UUID=<YOUR-UUID> none discard,tpm2-device=auto
 ```
+
+Keep each entry on **one line**: crypttab has no line continuation, so an entry split with `\` will fail to unlock at boot. The four columns are the mapped name, the device, the key file (`none` = ask for the passphrase or use the TPM), and the options.
 
 ## 6. Rebuild Initramfs and Reboot
 
@@ -108,14 +105,11 @@ Apply the changes to the boot image and restart the machine to verify the config
 **Commands:**
 
 ```bash
-sudo dracut \
--f \
---regenerate-all
+sudo dracut -f --regenerate-all
 ```
 
 ```bash
-sudo \
-reboot
+sudo reboot
 ```
 
 **Example Output (dracut):**
@@ -127,6 +121,23 @@ dracut: *** Including module: crypt ***
 dracut: *** Creating image file '/boot/initramfs-6.9.X-XXX.fc44.x86_64.img' ***
 dracut: *** Creating initramfs image file '/boot/initramfs-6.9.X-XXX.fc44.x86_64.img' done ***
 ```
+
+## Undo: go back to passphrase-only unlock
+
+1. Remove the TPM key slot (the passphrase slot is untouched):
+
+   ```bash
+   sudo systemd-cryptenroll --wipe-slot=tpm2 /dev/<YOUR_PARTITION>
+   ```
+
+2. Edit `/etc/crypttab` (`sudo nano /etc/crypttab`) and remove `tpm2-device=auto` from the options column, keeping the line otherwise as it was.
+3. Remove the dracut setting and rebuild the boot images:
+
+   ```bash
+   sudo rm /etc/dracut.conf.d/tpm2.conf
+   sudo dracut -f --regenerate-all
+   sudo reboot
+   ```
 
 ---
 

@@ -1,55 +1,43 @@
-## Everyday commands for managing packages on openSUSE and SLES using Zypper
-
 # Zypper Command Reference Guide (openSUSE / SUSE Linux Enterprise)
+
+Everyday commands for managing packages on openSUSE and SLES using Zypper.
 
 ## Core Package Management
 
 **Install software.**
 
 ```bash
-zypper \
-  install \
-  <package_name>
+zypper install <package_name>
 ```
 
 **Remove (uninstall) software.**
 
 ```bash
-zypper \
-  remove \
-  <package_name>
+zypper remove <package_name>
 ```
 
 **Upgrade software (standard update).**
 
 ```bash
-zypper \
-  update
+zypper update
 ```
 
 **Upgrade software (distribution upgrade / rolling release).**
 
 ```bash
-zypper \
-  dup
+zypper dup
 ```
 
 **Remove unneeded dependencies.**
 
 ```bash
-zypper \
-  remove \
-  --clean-deps \
-  <package_name>
+zypper remove --clean-deps <package_name>
 ```
 
 **Install build dependencies for a package.**
 
 ```bash
-zypper \
-  source-install \
-  --build-deps-only \
-  <package_name>
+zypper source-install --build-deps-only <package_name>
 ```
 
 ## Search and Information
@@ -57,26 +45,19 @@ zypper \
 **Search for software matching specified strings.**
 
 ```bash
-zypper \
-  search \
-  <search_term>
+zypper search <search_term>
 ```
 
 **List packages depending on their relation to the system with additional details.**
 
 ```bash
-zypper \
-  info \
-  <package_name>
+zypper info <package_name>
 ```
 
 **Find what package provides the given value.**
 
 ```bash
-zypper \
-  search \
-  --provides \
-  <file_or_value>
+zypper search --provides <file_or_value>
 ```
 
 ## Repository and Configuration Management
@@ -84,31 +65,25 @@ zypper \
 **Generate the metadata cache (refresh).**
 
 ```bash
-zypper \
-  refresh
+zypper refresh
 ```
 
 **List configured repositories.**
 
 ```bash
-zypper \
-  repos
+zypper repos
 ```
 
 **Add a new repository.**
 
 ```bash
-zypper \
-  addrepo \
-  <url> \
-  <alias>
+zypper addrepo <url> <alias>
 ```
 
 **Remove or expire cached data.**
 
 ```bash
-zypper \
-  clean
+zypper clean
 ```
 
 ---

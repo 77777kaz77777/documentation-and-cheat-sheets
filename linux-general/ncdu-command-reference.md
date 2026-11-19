@@ -11,16 +11,13 @@ ncdu
 **Launch the disk usage analyzer for a specific directory.**
 
 ```bash
-ncdu \
-  /path/to/directory
+ncdu /path/to/directory
 ```
 
 **Scan the entire root file system (excluding other mounted file systems to prevent scanning external drives or network shares).**
 
 ```bash
-ncdu \
-  -x \
-  /
+ncdu -x /
 ```
 
 ## Advanced Scanning and Exporting
@@ -28,43 +25,31 @@ ncdu \
 **Scan a directory quietly (reduces UI updates for faster scanning of large file systems).**
 
 ```bash
-ncdu \
-  -q \
-  /path/to/directory
+ncdu -q /path/to/directory
 ```
 
 **Scan a directory and export the results to a file for later viewing.**
 
 ```bash
-ncdu \
-  -o \
-  ncdu_export.file \
-  /path/to/directory
+ncdu -o ncdu_export.file /path/to/directory
 ```
 
 **Load and view previously exported disk usage results.**
 
 ```bash
-ncdu \
-  -f \
-  ncdu_export.file
+ncdu -f ncdu_export.file
 ```
 
 **Scan a directory with extended information (enables extended mode).**
 
 ```bash
-ncdu \
-  -e \
-  /path/to/directory
+ncdu -e /path/to/directory
 ```
 
 **Scan a directory and enable color output (if supported by terminal).**
 
 ```bash
-ncdu \
-  --color \
-  dark \
-  /path/to/directory
+ncdu --color dark /path/to/directory
 ```
 
 ## Interactive UI Keybindings (Inside NCDU)

@@ -8,11 +8,7 @@ Audit the hardware bus to confirm physical seating, PCIe/USB bus enumeration, an
 
 ```bash
 # Query PCI wireless controllers and display active kernel drivers
-lspci \
-  -nnk \
-  | grep \
-  -A 3 \
-  -i network
+lspci -nnk | grep -A 3 -i network
 ```
 
 - **Expected Output:** Shows the card's vendor ID, product name (e.g., MediaTek MT7922 / Intel AX210), and the `Kernel driver in use:` line.
@@ -22,13 +18,7 @@ lspci \
 
 ```bash
 # Query USB bus hierarchy for wireless dongles or M.2 USB-interface cards
-lsusb \
-  -t \
-  | grep \
-  -i \
-  -A 2 \
-  -B 2 \
-  wireless
+lsusb -t | grep -i -A 2 -B 2 wireless
 ```
 
 - **Verification:** Device must be enumerated with an assigned driver (`btusb`, `rtw88`, etc.).
@@ -43,9 +33,7 @@ Verify kernel driver module initialization and ensure the hardware vendor's firm
 
 ```bash
 # List active wireless driver modules in kernel memory
-lsmod \
-  | grep \
-  -E 'mt79|iwl|ath|rtw|b43'
+lsmod | grep -E 'mt79|iwl|ath|rtw|b43'
 ```
 
 - **Verification:** Confirm the relevant driver module (e.g., `mt7921e` for MediaTek MT7921/MT7922, `iwlwifi` for Intel, `rtw89` for Realtek) is listed as loaded.
@@ -54,9 +42,7 @@ lsmod \
 
 ```bash
 # Inspect boot logs for hardware initialization and firmware load traps
-sudo dmesg \
-  | grep \
-  -iE 'wlan|firmware|wifi|mt79|iwl|ath|rtw'
+sudo dmesg | grep -iE 'wlan|firmware|wifi|mt79|iwl|ath|rtw'
 ```
 
 - **Verification:** Look for lines indicating firmware load success (e.g., `firmware: direct-loading firmware...`).
@@ -64,18 +50,12 @@ sudo dmesg \
 
 ```bash
 # On Fedora / RHEL
-sudo dnf \
-  reinstall \
-  linux-firmware
+sudo dnf reinstall linux-firmware
 ```
 
 ```bash
 # On Debian / Ubuntu
-sudo apt \
-  install \
-  --reinstall \
-  firmware-linux-free \
-  firmware-linux-nonfree
+sudo apt install --reinstall firmware-linux-free firmware-linux-nonfree
 ```
 
 ---
@@ -88,9 +68,7 @@ Ensure the system creates the logical interface and that software or hardware ki
 
 ```bash
 # List all wireless network interfaces
-ip link \
-  show \
-  type wifi
+ip link show type wifi
 
 # Alternatively:
 iw dev
@@ -102,14 +80,10 @@ iw dev
 
 ```bash
 # Check physical and software wireless block states
-rfkill \
-  list \
-  all
+rfkill list all
 
 # Clear all software blocks across Wi-Fi and Bluetooth
-sudo rfkill \
-  unblock \
-  all
+sudo rfkill unblock all
 ```
 
 - **Verification:** Confirm that both `Soft blocked` and `Hard blocked` report `no` for `Wireless LAN` and `Bluetooth`.
@@ -118,15 +92,10 @@ sudo rfkill \
 
 ```bash
 # Display active wireless regulatory domain
-sudo iw \
-  reg \
-  get
+sudo iw reg get
 
 # Manually set region code (e.g., CA for Canada, US for United States)
-sudo iw \
-  reg \
-  set \
-  CA
+sudo iw reg set CA
 ```
 
 - **Verification:** Running `sudo iw reg get` reflects your specified country code to unlock region-specific 5 GHz and 6 GHz channels.
@@ -141,23 +110,13 @@ Perform active scanning and clean up legacy profiles tied to old MAC addresses o
 
 ```bash
 # Bring interface online manually if state is DOWN
-sudo ip \
-  link \
-  set \
-  <interface> \
-  up
+sudo ip link set <interface> up
 
 # Force NetworkManager to rescan available access points
-nmcli \
-  device \
-  wifi \
-  rescan
+nmcli device wifi rescan
 
 # Display detailed scan results
-nmcli \
-  device \
-  wifi \
-  list
+nmcli device wifi list
 ```
 
 - **Verification:** Confirm target SSID appears with appropriate signal strength (`SIGNAL`), channel (`CHAN`), and security protocols.
@@ -166,15 +125,10 @@ nmcli \
 
 ```bash
 # Display saved NetworkManager connection profiles
-nmcli \
-  connection \
-  show
+nmcli connection show
 
 # Remove orphaned network profiles tied to replaced hardware MAC addresses
-sudo nmcli \
-  connection \
-  delete \
-  "OLD_PROFILE_NAME"
+sudo nmcli connection delete "OLD_PROFILE_NAME"
 ```
 
 - **Verification:** Running `nmcli connection show` confirms legacy connections are removed.
@@ -183,13 +137,7 @@ sudo nmcli \
 
 ```bash
 # Connect to access point via nmcli
-nmcli \
-  device \
-  wifi \
-  connect \
-  "SSID_NAME" \
-  password \
-  "WIFI_PASSWORD"
+nmcli device wifi connect "SSID_NAME" password "WIFI_PASSWORD"
 ```
 
 - **Verification:** `nmcli device` reports the interface state as `connected`.
@@ -204,14 +152,10 @@ Verify IP assignment, default gateway routing, and systemd DNS resolution.
 
 ```bash
 # Verify IPv4 and IPv6 address allocation
-ip addr \
-  show \
-  dev \
-  <interface>
+ip addr show dev <interface>
 
 # Inspect default routing table
-ip route \
-  show
+ip route show
 ```
 
 - **Verification:** Confirm an IP address (DHCP or static) is bound to the interface and a `default via <GATEWAY_IP>` route exists.
@@ -220,18 +164,12 @@ ip route \
 
 ```bash
 # Check systemd-resolved DNS status
-resolvectl \
-  status \
-  <interface>
+resolvectl status <interface>
 
 # Test end-to-end ICMP connectivity and DNS lookup
-ping \
-  -c 4 \
-  1.1.1.1
+ping -c 4 1.1.1.1
 
-ping \
-  -c 4 \
-  fedoraproject.org
+ping -c 4 fedoraproject.org
 ```
 
 - **Verification:** Packet loss must be 0%, and domain name queries must resolve to valid IP addresses.
@@ -246,11 +184,7 @@ Disable aggressive wireless power saving to prevent intermittent latency spikes,
 
 ```bash
 # Read interface power management status
-iw \
-  dev \
-  <interface> \
-  get \
-  power_save
+iw dev <interface> get power_save
 ```
 
 - **Verification:** Displays whether wireless power saving is currently `on` or `off`.
@@ -259,12 +193,7 @@ iw \
 
 ```bash
 # Disable power save for a specific connection profile (2 = disabled, 3 = enabled)
-sudo nmcli \
-  connection \
-  modify \
-  "SSID_NAME" \
-  802-11-wireless.powersave \
-  2
+sudo nmcli connection modify "SSID_NAME" 802-11-wireless.powersave 2
 ```
 
 ```ini
@@ -276,9 +205,7 @@ wifi.powersave = 2
 
 ```bash
 # Restart NetworkManager to apply
-sudo systemctl \
-  restart \
-  NetworkManager
+sudo systemctl restart NetworkManager
 ```
 
 - **Verification:** Running `iw dev <interface> get power_save` outputs `Power save: off`.
@@ -293,13 +220,10 @@ Modern Wi-Fi cards are combo modules housing Bluetooth on an internal USB protoc
 
 ```bash
 # Inspect Bluetooth service state
-systemctl \
-  status \
-  bluetooth.service
+systemctl status bluetooth.service
 
 # Verify Bluetooth adapter hardware recognition
-bluetoothctl \
-  show
+bluetoothctl show
 ```
 
 - **Verification:** `bluetoothctl show` displays controller details including MAC address and `Powered: yes`.
@@ -308,14 +232,10 @@ bluetoothctl \
 
 ```bash
 # Unblock Bluetooth radio
-sudo rfkill \
-  unblock \
-  bluetooth
+sudo rfkill unblock bluetooth
 
 # Restart Bluetooth service
-sudo systemctl \
-  restart \
-  bluetooth
+sudo systemctl restart bluetooth
 ```
 
 - **Verification:** Run `bluetoothctl devices` to verify active scanning and discovery of nearby Bluetooth devices.
@@ -324,50 +244,13 @@ sudo systemctl \
 
 ## 8. Diagnostic Command Reference Matrix
 
-**`PCI Hardware` — `lspci -nnk \:**
-
-```bash
-grep -A 3 -i network`
-```
-
-**`Kernel Log` — `sudo dmesg \:**
-
-```bash
-grep -iE 'mt79\
-```
-
-**`RF Block State` — rfkill list all:**
-
-```bash
-`Soft blocked: no`, `Hard blocked: no`
-```
-
-**`Scanning` — nmcli device wifi list:**
-
-```bash
-Target SSIDs listed with signal percentages
-```
-
-**`Connection` — nmcli device wifi connect "SSID" password "PASS":**
-
-```bash
-Device 'wlan0' successfully activated
-```
-
-**`Routing` — ip route show:**
-
-```bash
-`default via <gateway_ip> dev <interface>` present
-```
-
-**`DNS Resolution` — resolvectl status:**
-
-```bash
-Valid DNS servers listed under interface
-```
-
-**`Power Management` — iw dev <interface> get power_save:**
-
-```bash
-Power save: off
-```
+| Check | Command | Expected result |
+| --- | --- | --- |
+| PCI hardware | `lspci -nnk \| grep -A 3 -i network` | Wireless controller listed with a `Kernel driver in use:` line |
+| Kernel log | `sudo dmesg \| grep -iE 'wlan\|firmware\|wifi\|mt79\|iwl\|ath\|rtw'` | Firmware loads; no `failed to load firmware` errors |
+| RF block state | `rfkill list all` | `Soft blocked: no`, `Hard blocked: no` |
+| Scanning | `nmcli device wifi list` | Target SSIDs listed with signal percentages |
+| Connection | `nmcli device wifi connect "SSID" password "PASS"` | `Device 'wlan0' successfully activated` |
+| Routing | `ip route show` | `default via <gateway_ip> dev <interface>` present |
+| DNS resolution | `resolvectl status` | Valid DNS servers listed under the interface |
+| Power management | `iw dev <interface> get power_save` | `Power save: off` |

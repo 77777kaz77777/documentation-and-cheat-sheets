@@ -1,4 +1,6 @@
-# Commands and scripts for backing up system configurations and dotfiles with Git
+# Back Up Dotfiles with Git
+
+Commands and scripts for backing up system configurations and dotfiles with Git.
 
 ## Repository Syncing
 

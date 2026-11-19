@@ -4,7 +4,7 @@ The `ss` command is a utility used to investigate socket connections on Linux sy
 
 ---
 
-## ⚙️ General Options
+## General Options
 
 | Option | Long Option | Description                                      |
 | :----- | :---------- | :----------------------------------------------- |
@@ -13,7 +13,7 @@ The `ss` command is a utility used to investigate socket connections on Linux sy
 
 ---
 
-## 📊 Socket Display Options
+## Socket Display Options
 
 | Option | Long Option   | Description                                                 |
 | :----- | :------------ | :---------------------------------------------------------- |
@@ -39,7 +39,7 @@ The `ss` command is a utility used to investigate socket connections on Linux sy
 
 ---
 
-## 🌐 Protocol-Specific Options
+## Protocol-Specific Options
 
 | Option | Long Option | Description                                                          |
 | :----- | :---------- | :------------------------------------------------------------------- |
@@ -59,7 +59,7 @@ The `ss` command is a utility used to investigate socket connections on Linux sy
 
 ---
 
-## 🔍 Family and Filtering Options
+## Family and Filtering Options
 
 | Option      | Long Option                       | Description                                                                                                                                                                                                                                        |
 | :---------- | :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -74,7 +74,7 @@ The `ss` command is a utility used to investigate socket connections on Linux sy
 
 ---
 
-## 🏷️ State Filters & TCP States
+## State Filters & TCP States
 
 ### State Filters
 

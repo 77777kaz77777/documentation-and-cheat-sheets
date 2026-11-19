@@ -1,4 +1,4 @@
-## A breakdown of the 2026 Enterprise Linux landscape plus core admin commands
+# A breakdown of the 2026 Enterprise Linux landscape plus core admin commands
 
 ## 1. Enterprise Linux Ecosystem Overview (Current as of August 2026)
 
@@ -18,7 +18,7 @@ Understanding where Fedora sits in the Red Hat ecosystem clarifies its use case 
 
 - **CentOS Stream:** The mid-stream development branch. Red Hat takes a snapshot of a specific Fedora release (e.g., Fedora 40 was branched to create CentOS Stream 10) and begins stabilizing it. CentOS Stream receives continuous updates but moves slower than Fedora, providing a direct preview of what will be in the next minor release of RHEL.
 
-- **RHEL & Rocky Linux:** The downstream enterprise releases. RHEL takes the stabilized CentOS Stream code and freezes it, providing up to 10-year lifecycles prioritizing extreme reliability, security compliance, and backwards compatibility over new features. Rocky Linux takes the published RHEL source code, removes the Red Hat branding, and rebuilds it to provide the exact same enterprise stability for free.
+- **RHEL & Rocky Linux:** The downstream enterprise releases. RHEL takes the stabilized CentOS Stream code and freezes it, providing up to 10-year lifecycles prioritizing extreme reliability, security compliance, and backwards compatibility over new features. Rocky Linux rebuilds RHEL without the Red Hat branding to provide the same enterprise stability for free. Since June 2023 Red Hat publishes RHEL source only to its customers (CentOS Stream is the only public source), so Rocky obtains the sources through Red Hat's UBI container images and pay-per-use cloud instances, and co-founded OpenELA, which publishes Enterprise Linux sources openly.
 
 ## 3. Package Management (DNF5)
 
@@ -27,40 +27,31 @@ With the release of EL10 (RHEL 10, CentOS Stream 10, Rocky Linux 10), the system
 ### Update the System
 
 ```bash
-sudo dnf \
-upgrade
+sudo dnf upgrade
 ```
 
 ### Install a Package
 
 ```bash
-sudo dnf \
-install \
-<package_name>
+sudo dnf install <package_name>
 ```
 
 ### Search for a Package
 
 ```bash
-dnf \
-search \
-<search_term>
+dnf search <search_term>
 ```
 
 ### List Installed Packages
 
 ```bash
-dnf \
-list \
---installed
+dnf list --installed
 ```
 
 ### Clean DNF Cache
 
 ```bash
-sudo dnf \
-clean \
-all
+sudo dnf clean all
 ```
 
 ## 4. Service Management (systemd)
@@ -70,34 +61,25 @@ Enterprise Linux distributions rely entirely on `systemd` for service initializa
 ### Start and Enable a Service on Boot
 
 ```bash
-sudo systemctl \
-enable \
---now \
-<service_name>
+sudo systemctl enable --now <service_name>
 ```
 
 ### Stop and Disable a Service
 
 ```bash
-sudo systemctl \
-disable \
---now \
-<service_name>
+sudo systemctl disable --now <service_name>
 ```
 
 ### Check Service Status
 
 ```bash
-systemctl \
-status \
-<service_name>
+systemctl status <service_name>
 ```
 
 ### Reload Systemd Daemon (After editing unit files)
 
 ```bash
-sudo systemctl \
-daemon-reload
+sudo systemctl daemon-reload
 ```
 
 ## 5. Network Management (NetworkManager)
@@ -107,43 +89,26 @@ Networking is handled by NetworkManager (`nmcli`), utilizing keyfiles located in
 ### Show All Network Connections
 
 ```bash
-nmcli \
-connection \
-show
+nmcli connection show
 ```
 
 ### Bring Up a Network Interface
 
 ```bash
-sudo nmcli \
-connection \
-up \
-<connection_name>
+sudo nmcli connection up <connection_name>
 ```
 
 ### Set a Static IP Address
 
 ```bash
-sudo nmcli \
-connection \
-modify \
-<connection_name> \
-ipv4.addresses \
-<ip_address/CIDR> \
-ipv4.gateway \
-<gateway_ip> \
-ipv4.dns \
-<dns_ip> \
-ipv4.method \
-manual
+sudo nmcli connection modify <connection_name> ipv4.addresses <ip_address/CIDR> \
+  ipv4.gateway <gateway_ip> ipv4.dns <dns_ip> ipv4.method manual
 ```
 
 ### Reload Network Connections
 
 ```bash
-sudo nmcli \
-connection \
-reload
+sudo nmcli connection reload
 ```
 
 ## 6. Firewall Management (firewalld)
@@ -153,31 +118,25 @@ Host-based firewall rules are managed dynamically via `firewalld` using zones an
 ### List Active Zones and Rules
 
 ```bash
-sudo firewall-cmd \
---list-all
+sudo firewall-cmd --list-all
 ```
 
 ### Open a Specific Port Permanently
 
 ```bash
-sudo firewall-cmd \
---permanent \
---add-port=<port_number>/<tcp|udp>
+sudo firewall-cmd --permanent --add-port=<port_number>/<tcp|udp>
 ```
 
 ### Allow a Specific Service Permanently
 
 ```bash
-sudo firewall-cmd \
---permanent \
---add-service=<service_name>
+sudo firewall-cmd --permanent --add-service=<service_name>
 ```
 
 ### Reload Firewall to Apply Changes
 
 ```bash
-sudo firewall-cmd \
---reload
+sudo firewall-cmd --reload
 ```
 
 ## 7. SELinux Management
@@ -193,26 +152,19 @@ sestatus
 ### Temporarily Change to Permissive Mode (for troubleshooting)
 
 ```bash
-sudo setenforce \
-0
+sudo setenforce 0
 ```
 
 ### Restore Default SELinux Contexts on a Directory
 
 ```bash
-sudo restorecon \
--R \
--v \
-/path/to/directory
+sudo restorecon -R -v /path/to/directory
 ```
 
 ### Allow a Service Specific Access via Booleans
 
 ```bash
-sudo setsebool \
--P \
-<boolean_name> \
-1
+sudo setsebool -P <boolean_name> 1
 ```
 
 _(Use `getsebool -a` to view all available booleans)._

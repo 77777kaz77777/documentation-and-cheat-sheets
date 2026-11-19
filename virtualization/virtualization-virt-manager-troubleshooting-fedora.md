@@ -1,8 +1,6 @@
-## Fixes and tweaks for running Virt-Manager smoothly on Fedora
-
-## Virt-Manager troubleshooting guide tailored for Fedora with notes for other distributions
-
 # Virt-Manager Troubleshooting: "No active connection" (Fedora Focus)
+
+Fixes and tweaks for running Virt-Manager smoothly on Fedora.
 
 This guide outlines the steps to resolve the common "No active connection to install on" error in Virtual Machine Manager (Virt-Manager) specifically tailored for Fedora.
 

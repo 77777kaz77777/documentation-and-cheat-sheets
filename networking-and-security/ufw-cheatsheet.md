@@ -1,4 +1,4 @@
-## UFW (Uncomplicated Firewall) Command Reference for Ubuntu/Debian
+# UFW (Uncomplicated Firewall) Command Reference for Ubuntu/Debian
 
 UFW is a user-friendly frontend for managing iptables (or nftables) firewall rules on Linux. It aims to make basic firewall management simple while still allowing for advanced configurations.
 

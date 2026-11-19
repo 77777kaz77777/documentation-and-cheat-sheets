@@ -1,44 +1,33 @@
-## A technical reference detailing essential commands for managing ZFS physical storage pools and logical datasets, including pool creation, dataset properties, snapshot replication, and disk replacement workflows
+# ZFS Administration Cheat Sheet
+
+A technical reference detailing essential commands for managing ZFS physical storage pools and logical datasets, including pool creation, dataset properties, snapshot replication, and disk replacement workflows.
 
 ## 1. Zpool Management (Physical Disks)
 
 **Check Pool Status and Health:**
 
 ```bash
-zpool status \
-  -v
+zpool status -v
 ```
 
 ```bash
-zpool iostat \
-  -v \
-  2
+zpool iostat -v 2
 ```
 
 **Create a New Pool:**
 
 ```bash
-zpool create \
-  mypool \
-  mirror \
-  /dev/sda \
-  /dev/sdb
+zpool create mypool mirror /dev/sda /dev/sdb
 ```
 
 ```bash
-zpool create \
-  mypool \
-  raidz1 \
-  /dev/sda \
-  /dev/sdb \
-  /dev/sdc
+zpool create mypool raidz1 /dev/sda /dev/sdb /dev/sdc
 ```
 
 **Import and Export Pools:**
 
 ```bash
-zpool export \
-  mypool
+zpool export mypool
 ```
 
 ```bash
@@ -46,8 +35,7 @@ zpool import
 ```
 
 ```bash
-zpool import \
-  mypool
+zpool import mypool
 ```
 
 ## 2. Dataset Management (Logical Storage)
@@ -55,33 +43,25 @@ zpool import \
 **Create and Destroy Datasets:**
 
 ```bash
-zfs create \
-  mypool/data
+zfs create mypool/data
 ```
 
 ```bash
-zfs destroy \
-  mypool/data
+zfs destroy mypool/data
 ```
 
 **Manage Properties:**
 
 ```bash
-zfs set \
-  compression=lz4 \
-  mypool/data
+zfs set compression=lz4 mypool/data
 ```
 
 ```bash
-zfs set \
-  quota=500G \
-  mypool/data
+zfs set quota=500G mypool/data
 ```
 
 ```bash
-zfs get \
-  all \
-  mypool/data
+zfs get all mypool/data
 ```
 
 ## 3. Snapshots and Replication
@@ -89,36 +69,27 @@ zfs get \
 **Take and View Snapshots:**
 
 ```bash
-zfs snapshot \
-  mypool/data@backup1
+zfs snapshot mypool/data@backup1
 ```
 
 ```bash
-zfs list \
-  -t \
-  snapshot
+zfs list -t snapshot
 ```
 
 **Rollback and Clone:**
 
 ```bash
-zfs rollback \
-  mypool/data@backup1
+zfs rollback mypool/data@backup1
 ```
 
 ```bash
-zfs clone \
-  mypool/data@backup1 \
-  mypool/data-clone
+zfs clone mypool/data@backup1 mypool/data-clone
 ```
 
 **Send and Receive (Replication):**
 
 ```bash
-zfs send \
-  mypool/data@backup1 | \
-zfs receive \
-  backuppool/data-backup
+zfs send mypool/data@backup1 | zfs receive backuppool/data-backup
 ```
 
 ## 4. Maintenance and Disk Replacement
@@ -126,34 +97,25 @@ zfs receive \
 **Scrubbing (Data Integrity Check):**
 
 ```bash
-zpool scrub \
-  mypool
+zpool scrub mypool
 ```
 
 ```bash
-zpool status \
-  mypool
+zpool status mypool
 ```
 
 **Replacing a Failed Disk:**
 
 ```bash
-zpool offline \
-  mypool \
-  /dev/sda
+zpool offline mypool /dev/sda
 ```
 
 ```bash
-zpool replace \
-  mypool \
-  /dev/sda \
-  /dev/sde
+zpool replace mypool /dev/sda /dev/sde
 ```
 
 ```bash
-zpool online \
-  mypool \
-  /dev/sde
+zpool online mypool /dev/sde
 ```
 
 ---
