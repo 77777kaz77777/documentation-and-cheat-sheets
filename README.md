@@ -39,7 +39,6 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="fedora/fedora-dnf5-tailscale-repository-fix.md"><code>fedora-dnf5-tailscale-repository-fix.md</code></a> | Fixes and syntax for setting up Tailscale repositories with DNF5 on Fedora |
 | <a href="fedora/fedora-firewall-cheat-sheet.md"><code>fedora-firewall-cheat-sheet.md</code></a> | Firewalld Cheat Sheet (Fedora / RHEL / CentOS) |
 | <a href="fedora/fedora-kde-grub-btrfs-advanced.md"><code>fedora-kde-grub-btrfs-advanced.md</code></a> | Advanced fixes and config steps for GRUB and Btrfs integration on Fedora KDE |
-| <a href="fedora/fedora-kde-grub-btrfs-integration.md"><code>fedora-kde-grub-btrfs-integration.md</code></a> | How to get Btrfs snapshots showing up directly in the GRUB boot menu on Fedora KDE |
 | <a href="fedora/fedora-kde-ssd-formatting-btrbk.md"><code>fedora-kde-ssd-formatting-btrbk.md</code></a> | Steps to format a secondary SSD and set up automated Btrbk snapshots on Fedora KDE |
 | <a href="fedora/fedora-kernel-compilation-guide.md"><code>fedora-kernel-compilation-guide.md</code></a> | This guide provides step-by-step instructions for manually configuring, compiling, and installing a custom or vanilla Linux kernel on Fedora systems |
 | <a href="fedora/fedora-linux-btrfs-recovery.md"><code>fedora-linux-btrfs-recovery.md</code></a> | CLI methods for rescuing a corrupted Btrfs filesystem on Fedora |

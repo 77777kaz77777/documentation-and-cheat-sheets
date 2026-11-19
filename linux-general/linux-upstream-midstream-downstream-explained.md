@@ -4,7 +4,7 @@ To understand upstream, midstream, and downstream, picture software development 
 
 ---
 
-## 🌊 1. Upstream (The Source & Innovation)
+## 1. Upstream (The Source & Innovation)
 
 **Upstream** refers to the original source code repository or primary project where development actively happens. This is where new features are written, experimental ideas are tried, and raw code is first created.
 
@@ -19,7 +19,7 @@ To understand upstream, midstream, and downstream, picture software development 
 
 ---
 
-## 🧪 2. Midstream (The Staging & Testing Ground)
+## 2. Midstream (The Staging & Testing Ground)
 
 **Midstream** is the bridge between raw, experimental upstream code and production-ready downstream products. It takes software from various upstream projects, integrates them together into a unified system, and continuously tests them under real-world conditions.
 
@@ -31,7 +31,7 @@ To understand upstream, midstream, and downstream, picture software development 
 
 ---
 
-## 📦 3. Downstream (The Refined / Production Product)
+## 3. Downstream (The Refined / Production Product)
 
 **Downstream** refers to the final, hardened distribution delivered to end users or enterprise environments. A downstream maintainer takes code from upstream and midstream sources, applies security patches, locks package versions to prevent breaking changes, and packages it into a release.
 
@@ -44,7 +44,7 @@ To understand upstream, midstream, and downstream, picture software development 
 
 ---
 
-## 🔄 How Code Flows in Practice
+## How Code Flows in Practice
 
 ```text
 [ Upstream ]            →          [ Midstream ]           →          [ Downstream ]
@@ -54,7 +54,7 @@ To understand upstream, midstream, and downstream, picture software development 
 
 ---
 
-## 📊 Comparison Summary
+## Comparison Summary
 
 | Trait              | Upstream                   | Midstream                                | Downstream                                   |
 | :----------------- | :------------------------- | :--------------------------------------- | :------------------------------------------- |

@@ -1,4 +1,4 @@
-## A guide to safely installing NVIDIA drivers on Fedora Workstation utilizing RPM Fusion repositories
+# A guide to safely installing NVIDIA drivers on Fedora Workstation utilizing RPM Fusion repositories
 
 Below is the complete installation process
 ---
@@ -9,27 +9,19 @@ First, ensure your system is completely up-to-date and enable the **RPM Fusion N
 
 ```bash
 # Update existing system packages
-sudo dnf \
-  update \
-  -y
+sudo dnf update -y
 ```
 
 ```bash
 # Enable RPM Fusion Free and Non-Free repositories
-sudo dnf \
-  install \
-  -y \
+sudo dnf install -y \
   [https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm](https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm) -E %fedora).noarch.rpm \
   [https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm](https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm) -E %fedora).noarch.rpm
 ```
 
 ```bash
 # Enable RPM Fusion AppStream metadata
-sudo dnf \
-  group \
-  update \
-  core \
-  -y
+sudo dnf group update core -y
 ```
 
 _(If you updated your kernel in this step, reboot your system before proceeding: `sudo reboot`)_
@@ -43,26 +35,17 @@ If **Secure Boot** is enabled in your system's UEFI/BIOS settings, Linux will bl
 ### 1. Generate the signing key
 
 ```bash
-sudo dnf \
-  install \
-  -y \
-  kmodtool \
-  akmods \
-  mokutil \
-  openssl
+sudo dnf install -y kmodtool akmods mokutil openssl
 ```
 
 ```bash
-sudo kmodgenca \
-  -a
+sudo kmodgenca -a
 ```
 
 ### 2. Import the key into MOK
 
 ```bash
-sudo mokutil \
-  --import \
-  /etc/pki/akmods/certs/public_key.der
+sudo mokutil --import /etc/pki/akmods/certs/public_key.der
 ```
 
 _You will be prompted to create a password. Remember this password._
@@ -83,18 +66,12 @@ Once back in Fedora, install the main driver package along with CUDA and video a
 
 ```bash
 # Install the core driver package
-sudo dnf \
-  install \
-  -y \
-  akmod-nvidia
+sudo dnf install -y akmod-nvidia
 ```
 
 ```bash
 # Install CUDA / NVENC / NVDEC libraries (Recommended for gaming & compute)
-sudo dnf \
-  install \
-  -y \
-  xorg-x11-drv-nvidia-cuda
+sudo dnf install -y xorg-x11-drv-nvidia-cuda
 ```
 
 ---
@@ -107,10 +84,7 @@ Fedora uses `akmods` to automatically build the NVIDIA kernel module in the back
 2. Check if the module build has finished by running:
 
 ```bash
-modinfo \
-  -F \
-  version \
-  nvidia
+modinfo -F version nvidia
 ```
 
 If it returns a version number (e.g., `555.58.02` or similar), the compilation is complete. If it says `module nvidia not found`, wait another 1–2 minutes and run the command again.

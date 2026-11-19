@@ -2,7 +2,7 @@
 
 # LXC_LXD_CLI_Cheat_Sheet.md
 
-## 🚀 Container Lifecycle
+## Container Lifecycle
 
 Most modern implementations use the `lxc` command-line tool (part of the LXD project).
 
@@ -54,7 +54,7 @@ lxc delete [name] --force
 lxc info [name]
 ```
 
-## 🛠️ Access & Configuration
+## Access & Configuration
 
 Interacting with the "inside" of an LXC container is very similar to interacting with a virtual machine.
 
@@ -94,7 +94,7 @@ lxc config edit [name]
 lxc config set [name] limits.cpu 2
 ```
 
-## 📸 Snapshots & Images
+## Snapshots & Images
 
 One of the best features of LXC is the ability to "freeze" a state before making risky changes.
 
@@ -128,7 +128,7 @@ lxc delete [name]/[snap_name]
 lxc publish [name]/[snap_name] --alias [my-custom-image]
 ```
 
-## 🌐 Network & Storage
+## Network & Storage
 
 **List Networks:**
 

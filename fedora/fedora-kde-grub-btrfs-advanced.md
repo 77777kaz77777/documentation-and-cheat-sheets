@@ -1,6 +1,6 @@
 # Advanced fixes and config steps for GRUB and Btrfs integration on Fedora KDE
 
-## 📋 Prerequisites
+## Prerequisites
 
 Ensure your system meets the following requirements before proceeding:
 
@@ -12,7 +12,7 @@ Ensure your system meets the following requirements before proceeding:
 sudo dnf install git make btrfs-progs inotify-tools
 ```
 
-## 🛠️ Phase 1: Fedora Compatibility & Environment Setup
+## Phase 1: Fedora Compatibility & Environment Setup
 
 Fedora uses distinct directory structures and binary naming conventions compared to upstream Linux distributions. Perform these setup steps first to prevent syntax and daemon execution errors.
 
@@ -41,7 +41,7 @@ sudo grub2-editenv - unset menu_auto_hide
 sudo grub2-editenv - set timeout=5
 ```
 
-## 📦 Phase 2: Install grub-btrfs
+## Phase 2: Install grub-btrfs
 
 Clone the official repository, compile, and install the utility:
 
@@ -59,7 +59,7 @@ Because Fedora runs SELinux in Enforcing mode, restore security contexts for the
 sudo restorecon -Rv /usr/bin/grub-btrfs* /usr/lib/systemd/system/grub-btrfsd.service
 ```
 
-## 🚀 Phase 3: Generate GRUB Menu & Enable Monitoring Daemon
+## Phase 3: Generate GRUB Menu & Enable Monitoring Daemon
 
 ### 1. Build the Initial Snapshot Submenu
 
@@ -83,11 +83,11 @@ sudo systemctl enable --now grub-btrfsd
 sudo systemctl status grub-btrfsd
 ```
 
-## 🚨 Emergency Recovery Procedure (Booting a Snapshot)
+## Emergency Recovery Procedure (Booting a Snapshot)
 
 If a kernel update, display driver failure, or system change prevents Fedora from loading normally:
 
-1. **Access the GRUB Menu:** Turn on or restart your laptop. Repeatedly tap **Esc** or **F8** during the splash screen until the GRUB menu appears.
+1. **Access the GRUB Menu:** Turn on or restart your laptop. Repeatedly tap **Esc** or **F8** (or hold **Shift**) during the splash screen until the GRUB menu appears.
 2. **Select and Boot Snapshot:** Navigate down to **Fedora Snapshots** (or **Btrfs Snapshots**) and press **Enter**. Select the timestamped snapshot created immediately before the issue occurred and press **Enter** to boot into the read-only snapshot environment.
 3. **Make the Rollback Permanent:** Once booted into your desktop or TTY terminal session, execute a Snapper rollback to lock in the clean snapshot state:
 
@@ -96,7 +96,7 @@ sudo snapper rollback
 sudo reboot
 ```
 
-## 🔧 Troubleshooting & Common Issues
+## Troubleshooting & Common Issues
 
 ### Issue 1: `grub-script-check: No such file or directory`
 
@@ -137,9 +137,11 @@ sudo grub2-editenv - set timeout=5
 - **Cause:** Btrfs snapshots **cannot cross physical drive or filesystem boundaries**. GRUB can only boot snapshots residing on the primary boot volume (`/.snapshots`).
 - **Resolution:** Keep bootable rollback snapshots on the main OS drive. Use secondary drives strictly for secondary backups via `btrfs send/receive` or `btrbk`.
 
-## 🧹 Maintenance & Updates
+## Maintenance & Updates
 
 **To Update grub-btrfs:**
+
+Run `git pull` as your normal user, not with `sudo`. Pulling as root leaves root-owned files in `.git`, and later pulls fail with `cannot open '.git/FETCH_HEAD': Permission denied` (fix that with `sudo chown -R "$USER": ~/grub-btrfs`).
 
 ```bash
 cd ~/grub-btrfs

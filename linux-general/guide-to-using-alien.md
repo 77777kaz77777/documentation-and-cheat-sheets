@@ -15,7 +15,7 @@
 
 ---
 
-## ⚠️ Important Warnings (Read Before Using)
+## Important Warnings (Read Before Using)
 
 Before using `alien`, you must understand its limitations:
 

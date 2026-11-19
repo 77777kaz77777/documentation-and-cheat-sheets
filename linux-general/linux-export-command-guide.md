@@ -4,7 +4,7 @@ The `export` command is a built-in shell utility in Bash, Zsh, and POSIX-complia
 
 ---
 
-## 🧠 Core Architecture: Shell Variables vs. Environment Variables
+## Core Architecture: Shell Variables vs. Environment Variables
 
 - **Local Shell Variables:** Stored inside the shell's internal symbol table. They exist only within the current shell session and are **not** passed down to scripts or sub-processes.
 - **Environment Variables:** Stored in the process environment array (`environ`). When a process spawns a child process via `fork()` or `exec()`, the kernel copies this environment array to the child.

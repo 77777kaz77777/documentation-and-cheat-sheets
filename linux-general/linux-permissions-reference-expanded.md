@@ -29,25 +29,19 @@ Instead of numbers, permissions can be modified using letters to add (`+`), remo
 **Add execute permission for the owner:**
 
 ```bash
-chmod \
-  u+x \
-  <file>
+chmod u+x <file>
 ```
 
 **Remove write permission for group and others:**
 
 ```bash
-chmod \
-  go-w \
-  <file>
+chmod go-w <file>
 ```
 
 **Set exact permissions (read/write for owner, read-only for group/others):**
 
 ```bash
-chmod \
-  u=rw,go=r \
-  <file>
+chmod u=rw,go=r <file>
 ```
 
 ---
@@ -63,9 +57,7 @@ Special bits alter the default execution or ownership behavior.
 - **Function:** Executes the file with the privileges of the file's owner (commonly root), not the user running it (e.g., `/usr/bin/passwd`).
 
 ```bash
-chmod \
-  u+s \
-  <executable_file>
+chmod u+s <executable_file>
 ```
 
 ### SGID (Set Group ID)
@@ -75,9 +67,7 @@ chmod \
 - **Function:** On a file, runs it with group privileges. On a directory, forces all newly created files within it to inherit the directory's group ownership rather than the creator's primary group.
 
 ```bash
-chmod \
-  g+s \
-  <shared_directory>
+chmod g+s <shared_directory>
 ```
 
 ### Sticky Bit
@@ -87,9 +77,7 @@ chmod \
 - **Function:** Used on shared directories (`/tmp`). Prevents users from deleting or renaming files they do not own, even if they have write access to the directory.
 
 ```bash
-chmod \
-  +t \
-  <shared_directory>
+chmod +t <shared_directory>
 ```
 
 ---
@@ -103,9 +91,7 @@ chmod \
 - Read, write, and execute for everyone. (Dangerous for sensitive files).
 
 ```bash
-chmod \
-  777 \
-  <file_or_directory>
+chmod 777 <file_or_directory>
 ```
 
 **755 (rwxr-xr-x)**
@@ -113,9 +99,7 @@ chmod \
 - Owner has full access; group and others have read and execute access. (Standard for directories and executable scripts).
 
 ```bash
-chmod \
-  755 \
-  <file_or_directory>
+chmod 755 <file_or_directory>
 ```
 
 **700 (rwx------)**
@@ -123,9 +107,7 @@ chmod \
 - Owner has full access; group and others have no access. (Standard for private directories like `~/.ssh`).
 
 ```bash
-chmod \
-  700 \
-  <file_or_directory>
+chmod 700 <file_or_directory>
 ```
 
 **644 (rw-r--r--)**
@@ -133,9 +115,7 @@ chmod \
 - Owner can read and write; group and others can only read. (Standard for configuration files and documents).
 
 ```bash
-chmod \
-  644 \
-  <file_or_directory>
+chmod 644 <file_or_directory>
 ```
 
 **600 (rw-------)**
@@ -143,9 +123,7 @@ chmod \
 - Owner can read and write; group and others have no access. (Standard for private files like SSH private keys).
 
 ```bash
-chmod \
-  600 \
-  <file_or_directory>
+chmod 600 <file_or_directory>
 ```
 
 ---
@@ -155,35 +133,25 @@ chmod \
 **Modify file or directory permissions recursively.**
 
 ```bash
-chmod \
-  -R \
-  755 \
-  <path>
+chmod -R 755 <path>
 ```
 
 **Change file owner and group.**
 
 ```bash
-chown \
-  <user>:<group> \
-  <file_or_directory>
+chown <user>:<group> <file_or_directory>
 ```
 
 **Change file owner recursively.**
 
 ```bash
-chown \
-  -R \
-  <user> \
-  <directory>
+chown -R <user> <directory>
 ```
 
 **View current permissions, ownership, and hidden files.**
 
 ```bash
-ls \
-  -la \
-  <path>
+ls -la <path>
 ```
 
 ---
@@ -195,34 +163,25 @@ Standard permissions only allow one owner and one group. ACLs permit assigning p
 **View current ACLs on a file or directory.**
 
 ```bash
-getfacl \
-  <file_or_directory>
+getfacl <file_or_directory>
 ```
 
 **Modify (add/change) an ACL to give a specific user read and write access.**
 
 ```bash
-setfacl \
-  -m \
-  u:<specific_user>:rw \
-  <file_or_directory>
+setfacl -m u:<specific_user>:rw <file_or_directory>
 ```
 
 **Remove a specific user's ACL entry.**
 
 ```bash
-setfacl \
-  -x \
-  u:<specific_user> \
-  <file_or_directory>
+setfacl -x u:<specific_user> <file_or_directory>
 ```
 
 **Remove all ACLs from a file.**
 
 ```bash
-setfacl \
-  -b \
-  <file_or_directory>
+setfacl -b <file_or_directory>
 ```
 
 ---
@@ -234,26 +193,19 @@ Attributes sit below standard permissions and can restrict root users. Highly re
 **Make a file immutable (cannot be deleted, renamed, or modified by anyone, including root).**
 
 ```bash
-sudo \
-  chattr \
-  +i \
-  <file>
+sudo chattr +i <file>
 ```
 
 **Remove the immutable attribute.**
 
 ```bash
-sudo \
-  chattr \
-  -i \
-  <file>
+sudo chattr -i <file>
 ```
 
 **List extended attributes on a file.**
 
 ```bash
-lsattr \
-  <file>
+lsattr <file>
 ```
 
 ---
@@ -265,24 +217,17 @@ For systems enforcing SELinux, standard permissions are evaluated first, followe
 **List files with their SELinux security contexts.**
 
 ```bash
-ls \
-  -Z \
-  <path>
+ls -Z <path>
 ```
 
 **Restore the default SELinux context for a file based on system policy (useful after moving files).**
 
 ```bash
-restorecon \
-  -v \
-  <file_or_directory>
+restorecon -v <file_or_directory>
 ```
 
 **Change a file's SELinux context type manually.**
 
 ```bash
-chcon \
-  -t \
-  <context_type> \
-  <file>
+chcon -t <context_type> <file>
 ```

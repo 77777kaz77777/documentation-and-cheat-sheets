@@ -1,4 +1,4 @@
-## Setting up the Alacritty terminal on Fedora, complete with custom fonts and themes
+# Setting up the Alacritty terminal on Fedora, complete with custom fonts and themes
 
 ## Step 1: Install Alacritty
 

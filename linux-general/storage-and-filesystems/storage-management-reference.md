@@ -13,30 +13,25 @@ lsblk
 **List all block devices with file system information (UUIDs and labels).**
 
 ```bash
-lsblk \
-  -f
+lsblk -f
 ```
 
 **List block devices with specific columns (name, size, type, mountpoint).**
 
 ```bash
-lsblk \
-  -o \
-  NAME,SIZE,TYPE,MOUNTPOINT
+lsblk -o NAME,SIZE,TYPE,MOUNTPOINT
 ```
 
 **List disk partition tables and sizes (requires root).**
 
 ```bash
-fdisk \
-  -l
+fdisk -l
 ```
 
 **Open the interactive partition manager for a specific drive.**
 
 ```bash
-fdisk \
-  /dev/nvme0n1
+fdisk /dev/nvme0n1
 ```
 
 ## Disk Space and Usage
@@ -44,34 +39,25 @@ fdisk \
 **Show file system disk space usage in human-readable format.**
 
 ```bash
-df \
-  -h
+df -h
 ```
 
 **Show file system disk space usage including the file system type.**
 
 ```bash
-df \
-  -h \
-  -T
+df -h -T
 ```
 
 **Estimate file space usage for a specific directory in human-readable format.**
 
 ```bash
-du \
-  -s \
-  -h \
-  /path/to/directory
+du -s -h /path/to/directory
 ```
 
 **List the sizes of all files and directories in the current location.**
 
 ```bash
-du \
-  -s \
-  -h \
-  *
+du -s -h *
 ```
 
 ## Mounting and Unmounting
@@ -79,23 +65,19 @@ du \
 **Mount a storage device to a directory.**
 
 ```bash
-mount \
-  /dev/sda1 \
-  /mnt/storage
+mount /dev/sda1 /mnt/storage
 ```
 
 **Unmount a storage device from its directory.**
 
 ```bash
-umount \
-  /mnt/storage
+umount /mnt/storage
 ```
 
 **Reload all mount points defined in `/etc/fstab`.**
 
 ```bash
-mount \
-  -a
+mount -a
 ```
 
 ## BTRFS File System Management
@@ -103,45 +85,31 @@ mount \
 **Show information about all BTRFS file systems.**
 
 ```bash
-btrfs \
-  filesystem \
-  show
+btrfs filesystem show
 ```
 
 **Show disk space usage specific to a BTRFS file system.**
 
 ```bash
-btrfs \
-  filesystem \
-  df \
-  /mnt/btrfs_storage
+btrfs filesystem df /mnt/btrfs_storage
 ```
 
 **List all BTRFS subvolumes under a specific path.**
 
 ```bash
-btrfs \
-  subvolume \
-  list \
-  /mnt/btrfs_storage
+btrfs subvolume list /mnt/btrfs_storage
 ```
 
 **Create a new BTRFS subvolume.**
 
 ```bash
-btrfs \
-  subvolume \
-  create \
-  /mnt/btrfs_storage/@new_subvol
+btrfs subvolume create /mnt/btrfs_storage/@new_subvol
 ```
 
 **Start a balance operation on a BTRFS file system to reclaim space.**
 
 ```bash
-btrfs \
-  balance \
-  start \
-  /mnt/btrfs_storage
+btrfs balance start /mnt/btrfs_storage
 ```
 
 ## Snapper and Snapshot Management
@@ -149,34 +117,23 @@ btrfs \
 **List all existing snapshots for the default configuration (usually root).**
 
 ```bash
-snapper \
-  list
+snapper list
 ```
 
 **List snapshots for a specific configuration.**
 
 ```bash
-snapper \
-  -c \
-  home \
-  list
+snapper -c home list
 ```
 
 **Create a manual snapshot with a description.**
 
 ```bash
-snapper \
-  create \
-  -d \
-  "Before system update" \
-  -c \
-  timeline
+snapper create -d "Before system update" -c timeline
 ```
 
 **Delete a specific snapshot by its number.**
 
 ```bash
-snapper \
-  delete \
-  42
+snapper delete 42
 ```

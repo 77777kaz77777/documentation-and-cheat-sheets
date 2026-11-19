@@ -1,4 +1,4 @@
-## ASUS ROG Zephyrus G15 Setup Guide for Fedora  KDE
+# ASUS ROG Zephyrus G15 Setup Guide for Fedora  KDE
 
 This document outlines the complete procedure for configuring and optimizing ASUS ROG hardware running Fedora 44 KDE, specifically targeting the AMD Ryzen 9 6900HS and NVIDIA RTX 3070 Ti architecture.
 
@@ -13,15 +13,9 @@ This configuration replaces legacy repositories with the official Terra reposito
 Remove deprecated COPR repositories and old software versions to prevent dependency errors.
 
 ```bash
-sudo dnf copr remove \
-  -y \
-  lukenukem/asus-linux
+sudo dnf copr remove -y lukenukem/asus-linux
 
-sudo dnf remove \
-  -y \
-  asusctl \
-  supergfxctl \
-  asusctl-rog-gui
+sudo dnf remove -y asusctl supergfxctl asusctl-rog-gui
 ```
 
 ## Step 2: Install the Terra Repository
@@ -29,15 +23,11 @@ sudo dnf remove \
 Add the official Terra repository maintained by Fyra Labs to source modern ASUS packages.
 
 ```bash
-sudo dnf install \
-  -y \
-  --nogpgcheck \
+sudo dnf install -y --nogpgcheck \
   --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' \
   terra-release
 
-sudo dnf update \
-  -y \
-  --refresh
+sudo dnf update -y --refresh
 ```
 
 ## Step 3: Install ASUS Utilities and Cardwire
@@ -45,12 +35,7 @@ sudo dnf update \
 Install the core management tools while allowing DNF to automatically resolve conflicts with default package managers like `switcheroo-control`.
 
 ```bash
-sudo dnf install \
-  -y \
-  --allowerasing \
-  asusctl \
-  cardwire \
-  asusctl-rog-gui
+sudo dnf install -y --allowerasing asusctl cardwire asusctl-rog-gui
 ```
 
 ## Step 4: Enable System Daemons
@@ -58,9 +43,7 @@ sudo dnf install \
 Enable the required background services to manage hardware states.
 
 ```bash
-sudo systemctl enable \
-  --now \
-  cardwired.service
+sudo systemctl enable --now cardwired.service
 ```
 
 ---
@@ -70,25 +53,19 @@ sudo systemctl enable \
 - **Integrated Mode (Max Battery):**
 
   ```bash
-  cardwire \
-    set \
-    integrated
+  cardwire set integrated
   ```
 
 - **Hybrid Mode (Default):**
 
   ```bash
-  cardwire \
-    set \
-    hybrid
+  cardwire set hybrid
   ```
 
 - **Dedicated Mode (Max Performance):**
 
   ```bash
-  cardwire \
-    set \
-    dedicated
+  cardwire set dedicated
   ```
 
 ## Verification
@@ -96,8 +73,7 @@ sudo systemctl enable \
 To verify that the NVIDIA GPU has successfully powered down to save battery in integrated mode, inspect the power state on the PCI bus:
 
 ```bash
-cat \
-  /sys/bus/pci/devices/0000:01:00.0/power_state
+cat /sys/bus/pci/devices/0000:01:00.0/power_state
 ```
 
 _(A return value of `D3cold` indicates the GPU is successfully powered off)._

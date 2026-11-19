@@ -1,6 +1,6 @@
 # Quick-reference CLI and syntax cheat sheet for Ansible
 
-## 🚀 Ansible Ad-Hoc Commands
+## Ansible Ad-Hoc Commands
 
 **Ping all hosts:**
 
@@ -44,7 +44,7 @@ ansible all -m copy -a "src=/etc/hosts dest=/tmp/hosts"
 ansible hostname -m setup
 ```
 
-## 📝 Playbook Management
+## Playbook Management
 
 **Run a playbook:**
 
@@ -94,7 +94,7 @@ ansible-playbook site.yml --limit "webserver01"
 ansible-playbook site.yml --step
 ```
 
-## 🔐 Ansible Vault (Secrets)
+## Ansible Vault (Secrets)
 
 **Create encrypted file:**
 
@@ -132,7 +132,7 @@ ansible-playbook site.yml --ask-vault-pass
 ansible-playbook site.yml --vault-password-file ~/.vault_pass.txt
 ```
 
-## 🏗️ Inventory & Roles
+## Inventory & Roles
 
 **List hosts in a group:**
 
@@ -164,7 +164,7 @@ ansible-galaxy install -r requirements.yml
 ansible-galaxy list
 ```
 
-## 🔍 Useful Variables & Debugging
+## Useful Variables & Debugging
 
 - **Debug a variable:**
 
@@ -180,7 +180,7 @@ ansible-galaxy list
   - `{{ ansible_default_ipv4.address }}`: The primary IP of the managed node (requires fact-gathering).
   - `{{ hostvars['hostname']['var_name'] }}`: Access variables assigned to another host.
 
-## 🛠️ Configuration Tips
+## Configuration Tips
 
 - **The `ansible.cfg` file:** Ansible evaluates configuration files in the following order of precedence:
   1. `ANSIBLE_CONFIG` (environment variable)

@@ -1,4 +1,4 @@
-## Step-by-step guide for configuring automatic LUKS2 root volume decryption using hardware TPM 2.0 and systemd-cryptenroll
+# Step-by-step guide for configuring automatic LUKS2 root volume decryption using hardware TPM 2.0 and systemd-cryptenroll
 
 ## 1. Install Dependencies
 
@@ -7,10 +7,7 @@ Install the required packages to interact with the TPM 2.0 chip using `systemd-c
 **Command:**
 
 ```bash
-sudo dnf \
-install \
-tpm2-tss \
-tpm2-tools
+sudo dnf install tpm2-tss tpm2-tools
 ```
 
 **Example Output:**
@@ -38,9 +35,7 @@ The `initramfs` must load the TPM modules before attempting to mount the encrypt
 **Command:**
 
 ```bash
-echo 'add_dracutmodules+=" tpm2-tss "' \
-| sudo tee \
-/etc/dracut.conf.d/tpm2.conf
+echo 'add_dracutmodules+=" tpm2-tss "' | sudo tee /etc/dracut.conf.d/tpm2.conf
 ```
 
 **Full File Content (`/etc/dracut.conf.d/tpm2.conf`):**
@@ -56,8 +51,7 @@ Find the exact partition containing your encrypted volume.
 **Command:**
 
 ```bash
-lsblk \
--f
+lsblk -f
 ```
 
 ## 4. Enroll the TPM into the LUKS Volume
@@ -67,10 +61,7 @@ Bind the unlock process to PCR 7, which ensures the drive only unlocks if the Se
 **Command:**
 
 ```bash
-sudo systemd-cryptenroll \
---tpm2-device=auto \
---tpm2-pcrs=7 \
-/dev/<YOUR_PARTITION>
+sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=7 /dev/<YOUR_PARTITION>
 ```
 
 **Example Output:**
@@ -88,8 +79,7 @@ Modify your configuration to instruct the system to use the TPM during boot by a
 **Command:**
 
 ```bash
-sudo nano \
-/etc/crypttab
+sudo nano /etc/crypttab
 ```
 
 **Full Updated File Template (`/etc/crypttab`):**
@@ -108,14 +98,11 @@ Apply the changes to the boot image and restart the machine to verify the config
 **Commands:**
 
 ```bash
-sudo dracut \
--f \
---regenerate-all
+sudo dracut -f --regenerate-all
 ```
 
 ```bash
-sudo \
-reboot
+sudo reboot
 ```
 
 **Example Output (dracut):**

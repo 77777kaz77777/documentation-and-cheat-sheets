@@ -7,33 +7,25 @@
 **Install software.**
 
 ```bash
-flatpak \
-  install \
-  <remote_name> \
-  <application_id>
+flatpak install <remote_name> <application_id>
 ```
 
 **Remove (uninstall) software.**
 
 ```bash
-flatpak \
-  uninstall \
-  <application_id>
+flatpak uninstall <application_id>
 ```
 
 **Upgrade software.**
 
 ```bash
-flatpak \
-  update
+flatpak update
 ```
 
 **Remove unused runtimes and extensions.**
 
 ```bash
-flatpak \
-  uninstall \
-  --unused
+flatpak uninstall --unused
 ```
 
 ## Search and Information
@@ -41,33 +33,25 @@ flatpak \
 **Search for software matching specified strings.**
 
 ```bash
-flatpak \
-  search \
-  <search_term>
+flatpak search <search_term>
 ```
 
 **List packages depending on their relation to the system with additional details.**
 
 ```bash
-flatpak \
-  info \
-  <application_id>
+flatpak info <application_id>
 ```
 
 **List installed packages (applications only).**
 
 ```bash
-flatpak \
-  list \
-  --app
+flatpak list --app
 ```
 
 **List installed packages (runtimes only).**
 
 ```bash
-flatpak \
-  list \
-  --runtime
+flatpak list --runtime
 ```
 
 ## Repository and Configuration Management
@@ -75,24 +59,17 @@ flatpak \
 **Add a new repository (remote).**
 
 ```bash
-flatpak \
-  remote-add \
-  --if-not-exists \
-  <remote_name> \
-  <url>
+flatpak remote-add --if-not-exists <remote_name> <url>
 ```
 
 **List configured repositories.**
 
 ```bash
-flatpak \
-  remotes
+flatpak remotes
 ```
 
 **Manage application permissions.**
 
 ```bash
-flatpak \
-  override \
-  <application_id>
+flatpak override <application_id>
 ```

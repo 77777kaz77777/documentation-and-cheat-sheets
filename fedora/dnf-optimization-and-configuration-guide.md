@@ -1,4 +1,4 @@
-## DNF Package Manager Speed Optimization & Configuration Guide
+# DNF Package Manager Speed Optimization & Configuration Guide
 
 ### 1. Open the DNF configuration file
 

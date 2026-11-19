@@ -1,4 +1,4 @@
-## This document provides a concise quick-reference guide for essential `iproute2` commands used in Linux network administration. It covers practical syntax for managing interfaces, IP addresses, routing tables, and socket statistics, serving as a modern replacement for legacy `net-tools`
+# This document provides a concise quick-reference guide for essential `iproute2` commands used in Linux network administration. It covers practical syntax for managing interfaces, IP addresses, routing tables, and socket statistics, serving as a modern replacement for legacy `net-tools`
 
 ## 1. Network Interfaces (`ip link`)
 
@@ -7,7 +7,8 @@ _Replaces legacy `ifconfig` for interface management._
 **List all network interfaces and their MAC addresses:**
 
 ```bash
-`ip link show` / `ip l`
+ip link show
+ip l   # same thing
 ```
 
 **Show status and details of a specific interface (`eth0`):**
@@ -41,7 +42,8 @@ _Replaces legacy `ifconfig` for IP assignment._
 **List all IP addresses across all interfaces:**
 
 ```bash
-`ip addr show` / `ip a`
+ip addr show
+ip a   # same thing
 ```
 
 **Show a brief, one-line-per-interface status including IP and state:**
@@ -87,7 +89,8 @@ _Replaces legacy `route` command._
 **Display the kernel's IPv4 routing table:**
 
 ```bash
-`ip route show` / `ip r`
+ip route show
+ip r   # same thing
 ```
 
 **Display the kernel's IPv6 routing table:**
@@ -127,7 +130,8 @@ _Replaces legacy `arp` command._
 **Display the neighbor/ARP cache table:**
 
 ```bash
-`ip neigh show` / `ip n`
+ip neigh show
+ip n   # same thing
 ```
 
 **Clear the entire ARP cache for a specific interface:**

@@ -26,9 +26,8 @@ Download the latest Linux `.tar.gz` package from Ventoy's GitHub release page or
 
 ```bash
 VENTOY_VER=$(curl -sI https://github.com/ventoy/Ventoy/releases/latest | grep -i '^location:' | sed -E 's/.*\/tag\/v//' | tr -d '\r\n') && \
-wget "https://github.com/ventoy/Ventoy/releases/download/v${VENTOY_VER}/ventoy-${VENTOY_VER}-linux.tar.gz" && \
-tar -xvf "ventoy-${VENTOY_VER}-linux.tar.gz" && \
-cd "ventoy-${VENTOY_VER}"
+  wget "https://github.com/ventoy/Ventoy/releases/download/v${VENTOY_VER}/ventoy-${VENTOY_VER}-linux.tar.gz" && \
+  tar -xvf "ventoy-${VENTOY_VER}-linux.tar.gz" && cd "ventoy-${VENTOY_VER}"
 ```
 
 ---

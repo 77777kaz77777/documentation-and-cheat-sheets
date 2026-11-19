@@ -5,82 +5,63 @@
 **Install software.**
 
 ```bash
-apt \
-  install
+apt install
 ```
 
 **Remove (uninstall) software.**
 
 ```bash
-apt \
-  remove
+apt remove
 ```
 
 **Upgrade software.**
 
 ```bash
-apt \
-  upgrade
+apt upgrade
 ```
 
 **Downgrade software.**
 
 ```bash
-apt \
-  install \
-  <package>=<version>
+apt install <package>=<version>
 ```
 
 **Reinstall software.**
 
 ```bash
-apt \
-  reinstall
+apt reinstall
 ```
 
 **Remove software and install another in one transaction (using chaining).**
 
 ```bash
-apt \
-  install \
-  <package1> && \
-apt \
-  remove \
-  <package2>
+apt install <package1> && apt remove <package2>
 ```
 
 **Remove all unneeded packages originally installed as dependencies.**
 
 ```bash
-apt \
-  autoremove
+apt autoremove
 ```
 
 **Install build dependencies for a package or spec file.**
 
 ```bash
-apt \
-  build-dep
+apt build-dep
 ```
 
 **Install debuginfo packages.**
 
 ```bash
-apt \
-  install \
-  <package>-dbgsym
+apt install <package>-dbgsym
 ```
 
 **Change the reason for an installed package (mark as auto or manual).**
 
 ```bash
-apt-mark \
-  auto \
-  <package>
+apt-mark auto <package>
 
-apt-mark \
-  manual \
-  <package>
+apt-mark manual <package>
 ```
 
 ## Search and Information
@@ -88,57 +69,49 @@ apt-mark \
 **Search for software matching all specified strings.**
 
 ```bash
-apt \
-  search
+apt search
 ```
 
 **List packages depending on their relation to the system with additional details.**
 
 ```bash
-apt \
-  show
+apt show
 ```
 
 **List packages depending on their relation to the system.**
 
 ```bash
-apt \
-  list
+apt list
 ```
 
 **Find what package provides the given value.**
 
 ```bash
-apt-file \
-  search
+apt-file search
 ```
 
 **Search for packages matching various criteria (cache information).**
 
 ```bash
-apt-cache \
-  showpkg
+apt-cache showpkg
 ```
 
 **List groups of installed packages not required by other installed packages.**
 
 ```bash
-apt-mark \
-  showauto
+apt-mark showauto
 ```
 
 **Show package changelogs.**
 
 ```bash
-apt \
-  changelog
+apt changelog
 ```
 
 **Print a list of unresolved dependencies for repositories.**
 
 ```bash
-apt-get \
-  check
+apt-get check
 ```
 
 ## System Updates and Upgrades
@@ -146,16 +119,13 @@ apt-get \
 **Check for available package upgrades.**
 
 ```bash
-apt \
-  list \
-  --upgradable
+apt list --upgradable
 ```
 
 **Upgrade or downgrade installed software to the latest available versions (handles changing dependencies).**
 
 ```bash
-apt \
-  full-upgrade
+apt full-upgrade
 ```
 
 **Prepare the system for an upgrade to a new release.**
@@ -181,22 +151,19 @@ add-apt-repository
 **Manage Copr-equivalent repositories (Personal Package Archives).**
 
 ```bash
-add-apt-repository \
-  ppa:<name>
+add-apt-repository ppa:<name>
 ```
 
 **Generate the metadata cache.**
 
 ```bash
-apt \
-  update
+apt update
 ```
 
 **Remove or expire cached data.**
 
 ```bash
-apt \
-  clean
+apt clean
 ```
 
 ## Transactions and History
@@ -204,6 +171,5 @@ apt \
 **Manage transaction history (viewing log).**
 
 ```bash
-cat \
-  /var/log/apt/history.log
+cat /var/log/apt/history.log
 ```

@@ -1,4 +1,4 @@
-## This guide provides step-by-step instructions for manually configuring, compiling, and installing a custom or vanilla Linux kernel on Fedora systems
+# This guide provides step-by-step instructions for manually configuring, compiling, and installing a custom or vanilla Linux kernel on Fedora systems
 
 ## Overview
 
@@ -11,16 +11,7 @@ This document provides instructions on how to manually compile the Linux kernel 
 To compile the kernel manually, you need standard development tools and libraries. Open your terminal and run:
 
 ```bash
-sudo dnf install \
-    gcc \
-    make \
-    git \
-    ncurses-devel \
-    bison \
-    flex \
-    elfutils-libelf-devel \
-    openssl-devel \
-    bc
+sudo dnf install gcc make git ncurses-devel bison flex elfutils-libelf-devel openssl-devel bc
 ```
 
 ### Step 2: Download the Kernel Source
@@ -28,18 +19,14 @@ sudo dnf install \
 Clone the mainline kernel tree directly from kernel.org. To get Linus Torvalds's tree, run:
 
 ```bash
-git clone \
-    git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
 cd linux
 ```
 
 Alternatively, if you want the stable release tree, you can add it with:
 
 ```bash
-git remote add \
-    -f \
-    stable \
-    git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git
+git remote add -f stable git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git
 ```
 
 ### Step 3: Configure the Kernel
@@ -64,10 +51,7 @@ make oldconfig
 Compile the kernel and its modules. By adding `-j$(nproc)`, you instruct the `make` command to use all available CPU cores, which speeds up the compilation process significantly.
 
 ```bash
-make \
-    -j$(nproc) \
-    bzImage \
-    modules
+make -j$(nproc) bzImage modules
 ```
 
 ### Step 5: Install the Kernel
@@ -112,10 +96,7 @@ make menuconfig
 Proceed with compiling and installing exactly as you did in the simplest method:
 
 ```bash
-make \
-    -j$(nproc) \
-    bzImage \
-    modules
+make -j$(nproc) bzImage modules
 sudo make modules_install
 sudo make install
 ```
@@ -125,9 +106,7 @@ sudo make install
 If you need to manually remove your custom kernel later, you must delete its files from `/boot` (e.g., `config-<version>`, `initramfs-<version>`, `vmlinuz-<version>`, `System.map-<version>`) and its module directory from `/lib/modules/<version>`. Finally, remove the bootloader specification entries from `/boot/loader/entries/` and rebuild the GRUB config by running:
 
 ```bash
-sudo grub2-mkconfig \
-    -o \
-    /boot/grub2/grub.cfg
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 ```
 
 ---

@@ -1,4 +1,4 @@
-## A quick-reference guide for Windows PowerShell administration, covering Registry manipulation, Active Directory user and group management, remote networking, and object-oriented data filtering
+# A quick-reference guide for Windows PowerShell administration, covering Registry manipulation, Active Directory user and group management, remote networking, and object-oriented data filtering
 
 ## **Windows PowerShell & Active Directory Essentials**
 

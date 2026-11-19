@@ -26,15 +26,9 @@ mv ~/.config/kdeconnect ~/.config/kdeconnect.bak
 Fedora defaults active connections to `FedoraWorkstation` or `public`. Apply the KDE Connect service rules to these zones instead of `home`.
 
 ```bash
-sudo firewall-cmd \
-  --permanent \
-  --zone=FedoraWorkstation \
-  --add-service=kdeconnect
+sudo firewall-cmd --permanent --zone=FedoraWorkstation --add-service=kdeconnect
 
-sudo firewall-cmd \
-  --permanent \
-  --zone=public \
-  --add-service=kdeconnect
+sudo firewall-cmd --permanent --zone=public --add-service=kdeconnect
 
 sudo firewall-cmd --reload
 ```
