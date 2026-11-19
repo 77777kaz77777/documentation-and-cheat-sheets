@@ -1,4 +1,6 @@
-# How to properly set and manage environment variables using the export command
+# Environment Variables with export
+
+How to properly set and manage environment variables using the export command.
 
 The `export` command is a built-in shell utility in Bash, Zsh, and POSIX-compliant shells. It converts local shell variables into environment variables, making them accessible to child processes spawned by that shell.
 

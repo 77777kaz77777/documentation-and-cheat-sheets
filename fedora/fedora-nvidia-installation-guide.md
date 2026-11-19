@@ -1,7 +1,14 @@
-# A guide to safely installing NVIDIA drivers on Fedora Workstation utilizing RPM Fusion repositories
+# Install NVIDIA Drivers on Fedora (RPM Fusion)
+
+A guide to safely installing NVIDIA drivers on Fedora Workstation utilizing RPM Fusion repositories.
 
 Below is the complete installation process
 ---
+
+## Before you start
+
+- **Have a way back.** Take a snapshot first if you use Snapper (`sudo snapper -c root create --description "before nvidia"`). If the desktop doesn't come back after rebooting, you can still pick the snapshot or an older kernel from the GRUB menu, or switch to a text console with **Ctrl+Alt+F3**.
+- **Secure Boot:** if it's enabled, Step 2 asks you to set a one-time MOK password. Write it down; you need it on the blue screen after the next reboot.
 
 ## Step 1: Update System & Enable Repositories
 
@@ -107,8 +114,26 @@ nvidia-smi
 
 If successful, this will output a table showing your GPU model, driver version, CUDA version, and active GPU processes.
 
+## Undo: remove the NVIDIA driver
+
+Removing the packages returns the system to the open-source `nouveau` driver. Keep `nvidia-gpu-firmware`, which `nouveau` also uses:
+
+```bash
+sudo dnf remove '*nvidia*' --exclude=nvidia-gpu-firmware
+sudo dracut -f --regenerate-all
+sudo reboot
+```
+
 ---
 
 ## Sources & Verification
 
 - **Source:** Verified against the official [RPM Fusion NVIDIA HowTo Guide](https://rpmfusion.org/Howto/NVIDIA). The commands provided correctly map to the standard deployment procedure for NVIDIA drivers on Fedora using `akmods`.
+
+## Related guides
+
+- [Troubleshooting: dracut-install Failed to find module 'nvidia'](troubleshooting-dracut-nvidia-module-error.md)
+- [Disable the Integrated AMD GPU on Fedora (GRUB Blacklist)](../linux-general/hardware-and-firmware/disable-amdgpu-grub.md)
+- [How to fix boot deadlocks caused by MUX switches and Plymouth](fix-mux-plymouth-deadlock.md)
+- [ASUS ROG Zephyrus G15 Setup Guide for Fedora KDE](asus-rog-fedora-setup.md)
+- [NVIDIA GPU and CUDA Monitoring Cheat Sheet](../linux-general/nvidia-cuda-monitoring-cheat-sheet.md)

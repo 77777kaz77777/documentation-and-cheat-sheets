@@ -1,6 +1,6 @@
-## quick-reference CLI guide for managing LXC/LXD system containers
-
 # LXC_LXD_CLI_Cheat_Sheet.md
+
+Quick-reference CLI guide for managing LXC/LXD system containers.
 
 ## Container Lifecycle
 

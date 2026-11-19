@@ -18,7 +18,7 @@ Understanding where Fedora sits in the Red Hat ecosystem clarifies its use case 
 
 - **CentOS Stream:** The mid-stream development branch. Red Hat takes a snapshot of a specific Fedora release (e.g., Fedora 40 was branched to create CentOS Stream 10) and begins stabilizing it. CentOS Stream receives continuous updates but moves slower than Fedora, providing a direct preview of what will be in the next minor release of RHEL.
 
-- **RHEL & Rocky Linux:** The downstream enterprise releases. RHEL takes the stabilized CentOS Stream code and freezes it, providing up to 10-year lifecycles prioritizing extreme reliability, security compliance, and backwards compatibility over new features. Rocky Linux takes the published RHEL source code, removes the Red Hat branding, and rebuilds it to provide the exact same enterprise stability for free.
+- **RHEL & Rocky Linux:** The downstream enterprise releases. RHEL takes the stabilized CentOS Stream code and freezes it, providing up to 10-year lifecycles prioritizing extreme reliability, security compliance, and backwards compatibility over new features. Rocky Linux rebuilds RHEL without the Red Hat branding to provide the same enterprise stability for free. Since June 2023 Red Hat publishes RHEL source only to its customers (CentOS Stream is the only public source), so Rocky obtains the sources through Red Hat's UBI container images and pay-per-use cloud instances, and co-founded OpenELA, which publishes Enterprise Linux sources openly.
 
 ## 3. Package Management (DNF5)
 

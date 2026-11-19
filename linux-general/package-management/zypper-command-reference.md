@@ -1,6 +1,6 @@
-## Everyday commands for managing packages on openSUSE and SLES using Zypper
-
 # Zypper Command Reference Guide (openSUSE / SUSE Linux Enterprise)
+
+Everyday commands for managing packages on openSUSE and SLES using Zypper.
 
 ## Core Package Management
 

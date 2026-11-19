@@ -1,4 +1,6 @@
-# useful commands for Fedora’s DNF package manager
+# DNF Command Reference
+
+Useful commands for Fedora’s DNF package manager.
 
 ## Core Package Management
 

@@ -114,3 +114,11 @@ sudo btrfs subvolume delete /root_broken
 ```
 
 1. Run `sudo btrbk run` to create a fresh baseline snapshot on your 1TB drive.
+
+## Related guides
+
+- [Btrfs Cheat Sheet](../linux-general/storage-and-filesystems/btrfs-cheat-sheet.md)
+- [Btrfs Snapshots in the GRUB Menu (grub-btrfs) on Fedora KDE](fedora-kde-grub-btrfs-advanced.md)
+- [Steps to automate Btrfs snapshots and backups using Btrbk](btrbk-snapshot-automation-cheat-sheet.md)
+- [Format a Second SSD and Automate Btrbk Snapshots](fedora-kde-ssd-formatting-btrbk.md)
+- [VMware VM Recovery Guide (Btrfs Snapshots)](../virtualization/vmware-btrfs-recovery-guide.md)

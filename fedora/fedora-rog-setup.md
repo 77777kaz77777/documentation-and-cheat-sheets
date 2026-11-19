@@ -1,4 +1,6 @@
-# This document outlines the configurations applied by `fedora_rog_setup.sh` for optimizing the ASUS ROG Zephyrus G15 on Fedora  KDE. It manages graphics switching, daemon integration, and power profile adjustments required for stable desktop performance and battery management
+# ASUS ROG Zephyrus G15 Fedora Setup Script
+
+This document outlines the configurations applied by `fedora_rog_setup.sh` for optimizing the ASUS ROG Zephyrus G15 on Fedora KDE. It manages graphics switching, daemon integration, and power profile adjustments required for stable desktop performance and battery management.
 
 ## System Prerequisites & Core Dependencies
 

@@ -1,6 +1,6 @@
-## Essential commands for managing Arch Linux packages with Pacman
-
 # Pacman Command Reference Guide
+
+Essential commands for managing Arch Linux packages with Pacman.
 
 ## Core Package Management
 

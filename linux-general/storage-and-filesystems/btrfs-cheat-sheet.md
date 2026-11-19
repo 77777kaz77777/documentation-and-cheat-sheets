@@ -1,4 +1,6 @@
-# quick-reference guide for managing Btrfs filesystems
+# Btrfs Cheat Sheet
+
+Quick-reference guide for managing Btrfs filesystems.
 
 **Btrfs** (B-tree Filesystem / Better FS) is a modern Copy-on-Write (CoW) filesystem for Linux designed for fault tolerance, online repair, flexible multi-device management, and instant snapshotting.
 
@@ -466,3 +468,11 @@ UUID=a1b2c3d4-e5f6-7890-abcd-1234567890ab /.snapshots    btrfs   subvol=@snapsho
 1. **Avoid LVM/MDADM Layers**: Place Btrfs directly on raw block partitions (`/dev/nvme0n1p2` or `/dev/sda1`) to allow native checksum verification and device repair functions to operate directly on disk hardware.
 2. **Automate Scrubbing**: Schedule monthly scrub jobs using systemd timers (`btrfs-scrub.timer`) or cron to identify bit rot early on cold data storage.
 3. **Set Up Automated Snapper / Btrbk**: Use snapshot management automation (like `snapper` or `btrbk`) for automated boot snapshots and incremental off-site replication.
+
+## Related guides
+
+- [CLI methods for rescuing a corrupted Btrfs filesystem on Fedora](../../fedora/fedora-linux-btrfs-recovery.md)
+- [Btrfs Snapshots in the GRUB Menu (grub-btrfs) on Fedora KDE](../../fedora/fedora-kde-grub-btrfs-advanced.md)
+- [Steps to automate Btrfs snapshots and backups using Btrbk](../../fedora/btrbk-snapshot-automation-cheat-sheet.md)
+- [Format a Second SSD and Automate Btrbk Snapshots](../../fedora/fedora-kde-ssd-formatting-btrbk.md)
+- [VMware VM Recovery Guide (Btrfs Snapshots)](../../virtualization/vmware-btrfs-recovery-guide.md)

@@ -12,7 +12,8 @@ Run the following commands in your terminal:
 # 1. Add the official Tailscale repository using DNF5 syntax
 sudo dnf config-manager addrepo --from-repofile=https://pkgs.tailscale.com/stable/fedora/tailscale.repo
 
-# 2. Refresh and upgrade Tailscale
+# 2. Install Tailscale (or update it if it's already installed)
+sudo dnf install --refresh -y tailscale
 sudo dnf upgrade --refresh tailscale
 ```
 
@@ -24,7 +25,7 @@ If you encounter issues with `config-manager` plugin commands in DNF5, download 
 
 ```bash
 sudo curl -fsSL https://pkgs.tailscale.com/stable/fedora/tailscale.repo -o /etc/yum.repos.d/tailscale.repo
-sudo dnf upgrade --refresh tailscale
+sudo dnf install --refresh -y tailscale
 ```
 
 ---

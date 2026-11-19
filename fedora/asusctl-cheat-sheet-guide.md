@@ -1,4 +1,6 @@
-# Commands to control fans, lighting, and performance profiles on ASUS ROG laptops (GA503RW) with asusctl
+# asusctl Cheat Sheet (ASUS ROG)
+
+Commands to control fans, lighting, and performance profiles on ASUS ROG laptops (GA503RW) with asusctl.
 
 Reference for **asusctl v6.5.0**.
 

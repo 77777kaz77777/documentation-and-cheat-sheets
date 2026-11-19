@@ -1,4 +1,6 @@
-# This document is a comprehensive Alacritty keybinding cheatsheet that outlines standard terminal shortcuts
+# Alacritty Keybindings Cheat Sheet
+
+This document is a comprehensive Alacritty keybinding cheatsheet that outlines standard terminal shortcuts.
 
 ## Custom Keybindings (Your Override Configuration)
 
@@ -51,3 +53,8 @@
 | **Copy Selection (Yank)**              | `y`                                                   |
 | **Search Forward/Backward**            | `/` / `?`                                             |
 | **Next / Previous Search Match**       | `n` / `N`                                             |
+
+## Related guides
+
+- [Set Up Alacritty on Fedora](../../fedora/fedora-alacritty-setup-and-verification.md)
+- [Alacritty Rendering Troubleshooting Guide (Fedora KDE)](alacritty-font-rendering-fix.md)

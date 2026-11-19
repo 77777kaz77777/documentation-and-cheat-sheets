@@ -1,6 +1,6 @@
-## Commands for managing network interfaces and Wi-Fi connections via nmcli
-
 # nmcli Cheat Sheet
+
+Commands for managing network interfaces and Wi-Fi connections via nmcli.
 
 `nmcli` (NetworkManager Command Line Interface) is a command-line tool for controlling NetworkManager and reporting network status.
 

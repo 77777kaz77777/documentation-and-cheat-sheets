@@ -211,24 +211,24 @@ sudo ip route add 10.0.0.0/8 via 192.168.1.254 dev eth0
 
 ## 7. net-tools (Legacy / Deprecated)
 
-**Standard on:** Older UNIX and legacy Linux environments. Replaced by `iproute2`.
+**Standard on:** Older UNIX and legacy Linux environments. Replaced by `iproute2` (`ip`, `ss`), and not installed by default on most current distributions. Each line shows the modern equivalent.
 
 ### Viewing Information
 
 ```bash
-ifconfig -a
-route -n
-netstat -tulpn
-arp -a
+ifconfig -a          # modern: ip addr show
+route -n             # modern: ip route show
+netstat -tulpn       # modern: ss -tulpn
+arp -a               # modern: ip neigh show
 ```
 
 ### Interface and IP Management
 
 ```bash
-sudo ifconfig eth0 down
-sudo ifconfig eth0 up
-sudo ifconfig eth0 192.168.1.50 netmask 255.255.255.0
-sudo route add default gw 192.168.1.1 eth0
+sudo ifconfig eth0 down                                # modern: sudo ip link set eth0 down
+sudo ifconfig eth0 up                                  # modern: sudo ip link set eth0 up
+sudo ifconfig eth0 192.168.1.50 netmask 255.255.255.0  # modern: sudo ip addr add 192.168.1.50/24 dev eth0
+sudo route add default gw 192.168.1.1 eth0             # modern: sudo ip route add default via 192.168.1.1 dev eth0
 ```
 
 ---

@@ -1,4 +1,6 @@
-# A quick-reference cheat sheet for Windows Command Prompt (CMD) and PowerShell, covering file navigation, system management, and package provisioning
+# Windows CMD and PowerShell Cheat Sheet
+
+A quick-reference cheat sheet for Windows Command Prompt (CMD) and PowerShell, covering file navigation, system management, and package provisioning.
 
 ## File and System Navigation
 

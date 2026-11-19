@@ -1,11 +1,11 @@
-# instructions for disabling the integrated AMD GPU on Fedora  by blacklisting the amdgpu module in the GRUB bootloader, ensuring the system relies exclusively on the dedicated NVIDIA GPU. It also includes troubleshooting steps using grubby and dracut to resolve issues where Boot Loader Specification (BLS) files retain outdated kernel parameters
+# Disable the Integrated AMD GPU on Fedora (GRUB Blacklist)
 
-Disable the integrated AMD GPU at the OS level by adding the `amdgpu` module to the GRUB bootloader blacklist. This ensures the system relies exclusively on the dedicated NVIDIA GPU.
+Instructions for disabling the integrated AMD GPU on Fedora by blacklisting the amdgpu module in the GRUB bootloader, ensuring the system relies exclusively on the dedicated NVIDIA GPU. It also includes troubleshooting steps using grubby and dracut to resolve issues where Boot Loader Specification (BLS) files retain outdated kernel parameters.
 
-## Prerequisites
+## Before you start
 
-- Root/sudo privileges.
-- Terminal access.
+- Root/sudo privileges and terminal access.
+- **Check the NVIDIA driver works first** (`nvidia-smi` shows your GPU). With the AMD GPU disabled and no working NVIDIA driver, you'll boot to a black screen. If that happens, press **e** on the GRUB entry, remove `amdgpu` from both blacklists on the `linux` line, and press **Ctrl+X** to boot once without it.
 
 ## Procedure
 
@@ -104,3 +104,24 @@ systemctl reboot
 ```bash
 sudo dmesg | grep -i "amdgpu"
 ```
+
+## Undo: re-enable the AMD GPU
+
+Remove `amdgpu` from both lists in `/etc/default/grub` (`sudo nano /etc/default/grub`), then update every installed kernel's entry and rebuild:
+
+```bash
+sudo grubby --update-kernel=ALL \
+  --remove-args="rd.driver.blacklist=nouveau,nova_core,amdgpu modprobe.blacklist=nouveau,nova_core,amdgpu" \
+  --args="rd.driver.blacklist=nouveau,nova_core modprobe.blacklist=nouveau,nova_core"
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+sudo dracut -f --regenerate-all
+sudo reboot
+```
+
+## Related guides
+
+- [Install NVIDIA Drivers on Fedora (RPM Fusion)](../../fedora/fedora-nvidia-installation-guide.md)
+- [Troubleshooting: dracut-install Failed to find module 'nvidia'](../../fedora/troubleshooting-dracut-nvidia-module-error.md)
+- [How to fix boot deadlocks caused by MUX switches and Plymouth](../../fedora/fix-mux-plymouth-deadlock.md)
+- [ASUS ROG Zephyrus G15 Setup Guide for Fedora KDE](../../fedora/asus-rog-fedora-setup.md)
+- [NVIDIA GPU and CUDA Monitoring Cheat Sheet](../nvidia-cuda-monitoring-cheat-sheet.md)

@@ -1,4 +1,12 @@
-# This guide provides step-by-step instructions for manually configuring, compiling, and installing a custom or vanilla Linux kernel on Fedora systems
+# Compile and Install a Custom Kernel on Fedora
+
+This guide provides step-by-step instructions for manually configuring, compiling, and installing a custom or vanilla Linux kernel on Fedora systems.
+
+## Before you start
+
+- **Keep your Fedora kernel installed.** The custom kernel is added alongside it, so if it fails to boot you can choose the Fedora kernel from the GRUB menu.
+- **Secure Boot:** a kernel you compile yourself isn't signed, so it won't boot while Secure Boot is enabled unless you sign it with your own enrolled key.
+- **Space and time:** a build needs roughly 20–30 GB free and can take an hour or more on a laptop.
 
 ## Overview
 
@@ -107,6 +115,16 @@ If you need to manually remove your custom kernel later, you must delete its fil
 
 ```bash
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+```
+
+## Undo: remove a custom kernel
+
+Boot into your Fedora kernel first, then from the kernel source folder:
+
+```bash
+KVER=$(make -s kernelrelease)        # the version you built
+sudo kernel-install remove "$KVER"   # removes it from /boot and the GRUB menu
+sudo rm -rf "/lib/modules/$KVER"
 ```
 
 ---
