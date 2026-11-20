@@ -131,5 +131,4 @@ sudo rm -rf "/lib/modules/$KVER"
 
 ## Sources
 
-- **Fedora Quick Docs**: Building a Custom Kernel - <https://docs.fedoraproject.org/en-US/quick-docs/kernel-build-custom/>
 - **Fedora Project Wiki**: Building a custom kernel - <https://fedoraproject.org/wiki/Building_a_custom_kernel>
