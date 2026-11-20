@@ -484,8 +484,8 @@ sudo xfsdump -l 0 -f /backup/data.dump /mnt/data  # full backup
 ## Sources & Verification
 
 - **mkfs.xfs defaults and options:** [mkfs.xfs(8) manual page](https://man7.org/linux/man-pages/man8/mkfs.xfs.8.html)
-- **Growing and the lack of shrink support:** [Red Hat — Increasing the size of an XFS file system](https://docs.redhat.com/en/documentation/Red_Hat_Enterprise_Linux/10/html/managing_file_systems/increasing-the-size-of-an-xfs-file-system) and [Oracle Linux — Growing an XFS File System](https://docs.oracle.com/en/operating-systems/oracle-linux/9/fsadmin/fsadmin-GrowinganXFSFileSystem.html)
-- **Online scrub and repair status:** [Oracle Linux blog — XFS online filesystem repair](https://blogs.oracle.com/linux/post/xfs-online-filesystem-repair)
+- **Growing and the lack of shrink support:** [xfs_growfs(8) manual page](https://man7.org/linux/man-pages/man8/xfs_growfs.8.html)
+- **Online scrub and repair status:** [Kernel documentation — XFS Online Fsck Design](https://docs.kernel.org/filesystems/xfs/xfs-online-fsck-design.html)
 - **General XFS administration:** [ArchWiki — XFS](https://wiki.archlinux.org/title/XFS)
 
 ## Related guides
