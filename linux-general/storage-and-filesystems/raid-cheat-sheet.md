@@ -152,3 +152,8 @@ When a physical drive breaks, the array enters a **degraded** state. Here is the
    ```
 
    _Press `Ctrl + C` to exit the monitoring screen once recovery hits 100%._
+
+## Related guides
+
+- [XFS Cheat Sheet](xfs-cheat-sheet.md)
+- [Btrfs Cheat Sheet](btrfs-cheat-sheet.md)

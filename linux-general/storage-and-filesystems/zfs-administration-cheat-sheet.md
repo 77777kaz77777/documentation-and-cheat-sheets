@@ -123,3 +123,8 @@ zpool online mypool /dev/sde
 ## Sources & Verification
 
 - **ZFS Commands:** Verified against the official OpenZFS Documentation (<https://openzfs.github.io/openzfs-docs/>). Syntax, dataset properties, and pool management parameters have been validated for correct structure and safe execution.
+
+## Related guides
+
+- [XFS Cheat Sheet](xfs-cheat-sheet.md)
+- [Btrfs Cheat Sheet](btrfs-cheat-sheet.md)

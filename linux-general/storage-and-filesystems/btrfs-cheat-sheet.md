@@ -471,6 +471,7 @@ UUID=a1b2c3d4-e5f6-7890-abcd-1234567890ab /.snapshots    btrfs   subvol=@snapsho
 
 ## Related guides
 
+- [XFS Cheat Sheet](xfs-cheat-sheet.md)
 - [CLI methods for rescuing a corrupted Btrfs filesystem on Fedora](../../fedora/fedora-linux-btrfs-recovery.md)
 - [Btrfs Snapshots in the GRUB Menu (grub-btrfs) on Fedora KDE](../../fedora/fedora-kde-grub-btrfs-advanced.md)
 - [Steps to automate Btrfs snapshots and backups using Btrbk](btrbk-snapshot-automation-cheat-sheet.md)

@@ -97,6 +97,7 @@ ACRONYMS = {
     "uefi": "UEFI",
     "lvm": "LVM",
     "luks": "LUKS",
+    "xfs": "XFS",
     "zfs": "ZFS",
     "raid": "RAID",
     "smb": "SMB",
