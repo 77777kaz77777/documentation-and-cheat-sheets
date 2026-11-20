@@ -48,7 +48,7 @@ A `whiptail` checklist lets you toggle these modules on or off. The KDE wallpape
 
 - Downloads the [linux-environment-automation](https://github.com/77777kaz77777/linux-environment-automation) repository.
 - **The `update` command:** asks which update script to install as `/usr/local/bin/update`, with the one for your distribution pre-selected. It warns you if an older `/usr/local/sbin/update` exists that could run instead.
-- **Tool scripts:** a checklist of the scripts in `utils/` and `security/` (none pre-selected). Each one is installed into `/usr/local/bin` without its `.sh` or `.py` extension.
+- **Tool scripts:** a checklist of the scripts in `utils/`, `maintenance/` and `security/` (including `security/clamav/` and `security/hardening/`), none pre-selected. Each one is installed into `/usr/local/bin` without its `.sh` or `.py` extension.
 
 #### TERM: Shell Aliases & Terminal Themes
 
@@ -67,17 +67,18 @@ When it finishes, the script lists anything that failed and where the full log i
 
 ## Usage
 
-1. Download the script and read it before running it:
+1. Clone the repository and read the script before running it:
 
    ```bash
-   curl -fsSLO https://raw.githubusercontent.com/77777kaz77777/linux-environment-automation/main/provisioning/setup.sh
-   less setup.sh
+   git clone https://github.com/77777kaz77777/linux-environment-automation.git
+   cd linux-environment-automation
+   less provisioning/setup.sh
    ```
 
 2. Run it with `sudo` from your normal user account:
 
    ```bash
-   sudo bash setup.sh
+   sudo bash provisioning/setup.sh
    ```
 
 3. Follow the on-screen menus.

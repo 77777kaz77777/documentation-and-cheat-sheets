@@ -78,6 +78,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="linux-general/desktop-environments/kde-plasma-wayland-shortcuts-cheat-sheet.md"><code>kde-plasma-wayland-shortcuts-cheat-sheet.md</code></a> | Essential keyboard shortcuts for getting around KDE Plasma on Wayland |
 | <a href="linux-general/desktop-environments/librepods-setup-guide.md"><code>librepods-setup-guide.md</code></a> | LibrePods Setup Guide |
 | <a href="linux-general/desktop-environments/sublime-text-linux-shortcuts.md"><code>sublime-text-linux-shortcuts.md</code></a> | Must-know keyboard shortcuts for Sublime Text on Linux |
+| <a href="linux-general/desktop-environments/ubuntu-dock-show-apps-button.md"><code>ubuntu-dock-show-apps-button.md</code></a> | Move the Ubuntu Dock "Show Applications" Button |
 
 
 ### 📁 linux-general/hardware-and-firmware (Firmware Updates & Hardware Quirks)
