@@ -112,6 +112,40 @@ btrfs subvolume create /mnt/btrfs_storage/@new_subvol
 btrfs balance start /mnt/btrfs_storage
 ```
 
+## XFS File System Management
+
+For the full guide, see the [XFS Cheat Sheet](xfs-cheat-sheet.md).
+
+**Create an XFS file system with a label.**
+
+```bash
+mkfs.xfs -L data /dev/sdb1
+```
+
+**Show the geometry and enabled features of a mounted XFS file system.**
+
+```bash
+xfs_info /mnt/xfs_storage
+```
+
+**Grow a mounted XFS file system to fill its partition or logical volume (XFS cannot be shrunk).**
+
+```bash
+xfs_growfs /mnt/xfs_storage
+```
+
+**Check an unmounted XFS file system without making changes.**
+
+```bash
+xfs_repair -n /dev/sdb1
+```
+
+**Show a human-readable quota report for an XFS file system.**
+
+```bash
+xfs_quota -x -c "report -h" /mnt/xfs_storage
+```
+
 ## Snapper and Snapshot Management
 
 **List all existing snapshots for the default configuration (usually root).**
