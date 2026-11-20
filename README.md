@@ -13,14 +13,16 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 |---|---|
 | <a href="ansible/ansible-automation-cheat-sheet.md"><code>ansible-automation-cheat-sheet.md</code></a> | Quick-reference CLI and syntax cheat sheet for Ansible |
 
+
 ### 📁 containers (Docker, Podman, and LXC Guides)
 
 | File | Description |
-| --- | --- |
+|---|---|
 | <a href="containers/docker-cli-compose-cheat-sheet.md"><code>docker-cli-compose-cheat-sheet.md</code></a> | Docker and Docker Compose Command-Line Reference Guide |
 | <a href="containers/lxc-cheatsheet.md"><code>lxc-cheatsheet.md</code></a> | LXC_LXD_CLI_Cheat_Sheet.md |
 | <a href="containers/podman-cheatsheet.md"><code>podman-cheatsheet.md</code></a> | Essential commands for running daemonless containers with Podman |
 | <a href="containers/podman-desktop-guide.md"><code>podman-desktop-guide.md</code></a> | How to install and set up the Podman Desktop GUI |
+
 
 ### 📁 fedora (Fedora Linux Specific Documentation)
 
@@ -51,10 +53,11 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="fedora/snapper-snapshot-management-cheat-sheet.md"><code>snapper-snapshot-management-cheat-sheet.md</code></a> | Commands to create filesystem snapshots and roll back changes using Snapper |
 | <a href="fedora/troubleshooting-dracut-nvidia-module-error.md"><code>troubleshooting-dracut-nvidia-module-error.md</code></a> | Troubleshooting: dracut-install Failed to find module 'nvidia' |
 
+
 ### 📁 linux-general (General Linux Reference)
 
 | File | Description |
-| --- | --- |
+|---|---|
 | <a href="linux-general/arkenfox-configuration-guide.md"><code>arkenfox-configuration-guide.md</code></a> | Arkenfox Configuration and Updater Guide |
 | <a href="linux-general/bash-configuration-guide.md"><code>bash-configuration-guide.md</code></a> | Bash Configuration and Environment Automation Guide |
 | <a href="linux-general/cardwire-cheat-sheet.md"><code>cardwire-cheat-sheet.md</code></a> | Cardwire Cheat Sheet |
@@ -89,15 +92,17 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="linux-general/systemd-journalctl-cheat-sheet.md"><code>systemd-journalctl-cheat-sheet.md</code></a> | systemd and journalctl Cheat Sheet |
 | <a href="linux-general/vim-vi-editor-cheat-sheet.md"><code>vim-vi-editor-cheat-sheet.md</code></a> | Core commands for opening, editing, saving, and exiting Vi/Vim |
 
+
 ### 📁 linux-general/desktop-environments (KDE Plasma, Terminals & Desktop Tools)
 
 | File | Description |
-| --- | --- |
+|---|---|
 | <a href="linux-general/desktop-environments/alacritty-font-rendering-fix.md"><code>alacritty-font-rendering-fix.md</code></a> | Alacritty Rendering Troubleshooting Guide (Fedora KDE) |
 | <a href="linux-general/desktop-environments/alacritty-keybindings-cheatsheet.md"><code>alacritty-keybindings-cheatsheet.md</code></a> | Alacritty Keybindings Cheat Sheet |
 | <a href="linux-general/desktop-environments/fastfetch-configuration-guide.md"><code>fastfetch-configuration-guide.md</code></a> | How to tweak and customize system info outputs using Fastfetch |
 | <a href="linux-general/desktop-environments/kde-plasma-wayland-shortcuts-cheat-sheet.md"><code>kde-plasma-wayland-shortcuts-cheat-sheet.md</code></a> | Essential keyboard shortcuts for getting around KDE Plasma on Wayland |
 | <a href="linux-general/desktop-environments/sublime-text-linux-shortcuts.md"><code>sublime-text-linux-shortcuts.md</code></a> | Must-know keyboard shortcuts for Sublime Text on Linux |
+
 
 ### 📁 linux-general/hardware-and-firmware (Firmware Updates & Hardware Quirks)
 
@@ -106,6 +111,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="linux-general/hardware-and-firmware/disable-amdgpu-grub.md"><code>disable-amdgpu-grub.md</code></a> | Disable the Integrated AMD GPU on Fedora (GRUB Blacklist) |
 | <a href="linux-general/hardware-and-firmware/fwupdmgr-firmware-update-cheat-sheet.md"><code>fwupdmgr-firmware-update-cheat-sheet.md</code></a> | fwupdmgr Firmware Update Cheat Sheet |
 | <a href="linux-general/hardware-and-firmware/wifi-hardware-replacement-guide.md"><code>wifi-hardware-replacement-guide.md</code></a> | Comprehensive Post-Wi-Fi Hardware Replacement Diagnostic Guide |
+
 
 ### 📁 linux-general/package-management (Package Managers & App Formats)
 
@@ -119,6 +125,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="linux-general/package-management/pacman-command-reference.md"><code>pacman-command-reference.md</code></a> | Pacman Command Reference Guide |
 | <a href="linux-general/package-management/zypper-command-reference.md"><code>zypper-command-reference.md</code></a> | Zypper Command Reference Guide (openSUSE / SUSE Linux Enterprise) |
 
+
 ### 📁 linux-general/storage-and-filesystems (BTRFS, ZFS, RAID & Storage Utilities)
 
 | File | Description |
@@ -130,6 +137,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="linux-general/storage-and-filesystems/smartctl-cheat-sheet.md"><code>smartctl-cheat-sheet.md</code></a> | `smartctl` Comprehensive Cheat Sheet |
 | <a href="linux-general/storage-and-filesystems/storage-management-reference.md"><code>storage-management-reference.md</code></a> | Storage Management Command Reference Guide |
 | <a href="linux-general/storage-and-filesystems/zfs-administration-cheat-sheet.md"><code>zfs-administration-cheat-sheet.md</code></a> | ZFS Administration Cheat Sheet |
+
 
 ### 📁 networking-and-security (Networking & Security Configurations)
 
@@ -145,6 +153,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="networking-and-security/tailscale-mesh-cli-cheat-sheet.md"><code>tailscale-mesh-cli-cheat-sheet.md</code></a> | Tailscale Mesh Networking Cheat Sheet |
 | <a href="networking-and-security/ufw-cheatsheet.md"><code>ufw-cheatsheet.md</code></a> | UFW (Uncomplicated Firewall) Command Reference for Ubuntu/Debian |
 
+
 ### 📁 virtualization (Hypervisor & VM Runbooks)
 
 | File | Description |
@@ -156,10 +165,11 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | <a href="virtualization/virtualization-virt-manager-troubleshooting-fedora.md"><code>virtualization-virt-manager-troubleshooting-fedora.md</code></a> | Virt-Manager Troubleshooting: "No active connection" (Fedora Focus) |
 | <a href="virtualization/vmware-btrfs-recovery-guide.md"><code>vmware-btrfs-recovery-guide.md</code></a> | VMware VM Recovery Guide (Btrfs Snapshots) |
 
+
 ### 📁 windows-and-macos (Windows & macOS References)
 
 | File | Description |
-| --- | --- |
+|---|---|
 | <a href="windows-and-macos/macos-terminal-package-management-cheat-sheet.md"><code>macos-terminal-package-management-cheat-sheet.md</code></a> | macOS Command-Line Reference Guide (Apple Silicon) |
 | <a href="windows-and-macos/windows-cmd-cheatsheet.md"><code>windows-cmd-cheatsheet.md</code></a> | Windows CMD and PowerShell Cheat Sheet |
 | <a href="windows-and-macos/windows-powershell-active-directory.md"><code>windows-powershell-active-directory.md</code></a> | PowerShell and Active Directory Reference |
