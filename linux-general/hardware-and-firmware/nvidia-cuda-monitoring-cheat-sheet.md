@@ -59,8 +59,8 @@ __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia <application_execut
 
 ## Related guides
 
-- [Install NVIDIA Drivers on Fedora (RPM Fusion)](../fedora/fedora-nvidia-installation-guide.md)
-- [Troubleshooting: dracut-install Failed to find module 'nvidia'](../fedora/troubleshooting-dracut-nvidia-module-error.md)
-- [Disable the Integrated AMD GPU on Fedora (GRUB Blacklist)](hardware-and-firmware/disable-amdgpu-grub.md)
-- [How to fix boot deadlocks caused by MUX switches and Plymouth](../fedora/fix-mux-plymouth-deadlock.md)
-- [ASUS ROG Zephyrus G15 Setup Guide for Fedora KDE](../fedora/asus-rog-fedora-setup.md)
+- [Install NVIDIA Drivers on Fedora (RPM Fusion)](../../fedora/fedora-nvidia-installation-guide.md)
+- [Troubleshooting: dracut-install Failed to find module 'nvidia'](../../fedora/troubleshooting-dracut-nvidia-module-error.md)
+- [Disable the Integrated AMD GPU on Fedora (GRUB Blacklist)](disable-amdgpu-grub.md)
+- [How to fix boot deadlocks caused by MUX switches and Plymouth](../../fedora/fix-mux-plymouth-deadlock.md)
+- [ASUS ROG Zephyrus G15 Setup Guide for Fedora KDE](../../fedora/asus-rog-fedora-setup.md)

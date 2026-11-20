@@ -146,4 +146,4 @@ Close all active instances of Alacritty and launch a new instance for the font c
 ## Related guides
 
 - [Set Up Alacritty on Fedora](../../fedora/fedora-alacritty-setup-and-verification.md)
-- [Alacritty Keybindings Cheat Sheet](alacritty-keybindings-cheatsheet.md)
+- [Alacritty Keybindings Cheat Sheet](alacritty-keybindings-cheat-sheet.md)

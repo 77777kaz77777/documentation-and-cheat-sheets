@@ -473,6 +473,6 @@ UUID=a1b2c3d4-e5f6-7890-abcd-1234567890ab /.snapshots    btrfs   subvol=@snapsho
 
 - [CLI methods for rescuing a corrupted Btrfs filesystem on Fedora](../../fedora/fedora-linux-btrfs-recovery.md)
 - [Btrfs Snapshots in the GRUB Menu (grub-btrfs) on Fedora KDE](../../fedora/fedora-kde-grub-btrfs-advanced.md)
-- [Steps to automate Btrfs snapshots and backups using Btrbk](../../fedora/btrbk-snapshot-automation-cheat-sheet.md)
+- [Steps to automate Btrfs snapshots and backups using Btrbk](btrbk-snapshot-automation-cheat-sheet.md)
 - [Format a Second SSD and Automate Btrbk Snapshots](../../fedora/fedora-kde-ssd-formatting-btrbk.md)
 - [VMware VM Recovery Guide (Btrfs Snapshots)](../../virtualization/vmware-btrfs-recovery-guide.md)

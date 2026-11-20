@@ -124,4 +124,4 @@ sudo reboot
 - [Troubleshooting: dracut-install Failed to find module 'nvidia'](../../fedora/troubleshooting-dracut-nvidia-module-error.md)
 - [How to fix boot deadlocks caused by MUX switches and Plymouth](../../fedora/fix-mux-plymouth-deadlock.md)
 - [ASUS ROG Zephyrus G15 Setup Guide for Fedora KDE](../../fedora/asus-rog-fedora-setup.md)
-- [NVIDIA GPU and CUDA Monitoring Cheat Sheet](../nvidia-cuda-monitoring-cheat-sheet.md)
+- [NVIDIA GPU and CUDA Monitoring Cheat Sheet](nvidia-cuda-monitoring-cheat-sheet.md)

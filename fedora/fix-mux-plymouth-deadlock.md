@@ -57,4 +57,4 @@ sudo grubby --update-kernel=ALL --args="rhgb quiet"
 - [Troubleshooting: dracut-install Failed to find module 'nvidia'](troubleshooting-dracut-nvidia-module-error.md)
 - [Disable the Integrated AMD GPU on Fedora (GRUB Blacklist)](../linux-general/hardware-and-firmware/disable-amdgpu-grub.md)
 - [ASUS ROG Zephyrus G15 Setup Guide for Fedora KDE](asus-rog-fedora-setup.md)
-- [NVIDIA GPU and CUDA Monitoring Cheat Sheet](../linux-general/nvidia-cuda-monitoring-cheat-sheet.md)
+- [NVIDIA GPU and CUDA Monitoring Cheat Sheet](../linux-general/hardware-and-firmware/nvidia-cuda-monitoring-cheat-sheet.md)

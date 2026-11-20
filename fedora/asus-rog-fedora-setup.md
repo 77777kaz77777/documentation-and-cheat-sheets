@@ -89,4 +89,4 @@ _(A return value of `D3cold` indicates the GPU is successfully powered off)._
 - [Troubleshooting: dracut-install Failed to find module 'nvidia'](troubleshooting-dracut-nvidia-module-error.md)
 - [Disable the Integrated AMD GPU on Fedora (GRUB Blacklist)](../linux-general/hardware-and-firmware/disable-amdgpu-grub.md)
 - [How to fix boot deadlocks caused by MUX switches and Plymouth](fix-mux-plymouth-deadlock.md)
-- [NVIDIA GPU and CUDA Monitoring Cheat Sheet](../linux-general/nvidia-cuda-monitoring-cheat-sheet.md)
+- [NVIDIA GPU and CUDA Monitoring Cheat Sheet](../linux-general/hardware-and-firmware/nvidia-cuda-monitoring-cheat-sheet.md)

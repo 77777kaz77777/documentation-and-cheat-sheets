@@ -55,5 +55,5 @@ Open VMware and power on the virtual machine. It should boot normally from the e
 - [Btrfs Cheat Sheet](../linux-general/storage-and-filesystems/btrfs-cheat-sheet.md)
 - [CLI methods for rescuing a corrupted Btrfs filesystem on Fedora](../fedora/fedora-linux-btrfs-recovery.md)
 - [Btrfs Snapshots in the GRUB Menu (grub-btrfs) on Fedora KDE](../fedora/fedora-kde-grub-btrfs-advanced.md)
-- [Steps to automate Btrfs snapshots and backups using Btrbk](../fedora/btrbk-snapshot-automation-cheat-sheet.md)
+- [Steps to automate Btrfs snapshots and backups using Btrbk](../linux-general/storage-and-filesystems/btrbk-snapshot-automation-cheat-sheet.md)
 - [Format a Second SSD and Automate Btrbk Snapshots](../fedora/fedora-kde-ssd-formatting-btrbk.md)

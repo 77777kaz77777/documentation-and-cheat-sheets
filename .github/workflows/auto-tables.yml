@@ -30,7 +30,11 @@ jobs:
           import os, re
           
           FOLDER_DESCS = {
-              "ansible": "Ansible Automation Guides",
+              "automation-and-git": "Ansible & Git Guides",
+              "commands-and-shell": "Core Commands, Bash & Shell",
+              "system-administration": "systemd, Boot & System Tools",
+              "networking": "Network Configuration, DNS & VPN",
+              "security": "Firewalls, SELinux & Security Tools",
               "containers": "Docker, Podman, and LXC Guides",
               "fedora": "Fedora Linux Specific Documentation",
               "linux-general": "General Linux Reference",

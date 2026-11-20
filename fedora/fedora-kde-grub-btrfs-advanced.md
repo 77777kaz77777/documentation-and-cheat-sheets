@@ -167,6 +167,6 @@ sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 
 - [Btrfs Cheat Sheet](../linux-general/storage-and-filesystems/btrfs-cheat-sheet.md)
 - [CLI methods for rescuing a corrupted Btrfs filesystem on Fedora](fedora-linux-btrfs-recovery.md)
-- [Steps to automate Btrfs snapshots and backups using Btrbk](btrbk-snapshot-automation-cheat-sheet.md)
+- [Steps to automate Btrfs snapshots and backups using Btrbk](../linux-general/storage-and-filesystems/btrbk-snapshot-automation-cheat-sheet.md)
 - [Format a Second SSD and Automate Btrbk Snapshots](fedora-kde-ssd-formatting-btrbk.md)
 - [VMware VM Recovery Guide (Btrfs Snapshots)](../virtualization/vmware-btrfs-recovery-guide.md)

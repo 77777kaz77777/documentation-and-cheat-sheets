@@ -183,4 +183,4 @@ action = "SpawnNewInstance"  # Opens a fresh terminal window in your current pat
 ## Related guides
 
 - [Alacritty Rendering Troubleshooting Guide (Fedora KDE)](../linux-general/desktop-environments/alacritty-font-rendering-fix.md)
-- [Alacritty Keybindings Cheat Sheet](../linux-general/desktop-environments/alacritty-keybindings-cheatsheet.md)
+- [Alacritty Keybindings Cheat Sheet](../linux-general/desktop-environments/alacritty-keybindings-cheat-sheet.md)
