@@ -27,7 +27,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 ### 📁 fedora (Fedora Linux Specific Documentation)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | <a href="fedora/airpods-pro-microphone-guide.md"><code>airpods-pro-microphone-guide.md</code></a> | AirPods Pro 3 Microphone Configuration on Fedora KDE |
 | <a href="fedora/asus-rog-fedora-setup.md"><code>asus-rog-fedora-setup.md</code></a> | ASUS ROG Zephyrus G15 Setup Guide for Fedora KDE |
 | <a href="fedora/asusctl-cheat-sheet-guide.md"><code>asusctl-cheat-sheet-guide.md</code></a> | asusctl Cheat Sheet (ASUS ROG) |
@@ -107,7 +107,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 ### 📁 linux-general/hardware-and-firmware (Firmware Updates & Hardware Quirks)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | <a href="linux-general/hardware-and-firmware/disable-amdgpu-grub.md"><code>disable-amdgpu-grub.md</code></a> | Disable the Integrated AMD GPU on Fedora (GRUB Blacklist) |
 | <a href="linux-general/hardware-and-firmware/fwupdmgr-firmware-update-cheat-sheet.md"><code>fwupdmgr-firmware-update-cheat-sheet.md</code></a> | fwupdmgr Firmware Update Cheat Sheet |
 | <a href="linux-general/hardware-and-firmware/wifi-hardware-replacement-guide.md"><code>wifi-hardware-replacement-guide.md</code></a> | Comprehensive Post-Wi-Fi Hardware Replacement Diagnostic Guide |
@@ -116,7 +116,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 ### 📁 linux-general/package-management (Package Managers & App Formats)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | <a href="linux-general/package-management/apk-command-reference.md"><code>apk-command-reference.md</code></a> | apk Command Reference (Alpine Linux) |
 | <a href="linux-general/package-management/appimage-installation-guide.md"><code>appimage-installation-guide.md</code></a> | How to Install and Run AppImages on Linux |
 | <a href="linux-general/package-management/apt-command-reference.md"><code>apt-command-reference.md</code></a> | Everyday package management commands for Debian and Ubuntu using APT |
@@ -129,7 +129,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 ### 📁 linux-general/storage-and-filesystems (BTRFS, ZFS, RAID & Storage Utilities)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | <a href="linux-general/storage-and-filesystems/btrfs-cheat-sheet.md"><code>btrfs-cheat-sheet.md</code></a> | Btrfs Cheat Sheet |
 | <a href="linux-general/storage-and-filesystems/nvme-cli-cheat-sheet.md"><code>nvme-cli-cheat-sheet.md</code></a> | nvme-cli Cheat Sheet |
 | <a href="linux-general/storage-and-filesystems/nvme-troubleshooting-guide.md"><code>nvme-troubleshooting-guide.md</code></a> | NVMe Unsafe Shutdown Troubleshooting Guide |
@@ -142,7 +142,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 ### 📁 networking-and-security (Networking & Security Configurations)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | <a href="networking-and-security/adguard-home-management-cheat-sheet.md"><code>adguard-home-management-cheat-sheet.md</code></a> | AdGuard Home Management & DNS Filtering Cheat Sheet |
 | <a href="networking-and-security/iptables-cheat-sheet.md"><code>iptables-cheat-sheet.md</code></a> | iptables Cheat Sheet |
 | <a href="networking-and-security/networking-cheatsheet.md"><code>networking-cheatsheet.md</code></a> | Networking Concepts and Explanations Cheatsheet |
@@ -157,7 +157,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 ### 📁 virtualization (Hypervisor & VM Runbooks)
 
 | File | Description |
-|---|---|
+| --- | --- |
 | <a href="virtualization/hyper-v-powershell-cheat-sheet.md"><code>hyper-v-powershell-cheat-sheet.md</code></a> | Hyper-V PowerShell Management Cheat Sheet |
 | <a href="virtualization/proxmox-cheatsheet.md"><code>proxmox-cheatsheet.md</code></a> | Proxmox Virtual Machine Commands (qm) Cheat Sheet |
 | <a href="virtualization/virt-manager-cheatsheet.md"><code>virt-manager-cheatsheet.md</code></a> | Virt-Manager & Virsh Command Line Cheat Sheet |
