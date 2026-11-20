@@ -1,0 +1,72 @@
+# Old page addresses and where they moved.
+# generate_redirects.py turns each entry into a redirect page after `zensical build`,
+# so links and bookmarks to the old address land on the new page.
+# Add a line here whenever a guide is moved or renamed.
+
+folders:
+  ansible/: automation-and-git/
+
+pages:
+  ansible/ansible-automation-cheat-sheet.md: automation-and-git/ansible-automation-cheat-sheet.md
+  containers/lxc-cheatsheet.md: containers/lxc-cheat-sheet.md
+  containers/podman-cheatsheet.md: containers/podman-cheat-sheet.md
+  fedora/airpods-pro-microphone-guide.md: linux-general/desktop-environments/airpods-pro-microphone-guide.md
+  fedora/asusctl-cheat-sheet-guide.md: linux-general/hardware-and-firmware/asusctl-cheat-sheet.md
+  fedora/btrbk-snapshot-automation-cheat-sheet.md: linux-general/storage-and-filesystems/btrbk-snapshot-automation-cheat-sheet.md
+  fedora/clamav-selinux-implementation-guide.md: networking-and-security/security/clamav-selinux-implementation-guide.md
+  fedora/fedora-firewall-cheat-sheet.md: networking-and-security/security/fedora-firewall-cheat-sheet.md
+  fedora/fedora-kde-grub-btrfs-integration.md: fedora/fedora-kde-grub-btrfs-advanced.md
+  fedora/fedora-selinux-management-cheat-sheet.md: networking-and-security/security/fedora-selinux-management-cheat-sheet.md
+  fedora/kde-plasma-6-multi-monitor-troubleshooting.md: linux-general/desktop-environments/kde-plasma-6-multi-monitor-troubleshooting.md
+  fedora/snapper-snapshot-management-cheat-sheet.md: linux-general/storage-and-filesystems/snapper-snapshot-management-cheat-sheet.md
+  fedora/troubleshooting_dracut_nvidia_module_error.md: fedora/troubleshooting-dracut-nvidia-module-error.md
+  linux-general/arkenfox-configuration-guide.md: linux-general/desktop-environments/arkenfox-configuration-guide.md
+  linux-general/bash-configuration-guide.md: linux-general/commands-and-shell/bash-configuration-guide.md
+  linux-general/cardwire-cheat-sheet.md: linux-general/hardware-and-firmware/cardwire-cheat-sheet.md
+  linux-general/desktop-environments/alacritty-keybindings-cheatsheet.md: linux-general/desktop-environments/alacritty-keybindings-cheat-sheet.md
+  linux-general/enterprise-linux-ecosystem-and-commands-2026.md: linux-general/system-administration/enterprise-linux-ecosystem-and-commands-2026.md
+  linux-general/git-command-line-guide.md: automation-and-git/git-command-line-guide.md
+  linux-general/git-dotfiles-maintenance-cheat-sheet.md: automation-and-git/git-dotfiles-maintenance-cheat-sheet.md
+  linux-general/git_command_line_guide.md: automation-and-git/git-command-line-guide.md
+  linux-general/grubby-command-reference.md: linux-general/system-administration/grubby-command-reference.md
+  linux-general/guide-to-using-alien.md: linux-general/package-management/guide-to-using-alien.md
+  linux-general/iproute2-reference-guide.md: networking-and-security/networking/iproute2-reference-guide.md
+  linux-general/librepods-setup-guide.md: linux-general/desktop-environments/librepods-setup-guide.md
+  linux-general/linux-commands-cheat-sheet-tables.md: linux-general/commands-and-shell/linux-commands-cheat-sheet-tables.md
+  linux-general/linux-commands-editors-terminals-and-dev-tools.md: linux-general/commands-and-shell/linux-commands-editors-terminals-and-dev-tools.md
+  linux-general/linux-commands-files-and-directories.md: linux-general/commands-and-shell/linux-commands-files-and-directories.md
+  linux-general/linux-commands-networking.md: linux-general/commands-and-shell/linux-commands-networking.md
+  linux-general/linux-commands-shell-and-text-processing.md: linux-general/commands-and-shell/linux-commands-shell-and-text-processing.md
+  linux-general/linux-commands-users-processes-and-system.md: linux-general/commands-and-shell/linux-commands-users-processes-and-system.md
+  linux-general/linux-comprehensive-networking-guide.md: networking-and-security/networking/linux-comprehensive-networking-guide.md
+  linux-general/linux-export-command-guide.md: linux-general/commands-and-shell/linux-export-command-guide.md
+  linux-general/linux-permissions-reference-expanded.md: linux-general/commands-and-shell/linux-permissions-reference-expanded.md
+  linux-general/linux-source-installation-guide.md: linux-general/system-administration/linux-source-installation-guide.md
+  linux-general/linux-static-ip-configuration.md: networking-and-security/networking/linux-static-ip-configuration.md
+  linux-general/linux-upstream-midstream-downstream-explained.md: linux-general/system-administration/linux-upstream-midstream-downstream-explained.md
+  linux-general/linux-ventoy-usb-creation-guide.md: linux-general/system-administration/linux-ventoy-usb-creation-guide.md
+  linux-general/make-bash-script-executable.md: linux-general/commands-and-shell/make-bash-script-executable.md
+  linux-general/modern-agnostic-nat-router-dhcp-guide.md: networking-and-security/networking/modern-agnostic-nat-router-dhcp-guide.md
+  linux-general/modern_agnostic_nat_router_dhcp_guide.md: networking-and-security/networking/modern-agnostic-nat-router-dhcp-guide.md
+  linux-general/ncdu-command-reference.md: linux-general/storage-and-filesystems/ncdu-command-reference.md
+  linux-general/nmcli-cheat-sheet.md: networking-and-security/networking/nmcli-cheat-sheet.md
+  linux-general/nvidia-cuda-monitoring-cheat-sheet.md: linux-general/hardware-and-firmware/nvidia-cuda-monitoring-cheat-sheet.md
+  linux-general/samba-mount-guide.md: linux-general/storage-and-filesystems/samba-mount-guide.md
+  linux-general/setup-script-documentation.md: linux-general/system-administration/setup-script-documentation.md
+  linux-general/ss-command-options-cheat-sheet.md: networking-and-security/networking/ss-command-options-cheat-sheet.md
+  linux-general/storage-and-filesystems/raid-cheatsheet.md: linux-general/storage-and-filesystems/raid-cheat-sheet.md
+  linux-general/systemd-journalctl-cheat-sheet.md: linux-general/system-administration/systemd-journalctl-cheat-sheet.md
+  linux-general/vim-vi-editor-cheat-sheet.md: linux-general/commands-and-shell/vim-vi-editor-cheat-sheet.md
+  networking-and-security/adguard-home-management-cheat-sheet.md: networking-and-security/networking/adguard-home-management-cheat-sheet.md
+  networking-and-security/iptables-cheat-sheet.md: networking-and-security/security/iptables-cheat-sheet.md
+  networking-and-security/networking-cheatsheet.md: networking-and-security/networking/networking-cheat-sheet.md
+  networking-and-security/nftables-cheat-sheet.md: networking-and-security/security/nftables-cheat-sheet.md
+  networking-and-security/openwrt-uci-command-cheat-sheet.md: networking-and-security/networking/openwrt-uci-command-cheat-sheet.md
+  networking-and-security/opkg-cheatsheet.md: networking-and-security/networking/opkg-cheat-sheet.md
+  networking-and-security/pentesting-toolkit-cheat-sheet.md: networking-and-security/security/pentesting-toolkit-cheat-sheet.md
+  networking-and-security/tailscale-mesh-cli-cheat-sheet.md: networking-and-security/networking/tailscale-mesh-cli-cheat-sheet.md
+  networking-and-security/ufw-cheatsheet.md: networking-and-security/security/ufw-cheat-sheet.md
+  virtualization/proxmox-cheatsheet.md: virtualization/proxmox-cheat-sheet.md
+  virtualization/virt-manager-cheatsheet.md: virtualization/virt-manager-cheat-sheet.md
+  virtualization/vmware_btrfs_recovery_guide.md: virtualization/vmware-btrfs-recovery-guide.md
+  windows-and-macos/windows-cmd-cheatsheet.md: windows-and-macos/windows-cmd-cheat-sheet.md

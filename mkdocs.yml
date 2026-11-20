@@ -12,6 +12,7 @@ docs_dir: .
 # The root README is the GitHub landing page; the site uses the generated index.md.
 exclude_docs: |
   /README.md
+  /redirects.yml
   mkdocs.yml
   zensical.toml
   .markdownlint.yaml

@@ -18,9 +18,11 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: '3.x'
-      - run: pip install zensical
+      - run: pip install zensical pyyaml
       - run: python generate_nav.py --build
       - run: zensical build
+      # Keep old addresses of moved guides working (see redirects.yml)
+      - run: python generate_redirects.py site
       - uses: actions/upload-pages-artifact@v5
         with:
           path: site/
