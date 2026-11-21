@@ -2,6 +2,8 @@
 
 **Issue:** KDE Connect fails to pair or discover devices (specifically iPhones) on Fedora KDE Plasma, even after adding firewall rules to the `home` zone.
 
+**Tested on:** Fedora 44 KDE Plasma
+
 **Root Causes:**
 
 1. Fedora's active network interface defaults to `FedoraWorkstation` or `public` zones, causing `home` zone rules to be ignored.

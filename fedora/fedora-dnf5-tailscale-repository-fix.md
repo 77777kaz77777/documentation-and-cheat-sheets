@@ -2,6 +2,8 @@
 
 If you are running Fedora 41 or newer, repository management syntax has changed due to the migration to **DNF5**. Specifically, `--add-repo` was replaced with the `addrepo` positional verb.
 
+**Tested on:** Fedora 44 KDE Plasma
+
 ---
 
 ## The Fix: Adding Tailscale Repo in DNF5

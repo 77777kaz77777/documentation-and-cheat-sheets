@@ -48,7 +48,7 @@ FOLDER_DESCS = {
     "networking": "Interfaces, DNS, routing, VPNs and router firmware.",
     "security": "Firewalls, SELinux, antivirus and security tools.",
     "containers": "Docker, Podman and LXC commands and setup.",
-    "fedora": "Fedora-specific setup, tuning and fixes.",
+    "fedora": "Fedora-specific setup, tuning and fixes. Tested on Fedora 44 KDE Plasma.",
     "linux-general": "Distro-agnostic Linux reference.",
     "desktop-environments": "KDE Plasma, terminals and desktop tools.",
     "hardware-and-firmware": "Firmware updates and hardware quirks.",

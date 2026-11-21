@@ -2,7 +2,10 @@
 
 A guide to safely installing NVIDIA drivers on Fedora Workstation utilizing RPM Fusion repositories.
 
-Below is the complete installation process
+**Tested on:** Fedora 44 KDE Plasma
+
+Below is the complete installation process.
+
 ---
 
 ## Before you start

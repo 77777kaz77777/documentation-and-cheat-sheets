@@ -2,6 +2,8 @@
 
 Advanced fixes and config steps for GRUB and Btrfs integration on Fedora KDE.
 
+**Tested on:** Fedora 44 KDE Plasma
+
 ## Prerequisites
 
 Ensure your system meets the following requirements before proceeding:

@@ -2,6 +2,8 @@
 
 Setting up the Alacritty terminal on Fedora, complete with custom fonts and themes.
 
+**Tested on:** Fedora 44 KDE Plasma
+
 ## Step 1: Install Alacritty
 
 Install the terminal emulator directly from the standard Fedora repositories.

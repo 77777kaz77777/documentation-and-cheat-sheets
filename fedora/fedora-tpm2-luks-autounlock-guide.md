@@ -2,6 +2,8 @@
 
 Step-by-step guide for configuring automatic LUKS2 root volume decryption using hardware TPM 2.0 and systemd-cryptenroll.
 
+**Tested on:** Fedora 44 KDE Plasma
+
 ## Before you start
 
 - **Your passphrase stays.** The TPM is added as an extra key slot; your existing LUKS passphrase keeps working and is the fallback whenever the TPM refuses to unlock.

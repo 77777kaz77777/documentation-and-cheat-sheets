@@ -2,6 +2,8 @@
 
 This guide provides step-by-step instructions for manually configuring, compiling, and installing a custom or vanilla Linux kernel on Fedora systems.
 
+**Tested on:** Fedora 44 KDE Plasma
+
 ## Before you start
 
 - **Keep your Fedora kernel installed.** The custom kernel is added alongside it, so if it fails to boot you can choose the Fedora kernel from the GRUB menu.

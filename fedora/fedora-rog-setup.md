@@ -2,6 +2,8 @@
 
 This document outlines the configurations applied by `fedora_rog_setup.sh` for optimizing the ASUS ROG Zephyrus G15 on Fedora KDE. It manages graphics switching, daemon integration, and power profile adjustments required for stable desktop performance and battery management.
 
+**Tested on:** Fedora 44 KDE Plasma
+
 ## System Prerequisites & Core Dependencies
 
 - A minimum Linux kernel version of `>= 6.19` is recommended to ensure all patches that drastically improve the Linux experience on an ASUS/ROG laptop are available .

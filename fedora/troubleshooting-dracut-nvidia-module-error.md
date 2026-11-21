@@ -2,6 +2,8 @@
 
 This error occurs during a kernel update or initramfs rebuild because `dracut` is explicitly instructed to include the `nvidia` kernel module in the initramfs, but that module isn't compiled or installed for the target kernel (e.g., `7.2.10-200.fc44.x86_64`).
 
+**Tested on:** Fedora 44 KDE Plasma
+
 This typically happens on Fedora when using RPM Fusion Nvidia drivers if the `akmods` background service hasn't finished compiling the kernel module for the newly installed kernel yet, or if a custom dracut configuration is forcing the module load.
 
 Here is how to resolve this, starting from the simplest and most common fix.

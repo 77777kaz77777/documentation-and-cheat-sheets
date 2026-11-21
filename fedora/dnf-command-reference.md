@@ -2,6 +2,8 @@
 
 Useful commands for Fedora’s DNF package manager.
 
+**Tested on:** Fedora 44 KDE Plasma
+
 ## Core Package Management
 
 **Install software.**

@@ -2,6 +2,8 @@
 
 Fixes and tweaks for running Virt-Manager smoothly on Fedora.
 
+**Tested on:** Fedora 44 KDE Plasma
+
 This guide outlines the steps to resolve the common "No active connection to install on" error in Virtual Machine Manager (Virt-Manager) specifically tailored for Fedora.
 
 > **Disclaimer for Other Distributions:** While the core concepts of starting the virtualization daemon and assigning group permissions remain the same across Linux distributions, specific package managers, group names, or command syntax (such as `usermod` versus `adduser`) can vary. Adjust the commands accordingly if you are using Debian, Ubuntu, or other non-Fedora distributions.

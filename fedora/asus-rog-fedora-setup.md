@@ -2,6 +2,8 @@
 
 This document outlines the complete procedure for configuring and optimizing ASUS ROG hardware running Fedora 44 KDE, specifically targeting the AMD Ryzen 9 6900HS and NVIDIA RTX 3070 Ti architecture.
 
+**Tested on:** Fedora 44 KDE Plasma
+
 ## Before you start
 
 - Take a snapshot if you use Snapper (`sudo snapper -c root create --description "before asus setup"`): Step 1 removes packages and Step 3 replaces them with `--allowerasing`.

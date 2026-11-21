@@ -36,7 +36,7 @@ jobs:
               "networking": "Network Configuration, DNS & VPN",
               "security": "Firewalls, SELinux & Security Tools",
               "containers": "Docker, Podman, and LXC Guides",
-              "fedora": "Fedora Linux Specific Documentation",
+              "fedora": "Fedora Linux Specific Documentation (tested on Fedora 44 KDE Plasma)",
               "linux-general": "General Linux Reference",
               "package-management": "Package Managers & App Formats",
               "storage-and-filesystems": "BTRFS, ZFS, RAID & Storage Utilities",

@@ -2,6 +2,8 @@
 
 **Symptoms:** after switching the GPU MUX (e.g. to dedicated/dGPU-only mode), the laptop hangs at the boot splash or a black screen and never shows the LUKS passphrase prompt. The graphical splash (Plymouth) can't drive the display in that mode, so boot waits forever.
 
+**Tested on:** Fedora 44 KDE Plasma
+
 To force text mode and bypass the MUX/Plymouth deadlock, edit the GRUB parameters directly from the boot selection screen. This edit only applies to **this one boot**; nothing is saved.
 
 ## Step 1: Modify Kernel Parameters

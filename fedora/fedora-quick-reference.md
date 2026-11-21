@@ -2,6 +2,8 @@
 
 CLI reference for Fedora Linux system administration. Provides direct syntax for DNF package management, systemd service control, journalctl diagnostics, firewalld rules, SELinux enforcement, and network operations.
 
+**Tested on:** Fedora 44 KDE Plasma
+
 ## Package Management (DNF / DNF5)
 
 ### System Updates & Maintenance

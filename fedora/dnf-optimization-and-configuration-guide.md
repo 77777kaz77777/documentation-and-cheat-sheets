@@ -1,5 +1,7 @@
 # DNF Package Manager Speed Optimization & Configuration Guide
 
+**Tested on:** Fedora 44 KDE Plasma
+
 ### 1. Open the DNF configuration file
 
 Open the file using a terminal text editor with elevated privileges:
