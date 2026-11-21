@@ -79,3 +79,8 @@ brew doctor
 ```
 
 ---
+
+## Related guides
+
+- [macOS Homebrew Cheat Sheet](../../windows-and-macos/macos-homebrew-cheat-sheet.md)
+- [macOS Command-Line Reference (Apple Silicon)](../../windows-and-macos/macos-command-line-reference.md)

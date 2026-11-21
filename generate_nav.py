@@ -164,6 +164,7 @@ ACRONYMS = {
     "vim": "Vim",
     "vi": "vi",
     "coredns": "CoreDNS",
+    "launchd": "launchd",
     "ntfy": "ntfy",
     "restic": "restic",
     "rkhunter": "rkhunter",

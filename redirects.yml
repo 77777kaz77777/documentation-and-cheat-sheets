@@ -70,3 +70,4 @@ pages:
   virtualization/virt-manager-cheatsheet.md: virtualization/virt-manager-cheat-sheet.md
   virtualization/vmware_btrfs_recovery_guide.md: virtualization/vmware-btrfs-recovery-guide.md
   windows-and-macos/windows-cmd-cheatsheet.md: windows-and-macos/windows-cmd-cheat-sheet.md
+  windows-and-macos/macos-terminal-package-management-cheat-sheet.md: windows-and-macos/macos-command-line-reference.md
