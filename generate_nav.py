@@ -57,6 +57,8 @@ FOLDER_DESCS = {
     "networking-and-security": "Networking, VPNs, firewalls and hardening.",
     "virtualization": "Hypervisors, VMs and runbooks.",
     "windows-and-macos": "Windows and macOS references.",
+    "macos": "macOS command-line references for Apple Silicon.",
+    "windows": "Windows CMD, PowerShell, Sysinternals and WinGet.",
 }
 
 ACRONYMS = {

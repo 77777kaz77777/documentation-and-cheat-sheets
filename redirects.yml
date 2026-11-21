@@ -69,5 +69,16 @@ pages:
   virtualization/proxmox-cheatsheet.md: virtualization/proxmox-cheat-sheet.md
   virtualization/virt-manager-cheatsheet.md: virtualization/virt-manager-cheat-sheet.md
   virtualization/vmware_btrfs_recovery_guide.md: virtualization/vmware-btrfs-recovery-guide.md
-  windows-and-macos/windows-cmd-cheatsheet.md: windows-and-macos/windows-cmd-cheat-sheet.md
-  windows-and-macos/macos-terminal-package-management-cheat-sheet.md: windows-and-macos/macos-command-line-reference.md
+  windows-and-macos/windows-cmd-cheatsheet.md: windows-and-macos/windows/windows-cmd-cheat-sheet.md
+  windows-and-macos/macos-terminal-package-management-cheat-sheet.md: windows-and-macos/macos/macos-command-line-reference.md
+  windows-and-macos/macos-command-line-reference.md: windows-and-macos/macos/macos-command-line-reference.md
+  windows-and-macos/macos-defaults-and-cli-tips-cheat-sheet.md: windows-and-macos/macos/macos-defaults-and-cli-tips-cheat-sheet.md
+  windows-and-macos/macos-homebrew-cheat-sheet.md: windows-and-macos/macos/macos-homebrew-cheat-sheet.md
+  windows-and-macos/macos-launchd-and-logs-cheat-sheet.md: windows-and-macos/macos/macos-launchd-and-logs-cheat-sheet.md
+  windows-and-macos/macos-networking-cheat-sheet.md: windows-and-macos/macos/macos-networking-cheat-sheet.md
+  windows-and-macos/macos-security-cheat-sheet.md: windows-and-macos/macos/macos-security-cheat-sheet.md
+  windows-and-macos/macos-system-updates-and-hardware-cheat-sheet.md: windows-and-macos/macos/macos-system-updates-and-hardware-cheat-sheet.md
+  windows-and-macos/windows-cmd-cheat-sheet.md: windows-and-macos/windows/windows-cmd-cheat-sheet.md
+  windows-and-macos/windows-powershell-active-directory.md: windows-and-macos/windows/windows-powershell-active-directory.md
+  windows-and-macos/windows-sysinternals-cheat-sheet.md: windows-and-macos/windows/windows-sysinternals-cheat-sheet.md
+  windows-and-macos/winget-cheat-sheet.md: windows-and-macos/windows/winget-cheat-sheet.md

@@ -44,7 +44,9 @@ jobs:
               "hardware-and-firmware": "Firmware Updates & Hardware Quirks",
               "networking-and-security": "Networking & Security Configurations",
               "virtualization": "Hypervisor & VM Runbooks",
-              "windows-and-macos": "Windows & macOS References"
+              "windows-and-macos": "Windows & macOS References",
+              "macos": "macOS Command-Line References",
+              "windows": "Windows CMD, PowerShell & Tools"
           }
           
           IGNORE_FILES = {"README.md", "readme.md", "tree_output.txt"}

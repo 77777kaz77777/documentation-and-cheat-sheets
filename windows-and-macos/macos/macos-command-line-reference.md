@@ -24,7 +24,7 @@ Start page for the macOS command-line cheat sheets. They cover modern macOS admi
 | [macOS Security Cheat Sheet](macos-security-cheat-sheet.md) | Gatekeeper, XProtect, quarantine attributes, `codesign`, notarization, FileVault |
 | [macOS defaults, Finder and CLI Tips Cheat Sheet](macos-defaults-and-cli-tips-cheat-sheet.md) | `defaults` tweaks for Finder, Dock, and screenshots; clipboard, `open`, `mdfind`, and plist tools |
 
-For Homebrew commands that work on both macOS and Linux, see the [Homebrew Command Reference](../linux-general/package-management/brew-command-reference.md).
+For Homebrew commands that work on both macOS and Linux, see the [Homebrew Command Reference](../../linux-general/package-management/brew-command-reference.md).
 
 ---
 

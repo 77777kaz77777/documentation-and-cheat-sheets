@@ -132,4 +132,4 @@ brew doctor
 * [macOS launchd, Processes and Logs Cheat Sheet](macos-launchd-and-logs-cheat-sheet.md)
 * [macOS Security Cheat Sheet](macos-security-cheat-sheet.md)
 * [macOS defaults, Finder and CLI Tips Cheat Sheet](macos-defaults-and-cli-tips-cheat-sheet.md)
-* [Homebrew Command Reference (macOS and Linux)](../linux-general/package-management/brew-command-reference.md)
+* [Homebrew Command Reference (macOS and Linux)](../../linux-general/package-management/brew-command-reference.md)
