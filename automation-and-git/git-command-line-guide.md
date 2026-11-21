@@ -595,3 +595,8 @@ If your terminal opens a screen full of `~` lines after `git commit` or `git mer
 ```text
 :wq
 ```
+
+## Related guides
+
+* [GitHub Terminal Setup Guide](github-terminal-setup-guide.md)
+* [Back Up Dotfiles with Git](git-dotfiles-maintenance-cheat-sheet.md)
