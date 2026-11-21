@@ -193,3 +193,7 @@ sudo firewall-cmd --panic-off
 ```bash
 sudo firewall-cmd --query-panic
 ```
+
+## Related guides
+
+- [SSH and sshd Hardening Cheat Sheet](ssh-hardening-cheat-sheet.md)

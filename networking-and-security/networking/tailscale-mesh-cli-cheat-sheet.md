@@ -212,3 +212,8 @@ tailscale bugreport
 ```bash
 sudo systemctl status tailscaled
 ```
+
+## Related guides
+
+- [WireGuard Cheat Sheet](wireguard-cheat-sheet.md)
+- [CoreDNS Cheat Sheet](coredns-cheat-sheet.md)

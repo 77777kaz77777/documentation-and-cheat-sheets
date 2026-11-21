@@ -386,3 +386,7 @@ NoNewPrivileges=true
 [Install]
 WantedBy=multi-user.target
 ```
+
+## Related guides
+
+- [systemd Timers Cheat Sheet](systemd-timers-cheat-sheet.md)

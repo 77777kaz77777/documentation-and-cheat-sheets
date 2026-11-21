@@ -163,6 +163,12 @@ ACRONYMS = {
     "appimage": "AppImage",
     "vim": "Vim",
     "vi": "vi",
+    "coredns": "CoreDNS",
+    "ntfy": "ntfy",
+    "restic": "restic",
+    "rkhunter": "rkhunter",
+    "auditd": "auditd",
+    "cockpit": "Cockpit",
 }
 
 LOWERCASE_WORDS = {"and", "or", "for", "in", "on", "to", "with", "of", "via", "vs", "a", "the"}

@@ -495,3 +495,4 @@ sudo xfsdump -l 0 -f /backup/data.dump /mnt/data  # full backup
 - [RAID Cheatsheet for Beginners](raid-cheat-sheet.md)
 - [Storage Management Command Reference Guide](storage-management-reference.md)
 - [smartctl Comprehensive Cheat Sheet](smartctl-cheat-sheet.md)
+- [LVM Cheat Sheet](lvm-cheat-sheet.md)
