@@ -5,9 +5,14 @@ on:
     branches:
       - main
   pull_request:
+  schedule:
+    # Every Monday at 08:17 UTC: catches external links that break between pushes
+    - cron: "17 8 * * 1"
+  workflow_dispatch:
 
 permissions:
   contents: read
+  issues: write
 
 jobs:
   link-checker:
@@ -19,17 +24,27 @@ jobs:
       - name: Restore Link Cache
         uses: actions/cache@v6
         with:
-          path: .lyrecache
+          path: .lycheecache
           key: lychee-${{ github.sha }}
           restore-keys: |
             lychee-
 
       - name: Run Lychee Link Checker
+        id: lychee
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress './**/*.md'
+          args: --verbose --no-progress --cache --max-cache-age 1d './**/*.md'
           format: markdown
-          output: tmate.md
-          fail: true
+          output: lychee-report.md
+          # Scheduled runs report through an issue instead of failing
+          fail: ${{ github.event_name != 'schedule' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Open an Issue for Broken Links (weekly run only)
+        if: github.event_name == 'schedule' && steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v6
+        with:
+          title: Broken links found by the weekly link check
+          content-filepath: lychee-report.md
+          labels: broken-links
