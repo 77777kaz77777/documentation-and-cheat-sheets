@@ -5,3 +5,7 @@
 */*/index.md
 site/
 .lycheecache
+
+# Editor and Python caches
+.obsidian/
+__pycache__/

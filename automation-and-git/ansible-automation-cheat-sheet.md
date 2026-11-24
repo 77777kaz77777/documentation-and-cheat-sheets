@@ -1,4 +1,6 @@
-# Quick-reference CLI and syntax cheat sheet for Ansible
+# Ansible Cheat Sheet
+
+Quick-reference guide for Ansible ad-hoc commands, playbooks, and command-line syntax.
 
 ## Ansible Ad-Hoc Commands
 

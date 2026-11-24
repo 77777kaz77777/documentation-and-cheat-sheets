@@ -15,7 +15,7 @@ from urllib.parse import urlparse
 import yaml
 
 SITE = Path(sys.argv[1] if len(sys.argv) > 1 else "site")
-config = yaml.safe_load(Path("redirects.yml").read_text(encoding="utf-8"))
+config = yaml.safe_load(Path("tools/redirects.yml").read_text(encoding="utf-8"))
 base = urlparse(yaml.safe_load(
     "\n".join(l for l in Path("mkdocs.yml").read_text(encoding="utf-8").splitlines() if l.startswith("site_url:"))
 )["site_url"]).path.rstrip("/") + "/"

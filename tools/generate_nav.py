@@ -35,6 +35,8 @@ EXCLUDE_DIRS = {
     ".obsidian",
     "site",
     "stylesheets",
+    "assets",
+    "tools",
     "__pycache__",
     ".venv",
     "venv",

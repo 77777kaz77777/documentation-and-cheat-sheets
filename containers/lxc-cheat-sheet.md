@@ -1,4 +1,4 @@
-# LXC_LXD_CLI_Cheat_Sheet.md
+# LXC and LXD Cheat Sheet
 
 Quick-reference CLI guide for managing LXC/LXD system containers.
 

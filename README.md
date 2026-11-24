@@ -1,6 +1,26 @@
-# documentation-and-cheat-sheets
+# Documentation and Cheat Sheets
 
-A structured personal repository dedicated to administrative cheat sheets, virtualization runbooks, container references, and cross-platform command-line documentation.
+[![Deploy site](https://github.com/77777kaz77777/documentation-and-cheat-sheets/actions/workflows/deploy-mkdocs.yml/badge.svg)](https://github.com/77777kaz77777/documentation-and-cheat-sheets/actions/workflows/deploy-mkdocs.yml)
+[![Link check](https://github.com/77777kaz77777/documentation-and-cheat-sheets/actions/workflows/markdown-link-checker.yml/badge.svg)](https://github.com/77777kaz77777/documentation-and-cheat-sheets/actions/workflows/markdown-link-checker.yml)
+[![License: MIT](https://img.shields.io/github/license/77777kaz77777/documentation-and-cheat-sheets)](LICENSE)
+
+Cheat sheets, runbooks, and command-line references for Linux system administration, containers, virtualization, networking, and Windows and macOS.
+
+**📖 Read it as a website: [77777kaz77777.github.io/documentation-and-cheat-sheets](https://77777kaz77777.github.io/documentation-and-cheat-sheets/)** (search, dark mode, and copy buttons on every command).
+
+## How It's Organised
+
+| Folder | What's in it |
+| --- | --- |
+| [`fedora/`](fedora/) | Fedora setup, tuning, and fixes (tested on Fedora 44 KDE Plasma) |
+| [`linux-general/`](linux-general/) | Commands, system administration, packages, storage, hardware, and desktops for any distro |
+| [`networking-and-security/`](networking-and-security/) | Networking, VPNs, DNS, firewalls, SSH, and auditing |
+| [`containers/`](containers/) | Podman, Quadlets, Docker, and LXC |
+| [`virtualization/`](virtualization/) | Proxmox, KVM/virt-manager, and VM recovery runbooks |
+| [`automation-and-git/`](automation-and-git/) | Ansible, Git, and GitHub setup |
+| [`windows-and-macos/`](windows-and-macos/) | Windows (CMD, PowerShell, WinGet) and macOS references |
+
+The full list of guides is below. New guides follow the [guide template](.github/GUIDE_TEMPLATE.md).
 
 ---
 
@@ -11,7 +31,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 
 | File | Description |
 |---|---|
-| <a href="automation-and-git/ansible-automation-cheat-sheet.md"><code>ansible-automation-cheat-sheet.md</code></a> | Quick-reference CLI and syntax cheat sheet for Ansible |
+| <a href="automation-and-git/ansible-automation-cheat-sheet.md"><code>ansible-automation-cheat-sheet.md</code></a> | Ansible Cheat Sheet |
 | <a href="automation-and-git/git-command-line-guide.md"><code>git-command-line-guide.md</code></a> | Git Command-Line Reference Guide |
 | <a href="automation-and-git/git-dotfiles-maintenance-cheat-sheet.md"><code>git-dotfiles-maintenance-cheat-sheet.md</code></a> | Back Up Dotfiles with Git |
 | <a href="automation-and-git/github-terminal-setup-guide.md"><code>github-terminal-setup-guide.md</code></a> | GitHub Terminal Setup Guide |
@@ -22,7 +42,7 @@ A structured personal repository dedicated to administrative cheat sheets, virtu
 | File | Description |
 |---|---|
 | <a href="containers/docker-cli-compose-cheat-sheet.md"><code>docker-cli-compose-cheat-sheet.md</code></a> | Docker and Docker Compose Command-Line Reference Guide |
-| <a href="containers/lxc-cheat-sheet.md"><code>lxc-cheat-sheet.md</code></a> | LXC_LXD_CLI_Cheat_Sheet.md |
+| <a href="containers/lxc-cheat-sheet.md"><code>lxc-cheat-sheet.md</code></a> | LXC and LXD Cheat Sheet |
 | <a href="containers/podman-cheat-sheet.md"><code>podman-cheat-sheet.md</code></a> | Essential commands for running daemonless containers with Podman |
 | <a href="containers/podman-desktop-guide.md"><code>podman-desktop-guide.md</code></a> | How to install and set up the Podman Desktop GUI |
 | <a href="containers/podman-quadlets-cheat-sheet.md"><code>podman-quadlets-cheat-sheet.md</code></a> | Podman Quadlets Cheat Sheet |
