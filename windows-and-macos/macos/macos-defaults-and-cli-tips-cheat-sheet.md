@@ -1,6 +1,6 @@
 # macOS defaults, Finder and CLI Tips Cheat Sheet
 
-Quick-reference guide for changing hidden settings with `defaults`, tweaking Finder and the Dock, and everyday Terminal shortcuts on macOS.
+Quick-reference guide for changing hidden settings with `defaults`, tweaking Finder and the Dock, and everyday Terminal tools for the clipboard, screenshots, audio, images, and Spotlight on macOS.
 
 ---
 
@@ -144,6 +144,153 @@ plutil -convert binary1 [file.plist]
 
 ```bash
 plutil -lint [file.plist]
+```
+
+---
+
+## Reading & Resetting Settings
+
+**Read Every Setting an App Has Stored:**
+
+```bash
+defaults read com.apple.finder
+```
+
+**Find the Setting Name Behind a Toggle (Run Before and After Changing It):**
+
+```bash
+defaults read > /tmp/before.txt
+defaults read > /tmp/after.txt && diff /tmp/before.txt /tmp/after.txt
+```
+
+**Undo a `defaults write` Tweak:**
+
+```bash
+defaults delete com.apple.finder AppleShowAllFiles && killall Finder
+```
+
+**Reset the Dock to Its Default Apps and Layout:**
+
+```bash
+defaults delete com.apple.dock && killall Dock
+```
+
+**Toggle Dark Mode:**
+
+```bash
+osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to not dark mode'
+```
+
+---
+
+## Screenshots, Audio & Notifications
+
+**Screenshot of a Selected Area to the Desktop:**
+
+```bash
+screencapture -i ~/Desktop/shot.png
+```
+
+**Screenshot of the Whole Screen After a 5-Second Delay:**
+
+```bash
+screencapture -T 5 ~/Desktop/shot.png
+```
+
+**Screenshot Straight to the Clipboard:**
+
+```bash
+screencapture -ic
+```
+
+**Set, Mute, and Unmute the Volume:**
+
+```bash
+osascript -e 'set volume output volume 40'
+osascript -e 'set volume output muted true'
+osascript -e 'set volume output muted false'
+```
+
+**Show a Notification When a Long Command Finishes:**
+
+```bash
+[long-command]; osascript -e 'display notification "Finished" with title "Terminal"'
+```
+
+**Speak Text Aloud:**
+
+```bash
+say "Backup complete"
+```
+
+**Run a Shortcut from the Shortcuts App:**
+
+```bash
+shortcuts list
+shortcuts run "[Shortcut Name]"
+```
+
+---
+
+## Files, Images & Documents
+
+**Preview Any File with Quick Look:**
+
+```bash
+qlmanage -p [file]
+```
+
+**Resize an Image So Its Longest Side Is 1200 px:**
+
+```bash
+sips -Z 1200 [photo].jpg --out [photo]-small.jpg
+```
+
+**Convert HEIC Photos to JPEG:**
+
+```bash
+sips -s format jpeg [photo].heic --out [photo].jpg
+```
+
+**Convert a Document Between Formats (for Example Word to Plain Text):**
+
+```bash
+textutil -convert txt [document].docx
+```
+
+**Compress and Extract Zip Files (Keeps macOS Metadata):**
+
+```bash
+ditto -c -k --sequesterRsrc --keepParent [folder] [folder].zip
+ditto -x -k [archive].zip [destination]
+```
+
+**Show the File Type of a File:**
+
+```bash
+file [file]
+```
+
+---
+
+## Spotlight Index
+
+**Check Whether Spotlight Indexing Is On for a Volume:**
+
+```bash
+mdutil -s /
+```
+
+**Rebuild the Spotlight Index (Fixes Missing Search Results):**
+
+```bash
+sudo mdutil -E /
+```
+
+**Turn Off Indexing for an External Drive:**
+
+```bash
+sudo mdutil -i off /Volumes/[name]
 ```
 
 ---

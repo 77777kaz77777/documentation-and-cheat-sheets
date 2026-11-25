@@ -18,11 +18,11 @@ Start page for the macOS command-line cheat sheets. They cover modern macOS admi
 | Cheat sheet | Covers |
 | --- | --- |
 | [macOS Homebrew Cheat Sheet](macos-homebrew-cheat-sheet.md) | Installing, upgrading, and removing formulae and casks; Brewfiles; cleanup |
-| [macOS System, Updates and Hardware Cheat Sheet](macos-system-updates-and-hardware-cheat-sheet.md) | `softwareupdate`, full installers, Xcode tools, `system_profiler`, `powermetrics`, `diskutil` and APFS, Time Machine snapshots, battery, `caffeinate` |
-| [macOS Networking Cheat Sheet](macos-networking-cheat-sheet.md) | Interfaces, Wi-Fi diagnostics, DNS, `networkQuality`, listening ports, Application Firewall and `pf` |
-| [macOS launchd, Processes and Logs Cheat Sheet](macos-launchd-and-logs-cheat-sheet.md) | `launchctl` user and system services, LaunchAgents, processes, `log show` and `log stream` |
-| [macOS Security Cheat Sheet](macos-security-cheat-sheet.md) | Gatekeeper, XProtect, quarantine attributes, `codesign`, notarization, FileVault |
-| [macOS defaults, Finder and CLI Tips Cheat Sheet](macos-defaults-and-cli-tips-cheat-sheet.md) | `defaults` tweaks for Finder, Dock, and screenshots; clipboard, `open`, `mdfind`, and plist tools |
+| [macOS System, Updates and Hardware Cheat Sheet](macos-system-updates-and-hardware-cheat-sheet.md) | Updates and Rosetta, hardware info, memory and CPU, **battery health and charging**, power and sleep settings, thermals, disks and APFS, disk images, Time Machine |
+| [macOS Networking Cheat Sheet](macos-networking-cheat-sheet.md) | Interfaces, Wi-Fi (scan, join, forget, saved passwords), DNS and split DNS, routing and troubleshooting, VPNs and proxies, ports, firewall, computer name and Remote Login |
+| [macOS launchd, Processes and Logs Cheat Sheet](macos-launchd-and-logs-cheat-sheet.md) | `launchctl` services, writing your own LaunchAgent, Homebrew services, processes and open files, unified log searches, crash reports, `sysdiagnose` |
+| [macOS Security Cheat Sheet](macos-security-cheat-sheet.md) | Security status, FileVault, Gatekeeper and code signing, quarantine, XProtect, privacy permissions, Keychain and certificates, Touch ID for `sudo`, MDM profiles |
+| [macOS defaults, Finder and CLI Tips Cheat Sheet](macos-defaults-and-cli-tips-cheat-sheet.md) | `defaults` tweaks for Finder and the Dock, clipboard, `open`, screenshots, volume, notifications, Shortcuts, image conversion, Spotlight, and plist tools |
 
 For Homebrew commands that work on both macOS and Linux, see the [Homebrew Command Reference](../../linux-general/package-management/brew-command-reference.md).
 
