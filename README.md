@@ -158,6 +158,7 @@ The full list of guides is below. New guides follow the [guide template](.github
 | <a href="linux-general/system-administration/enterprise-linux-ecosystem-and-commands-2026.md"><code>enterprise-linux-ecosystem-and-commands-2026.md</code></a> | A breakdown of the 2026 Enterprise Linux landscape plus core admin commands |
 | <a href="linux-general/system-administration/grubby-command-reference.md"><code>grubby-command-reference.md</code></a> | grubby Command Reference |
 | <a href="linux-general/system-administration/linux-source-installation-guide.md"><code>linux-source-installation-guide.md</code></a> | Steps to compile and install Linux software directly from source code |
+| <a href="linux-general/system-administration/linux-time-sync-fix-guide.md"><code>linux-time-sync-fix-guide.md</code></a> | Fix Wrong Time on Debian, Rocky Linux and Proxmox VE |
 | <a href="linux-general/system-administration/linux-upstream-midstream-downstream-explained.md"><code>linux-upstream-midstream-downstream-explained.md</code></a> | Upstream, Midstream and Downstream Explained |
 | <a href="linux-general/system-administration/linux-ventoy-usb-creation-guide.md"><code>linux-ventoy-usb-creation-guide.md</code></a> | How to format and create a multi-boot Ventoy USB drive on Linux |
 | <a href="linux-general/system-administration/ntfy-notifications-cheat-sheet.md"><code>ntfy-notifications-cheat-sheet.md</code></a> | ntfy Notifications Cheat Sheet |
